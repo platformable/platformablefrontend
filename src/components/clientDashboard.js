@@ -152,7 +152,7 @@ export default function Dashboard() {
             <div className="dashboard-profile-card bg-gray-50 rounded-lg flex flex-wrap shadow-xl">
               <div className="dashboard-profile-card-img py-10"></div>
               <div className="dashboard-profile-card-text p-5">
-                <h5 className="font-black text-primary">Hi! {user.name}</h5>
+                <h5 className="font-black text-primary">Hi {user.name}</h5>
                 
                 {/* <Link
                   to={`/app/profile/1`}

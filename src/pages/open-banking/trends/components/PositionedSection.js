@@ -10,7 +10,7 @@ import ActionableInfoLp from './ActionableInfoLp';
 const PositionedSection = () => {
 const [user,setUser]=useContext(UserContext)
   const handleIsLoggedIn = ()=> {
-    user.isLoggedIn ? navigate('app/dashboard') : navigate("/login")
+    user.isLoggedIn ? navigate('/app/dashboard') : navigate("/login")
   }
 
   return (
