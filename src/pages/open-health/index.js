@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import data from "../../data/product-stream/data.json"
+// import data from "../../data/product-stream/data.json"
 import GridDisplay from "../../components/shared-components/GridDisplay"
 /*specific-components*/
 import SectorSubCards from "../../components/product-streams/sectorSubCards"
@@ -10,6 +10,59 @@ import Layout from "../../components/layout"
 import openHealthImg from "../../assets/product-streams/open_health.svg"
 
 
+import AnanlistAsServiceImg from '../../assets/product-streams/analyst-as-a-service.svg'
+import BlogImg from '../../assets/product-streams/blogs_and_articles.svg'
+import OpenEcoIMg from '../../assets/product-streams/open_ecosystem_mapping.svg'
+import PlatFormImg from '../../assets/product-streams/platform_mindset_training_for_banks.svg'
+import QuarterlyImg from '../../assets/product-streams/quarterly_trends_report.svg'
+import StateImg from '../../assets/product-streams/state_of_the_market_reports.svg'
+
+const data = {
+  "OpenHealth": {
+    "elements": [
+      {
+        "img": AnanlistAsServiceImg,
+        "title": "Data Governance",
+        "paragraph": "Create a data governance and data stewardship system for your agency",
+        "color": "#87ACFC40",
+        "url":"/open-health/data-governance"
+      },
+      {
+        "img": BlogImg,
+        "title": "Blogs and \nArticles",
+        "paragraph": "Read our latest news and articles",
+        "color": "#87ACFC40",
+        "url":"/open-health-posts"
+      },
+      {
+        "img": OpenEcoIMg,
+        "title": "Open Ecosystem\nMapping",
+        "paragraph": "Coming Soon",
+        "color": "#87ACFC40"
+      },
+      {
+        "img": PlatFormImg,
+        "title": "Data Stewardship Training and Mentoring",
+        "paragraph": "Learn how to collect, manage, analyse and reuse data",
+        "color": "#87ACFC40",
+        "url":"/open-health/data-stewardship-training-and-mentoring"
+      },
+      {
+        "img": QuarterlyImg,
+        "title": "Quarterly Trends\nReport",
+        "paragraph": "Coming Soon",
+        "color": "#87ACFC40"
+      },
+      {
+        "img": StateImg,
+        "title": "State of the Market\nReports",
+        "paragraph": "Coming Soon",
+        "color": "#87ACFC40"
+      }
+    ]
+  },
+  
+}
 
 export default function openHealth() {
     return (

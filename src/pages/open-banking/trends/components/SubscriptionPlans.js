@@ -44,7 +44,7 @@ const SubscriptionPlans = props => {
           </ul>
           <div className="plans-price h-32">
             <p className="font-bold">
-              <span className="text-black text-base opacity-50">$ </span>
+              <span className="text-black text-base opacity-50">€ </span>
               <strong className="text-primary text-3xl leading-tight">
                 19
               </strong>
@@ -94,7 +94,7 @@ const SubscriptionPlans = props => {
           </ul>
           <div className="plans-price mx-3">
             <p className="font-bold">
-              <span className="text-black text-base opacity-50">$ </span>
+              <span className="text-black text-base opacity-50">€ </span>
               <strong className="text-primary text-3xl leading-tight">
                 49
               </strong>
@@ -152,7 +152,7 @@ const SubscriptionPlans = props => {
           </ul>
           <div className="plans-price mx-3">
             <p className="font-bold">
-              <span className="text-black text-base opacity-50">$ </span>
+              <span className="text-black text-base opacity-50">€ </span>
               <strong className="text-primary text-3xl leading-tight">
                 750
               </strong>
@@ -211,7 +211,7 @@ const SubscriptionPlans = props => {
           </ul>
           <div className="plans-price h-32">
             <p className="font-bold">
-              <span className="text-black text-base opacity-50">$ </span>
+              <span className="text-black text-base opacity-50">€ </span>
               <strong className="text-primary text-3xl leading-tight">
                 2200
               </strong>
