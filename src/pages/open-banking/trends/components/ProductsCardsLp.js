@@ -62,7 +62,7 @@ const ProductsCardsLp = () => {
       </div>
     </section>
     <section className="flex justify-center py-5 -mt-20">
-      <a href={`${data?data.file.publicURL:""}`} className="btn bg-russian-violet-dark text-white px-5 rounded-xl py-2" download>See our latest Trends Reports</a>
+      <a href={`{${data ? data.file.publicURL :""}}`} className="btn bg-russian-violet-dark text-white px-5 rounded-xl py-2" download>See our latest Trends Reports</a>
     </section>
     </>
   )
