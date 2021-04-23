@@ -75,7 +75,7 @@ export default function Login({data,location}) {
 
   // CHECK IF CONNECTED USER IS A PAID MEMBER
   const isActiveMember = (costumerEmail)=> {
-    const existingUser =  data.allStripeSubscription.nodes.find(element => element.customer.email === costumerEmail);
+    const existingUser =  data.allStripeSubscription.nodes.find(element => element.customer.email === costumerEmail) ;
 
       if(existingUser) {
       //  setUser({...user,membership:'paid',
