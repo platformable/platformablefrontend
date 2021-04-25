@@ -231,8 +231,8 @@ const ProductStreams = props => {
       <SEO title="Sectors" />
 
       <GridDisplay
-        gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-center items-center "
-        gridContentClass="md:w-2/5"
+        gridDisplayClass="hero-section container flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-between items-center "
+        gridContentClass="md:w-3/5"
         title="Sectors"
         titleClass="my-5"
         paragraphOne="We track the growth and opportunities of open ecosystems in key sectors. Open ecosystems can help solve today’s complex challenges by building to open standards and using open data models, encouraging multi-stakeholder networks, and measuring value and impact."
@@ -246,7 +246,7 @@ const ProductStreams = props => {
 
       <ProductStreamsCards
         data={data["products"]}
-        className="my-0 md:mx-8 mx-2 py-0 px-2 flex flex-wrap flex-col sm:flex-row justify-evenly items-center"
+        className="my-0  py-0 px-2 flex flex-wrap flex-col sm:flex-row justify-between items-center"
       />
 
       {/* <div id="openBanking">

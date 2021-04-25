@@ -4,14 +4,14 @@ import CallToAction from './../shared-components/CallToAction';
 
 const SectorSubCards = ({ data, className }) => {
   return (
-    <section className="cards-section my-4 mx-auto py-8">
+    <section className="cards-section my-4 container mx-auto py-8">
       <div className="border-b border-primary border-opacity-25 w-2/3 mx-auto mb-8"></div>
 
       <div className={className}>
         {data.elements.map((el, i) => (
           <div
             key={i}
-            className="md:w-56 max-w-xs mt-4 md:mb-2 mb-12 mx-2 p-6 rounded-3xl bg-card
+            className="md:w-full max-w-xs mt-4 md:mb-2 mb-12 mx-2 p-6 rounded-3xl bg-card
               flex flex-col justify-center items-center 
             "
             style={{ backgroundColor: el.color }}
@@ -26,7 +26,7 @@ const SectorSubCards = ({ data, className }) => {
 
               <div className="">
                 <h6 className="my-5 text-center h-18 md:h-14 px-3 text-primary font-black">{el.title}</h6>
-                <p className="hidden md:block text-grayed text-center font-normal my-5 h-24 border-t border-primary border-opacity-25 pt-3">
+                <p className="hidden md:block text-grayed text-center font-normal my-1 h-24 border-t border-primary border-opacity-25 pt-3">
                   {el.paragraph}
                 </p>
               </div>

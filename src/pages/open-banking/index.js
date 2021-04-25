@@ -76,7 +76,7 @@ export default function openBanking() {
       <div id="openBanking">
         <GridDisplay
         
-          gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-0 px-5 justify-center items-center "
+          gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-0 px-5 container justify-between items-center "
           gridContentClass="md:w-2/5 "
           title={`Open Banking / 
             Open Finance`}
@@ -91,7 +91,7 @@ export default function openBanking() {
         ></GridDisplay>
         <SectorSubCards
           data={data["OpenBanking"]}
-          className="my-0 md:mx-8 mx-2 py-0 px-8 flex flex-wrap flex-col sm:flex-row justify-evenly text-sm items-center"
+          className="my-0 md:mx-8 mx-2 py-0  flex flex-wrap flex-col sm:flex-row justify-between text-sm items-center"
         />
       </div>
     </Layout>

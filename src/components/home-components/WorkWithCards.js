@@ -48,21 +48,20 @@ const WorkWithCards = () => {
     
   ]
   return (
-    <section className="cards-section my-6 mx-auto py-8">
+    <section className="cards-section my-6 container mx-auto py-8">
       <h2 className="text-center my-5 font-black">We Work with</h2>
-
-      <div className="my-0 md:mx-16 mx-2 py-0 px-3 flex flex-wrap flex-col sm:flex-row justify-evenly items-center">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 justify-center">
+      {/* <div className="my-0 md:mx-16 mx-2 md:mx-0 py-0 px-3 md:px-0 flex flex-wrap flex-col sm:flex-row justify-between items-center"> */}
         {images.map((img, i) => (
           <div
             key={i}
-            className="md:w-52 w-96 max-w-md mt-4 mb-12 md:mb-2 mx-2 p-6 rounded-3xl bg-card
-          flex flex-col justify-center items-center 
-          shadow transition-shadow hover:shadow-hover "
+            className="px-3 rounded-3xl bg-card justify-center gap-4 items-center shadow transition-shadow hover:shadow-hover "
           >
-            <img src={img.src} alt={img.title} className="w-28 h-28" />
-
+            <div className="flex justify-center">
+            <img src={img.src} alt={img.title} className="w-28 h-28 " />
+            </div>
             <div className="h-56">
-              <h6 className="my-5 border-t border-darkGrey pt-3 font-black">{img.title}</h6>
+              <h6 className="my-5 border-t border-darkGrey pt-3 font-black text-center">{img.title}</h6>
               <p className="text-sm">{img.paragraph}</p>
             </div>
           </div>

@@ -26,8 +26,8 @@ return(
     <SEO title="Home" />
 
     <GridDisplay
-      gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-center items-center"
-      gridContentClass="md:w-2/5"
+      gridDisplayClass="hero-section  flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
+      gridContentClass="md:w-3/5 "
       title="We support open ecosystems that build economic opportunities, solve complex problems, and enable everyone to participate and co-create their own value"
       paragraphOne=""
       paragraphTwo=""
@@ -36,7 +36,7 @@ return(
       type="button"
       label={"Learn more about us"}
       btnClass="outlinedBtn text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
-      imgContentClass=""
+      imgContentClass="flex justify-end "
       imgClass="object-cointain w-96 h-94"
       backImgSrc={sectionOneImg}
       alt="Hero"
@@ -44,7 +44,7 @@ return(
 
     <section className="bg-gray-100 py-5">
     <GridDisplay
-      gridDisplayClass="bg-lightBlue flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-center items-center"
+      gridDisplayClass="bg-lightBlue flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
       gridContentClass="md:w-2/5"
       firstParagraph="Download our latest release"
       title={`Open Banking/Open Finance Quarterly Trend Reports`}

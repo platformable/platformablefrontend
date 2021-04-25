@@ -66,7 +66,7 @@ export default function openGovernment() {
         <Layout>
            <div id="openGovernment">
         <GridDisplay
-          gridDisplayClass="flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-center items-center "
+          gridDisplayClass="flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center "
           gridContentClass="md:w-2/5"
           title="Open Government"
           titleClass="my-5 text-purple"
@@ -80,7 +80,7 @@ export default function openGovernment() {
         ></GridDisplay>
         <SectorSubCards
           data={data["OpenGovernement"]}
-          className="my-0 md:mx-8 mx-2 py-0 px-12 flex flex-wrap flex-col sm:flex-row justify-evenly items-center"
+          className="my-0 md:mx-8 mx-2 py-0  flex flex-wrap flex-col sm:flex-row justify-between text-sm items-center"
         />
       </div>
         </Layout>

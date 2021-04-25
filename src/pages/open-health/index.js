@@ -70,8 +70,8 @@ export default function openHealth() {
             <div id="openHealth">
 
         <GridDisplay
-          gridDisplayClass="flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-center items-center "
-          gridContentClass="md:w-2/5"
+          gridDisplayClass="flex flex-col container sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-between items-center "
+          gridContentClass="md:w-3/5"
           title="Open Health"
           titleClass="my-5 text-blue"
           paragraphOne="Supporting community-based health organisations with data governance and data management."
@@ -87,7 +87,7 @@ export default function openHealth() {
         ></GridDisplay>
         <SectorSubCards
           data={data["OpenHealth"]}
-          className="my-0 md:mx-8 mx-2 py-0 px-12 flex flex-wrap flex-col sm:flex-row justify-evenly items-center"
+          className="my-0 md:mx-8 mx-2 py-0  flex flex-wrap flex-col sm:flex-row justify-between text-sm items-center"
         />
       </div>
     

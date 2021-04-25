@@ -4,15 +4,15 @@ import CallToAction from './../shared-components/CallToAction';
 
 const ProductStreamsCards = ({ data, className }) => {
   return (
-    <section className="cards-section my-4 mx-auto py-8">
-      <div className="border-b border-primary border-opacity-25 w-2/3 mx-auto mb-8"></div>
+    <section className="cards-section container my-4 mx-auto py-8">
+      <div className="border-b border-primary border-opacity-25 w-3/3 mx-auto mb-8"></div>
 
       <div className={className}>
         {data.elements.map((el, i) => (
           <div
             key={i}
-            className="md:w-56 max-w-xs mt-4 md:mb-2 mb-12 mx-2 p-6 rounded-3xl bg-card
-              flex flex-col justify-center items-center"
+            className="md:w-56 max-w-xs mt-4 md:mb-2 mb-12  p-6 rounded-3xl bg-card
+              flex flex-col  items-center"
             style={{ backgroundColor: el.color }}
           >
             <div className="text-center">
