@@ -163,7 +163,7 @@ export default function Dashboard() {
                 <h6 className="text-xs text-primary">
                   {user.isStripeActive
                     ? "Your Plan is Active"
-                    : "No Active Plan yet!"}
+                    : "No Active Plan yet"}
                 </h6>
               </div>
             </div>
@@ -215,11 +215,11 @@ export default function Dashboard() {
 
         {/* PLANS */}
         <section className="">
-          <h6 className=" py-5 text-gray-300">
+          <h6 className=" py-5 text-gray-300 px-5" >
             Select a Subscription Pack
           </h6>
           {/* <div className="plans-group flex flex-wrap flex-col md:flex-row  text-center text-sm my-5 gap-4"> */}
-          <div className="plans-group grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="plans-group grid grid-cols-1 md:grid-cols-4 gap-4 md:px-5">
            {data.allStripePrice.edges.map(plan => {
               return (
                 <React.Fragment key={plan.node.product.id}>
@@ -239,7 +239,7 @@ export default function Dashboard() {
                     <div className="plans-price ">
                       <div className="font-bold">
                         <h2 className="text-primary font-black text-3xl leading-tight">
-                        ${(plan.node.unit_amount / 100).toFixed(2)}
+                        €{(plan.node.unit_amount / 100).toFixed(2)}
                         </h2>
                         <span className="text-black">
                           {" "}

@@ -6,6 +6,7 @@ import axios from 'axios';
 import UserContext from '../context/UserContext'
 import SEO from '../components/seo'
 import LoginSignErrorMessage from "../components/LoginSignErrorMessage";
+import Logo from '../images/logo.png'
 
 export default function Login({data,location}) {
  
@@ -119,10 +120,11 @@ export default function Login({data,location}) {
     <div className="container mx-auto ">
       <div className="grid md:grid-cols-6 md:gap-4 grid-cols-1 md:gap-2 px-5 justify-center items-center h-screen  ">
         <div className="col-start-3 col-span-2 bg-gray-50 rounded-xl  px-10 py-10">
-          <img
-            src="https://platformable.com/content/images/2020/02/logo-and-business-name-horizontal.png"
-            className="my-10"
-          />
+        <Link to="/"><img
+            src={Logo}
+            className="my-5"
+          /></Link>
+          <p className="small-text my-5">Logging in lets you see more free content, and your paid content, if you have subscribed.</p>
 
           <div className="mb-4">
             <label
@@ -130,13 +132,13 @@ export default function Login({data,location}) {
               htmlFor="username"
             >
    
-              Username
+              Email
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"
               id="username"
               type="text"
-              placeholder="Username"
+              placeholder="Email"
               onChange={e => setLogin({ ...login, identifier: e.target.value })}
             />
           </div>

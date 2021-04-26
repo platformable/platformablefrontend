@@ -685,6 +685,10 @@ MEDIA QUERIES */
   margin: 10px auto;
 }
 
+.underline {
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
 .posts-content a {
   text-decoration: underline;
   text-decoration-color: blue;

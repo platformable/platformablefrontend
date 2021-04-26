@@ -6,6 +6,7 @@ import { Link, navigate } from "gatsby"
 import axios from 'axios'
 import SEO from '../components/seo'
 import LoginSignErrorMessage from "../components/LoginSignErrorMessage"
+import Logo from '../images/logo.png'
 
 export default function SignUp() {
   const [register, setRegister] = useState({
@@ -30,9 +31,9 @@ export default function SignUp() {
     .post('https://websiteserver-ds7cf.ondigitalocean.app/auth/local/register', {...register})
     .then(response => {
       // Handle success.
-      console.log('Well done!');
-      console.log('User profile', response.data.user);
-      console.log('User token', response.data.jwt);
+      // console.log('Well done!');
+      // console.log('User profile', response.data.user);
+      // console.log('User token', response.data.jwt);
       navigate("/registration-success")
     })
     .catch(error => {
@@ -43,15 +44,16 @@ export default function SignUp() {
 
   return (
     <>
-    <SEO title="Login"/>
+    <SEO title="Register"/>
     <div className="container mx-auto ">
       <div className="grid md:grid-cols-6 md:gap-4 grid-cols-1 md:gap-2 px-5 justify-center items-center h-screen  ">
         <div className="col-start-3 col-span-2 bg-gray-100 rounded-xl  px-10 py-10">
-          <img
-            src="https://platformable.com/content/images/2020/02/logo-and-business-name-horizontal.png"
+          <Link to="/"><img
+            src={Logo}
             className="my-5"
-          />
-          <div className="mb-4">
+          /></Link>
+          <p className="small-text mb-2">Register your account to view more of the content we offer, access our newsletters and discount offers, and subscribe to paid services.</p>
+          {/* <div className="mb-4">
             <label
               className="block text-grey-darker text-sm font-bold mb-2"
               for="username"
@@ -65,7 +67,7 @@ export default function SignUp() {
               placeholder="username"
               onChange={e => setRegister({ ...register, username: e.target.value })}
             />
-          </div>
+          </div> */}
 
           <div className="mb-4">
             <label
@@ -82,7 +84,7 @@ export default function SignUp() {
               onChange={e => setRegister({ ...register, name: e.target.value })}
             />
           </div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label
               className="block text-grey-darker text-sm font-bold mb-2"
               for="lastname"
@@ -96,7 +98,7 @@ export default function SignUp() {
               placeholder="lastname"
               onChange={e => setRegister({ ...register, lastname: e.target.value })}
             />
-          </div>
+          </div> */}
           <div className="mb-4">
             <label
               className="block text-grey-darker text-sm font-bold mb-2"
