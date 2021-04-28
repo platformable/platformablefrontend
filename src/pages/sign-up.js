@@ -53,7 +53,7 @@ export default function SignUp() {
             className="my-5"
           /></Link>
           <p className="small-text mb-2">Register your account to view more of the content we offer, access our newsletters and discount offers, and subscribe to paid services.</p>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label
               className="block text-grey-darker text-sm font-bold mb-2"
               for="username"
@@ -67,7 +67,7 @@ export default function SignUp() {
               placeholder="username"
               onChange={e => setRegister({ ...register, username: e.target.value })}
             />
-          </div>
+          </div> */}
 
           <div className="mb-4">
             <label
@@ -111,7 +111,7 @@ export default function SignUp() {
               id="email"
               type="email"
               placeholder="Email"
-              onChange={e => setRegister({ ...register, email: e.target.value })}
+              onChange={e => setRegister({ ...register, email: e.target.value, username: e.target.value })}
             />
           </div>
           <div className="mb-6">

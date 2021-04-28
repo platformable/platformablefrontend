@@ -34,7 +34,7 @@ const ProductCards = () => {
             key={i}
             className="w-64 mb-12 md:mb-2 md:mx-2 p-5 rounded-3xl bg-card
           flex flex-col justify-center items-center 
-          cursor-pointer shadow transition-shadow hover:shadow-hover"
+          shadow transition-shadow hover:shadow-hover"
           >
             <img src={img.src} alt={img.title} className="w-40 h-32" />
 

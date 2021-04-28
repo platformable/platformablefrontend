@@ -48,7 +48,7 @@ const HowWeDoIt = () => {
             key={i}
             className="lg:w-2/5 w-full max-w-md my-6 mx-2 p-4 rounded-full bg-card
           flex items-center 
-          cursor-pointer transition-shadow hover:shadow-hover"
+           transition-shadow hover:shadow-hover"
           >
             <img src={img.src} alt={img.title} className="mr-8 w-20 h-20" />
 

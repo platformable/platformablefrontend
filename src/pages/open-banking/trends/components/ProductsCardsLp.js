@@ -18,7 +18,7 @@ const ProductsCardsLp = () => {
         <div
           className="product--item md:w-1/3 w-9/12 mb-12 md:mb-2 md:mx-2 p-6 rounded-3xl bg-card
                     flex flex-col justify-center items-center 
-                    cursor-pointer shadow transition-shadow hover:shadow-hover"
+                     shadow transition-shadow hover:shadow-hover"
         >
           <div className="w-40 h-32 product-photo-1"></div>
           <div>
@@ -31,7 +31,7 @@ const ProductsCardsLp = () => {
         <div
           className="product--item md:w-1/3 w-9/12 mb-12 md:mb-2 md:mx-2 p-6 rounded-3xl bg-card
           flex flex-col justify-center items-center 
-          cursor-pointer shadow transition-shadow hover:shadow-hover"
+           shadow transition-shadow hover:shadow-hover"
         >
           <div className="w-40 h-32 product-photo-2"></div>
           <div>
@@ -44,7 +44,7 @@ const ProductsCardsLp = () => {
         <div
           className="product--item md:w-1/3 w-9/12 mb-12 md:mb-2 md:mx-2 p-6 rounded-3xl bg-card
                     flex flex-col justify-center items-center 
-                    cursor-pointer shadow transition-shadow hover:shadow-hover"
+                     shadow transition-shadow hover:shadow-hover"
         >
           <div className="w-40 h-32 product-photo-3 block"></div>
           <div>

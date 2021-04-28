@@ -36,7 +36,7 @@ const ProductCards = () => {
         {images.map((img, i) =>(
           <div key={i} className="lg:w-1/5 md:w-80 w-full md:mb-2 mb-12 md:mx-4 p-6 rounded bg-card
           flex flex-col justify-center items-center 
-          cursor-pointer shadow transition-shadow hover:shadow-hover"
+           shadow transition-shadow hover:shadow-hover"
             >
             <img src={img.src} alt={img.title} className="w-40 h-40" />
             
