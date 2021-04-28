@@ -6,7 +6,7 @@ import globalMoveImg from '../assets/offer_the_global_move.svg'  ;
 
 const ActionableInfoLp = () => {
   return (
-    <section className="bg-card py-3 px-8  rounded-3xl md:mx-12 mx-4 lg:absolute -bottom-80 inset-x-0">
+    <section className="bg-card py-3  container mx-auto rounded-3xl  mx-4 lg:absolute -bottom-80 inset-x-0">
       <h2 className="my-8 mx-auto text-center font-black">Actionable information on:</h2>
 
       <div className="my-0 sm:mx-12 mx-auto justify-between flex flex-wrap items-center">

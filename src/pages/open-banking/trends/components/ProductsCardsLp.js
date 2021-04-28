@@ -14,7 +14,7 @@ const ProductsCardsLp = () => {
   
   return (<>
     <section className="w-screen my-16 mx-auto py-8 ">
-      <div className="product-group my-0 md:mx-16 mx-2 py-0 px-3 flex md:flex-row flex-col justify-evenly items-center">
+      <div className="container mx-auto product-group my-0  py-0 px-3 flex md:flex-row flex-col justify-between items-center">
         <div
           className="product--item md:w-1/3 w-9/12 mb-12 md:mb-2 md:mx-2 p-6 rounded-3xl bg-card
                     flex flex-col justify-center items-center 

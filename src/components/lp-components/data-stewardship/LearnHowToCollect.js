@@ -29,7 +29,7 @@ const LearnHowToCollect = () => {
     },
   ]
   return (
-    <section className="px-8 py-6 md:mx-12 mx-4">
+    <section className="px-8 py-6 container mx-auto mx-4">
       <h4 className="my-4 mx-auto text-center font-black">
         Learn how to collect, manage, analyse and reuse data in ways that are
         ethical, responsible and participatory.

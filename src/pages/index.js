@@ -90,7 +90,7 @@ return(
                 <Link to={`/${post.node.slug}`}> {post.node.title}</Link>
               </h5>
               <span className="text-gray-600 mr-3 text-xs small-text mt-1">
-            Published {new Date(post.node.published_at).toDateString()}
+            Published {new Date(post.node.publishing_date).toDateString()}
           </span>
               <div className="text-gray-600 text-sm font-medium flex mb-4 mt-2">
                 <small className="text-xs mr-1">{`Writen by `} </small>
@@ -141,7 +141,7 @@ return(
     <WorkWithCards/>
 
     <GridDisplay
-      gridDisplayClass="bg-purple flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-center items-center"
+      gridDisplayClass="bg-purple flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
       gridContentClass="md:w-2/5"
       title="We publish analysis
       and insights"
@@ -176,7 +176,7 @@ export default IndexPage
 
 export const blogQuery = graphql`
 query HomepagePosts {
-  allStrapiPost(sort: {fields: published_at, order: DESC}, filter: {is_featured: {eq: true}}, limit: 3)  {
+  allStrapiPost(sort: {fields: publishing_date, order: DESC}, filter: {is_featured: {eq: true}}, limit: 3)  {
     edges {
       node {
         categories {
@@ -184,6 +184,7 @@ query HomepagePosts {
         }
         id
         slug
+        publishing_date
         published_at
         is_featured
         tags {

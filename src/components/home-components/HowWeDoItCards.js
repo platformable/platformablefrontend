@@ -33,7 +33,7 @@ const HowWeDoItCards = () => {
     },
   ]
   return (
-    <section className="cards-section my-6 mx-auto lg:pt-72 pb-8">
+    <section className="cards-section my-6 container mx-auto lg:pt-72 pb-8">
       <h2 className="text-center my-20 text-secondary font-black">How we do it</h2>
 
       <div className="my-0 md:mx-16 mx-2 py-0 px-4 flex flex-wrap flex-col sm:flex-row justify-evenly items-center">

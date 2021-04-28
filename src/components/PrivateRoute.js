@@ -1,8 +1,8 @@
 
-import React,{useContext,useState,useEffect} from "react"
+import React,{useContext} from "react"
 import { navigate } from "gatsby"
 import UserContext from '../context/UserContext'
-import { Router } from "@reach/router"
+
 
 const PrivateRoute = ({ component: Component, location, ...rest }) => {
 

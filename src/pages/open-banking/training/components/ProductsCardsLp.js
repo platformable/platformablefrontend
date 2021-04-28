@@ -2,12 +2,12 @@ import React from "react"
 
 const ProductsCardsLp = props => {
   return (
-    <section className="w-screen my-4 mx-auto py-8">
-      <div className="product-group my-0 md:mx-16 mx-2 py-0 px-3 md:flex  justify-evenly items-center">
+    <section className=" my-4  py-8">
+      <div className="container mx-auto product-group  my-0  py-0  md:flex  items-center">
         <div
           className="product--item md:w-1/3 w-full mb-12 md:mb-2 md:mx-2 p-6 rounded bg-card
                     flex flex-col justify-center items-center 
-                    cursor-pointer shadow transition-shadow hover:shadow-hover"
+                     shadow transition-shadow hover:shadow-hover"
         >
           <div className="w-40 h-40 product-photo-1"></div>
           <div>
@@ -22,7 +22,7 @@ const ProductsCardsLp = props => {
         <div
           className="product--item md:w-1/3 w-full mb-12 md:mb-20  md:mx-2 p-6 rounded bg-card
                     flex flex-col justify-center items-center 
-                    cursor-pointer shadow transition-shadow hover:shadow-hover"
+                     shadow transition-shadow hover:shadow-hover"
         >
           <div className="w-40 h-40 product-photo-2"></div>
           <div>
@@ -37,7 +37,7 @@ const ProductsCardsLp = props => {
         <div
           className="product--item md:w-1/3 w-full mb-12 md:mb-2 md:mx-2 p-6 rounded bg-card
                     flex flex-col justify-center items-center 
-                    cursor-pointer shadow transition-shadow hover:shadow-hover"
+                     shadow transition-shadow hover:shadow-hover"
         >
           <div className="w-40 h-40 product-photo-3 block"></div>
           <div>

@@ -30,9 +30,9 @@ const ProductCards = () => {
   ];
   
   return (
-    <section className="my-4 mx-auto py-6">
+    <section className="my-4 container mx-auto py-6">
       
-      <div className="my-0 mx-auto py-0 px-3 md:flex flex-wrap justify-center items-center">
+      <div className="my-0 mx-auto py-0 px-3 md:flex flex-wrap justify-between items-center">
         {images.map((img, i) =>(
           <div key={i} className="lg:w-1/5 md:w-80 w-full md:mb-2 mb-12 md:mx-4 p-6 rounded bg-card
           flex flex-col justify-center items-center 

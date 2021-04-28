@@ -1,6 +1,6 @@
 import React, { useState,useContext } from "react"
 import "../components/layout.css"
-import { Link,navigate } from "gatsby"
+import { Link,navigate, graphql } from "gatsby"
 import Loader from "../components/Loader"
 import axios from 'axios';
 import UserContext from '../context/UserContext'

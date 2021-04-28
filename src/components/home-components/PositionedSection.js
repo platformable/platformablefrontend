@@ -4,7 +4,7 @@ import ApiprovidersImg from '../../assets/home/home-apiproviders.png'
 import hometheyopenvaluesImg from '../../assets/home/home-theyopenvalues.png'
 
 /*assets*/
-import sectionImg from '../../assets/home/platform_approaches.png'
+// import sectionImg from '../../assets/home/platform_approaches.png'
 
 const PositionedSection = () => {
   return (

@@ -12,8 +12,8 @@ const GridDisplayLp = ({
   doNotDisplay,
 }) => {
   return (
-    <section id="gridDisplay" className={gridDisplayOrder}>
-      <div className="flex-1">
+    <section id="" className="grid md:grid-cols-2 grid-cols-1 container mx-auto py-10 my-10 justify-between items-center">
+      <div className=" ">
         <div>
           <h3 className="font-black">
             {title}&nbsp;
@@ -27,12 +27,14 @@ const GridDisplayLp = ({
         </div>
       </div>
 
+      <div className="grid justify-end">
       <img
         loading="lazy"
         src={backImg}
         alt="background"
-        className="flex-1 mt-5 sm:mt-0"
+        className=" mt-5 sm:mt-0"
       />
+      </div>
     </section>
   )
 }

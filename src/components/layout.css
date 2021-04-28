@@ -4354,3 +4354,9 @@ width:125px !important;
 .bg-lightPurple {
   background-color:#9686AE;
 }
+
+.top-featured-post-image {
+  max-width:300px;
+  height:auto;
+  text-align: center;
+}

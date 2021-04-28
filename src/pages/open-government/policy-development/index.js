@@ -50,10 +50,12 @@ const LPPolicyDevelopment = ({data}) => (
 
     <HowWeDoIt/>
     <ProductCards/>
-    <section className="mt-6 mx-auto py-6 px-5 bg-whitePurple">
+    <section className="mt-6  py-6 px-5 bg-whitePurple">
+      <div className="container mx-auto">
       <h2 className="text-center font-black">Current policy consultation opportunities</h2>
       <iframe src="https://airtable.com/embed/shrHdOaxfkJmBJUno?backgroundColor=red&viewControls=on" frameborder="0"  width="100%" height="533" className="my-8 mx-auto px-8">
       </iframe>
+      </div>
     </section>
 
 

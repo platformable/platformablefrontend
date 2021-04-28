@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext } from "react"
+import React, { useState, useContext } from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
 import { loadStripe } from "@stripe/stripe-js"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -97,8 +96,8 @@ export default function Dashboard() {
     }
   `)
 
-  const authorsData = data.allStrapiPost.edges[0].node.user
-  const connectedUserEmail = user.email
+  // const authorsData = data.allStrapiPost.edges[0].node.user
+  // const connectedUserEmail = user.email
 
   // useEffect(()=>{
   //   const getConnectedUserInfo =  (email)=>{

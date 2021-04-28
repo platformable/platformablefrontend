@@ -14,7 +14,7 @@ const [user,setUser]=useContext(UserContext)
   }
 
   return (
-    <section className="positionedSection bg-primary relative sm:mb-72 mb-8 w-auto lg:h-96">
+    <section className="positionedSection bg-primary   relative sm:mb-72 mb-8 w-auto lg:h-96">
       <CallToActionLp
       handleIsLoggedIn={handleIsLoggedIn}
       sectionClassName="mb-36 text-white text-center py-4 mx-auto py-6 self-center"

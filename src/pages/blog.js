@@ -2,12 +2,13 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
+import SEO from "../components/seo";
 
 export default function blogs({data}) {
 const authorsData = data.allStrapiPost.edges[0].node.user;
   return (
     <Layout>
-        
+        <SEO title="Blog"/>
       <div className="container mx-auto all-blog-content my-20 px-5">
       {/* <h3 className="text-3xl font-black text-center">
         Open Ecosytems
@@ -22,15 +23,17 @@ const authorsData = data.allStrapiPost.edges[0].node.user;
             <div class="item rounded bg-gray-100  shadow-lg mb-5">
               {/* Check if post has image, if we dont do the check netlify wont build */}
               {post.node.featured_image && post.node.featured_image ? (
+        
                 <Link to={`/${post.node.slug}`}>
                   <Img
                     alt={post.node.title}
                     key={post.node.featured_image.childImageSharp.fluid.src}
-                    imgStyle={{ objectFit: "contain" }}
+                     imgStyle={{ objectFit: "contain" }}
                     fluid={post.node.featured_image.childImageSharp.fluid}
                     className="mb-2"
                   />
                 </Link>
+          
               ) : (
                 ""
               )}
@@ -40,7 +43,7 @@ const authorsData = data.allStrapiPost.edges[0].node.user;
               </h5>
            
               <span className="text-gray-600 mr-3 text-xs small-text mt-1">
-            Published {new Date(post.node.published_at).toDateString()}
+            Published {new Date(post.node.publishing_date).toDateString()}
           </span>
                    {' '}
         
@@ -92,7 +95,7 @@ const authorsData = data.allStrapiPost.edges[0].node.user;
 
 export const blogQuery = graphql`
 query AllBlogPosts {
-  allStrapiPost(sort: {fields: published_at, order: DESC}) {
+  allStrapiPost(sort: {fields: publishing_date, order: DESC}) {
     edges {
       node {
         categories {
@@ -117,6 +120,7 @@ query AllBlogPosts {
           id
           username
         }
+        publishing_date
         published_at
         excerpt
       }

@@ -14,7 +14,7 @@ const SubscriptionPlans = props => {
    user.isLoggedIn ? navigate('/app/dashboard') : navigate('/login')
   }
   return (
-    <section className="subscription-section text-grayed my-8 mx-auto px-2">
+    <section className="subscription-section text-grayed my-8 container mx-auto px-2">
       <h2 className="text-primary text-center py-5 font-black">Subscription Plans</h2>
       <div className="plans-group flex flex-wrap flex-col md:flex-row justify-evenly text-center text-sm my-5">
 

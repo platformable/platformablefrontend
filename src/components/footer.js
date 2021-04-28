@@ -1,4 +1,4 @@
-import React,{useState,useContext} from 'react'
+import React,{useContext} from 'react'
 import {Link } from 'gatsby'
 import UserContext from "../context/UserContext"
 import Logo from '../images/logo.png'

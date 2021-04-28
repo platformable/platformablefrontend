@@ -41,7 +41,7 @@ const OpenBankingPosts = ({data}) => {
                 <Link to={`/${post.node.slug}`}> {post.node.title}</Link>
               </h5>
               <span className="text-gray-600 mr-3 text-xs small-text mt-1">
-            Published {new Date(post.node.published_at).toDateString()}
+            Published {new Date(post.node.publishing_date).toDateString()}
           </span>
               <div className="text-gray-600 text-sm font-medium flex mb-4 mt-2">
                 <small className="text-xs mr-1">{`Writen by `} </small>
@@ -110,6 +110,7 @@ query OpenBankingBlogPosts {
                 }
               }
             }
+            publishing_date
             published_at
             title
             updated_at

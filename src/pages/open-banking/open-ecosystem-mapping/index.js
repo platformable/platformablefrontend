@@ -21,7 +21,7 @@ export default function index({data}) {
     return (
        <Layout>
         <GridDisplay
-      gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-center items-center"
+      gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
       gridContentClass="md:w-2/5"
       title="Open Banking / Open Finance"
       subtitle="Open Ecosystem Mapping"
