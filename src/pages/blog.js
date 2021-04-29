@@ -18,7 +18,7 @@ const authorsData = data.allStrapiPost.edges[0].node.user;
                   key={post.node.featured_image.childImageSharp.fluid.src}>
 
                   <div className="blog-card--left-main-page">
-                    <img src={post.node.featured_image.childImageSharp.fluid.src}/>
+                    <img src={post.node.featured_image?post.node.featured_image.childImageSharp.fluid.src: ""}/>
                 
                     
                     </div>
