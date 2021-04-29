@@ -18,19 +18,9 @@ const authorsData = data.allStrapiPost.edges[0].node.user;
                   key={post.node.featured_image.childImageSharp.fluid.src}>
                   
                   <div className="blog-card--left-main-page">
-                  {/* {post.node.featured_image && post.node.featured_image ? (
-                <Link to={`/${post.node.slug}`}>
-                  <Img
-                    alt={post.node.title}
-                    key={post.node.featured_image.childImageSharp.fluid.src}
-                    imgStyle={{ objectFit: "contain" }}
-                    fluid={post.node.featured_image.childImageSharp.fluid}
-                    className="mb-2"
-                  />
-                </Link>
-              ) : (
-                ""
-              )} */}
+                  {post.node.featured_image && post.node.featured_image ?
+                   <Link to={`/${post.node.slug}`}> <img src={post.node.featured_image.childImageSharp.fluid.src }/></Link>
+                    : null}
                     </div>
                    
                     <div className="blog-card-right-main-page ">
