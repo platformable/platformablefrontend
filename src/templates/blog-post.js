@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet"
 import BlogPostAlertMessage from '../components/BlogPostAlertMessage'
 import PostContentComponent from '../components/PostContentComponent'
 import UserContext from '../context/UserContext'
-
+import { GatsbyImage } from "gatsby-plugin-image"
 
 
 
@@ -178,7 +178,7 @@ const getMembership = (subscription, isLoggedIn)=>{
               {/* <img src={data.strapiPost.featured_image.childImageSharp.fixed.src} className="text-center mb-5 center"/> */}
               <div style={{ width: '100%' }}>
               {data.strapiPost.featured_image && data.strapiPost.featured_image ?
-              <img src={data.strapiPost.featured_image.childImageSharp.fluid.src} className="text-center mb-5 center top-featured-post-image"/>
+              <img src={data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="text-center mb-5 center top-featured-post-image"/>
               : null}
               
               {/* <Img
@@ -228,12 +228,13 @@ const getMembership = (subscription, isLoggedIn)=>{
               alt=""
               className="h-full w-full my-0"
             /> */}
-                    <Img
+                    <img
                       alt={data.strapiPost.title}
                       key={index}
-                      fluid={user.image.childImageSharp.fluid}
+                      src={user.image.childImageSharp.gatsbyImageData.images.fallback.src}
                       className="h-full w-full my-0"
                     />
+                 
                   </div>
 
                   <h2 className="mt-4 font-bold text-xl">
@@ -273,9 +274,7 @@ export const query = graphql`
         username
         image {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
         position
@@ -283,9 +282,7 @@ export const query = graphql`
       updated_at
       featured_image {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       calendly

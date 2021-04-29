@@ -44,9 +44,7 @@ query OpenHealthBlogPosts {
             }
             featured_image {
               childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
             title

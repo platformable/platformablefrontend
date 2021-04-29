@@ -33,11 +33,11 @@ const AllPosts = ({data}) => {
                 {/* Check if post has image, if we dont do the check netlify wont build */}
               {post.node.featured_image && post.node.featured_image ? 
               <Link to={`/${post.node.slug}`}>
-              <Img 
+              <img 
               alt={post.node.title}
-              key={post.node.featured_image.childImageSharp.fluid.src}
+              key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
               imgStyle={{ objectFit: 'contain' }}
-              fluid={post.node.featured_image.childImageSharp.fluid} 
+              to={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} 
               className="mb-1"/>
               </Link>
               : ''}
@@ -130,9 +130,7 @@ query AllBloxPosts {
         }
         featured_image {
           childImageSharp {
-            fluid  {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
         title

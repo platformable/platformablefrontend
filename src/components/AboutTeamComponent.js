@@ -9,10 +9,10 @@ const AboutTeamComponent = ({img,position,name,lastname,bio,ind}) => {
           alt="People"
           class="w-full object-contain h-32 sm:h-48 md:h-64 my-0"
         /> */}
-        <Img 
+        <img 
         alt="Platformable.com"
         key={ind}
-        fluid={img} 
+        src={img} 
         
         className="w-full object-contain h-32 sm:h-48 md:h-64 my-0"/>
 

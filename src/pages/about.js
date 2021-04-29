@@ -71,7 +71,7 @@ export default function about({ data }) {
                   className=" pt-5 rounded overflow-hidden border-b-4 border-russian-violet-dark bg-gray-50 w-1/1"
                 >
                   <img
-                    src={x.image.childImageSharp.fluid.src}
+                    src={x.image.childImageSharp.gatsbyImageData.images.fallback.src}
                     alt="Platformable team"
                     className="w-full object-contain h-32 sm:h-48 md:h-64 my-0"
                   />
@@ -119,9 +119,7 @@ export const query = graphql`
           position
           image {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
           bio

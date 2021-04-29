@@ -15,11 +15,11 @@ const authorsData = data.allStrapiPost.edges[0].node.user;
   return (
  
                   <div className="blog-card-main-page flex flex-wrap  md:flex-nowrap bg-gray-50 shadow-md" alt={post.node.title}
-                  key={post.node.featured_image.childImageSharp.fluid.src}>
+                  key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}>
                   
                   <div className="blog-card--left-main-page">
                   {post.node.featured_image && post.node.featured_image ?
-                   <Link to={`/${post.node.slug}`}> <img src={post.node.featured_image.childImageSharp.fluid.src }/></Link>
+                   <Link to={`/${post.node.slug}`}> <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}/></Link>
                     : null}
                     </div>
                    
@@ -108,9 +108,7 @@ query AllBlogPosts {
         }
         featured_image {
           childImageSharp {
-            fluid  {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
         title

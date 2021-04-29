@@ -15,7 +15,7 @@ const AuthorPage = ({ data }) => {
          <div className="authors-page-left grid justify-center">
       {/* <img src={user.image.childImageSharp.fluid.src}/> */}
          {user.image && user.image ? (
-                <img src={user.image.childImageSharp.fluid.src}/>
+                <img src={user.image.childImageSharp.gatsbyImageData.images.fallback.src}/>
                   // <Img
                   //   alt={user.title}
                   //   key={user.image.childImageSharp.fluid}
@@ -59,11 +59,11 @@ const AuthorPage = ({ data }) => {
                    <Link to={`/${post.slug}`}>
                    {post.featured_image && post.featured_image ? (
                 <Link to={`/${post.slug}`}>
-                  <Img
+                  <img
                     alt={post.title}
-                    key={post.featured_image.childImageSharp.fluid.src}
+                    key={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
                     imgStyle={{ objectFit: "contain" }}
-                    fluid={post.featured_image.childImageSharp.fluid}
+                    src={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
                     className="w-full object-contain h-32 sm:h-48 md:h-64 my-0"
                   />
                 </Link>
@@ -97,9 +97,7 @@ query strapiAuthorPage($strapiId: Int){
     id
     image {
       childImageSharp {
-        fluid {
-          src
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     name
@@ -112,9 +110,7 @@ query strapiAuthorPage($strapiId: Int){
       title
       featured_image {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       excerpt

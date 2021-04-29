@@ -62,9 +62,7 @@ export default function Dashboard() {
             }
             featured_image {
               childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
             title
