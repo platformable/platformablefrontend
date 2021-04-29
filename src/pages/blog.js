@@ -16,12 +16,13 @@ const authorsData = data.allStrapiPost.edges[0].node.user;
  
                   <div className="blog-card-main-page flex flex-wrap  md:flex-nowrap bg-gray-50 shadow-md" alt={post.node.title}
                   key={post.node.featured_image.childImageSharp.fluid.src}>
-
+                  
                   <div className="blog-card--left-main-page">
-                    <img src={post.node.featured_image?post.node.featured_image.childImageSharp.fluid.src: ""}/>
-                
-                    
+                  {post.node.featured_image && post.node.featured_image ?
+                   <Link to={`/${post.node.slug}`}> <img src={post.node.featured_image.childImageSharp.fluid.src }/></Link>
+                    : ''}
                     </div>
+                   
                     <div className="blog-card-right-main-page ">
                     <h5 className="text-lg font-bold leading-5 mt-5">
                 <Link to={`/${post.node.slug}`}> {post.node.title}</Link>

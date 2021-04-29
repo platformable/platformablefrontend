@@ -177,8 +177,9 @@ const getMembership = (subscription, isLoggedIn)=>{
             <div className="post-featured-img  max-w-md grid justify-center center container">
               {/* <img src={data.strapiPost.featured_image.childImageSharp.fixed.src} className="text-center mb-5 center"/> */}
               <div style={{ width: '100%' }}>
+              {data.strapiPost.featured_image && data.strapiPost.featured_image ?
               <img src={data.strapiPost.featured_image.childImageSharp.fluid.src} className="text-center mb-5 center top-featured-post-image"/>
-              
+              : ''}
               
               {/* <Img
             alt={data.strapiPost.title}
