@@ -70,9 +70,15 @@ const data = {
 }
 
 
-export default function openBanking() {
+export default function openBanking({location}) {
+
+ 
+  const customCrumbLabel = location.pathname.toLowerCase().replace('-', ' ')
+
   return (
     <Layout>
+     
+ {/* <Breadcrumb crumbs={crumbs} crumbSeparator=" - " crumbLabel="Home" /> */}
       <div id="openBanking">
         <GridDisplay
         

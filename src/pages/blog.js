@@ -4,12 +4,19 @@ import Img from 'gatsby-image'
 import Layout from "../components/layout"
 import SEO from "../components/seo";
 
-export default function blogs({data}) {
+
+export default function blogs({data, location}) {
 const authorsData = data.allStrapiPost.edges[0].node.user;
   return (
     <Layout>
         <SEO title="Blog"/>
+        <section className="container mx-auto ">
+      <div className="my-10 px-5">
+
+      </div>
+      </section>
       <div className="container mx-auto all-blog-content my-20 px-5">
+   
       <div className="blog-cards-main-page-container">
 {data.allStrapiPost.edges.map((post,index)=>{
   return (

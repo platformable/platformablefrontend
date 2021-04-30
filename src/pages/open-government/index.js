@@ -36,8 +36,9 @@ const data = {
       {
         "img": OpenEcoIMg,
         "title": "Open Ecosystem\nMapping",
-        "paragraph": "Coming Soon",
-        "color": "#D8C1FB40"
+        "paragraph": "Analyse the open banking / open finance ecosystem from your perspective and gain actionable insights",
+        "color": "#D8C1FB40",
+        "url":"/open-government/open-ecosystem-mapping"
       },
       {
         "img": PlatFormImg,

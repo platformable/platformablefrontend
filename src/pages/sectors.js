@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import GridDisplay from "../components/shared-components/GridDisplay"
 /*specific-components*/
 import ProductStreamsCards from "../components/product-streams/ProductStreamsCards"
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
 /*assets*/
 import sectionHeroImg from "../assets/product-streams/home_hero.svg"
@@ -222,13 +223,19 @@ const data = {
 }
 
 
-const ProductStreams = props => {
+const ProductStreams = ({location}) => {
 
 
 
   return (
     <Layout>
       <SEO title="Sectors" />
+      <section className="container mx-auto ">
+      <div className="my-10 px-5">
+     
+      {/* <Breadcrumb location={location} crumbLabel=" Sectors"/> */}
+      </div>
+      </section>
 
       <GridDisplay
         gridDisplayClass="hero-section container flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-between items-center "

@@ -6,12 +6,16 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import EmbedContainer from "react-oembed-container"
 import sectionOneImg from "../assets/home/hero_squares.png"
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
-export default function about({ data }) {
+export default function about({ data,location }) {
   return (
     <Layout>
       <SEO title="About" />
+      
       <div className="container mx-auto my-10 px-5">
+     
+      {/* <Breadcrumb location={location} crumbLabel="About" /> */}
         <section>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4 items-center">
             <div>

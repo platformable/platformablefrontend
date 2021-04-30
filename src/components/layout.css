@@ -4272,6 +4272,31 @@ blockquote:after {
   color: var(--red-orange-dark);
 }
 
+.OG-anOpenEcosystemIs h3 {
+  color: var(--russian-violet-dark);
+}
+
+.OH-anOpenEcosystemIs {
+  background-color:#f5f7ff;
+}
+.bg-oh-open-ecosystem-mapping-audience {
+  background-color:#759bfe;
+}
+.oh-oem-our-process-vertical-line {
+  width: 1px;
+
+  height: 35px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+background-color:#759bfe;
+}
+
+.oh-oem-anOpenEcosystemis {
+color:#003fff;
+}
+
+
 /* --------------------------------------------------------------------------
      13.Footer
      -------------------------------------------------------------------------- */
@@ -4377,4 +4402,27 @@ width:125px !important;
   object-fit:cover;
   border-top-left-radius:20px;
   border-bottom-left-radius:20px;
+}
+
+.breadcrumb__list{
+  display:flex;
+  font-size:12px;
+  color:#333;
+  }
+  
+.breadcrumb__link__active {
+color:var(--russian-violet-dark);
+font-weight:bold;
+}
+
+.bg-lavender-blue-dark {
+  background-color:var(--lavender-blue-dark)
+}
+
+.bg-lavender-blue-light{
+  background-color:var(--lavender-blue-light)
+}
+
+.bg-oh-openecosystemTools {
+  background-color:#759bfe;
 }

@@ -7,7 +7,8 @@ module.exports = {
     title: `Platformable`,
     description: `We build tools.`,
     author: `@platformable`,
-    siteUrl:`https://www.platformable.com`
+    // siteUrl:`https://www.platformable.com`
+    siteUrl:`http://localhost:8000`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -136,6 +137,7 @@ module.exports = {
         sitemap: 'https://www.platformable.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/',disallow: ['/app','/app/*'] }]
       }
-    }
+    },
+    
   ],
 }
