@@ -18,19 +18,17 @@ const Image = () => {
     query {
       placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
   `)
 
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
+  if (!data?.placeholderImage?.childImageSharp?.gatsbyImageData.images.fallback.src) {
     return <div>Picture not found</div>
   }
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.gatsbyImageData.images.fallback.src} />
 }
 
 export default Image

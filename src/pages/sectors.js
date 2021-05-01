@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import GridDisplay from "../components/shared-components/GridDisplay"
 /*specific-components*/
 import ProductStreamsCards from "../components/product-streams/ProductStreamsCards"
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+
 
 /*assets*/
 import sectionHeroImg from "../assets/product-streams/home_hero.svg"

@@ -50,9 +50,7 @@ query strapiPage($slug: String!){
       id
       featured_image {
         childImageSharp {
-          fluid {
-            src
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       slug

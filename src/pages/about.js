@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import EmbedContainer from "react-oembed-container"
 import sectionOneImg from "../assets/home/hero_squares.png"
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+
 
 export default function about({ data,location }) {
   return (

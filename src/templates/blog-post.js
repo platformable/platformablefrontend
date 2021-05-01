@@ -175,19 +175,11 @@ const getMembership = (subscription, isLoggedIn)=>{
           <div className="posts-content py-10">
             {data.strapiPost.featured_image && data.strapiPost.featured_image ? 
             <div className="post-featured-img  max-w-md grid justify-center center container">
-              {/* <img src={data.strapiPost.featured_image.childImageSharp.fixed.src} className="text-center mb-5 center"/> */}
               <div style={{ width: '100%' }}>
               {data.strapiPost.featured_image && data.strapiPost.featured_image ?
               <img src={data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="text-center mb-5 center top-featured-post-image"/>
               : null}
-              
-              {/* <Img
-            alt={data.strapiPost.title}
-            key={data.strapiPost.featured_image.childImageSharp.fluid.src}
-            imgStyle={{ maxWidth: "300px", height:"auto"}}
-            fluid={data.strapiPost.featured_image.childImageSharp.fluid}
-            className=""
-          /> */}
+            
           
           </div>
           </div>
