@@ -1,7 +1,6 @@
 import React from "react"
 import { Link,graphql } from "gatsby"
 import Layout from "../../components/layout"
-import Img from 'gatsby-image'
 import SEO from "../../components/seo"
 
 const AuthorPage = ({ data }) => {
@@ -9,7 +8,7 @@ const AuthorPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={`${user.name}`}/>
+      <SEO title="Author"/>
       <div className="container mx-auto">
        
        

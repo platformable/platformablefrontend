@@ -1,6 +1,5 @@
 import React, { useEffect,useState, useRef,useContext } from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import EmbedContainer from "react-oembed-container"
 import { InlineWidget } from "react-calendly";

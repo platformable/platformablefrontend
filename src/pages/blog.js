@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -24,19 +24,13 @@ export default function blogs({ data, location }) {
                       {post.node.featured_image && post.node.featured_image ? (
                         <Link to={`/${post.node.slug}`}>
                           {" "}
-                          <img
-                            src={
-                              post.node.featured_image.childImageSharp
-                                .gatsbyImageData.images.fallback.src
-                            }
-                            className="block object-contain h-48 w-full"
-                          />
+                          <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="block object-contain h-48 w-full"/>
                         </Link>
                       ) : null}
                     </div>
-                    <h5 className="text-lg font-bold leading-5 mt-5">
+                    <Link to={post.node.title}><h5 className="text-lg font-bold leading-5 mt-5">
                       {post.node.title}
-                    </h5>
+                    </h5></Link>
                     <span className="text-gray-600 mr-3 small-text mt-1">
                       Published{" "}
                       {new Date(post.node.publishing_date).toDateString()}
@@ -92,20 +86,13 @@ while (index > 3) {
               <div
                 className="blog-card-main-page flex flex-wrap  p-5 md:p-0 md:flex-nowrap bg-gray-50 shadow-md"
                 alt={post.node.title}
-                key={
-                  post.node.featured_image.childImageSharp.gatsbyImageData
-                    .images.fallback.src
-                }
+                key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
               >
                 <div className="blog-card--left-main-page">
                   {post.node.featured_image && post.node.featured_image ? (
                     <Link to={`/${post.node.slug}`}>
                       {" "}
-                      <img
-                        src={
-                          post.node.featured_image.childImageSharp
-                            .gatsbyImageData.images.fallback.src
-                        }
+                      <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
                       />
                     </Link>
                   ) : null}
@@ -160,11 +147,7 @@ while (index > 3) {
             )}
           })}
         </div>
-        {/* <h3 className="text-3xl font-black text-center">
-        Open Ecosytems
-      </h3>
-      <h3 className="text-1xl font-black text-center mb-10">Posts and Articles</h3> */}
-        {/* blog CARD START HERE */}
+
       </div>
     </Layout>
   )
