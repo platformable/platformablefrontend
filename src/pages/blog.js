@@ -92,8 +92,7 @@ while (index > 3) {
                   {post.node.featured_image && post.node.featured_image ? (
                     <Link to={`/${post.node.slug}`}>
                       {" "}
-                      <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                      />
+                      <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}/>
                     </Link>
                   ) : null}
                 </div>
