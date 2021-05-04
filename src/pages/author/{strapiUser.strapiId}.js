@@ -17,8 +17,6 @@ const AuthorPage = ({ data }) => {
      
          {user.image && user.image ? (
                 <img src={user.image.childImageSharp.gatsbyImageData.images.fallback.src}/>
-                 
-                
               ) : (
                 ""
               )}
@@ -40,33 +38,39 @@ const AuthorPage = ({ data }) => {
         <div className="masonry">
           {user.posts.map(post=> {
 
-            return (
-        <>       
-                 
-                
-                   <div className="item rounded bg-gray-100  shadow-lg mb-5">
-                   <Link to={`/${post.slug}`}>
-                   {post.featured_image && post.featured_image ? (
-                <Link to={`/${post.slug}`}>
-                  <img
-                    alt={post.title}
-                    key={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    imgStyle={{ objectFit: "contain" }}
-                    src={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    className="w-full object-contain h-32 sm:h-48 md:h-64 my-0"
-                  />
-                </Link>
-              ) : (
-                ""
-              )}
-                     
-                     <h5 className="text-lg font-bold leading-5 my-5">{post.title}</h5>
-                     </Link>
-                   </div>
-                 
-                
-            </>
-            )
+            if(post.authors_page===true){
+              return (
+                <>       
+                         
+                        
+                           <div className="item rounded bg-gray-100  shadow-lg mb-5">
+                           <Link to={`/${post.slug}`}>
+                           {post.featured_image && post.featured_image ? (
+                        <Link to={`/${post.slug}`}>
+                          <img
+                            alt={post.title}
+                            key={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
+                            imgStyle={{ objectFit: "contain" }}
+                            src={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
+                            className="w-full object-contain h-32 sm:h-48 md:h-64 my-0"
+                          />
+                        </Link>
+                      ) : (
+                        ""
+                      )}
+                             
+                             <h5 className="text-lg font-bold leading-5 my-5">{post.title}</h5>
+                             </Link>
+                           </div>
+                         
+                        
+                    </>
+                    )
+            } else {
+              return 
+            }
+
+            
           })}
         </div>
         </section>
@@ -83,7 +87,6 @@ export const query = graphql`
 query strapiAuthorPage($strapiId: Int){
   strapiUser(
     strapiId: {eq: $strapiId}
-    posts: {elemMatch: {authors_page: {eq: true}}}
     ) {
     bio
     id
