@@ -50,7 +50,6 @@ const AuthorPage = ({ data }) => {
                           <img
                             alt={post.title}
                             key={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                            imgStyle={{ objectFit: "contain" }}
                             src={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
                             className="w-full object-contain h-32 sm:h-48 md:h-64 my-0"
                           />
@@ -85,9 +84,7 @@ const AuthorPage = ({ data }) => {
 
 export const query = graphql`
 query strapiAuthorPage($strapiId: Int){
-  strapiUser(
-    strapiId: {eq: $strapiId}
-    ) {
+  strapiUser(strapiId: {eq: $strapiId}) {
     bio
     id
     image {
