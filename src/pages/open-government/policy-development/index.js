@@ -74,7 +74,6 @@ const LPPolicyDevelopment = ({data}) => (
                   <img
                     alt={post.node.title}
                     key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    imgStyle={{ objectFit: "contain" }}
                     src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
                     className="mb-2"
                   />

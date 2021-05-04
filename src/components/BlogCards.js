@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import Img from 'gatsby-image'
+
 
 export default function BlogCards({data}) {
     // const authorsData = data.allStrapiPost.edges[0].node.user;
@@ -16,8 +16,7 @@ export default function BlogCards({data}) {
                 <Link to={`/${post.node.slug}`}>
                   <img
                     alt={post.node.title}
-                    key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    imgStyle={{ objectFit: "contain" }}
+                    key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}            
                     src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
                     className="mb-2"
                   />

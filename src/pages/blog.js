@@ -28,7 +28,7 @@ export default function blogs({ data, location }) {
                         </Link>
                       ) : null}
                     </div>
-                    <Link to={post.node.title}><h5 className="text-lg font-bold leading-5 mt-5">
+                    <Link to={`/${post.node.slug}`}><h5 className="text-lg font-bold leading-5 mt-5">
                       {post.node.title}
                     </h5></Link>
                     <span className="text-gray-600 mr-3 small-text mt-1">

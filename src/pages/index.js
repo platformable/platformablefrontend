@@ -1,6 +1,6 @@
 import React from "react"
 import {Link, graphql} from 'gatsby'
-import Img from "gatsby-image"
+
 /*shared-components*/
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -77,7 +77,6 @@ return(
                   <img
                     alt={post.node.title}
                     key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    imgStyle={{ objectFit: "contain" }}
                     src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
                     className="mb-2"
                   />

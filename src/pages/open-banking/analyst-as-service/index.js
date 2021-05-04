@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link,graphql} from 'gatsby'
-import Img from 'gatsby-image'
 import Layout from '../../../components/layout'
 import GridDisplay from '../../../components/shared-components/GridDisplay'
 import HowWeWork from '../../../components/lp-components/open-banking/analyst-as-service/howWeWork'
@@ -63,7 +62,6 @@ export default function index({data,location}) {
                   <img
                     alt={post.node.title}
                     key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    imgStyle={{ objectFit: "contain" }}
                     src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
                     className="mb-2"
                   />

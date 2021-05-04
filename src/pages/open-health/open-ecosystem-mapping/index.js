@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link, graphql} from 'gatsby'
 import SEO from '../../../components/seo'
-import Img from 'gatsby-image'
 import Layout from '../../../components/layout'
 import GridDisplay from '../../../components/shared-components/GridDisplay'
 import HowWeWork from '../../../components/lp-components/open-health/open-ecosystem-mapping/howWeWork'
@@ -149,7 +148,6 @@ tools (APIs) and data infrastructures.</p>
                   <img
                     alt={post.node.title}
                     key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    imgStyle={{ objectFit: "contain" }}
                     src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
                     className="mb-2"
                   />
