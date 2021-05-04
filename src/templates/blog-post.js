@@ -114,21 +114,21 @@ const getMembership = (subscription, isLoggedIn)=>{
         </Helmet>
         <SEO title={data.strapiPost.title}/>
         <section className="posts-container mx-auto all-blog-content my-5 sm:my-20 px-5">
-          <h3 className="text-1xl sm:text-3xl font-black mb-3">
+          <h3 className="text-3xl sm:text-3xl font-black mb-3">
             {data.strapiPost.title}
           </h3>
       
           <div className="autor flex flex-wrap items-start">
             <div className="autores flex  ">
               <div className="autorInfo flex items-start">
-                <h2 className="text-sm tracking-tighter text-gray-900">
-                  By{" "}
+                {/* <h2 className="text-sm tracking-tighter text-gray-900"> */}
+            
                   {data.strapiPost.user.length === 1 ? (
                     <>
                       <Link 
                       to={`/author/${data.strapiPost.user[0].id}`}
                       className="hover:text-black transition duration-300 ease-in-out text-xs mr-1">
-                        {data.strapiPost.user[0].username}
+                      <h2 className="text-sm tracking-tighter text-gray-900">By {data.strapiPost.user[0].username}</h2> 
                       </Link>{" "}
                     </>
                   ) : data.strapiPost.user.length > 1 ? (
@@ -147,7 +147,7 @@ const getMembership = (subscription, isLoggedIn)=>{
                       </>
                     ))
                   ) : null}
-                </h2>
+                {/* </h2> */}
               </div>
             </div>
             {/* LOAD CATEGORIES */}

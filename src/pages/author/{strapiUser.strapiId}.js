@@ -2,12 +2,14 @@ import React from "react"
 import { Link,graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Img from 'gatsby-image'
+import SEO from "../../components/seo"
 
 const AuthorPage = ({ data }) => {
   const user = data.strapiUser;
 
   return (
     <Layout>
+      <SEO title={`${user.name}`}/>
       <div className="container mx-auto">
        
        
@@ -34,7 +36,7 @@ const AuthorPage = ({ data }) => {
 
 
       <section className="blog-cards px-5 md:px-0">
-        <h3 className="text-center font-black mt-14">{`Posts`}</h3>
+        <h3 className="text-center font-black mt-14">Posts</h3>
         <div className="bottom-line"></div>
         <div className="masonry">
           {user.posts.map(post=> {
@@ -80,7 +82,10 @@ const AuthorPage = ({ data }) => {
 
 export const query = graphql`
 query strapiAuthorPage($strapiId: Int){
-  strapiUser(strapiId: {eq: $strapiId}) {
+  strapiUser(
+    strapiId: {eq: $strapiId}
+    posts: {elemMatch: {authors_page: {eq: true}}}
+    ) {
     bio
     id
     image {
@@ -102,6 +107,7 @@ query strapiAuthorPage($strapiId: Int){
         }
       }
       excerpt
+      authors_page
     }
   }
   }
