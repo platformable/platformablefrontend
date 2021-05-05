@@ -17,7 +17,7 @@ export default function blogs({ data, location }) {
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
           {data?data.allStrapiPost.edges.map((post, index) => {
             
-            while (index < 3 && post.node.staging !=true) {
+            while (index < 3 && post.node.staging ===false) {
               return (
                 <>
                   <div className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
@@ -82,7 +82,7 @@ export default function blogs({ data, location }) {
         <div className="blog-cards-main-page-container">
           {data?data.allStrapiPost.edges.map((post, index) => {
 
-while (index > 2 && post.node.staging !=true) {
+while (index > 2 && post.node.staging ===false) {
             return (
               <div
                 className="blog-card-main-page flex flex-wrap  p-5 md:p-0 md:flex-nowrap bg-gray-50 shadow-md"

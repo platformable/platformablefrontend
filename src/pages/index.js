@@ -68,7 +68,7 @@ return(
     {/* TOP LATESTS 3 POSTS */}
     <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
           {data?data.allStrapiPost.edges.map((post, index) => {
-            while (index < 3) {
+            while (index < 3 && post.node.staging===false) {
               return (
                 <>
                   <div className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
@@ -183,6 +183,7 @@ query HomepagePosts {
         }
         id
         slug
+        staging
         publishing_date
         published_at
         is_featured

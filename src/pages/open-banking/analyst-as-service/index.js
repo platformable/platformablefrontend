@@ -52,8 +52,8 @@ export default function index({data,location}) {
           
     {/* TOP LATESTS 3 POSTS */}
     <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-          {data.allStrapiPost.edges.map((post, index) => {
-            while (index < 3) {
+          {data?data.allStrapiPost.edges.map((post, index) => {
+            while (index < 3 && post.node.staging ===false) {
               return (
                 <>
                   <div className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
@@ -112,7 +112,7 @@ export default function index({data,location}) {
                 </>
               )
             }
-          })}
+          }):null}
         </div>
 
 
@@ -158,6 +158,7 @@ query AnalystPagePosts {
           }
         }
         title
+        staging
         updated_at
         user {
           id

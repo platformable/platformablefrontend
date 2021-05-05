@@ -64,8 +64,8 @@ const LPPolicyDevelopment = ({data}) => (
     <div className="blog-cards container mx-auto all-blog-content my-20 px-5">
       <h3 className="text-center font-black my-5 text-white">{`See our recent submissions\n and contribute to our next response`}</h3>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-          {data.allStrapiPost.edges.map((post, index) => {
-            while (index < 3) {
+          {data?data.allStrapiPost.edges.map((post, index) => {
+            while (index < 3 && post.node.staging ===false) {
               return (
                 <>
                   <div className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
@@ -124,7 +124,7 @@ const LPPolicyDevelopment = ({data}) => (
                 </>
               )
             }
-          })}
+          }):null}
         </div>
         </div>
 
@@ -156,6 +156,7 @@ query OGPolicyPostIndex {
         }
         id
         slug
+        staging
         is_featured
         tags {
           name
