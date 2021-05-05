@@ -76,11 +76,11 @@ export default function blogs({ data, location }) {
                 </>
               )
             }
-          }):""}
+          }):null}
         </div>
 
         <div className="blog-cards-main-page-container">
-          {data.allStrapiPost.edges.map((post, index) => {
+          {data?data.allStrapiPost.edges.map((post, index) => {
 
 while (index > 2 && post.node.staging !=true) {
             return (
@@ -145,7 +145,7 @@ while (index > 2 && post.node.staging !=true) {
                 </div>
               </div>
             )}
-          })}
+          }):null}
         </div>
 
       </div>
