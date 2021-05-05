@@ -76,7 +76,7 @@ export default function blogs({ data, location }) {
                 </>
               )
             }
-          }):null}
+          }):""}
         </div>
 
         <div className="blog-cards-main-page-container">

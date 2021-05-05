@@ -31,7 +31,7 @@
     "gatsby-source-strapi": "0.0.12",
     "gatsby-source-stripe": "^3.2.2",
     "gatsby-transformer-remark": "^4.0.0",
-    "gatsby-transformer-sharp": "^3.4.0",
+    "gatsby-transformer-sharp": "3.4.0",
     "postcss": "^8.2.4",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

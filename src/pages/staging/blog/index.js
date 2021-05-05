@@ -82,7 +82,7 @@ while (post.node.staging ===true) {
                 </div>
               </div>
             )}
-          }):null}
+          }):""}
         </div>
 
       </div>
