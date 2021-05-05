@@ -8,7 +8,6 @@ module.exports = {
     description: `We build tools.`,
     author: `@platformable`,
     siteUrl:`https://www.platformable.com`
-    //siteUrl:`http://localhost:8000`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,15 +25,9 @@ module.exports = {
         path: `${__dirname}/src/pdf`,
       },
     },
-    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-sharp`,
-      options: {
-        // The option defaults to true
-        checkSupportedExtensions: true,
-      },
-    },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
