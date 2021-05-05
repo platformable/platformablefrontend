@@ -15,7 +15,7 @@ export default function blogs({ data, location }) {
       <div className="container mx-auto all-blog-content my-20 px-5">
         {/* TOP LATESTS 3 POSTS */}
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-          {data.allStrapiPost.edges.map((post, index) => {
+          {data?data.allStrapiPost.edges.map((post, index) => {
             while (index < 3) {
               return (
                 <>
@@ -75,7 +75,7 @@ export default function blogs({ data, location }) {
                 </>
               )
             }
-          })}
+          }):null}
         </div>
 
         <div className="blog-cards-main-page-container">
