@@ -17,7 +17,7 @@ export default function StagingBlogs({ data, location }) {
         
 
         <div className="blog-cards-main-page-container">
-          {data.allStrapiPost.edges.map((post, index) => {
+          {data?data.allStrapiPost.edges.map((post, index) => {
 
 while (post.node.staging ===true) {
             return (
@@ -82,7 +82,7 @@ while (post.node.staging ===true) {
                 </div>
               </div>
             )}
-          })}
+          }):null}
         </div>
 
       </div>
