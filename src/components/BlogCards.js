@@ -22,7 +22,7 @@ export default function BlogCards({data}) {
                   />
                 </Link>
               ) : (
-                ""
+                null
               )}
 
               <h5 className="text-lg font-bold leading-5">
