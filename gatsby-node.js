@@ -62,7 +62,7 @@ exports.sourceNodes = ({actions})=> {
     featured_image: String
   } 
 
-  type AllStrapiPost implements Node {
+  type allStrapiPost implements Node {
     featured_image: String
   } 
   `
