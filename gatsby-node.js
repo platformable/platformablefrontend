@@ -59,7 +59,7 @@ exports.sourceNodes = ({actions})=> {
 
   type StrapiPost implements Node {
     slug: String
-    featured_image: String
+  
   } 
 
   `
