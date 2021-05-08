@@ -6,6 +6,9 @@ import SEO from "../components/seo"
 
 export default function blogs({ data, location }) {
   // const authorsData = data.allStrapiPost.edges[0].node.user;
+  const noStagingPosts = data?data.allStrapiPost.edges.filter(post=>post.node.staging !=true):" ";
+
+
   return (
     <Layout>
       <SEO title="Blog" />
@@ -15,7 +18,7 @@ export default function blogs({ data, location }) {
       <div className="container mx-auto all-blog-content my-20 px-5">
         {/* TOP LATESTS 3 POSTS */}
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-          {data?data.allStrapiPost.edges.map((post, index) => {
+          {data?noStagingPosts.map((post, index) => {
             
             while (index < 3 && post.node.staging ===false) {
               return (
@@ -80,7 +83,7 @@ export default function blogs({ data, location }) {
         </div>
 
         <div className="blog-cards-main-page-container">
-          {data?data.allStrapiPost.edges.map((post, index) => {
+          {data?noStagingPosts.map((post, index) => {
 
 while (index > 2 && post.node.staging ===false) {
             return (

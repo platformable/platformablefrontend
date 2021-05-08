@@ -77,7 +77,7 @@ const getMembership = (subscription, isLoggedIn)=>{
   function getScripts () {
  // get all script tags from content
  const re = /<script\b[^>]*>[\s\S]*?<\/script\b[^>]*>/g
- const results = setScripts(data?data.strapiPost.content.match(re):" ")
+ const results = data.strapiPost.content? setScripts(data.strapiPost.content.match(re)): " ";
  
  return results
   }
