@@ -16,7 +16,7 @@ import KpiImg from "../../../assets/oh-data-governance/kpi.png"
 import AutomatedImg from "../../../assets/oh-data-governance/automated.png"
 import blackHealthImg from "../../../assets/lp-data_stewardship/black_health.svg"
 import SEO from "../../../components/seo"
-
+import Breadcrumbs from '../../../components/breadcrumbs'
 const datas = {
   "dataGovernance": {
     data: [
@@ -81,9 +81,10 @@ const tools = [
 
 ]
 
-export default function index() {
+export default function index({location}) {
   return (
     <Layout>
+      <Breadcrumbs location={location}/>
       <SEO title="Data Governance"/>
       <section className="hero-data-governance py-10">
         <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 items-center px-5 ">

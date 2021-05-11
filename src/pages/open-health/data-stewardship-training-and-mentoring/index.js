@@ -13,13 +13,13 @@ import CourseStructure from './../../../components/lp-components/data-stewardshi
 import sectionOneImg from "../../../assets/lp-data_stewardship/data_stewardship_training_and_mentoring.svg"
 import buildImg from "../../../assets/lp-training/build_your_knowledge.svg"
 import blackHealthImg from "../../../assets/lp-data_stewardship/black_health.svg"
+import Breadcrumbs from '../../../components/breadcrumbs'
 
 
-
-const LPDataStewardship = props => (
+const LPDataStewardship = ({location}) => (
   <Layout>
     <SEO title="Home" />
-
+    <Breadcrumbs location={location}/>
     <GridDisplay
       gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
       gridContentClass="md:w-2/5"

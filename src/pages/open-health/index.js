@@ -16,7 +16,7 @@ import OpenEcoIMg from '../../assets/product-streams/open_ecosystem_mapping.svg'
 import PlatFormImg from '../../assets/product-streams/platform_mindset_training_for_banks.svg'
 import QuarterlyImg from '../../assets/product-streams/quarterly_trends_report.svg'
 import StateImg from '../../assets/product-streams/state_of_the_market_reports.svg'
-
+import Breadcrumbs from '../../components/breadcrumbs'
 const data = {
   "OpenHealth": {
     "elements": [
@@ -65,9 +65,10 @@ const data = {
   
 }
 
-export default function openHealth() {
+export default function openHealth({location}) {
     return (
         <Layout>
+          <Breadcrumbs location={location}/>
             <div id="openHealth">
 
         <GridDisplay

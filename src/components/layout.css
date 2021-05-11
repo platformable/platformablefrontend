@@ -4443,3 +4443,12 @@ font-weight:bold;
 .bg-oh-openecosystemTools {
   background-color:#759bfe;
 }
+
+/* BASIC TABLE FROM STRAPI */
+/* table tbody tr th {
+  background-color: #f8f8f8;
+  border:1px solid gray;
+  padding:10px;
+  font-size:14px;
+  
+  } */

@@ -11,14 +11,15 @@ import PostsCards from "../../../components/home-components/PostsCards"
 import Potential from "../../../components/lp-components/policy-development/Potential"
 import ProductCards from '../../../components/lp-components/policy-development/ProductCards';
 import HowWeDoIt from '../../../components/lp-components/policy-development/HowWeDoIt';
-
+import Breadcrumbs from '../../../components/breadcrumbs'
 /*assets*/
 import sectionOneImg from "../../../assets/lp-policy_development/policy_development _and_advocacy_services.svg"
 
 
 
-const LPPolicyDevelopment = ({data}) => (
+const LPPolicyDevelopment = ({data,location}) => (
   <Layout>
+    <Breadcrumbs location={location}/>
     <SEO title="Policy Development" />
     <section className="hero-data-governance py-10">
         <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 items-center px-5 ">

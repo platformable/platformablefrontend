@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState,useEffect} from "react"
 import { Link } from "gatsby"
 // import data from "../../data/product-stream/data.json"
 import GridDisplay from "../../components/shared-components/GridDisplay"
@@ -15,7 +15,7 @@ import OpenEcoIMg from '../../assets/product-streams/open_ecosystem_mapping.svg'
 import PlatFormImg from '../../assets/product-streams/platform_mindset_training_for_banks.svg'
 import QuarterlyImg from '../../assets/product-streams/quarterly_trends_report.svg'
 import StateImg from '../../assets/product-streams/state_of_the_market_reports.svg'
-
+import Breadcrumbs from '../../components/breadcrumbs'
 
 
 const data = {
@@ -70,13 +70,14 @@ const data = {
 }
 
 
-export default function openBanking({location}) {
+export default function OpenBanking({location}) {
+  
 
- 
-  const customCrumbLabel = location.pathname.toLowerCase().replace('-', ' ')
 
   return (
     <Layout>
+      <Breadcrumbs location={location}/>
+     
      
  {/* <Breadcrumb crumbs={crumbs} crumbSeparator=" - " crumbLabel="Home" /> */}
       <div id="openBanking">

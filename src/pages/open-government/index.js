@@ -14,7 +14,7 @@ import OpenEcoIMg from '../../assets/product-streams/open_ecosystem_mapping.svg'
 import PlatFormImg from '../../assets/product-streams/platform_mindset_training_for_banks.svg'
 import QuarterlyImg from '../../assets/product-streams/quarterly_trends_report.svg'
 import StateImg from '../../assets/product-streams/state_of_the_market_reports.svg'
-
+import Breadcrumbs from '../../components/breadcrumbs'
 const data = {
   
   "OpenGovernement": {
@@ -62,9 +62,11 @@ const data = {
   },
 }
 
-export default function openGovernment() {
+export default function openGovernment({location}) {
     return (
         <Layout>
+          <Breadcrumbs location={location}/>
+          
            <div id="openGovernment">
         <GridDisplay
           gridDisplayClass="flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center "

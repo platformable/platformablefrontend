@@ -14,11 +14,12 @@ import q4Img from "../../../assets/lp_latest_trend_report/q4_to-be_released.svg"
 import q2RelImg from "../../../assets/lp_latest_trend_report/q2.svg"
 import q3RelImg from "../../../assets/lp_latest_trend_report/q3.svg"
 import q4RelImg from "../../../assets/lp_latest_trend_report/q4.svg"
+import Breadcrumbs from '../../../components/breadcrumbs'
 
 
-
-const LPLatestTrend = props => (
+const LPLatestTrend = ({location}) => (
   <Layout>
+    <Breadcrumbs location={location}/>
     <SEO title="Latest Trends" />
 
     <GridDisplay

@@ -7,11 +7,13 @@ import FourHorizontalCircles from '../../../components/lp-components/open-bankin
 import AnalistAsServiceTitle from '../../../assets/ob-analyst-as-service/ANalyst as a Service Title.svg'
 import HowToHire from '../../../components/lp-components/open-banking/analyst-as-service/HowToHire'
 import Form from '../../../components/shared-components/Form'
+import Breadcrumbs from '../../../components/breadcrumbs'
 export default function index({data,location}) {
+
     const authorsData = data?data.allStrapiPost.edges[0].node.user :null
     return (
        <Layout>
-
+        <Breadcrumbs location={location}/>
          {/* <section className="mainHero py-20">
            <div className="container mx-auto flex">
           <div className="heroLeft">

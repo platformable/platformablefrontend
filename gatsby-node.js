@@ -23,7 +23,7 @@ exports.createPages = ({ actions, graphql }) => {
   
   const getPosts = makeRequest(graphql, `
     {
-      allStrapiPost {
+      allStrapiPost(sort: { fields: publishing_date, order: DESC }) {
         edges {
           node {
             id
@@ -35,12 +35,16 @@ exports.createPages = ({ actions, graphql }) => {
     }
     `).then(result => {
     // Create pages for each article.
-    result.data.allStrapiPost.edges.forEach(({ node }) => {
+    const posts= result.data.allStrapiPost.edges;
+
+    posts.forEach(({ node }, index) => {
       createPage({
         path: `/${node.slug}`,
         component: path.resolve(`src/templates/blog-post.js`),
         context: {
-          slug:node.slug
+          slug:node.slug,
+          prev: index===0  ? null : posts[index-1].node,
+          next: index ===(posts.length -1) ? null : posts[index +1].node
         },
       })
     })

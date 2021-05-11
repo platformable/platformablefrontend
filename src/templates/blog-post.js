@@ -12,18 +12,27 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext,location }) => {
+  console.log('pageContext',pageContext)
+  console.log('location',location)
+  const {next,prev} = pageContext;
   const [user,setUser] = useContext(UserContext)
   const [scripts,setScripts] = useState([])
   const [update,setUpdate]=useState(false);
   const [category,setCategory]=useState('');
+  const [urls,setUrls]=useState([])
 
 
-
+  const getLocations = (location)=> {
+    const url = location.href;
+    const getUrls = url.split(/[/]/);
+    const pathnames = getUrls.splice(3,getUrls.length-1)
+    setUrls(pathnames)
+  }
   
 
   useEffect(() => {
-    
+    getLocations(location)
     const loggedInUser = localStorage.getItem("user");
     if(typeof window !==`undefined`) {
       if (loggedInUser) {
@@ -106,6 +115,20 @@ const getMembership = (subscription, isLoggedIn)=>{
   return (
     <>
       <Layout>
+        <section className="container mx-auto p-5">
+      <ul className="flex">
+      <li className="small-text"><Link to={`/blog`}>Blog</Link></li>
+        {urls && urls.map((url,index)=>{
+          return (
+            <>
+            
+              <li className="small-text font-black">{`/${url}`}</li>
+           
+            </>
+          )
+        })}
+         </ul>
+         </section>
         <Helmet>
           {scripts ? scripts.map((script)=> {
            return script  
@@ -198,6 +221,16 @@ const getMembership = (subscription, isLoggedIn)=>{
         </section>
 
 
+<section>
+  <div className="post-next-prev-button container mx-auto grid justify-center">
+ <ul className="flex mx-auto">
+  {prev && (<li className="mr-5 text-small bg-gray-50 rounded-lg px-5 py-2 "><Link to={`/${prev.slug}`} className="small-text">{`< Prev`}</Link></li>)}
+   {next && (<li className="mr-5 text-small bg-gray-50 rounded-lg px-5 py-2 text-small"><Link to={`/${next.slug}`} className="small-text">{`Next >`}</Link></li>)}
+   
+   
+ </ul>
+  </div>
+</section>
 
     
         

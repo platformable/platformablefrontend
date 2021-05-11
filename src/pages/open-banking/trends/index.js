@@ -15,10 +15,10 @@ import MeasuringBenefitsLP from './components/MeasuringBenefitsLP';
 
 import SubscriptionPlans from './components/SubscriptionPlans';
 import "./styles/index.css"
+import Breadcrumbs from '../../../components/breadcrumbs'
 
 
-
-const IndexPage = props => {
+const IndexPage = ({location}) => {
   const [user,setUser]=useContext(UserContext)
 
   const handleIsLoggedIn = () => {
@@ -27,6 +27,7 @@ const IndexPage = props => {
   }
   return(
   <Layout>
+    <Breadcrumbs location={location}/>
     <HeroLp />
     <ProductsCardsLp />
     <PositionedSection  handleIsLoggedIn={handleIsLoggedIn}/>

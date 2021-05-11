@@ -16,12 +16,13 @@ import OESMLine from '../../../assets/ob-open-ecosystem-mapping/oecmappingLines.
 import PanoramaImg from '../../../assets/ob-open-ecosystem-mapping/Panorama.png'
 import PolicyImg from '../../../assets/ob-open-ecosystem-mapping/Policy.png'
 import ProcessImg from '../../../assets/ob-open-ecosystem-mapping/Process.png'
+import Breadcrumbs from '../../../components/breadcrumbs'
 
-
-export default function index({data}) {
+export default function index({data,location}) {
     // const authorsData = data?data.allStrapiPost.edges[0].node.user :null
     return (
        <Layout>
+         <Breadcrumbs location={location}/>
            <SEO title="OG-Open Ecosystem Mapping"/>
         <GridDisplay
       gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
