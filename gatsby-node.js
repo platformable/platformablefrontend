@@ -59,15 +59,16 @@ exports.sourceNodes = ({actions})=> {
   const typeDefs = `
   type StrapiAbout implements Node {
     content: String 
+
   }
 
 
   type StrapiPost implements Node {
     slug: String
     content: String
-    featured_image: File
 
   } 
+
 
   `
 

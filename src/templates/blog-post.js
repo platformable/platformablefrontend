@@ -196,7 +196,7 @@ const getMembership = (subscription, isLoggedIn)=>{
 
           <div className="posts-content py-10">
             {data.strapiPost.featured_image && data.strapiPost.featured_image ? 
-            <div className="post-featured-img   grid justify-center center container">
+            <div className="post-featured-img   flex justify-center ">
              
               {data.strapiPost.featured_image && data.strapiPost.featured_image ?
               <img src={data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="text-center mb-5  top-featured-post-image" alt={data.strapiPost.title}/>
