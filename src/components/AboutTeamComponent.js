@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+
 
 const AboutTeamComponent = ({img,position,name,lastname,bio,ind}) => {
     return (

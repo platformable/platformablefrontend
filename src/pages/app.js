@@ -10,14 +10,14 @@ import PrivateRoute from '../components/PrivateRoute'
 
 import Login from "./login"
 import Default from "./index"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const App = () => {
-  const [user,setUser]=useContext(UserContext);
+  // const [user,setUser]=useContext(UserContext);
 
   return (
     <>
-    <SEO title="App"/>
+    <Seo title="App"/>
       <Router basepath="/app">
       <PrivateRoute path="/dashboard" component={Dashboard} />
       <PrivateRoute path="/profile/:strapiId" component={Profile} />

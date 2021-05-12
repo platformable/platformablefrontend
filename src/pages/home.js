@@ -1,15 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
+
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+
+import Seo from "../components/seo"
 
 const HomePage = () => (
   <Layout>
 
   
-    <SEO title="Home" />
+    <Seo title="Home" />
     <div className="">
 
 
@@ -48,7 +48,7 @@ const HomePage = () => (
         </div>
         <div className="business-models-advantages-center">
             <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/completed_tasks_vs6q.svg"
-                alt=""/>
+                alt="plaformable"/>
         </div>
         <div className="business-models-advantages-right">
             <p>Platforms enable digital ecosystems where everyone can participate and co-create.</p>
@@ -105,12 +105,12 @@ const HomePage = () => (
                 <div>
                     <h4>Open Finance</h4>
              
-                    <img src="https://platformable.com/assets/img/OpenFinanceImg.png"/>
+                    <img src="https://platformable.com/assets/img/OpenFinanceImg.png" alt="plaformable"/>
                 </div>
                 <div>
                     <h4>Digital Goverment</h4>
                 
-                    <img src="https://platformable.com/assets/img/governmentImg.png"/>
+                    <img src="https://platformable.com/assets/img/governmentImg.png" alt="plaformable"/>
                 </div>
             </div>
 
@@ -118,12 +118,12 @@ const HomePage = () => (
                 <div>
                     <h4>Public health</h4>
              
-                    <img src="https://platformable.com/assets/img/publicHealthImg.png"/>
+                    <img src="https://platformable.com/assets/img/publicHealthImg.png" alt="plaformable"/>
                 </div>
                 <div>
                     <h4>Circular/low-carbon economy</h4>
                 
-                    <img src="https://platformable.com/assets/img/energyImg.png"/>
+                    <img src="https://platformable.com/assets/img/energyImg.png" alt="plaformable"/>
                 </div>
             </div>
 
@@ -193,7 +193,7 @@ const HomePage = () => (
             <a href="https://platformable.com/open-banking/">
                 <div className="product1">
                   <div>
-                <img src="https://platformable.com/assets/img/OpenFinanceImg.png"/>
+                <img src="https://platformable.com/assets/img/OpenFinanceImg.png" alt="plaformable"/>
                 </div>
                 <div>
                 <h4>Open Banking & Open Finance</h4>
@@ -203,7 +203,7 @@ const HomePage = () => (
             <a href="https://platformable.com/digital-government/">
             <div className="product2">
               <div>
-                <img src="https://platformable.com/assets/img/governmentImg.png"/>
+                <img src="https://platformable.com/assets/img/governmentImg.png" alt="plaformable"/>
                 </div>
                 <div>
                 <h4>Digital Government</h4>
@@ -213,7 +213,7 @@ const HomePage = () => (
             <a href="https://platformable.com/public-health/">
             <div className="product3">
             <div>
-                <img src="https://platformable.com/assets/img/publicHealthImg.png"/></div>
+                <img src="https://platformable.com/assets/img/publicHealthImg.png" alt="plaformable"/></div>
                 <div><h4>Public Health</h4></div>
             </div>
             </a>

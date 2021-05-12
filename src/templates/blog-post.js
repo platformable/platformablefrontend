@@ -1,14 +1,14 @@
 import React, { useEffect,useState, useRef,useContext } from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import EmbedContainer from "react-oembed-container"
+// import EmbedContainer from "react-oembed-container"
 import { InlineWidget } from "react-calendly";
 import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
 import BlogPostAlertMessage from '../components/BlogPostAlertMessage'
 import PostContentComponent from '../components/PostContentComponent'
 import UserContext from '../context/UserContext'
-import { GatsbyImage } from "gatsby-plugin-image"
+// import { GatsbyImage } from "gatsby-plugin-image"
 
 
 
@@ -196,14 +196,11 @@ const getMembership = (subscription, isLoggedIn)=>{
 
           <div className="posts-content py-10">
             {data.strapiPost.featured_image && data.strapiPost.featured_image ? 
-            <div className="post-featured-img  max-w-md grid justify-center center container">
-              <div style={{ width: '100%' }}>
+            <div className="post-featured-img   grid justify-center center container">
+             
               {data.strapiPost.featured_image && data.strapiPost.featured_image ?
-              <img src={data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="text-center mb-5 center top-featured-post-image"/>
+              <img src={data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="text-center mb-5  top-featured-post-image" alt={data.strapiPost.title}/>
               : null}
-            
-          
-          </div>
           </div>
             : ''}
             

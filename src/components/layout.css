@@ -4398,7 +4398,7 @@ width:125px !important;
 }
 
 .top-featured-post-image {
-  max-width:500px;
+  max-width:100%;
   height:auto;
   text-align: center;
 }

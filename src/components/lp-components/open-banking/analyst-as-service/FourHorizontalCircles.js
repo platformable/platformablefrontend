@@ -31,7 +31,7 @@ const FourHorizontalCircles = () => {
   ]
   return (
     <section className="px-8 py-6 md:mx-12 mx-4">
-      <h3 className="my-5 font-black text-center"></h3>
+      {/* <h3 className="my-5 font-black text-center"></h3> */}
       <div className="my-0 md:mx-8 mx-2 py-0 px-3 flex flex-wrap flex-col sm:flex-row justify-center items-center">
         {images.map((img, i) => (
           <div key={i} className="md:w-1/5 w-full my-6 mx-1 text-center ">

@@ -14,23 +14,23 @@
     "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "gatsby": "^3.3.1",
-    "gatsby-image": "^3.4.0",
+    "gatsby-image": "^3.5.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-create-client-paths": "^3.1.0",
     "gatsby-plugin-image": "^1.5.0",
     "gatsby-plugin-load-script": "^1.1.0",
-    "gatsby-plugin-manifest": "^3.4.0",
+    "gatsby-plugin-manifest": "^3.5.0",
     "gatsby-plugin-mdx": "^1.10.0",
     "gatsby-plugin-offline": "^4.3.0",
-    "gatsby-plugin-postcss": "^4.3.0",
-    "gatsby-plugin-react-helmet": "^4.3.0",
-    "gatsby-plugin-robots-txt": "^1.5.6",
+    "gatsby-plugin-postcss": "^4.5.0",
+    "gatsby-plugin-react-helmet": "^4.5.0",
+    "gatsby-plugin-robots-txt": "^1.6.2",
     "gatsby-plugin-sharp": "^3.5.0",
     "gatsby-plugin-sitemap": "^3.3.0",
     "gatsby-source-filesystem": "^3.5.0",
     "gatsby-source-strapi": "0.0.12",
     "gatsby-source-stripe": "^3.2.2",
-    "gatsby-transformer-remark": "^4.1.0",
+    "gatsby-transformer-remark": "^4.2.0",
     "gatsby-transformer-sharp": "^3.5.0",
     "postcss": "^8.2.4",
     "prop-types": "^15.7.2",
@@ -64,12 +64,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/platformable/platformablefrontend"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "engines": {
-    "node": "14.16.1"
   }
 }

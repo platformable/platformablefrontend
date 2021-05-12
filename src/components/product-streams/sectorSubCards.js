@@ -1,6 +1,6 @@
 import React from "react"
 import {Link} from 'gatsby'
-import CallToAction from './../shared-components/CallToAction';
+// import CallToAction from './../shared-components/CallToAction';
 
 const SectorSubCards = ({ data, className }) => {
   return (

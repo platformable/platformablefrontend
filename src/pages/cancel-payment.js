@@ -1,9 +1,9 @@
 import React from "react"
-import {Link, navigate} from 'gatsby'
+import { navigate} from 'gatsby'
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
-import CancelPaymentImg from "../images/cancelPayment.png"
+
 
 const CancelPayment = () => {
 
@@ -13,7 +13,7 @@ const CancelPayment = () => {
 
   return (
     <Layout>
-      <SEO title="Subscription Success"/>
+      <Seo title="Subscription Success"/>
       <div className="container mx-auto ">
         <div className="grid md:grid-cols-6 md:gap-4 grid-cols-1 md:gap-2 px-5 justify-center items-center h-screen  ">
           <div className="col-start-3 col-span-2  rounded-xl  px-10 py-10">
