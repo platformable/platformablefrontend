@@ -1,4 +1,5 @@
 const path = require(`path`);
+const { createRemoteFileNode } = require("gatsby-source-filesystem")
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -54,26 +55,44 @@ exports.createPages = ({ actions, graphql }) => {
   return getPosts;
 };
 
-exports.sourceNodes = ({actions})=> {
-  const {createTypes} = actions;
+// exports.sourceNodes = ({actions})=> {
+//   const {createTypes} = actions;
+//   const typeDefs = `
+//   type StrapiAbout implements Node {
+//     content: String 
+
+//   }
+
+//   type StrapiPost implements Node  {
+//     slug: String
+//     content: String
+//     featured_image: File @fileByRelativePath
+//   } 
+
+//   `
+
+//   createTypes(typeDefs);
+// }
+
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
   const typeDefs = `
-  type StrapiAbout implements Node {
-    content: String 
+    type StrapiAbout implements Node {
+      content: String
+    }
 
-  }
-
-
-  type StrapiPost implements Node {
+    type StrapiPost implements Node  {
     slug: String
     content: String
-
   } 
 
-
+ 
   `
-
-  createTypes(typeDefs);
+  createTypes(typeDefs)
 }
+
+
 
 
 // Implement the Gatsby API “onCreatePage”. This is

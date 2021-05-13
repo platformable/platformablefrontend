@@ -443,9 +443,7 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
 }
-.whatwedo-left {
-  /* padding:40px 20px; */
-}
+
 
 .whatwedo-left-content {
   /* background-color: orange; */
@@ -654,9 +652,6 @@ MEDIA QUERIES */
     grid-template-columns: 1fr !important;
   }
 
-  .q4Hero {
-    /* background-image: none !important; */
-  }
 
   .q4HeroLeft h3 {
     font-size: 24px !important;
@@ -689,10 +684,7 @@ MEDIA QUERIES */
 .posts-container {
   max-width: 960px;
 }
-.posts-content img,
-.posts-content iframe {
-  /* margin:20px 0; */
-}
+
 
 .posts-content iframe {
   text-align: center !important;
