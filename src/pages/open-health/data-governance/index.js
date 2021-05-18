@@ -168,7 +168,9 @@ export default function index({location}) {
                   return (
                       
                     <div key={index} className="bg-blue-50 rounded-xl p-10">
-                    <img src={tool.img}/>
+                     <div className="flex justify-center"> 
+                    <img src={tool.img} className="img-thumbnail"/>
+                    </div>
                       <h4 className="font-black text-center">{tool.title}</h4>
                 </div>
                   )
