@@ -197,7 +197,7 @@ export const blogQuery = graphql`
           }
           featured_image {
             childImageSharp {
-              gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
+              gatsbyImageData(width:320, blurredOptions: {width: 100}, placeholder: BLURRED)
             }
           }
           title

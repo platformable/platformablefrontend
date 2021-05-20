@@ -6,10 +6,10 @@ import Logo from '../images/logo.png'
 
 const Header = ({ siteTitle }) => {
   const [user, setUser] = useContext(UserContext || false)
-  const [isOpen, setIsOpen] = useState(false)
-  const [isBurguerActive, setIsBurguerActive] = useState(false)
-  const [isProductsMenuActive, setItsProductsMenuActive] = useState(false)
-  const [isActive, setActive] = useState(false)
+  // const [isOpen, setIsOpen] = useState(false)
+  // const [isBurguerActive, setIsBurguerActive] = useState(false)
+  // const [isProductsMenuActive, setItsProductsMenuActive] = useState(false)
+  // const [isActive, setActive] = useState(false)
 
   function openNav() {
     return document
