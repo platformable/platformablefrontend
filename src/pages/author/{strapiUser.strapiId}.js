@@ -84,7 +84,7 @@ query strapiAuthorPage($strapiId: Int){
     id
     image {
       childImageSharp {
-        gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
+        gatsbyImageData(width:320, blurredOptions: {width: 100}, placeholder: BLURRED)
       }
     }
     name
