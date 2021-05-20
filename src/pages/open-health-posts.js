@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from 'gatsby-image'
 import Layout from "../components/layout"
 import SEO from '../components/seo'
 import BlogCards from "../components/BlogCards"
+
 
 const OpenHealthPosts = ({data}) => {
 
@@ -36,6 +36,7 @@ query OpenHealthBlogPosts {
               name
             }
             id
+            publishing_date
             published_at
             slug
             is_featured
@@ -44,7 +45,7 @@ query OpenHealthBlogPosts {
             }
             featured_image {
               childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
+                gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
               }
             }
             title

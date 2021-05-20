@@ -1,6 +1,6 @@
 import React from "react"
-import {Link, graphql} from 'gatsby'
-import Img from 'gatsby-image'
+import {Link, graphql,navigate} from 'gatsby'
+
 /*shared-components*/
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
@@ -17,7 +17,30 @@ import sectionOneImg from "../../../assets/lp-policy_development/policy_developm
 
 
 
-const LPPolicyDevelopment = ({data,location}) => (
+const LPPolicyDevelopment = ({data,location}) => {
+  const postsCategories =[
+    {
+      name:"Open Banking / Open Finance",
+      url:"/open-banking-posts"
+    },
+    {
+      name:"Open Government",
+      url:"/open-government-posts"
+    },
+    {
+      name:"Open Health",
+      url:"/open-health-posts"
+    }
+
+  ]
+  const handleCategory = (selectedCategory)=>{
+    const found = postsCategories.find(cat => cat.name === selectedCategory.name);
+    const goTo = found ? navigate(`${found.url}`) : null
+    return goTo
+  }
+  return(
+
+
   <Layout>
     <Breadcrumbs location={location}/>
     <SEO title="Policy Development" />
@@ -111,6 +134,7 @@ const LPPolicyDevelopment = ({data,location}) => (
                             <button
                               to={cat.name}
                               className={`bg-${cat.name} py-0 px-2 rounded text-white small-text text-xs`}
+                              onClick={()=> handleCategory(cat)}
                             >
                               {cat.name}
                             </button>
@@ -143,6 +167,7 @@ const LPPolicyDevelopment = ({data,location}) => (
     />
   </Layout>
 )
+        }
 
 export default LPPolicyDevelopment
 
@@ -159,6 +184,7 @@ query OGPolicyPostIndex {
         slug
         staging
         is_featured
+        publishing_date
         tags {
           name
         }

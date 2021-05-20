@@ -1,12 +1,12 @@
 import React from 'react'
-import {Link, graphql} from 'gatsby'
+import { graphql} from 'gatsby'
 import SEO from '../../../components/seo'
 import Img from 'gatsby-image'
 import Layout from '../../../components/layout'
 import GridDisplay from '../../../components/shared-components/GridDisplay'
 import HowWeWork from './components/howWeWork'
 import FourHorizontalCircles from '../../../components/lp-components/open-government/open-ecosystem-mapping/FourHorizontalCircles'
-import OBOpenEcosystemTitle from '../../../assets/ob-open-ecosystem-mapping/OB - Open Ecosystem Title.png'
+// import OBOpenEcosystemTitle from '../../../assets/ob-open-ecosystem-mapping/OB - Open Ecosystem Title.png'
 import OGOpenEcosystemTitle from '../../../assets/ob-open-ecosystem-mapping/OG-Open-Ecosystem-Title.png' 
 import Form from '../../../components/shared-components/Form'
 import BuildADataImg from '../../../assets/ob-open-ecosystem-mapping/build-a-data.png'
@@ -18,7 +18,10 @@ import PolicyImg from '../../../assets/ob-open-ecosystem-mapping/Policy.png'
 import ProcessImg from '../../../assets/ob-open-ecosystem-mapping/Process.png'
 import Breadcrumbs from '../../../components/breadcrumbs'
 
+
 export default function index({data,location}) {
+
+  
     // const authorsData = data?data.allStrapiPost.edges[0].node.user :null
     return (
        <Layout>

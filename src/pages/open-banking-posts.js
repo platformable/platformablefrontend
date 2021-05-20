@@ -1,9 +1,30 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from '../components/seo'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const OpenBankingPosts = ({data}) => {
+  const postsCategories =[
+    {
+      name:"Open Banking / Open Finance",
+      url:"/open-banking-posts"
+    },
+    {
+      name:"Open Government",
+      url:"/open-government-posts"
+    },
+    {
+      name:"Open Health",
+      url:"/open-health-posts"
+    }
+
+  ]
+  const handleCategory = (selectedCategory)=>{
+    const found = postsCategories.find(cat => cat.name === selectedCategory.name);
+    const goTo = found ? navigate(`${found.url}`) : null
+    return goTo
+  }
 
   // const authorsData = data.allStrapiPost.edges[0].node.user;
 
@@ -25,12 +46,7 @@ const OpenBankingPosts = ({data}) => {
               {post.node.featured_image && post.node.featured_image ? (
                 <Link to={`/${post.node.slug}`}>
                   <div className="grid justify-center">
-                  <img
-                    alt={post.node.title}
-                    key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    className="mb-2 text-center mx-auto"
-                  />
+                  <GatsbyImage image={getImage(post.node.featured_image)} className=" mb-2" alt={post.node.title}/>
                   </div>
                 </Link>
               ) : (
@@ -68,6 +84,7 @@ const OpenBankingPosts = ({data}) => {
                       <button
                         to={cat.name}
                         className={`bg-${cat.name} py-1 px-2 rounded small-text text-white text-xs`}
+                        onClick={()=> handleCategory(cat)}
                       >
                         {cat.name}
                       </button>
@@ -105,7 +122,7 @@ query OpenBankingBlogPosts {
             }
             featured_image {
               childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
+                gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
               }
             }
             publishing_date

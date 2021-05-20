@@ -2,7 +2,7 @@ import React from "react"
 import { Link,graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const AuthorPage = ({ data }) => {
   const user = data.strapiUser;
 
@@ -16,7 +16,7 @@ const AuthorPage = ({ data }) => {
          <div className="authors-page-left grid justify-center">
      
          {user.image && user.image ? (
-                <img src={user.image.childImageSharp.gatsbyImageData.images.fallback.src}/>
+                <GatsbyImage image={getImage(user.image)} className="mb-2" alt={'Platformable'}/>
               ) : (
                 ""
               )}
@@ -47,12 +47,7 @@ const AuthorPage = ({ data }) => {
                            <Link to={`/${post.slug}`}>
                            {post.featured_image && post.featured_image ? (
                         <Link to={`/${post.slug}`}>
-                          <img
-                            alt={post.title}
-                            key={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                            src={post.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                            className="w-full object-contain h-32 sm:h-48 md:h-64 my-0"
-                          />
+                          <GatsbyImage image={getImage(post.featured_image)} className="mb-2"/>
                         </Link>
                       ) : (
                         ""
@@ -89,7 +84,7 @@ query strapiAuthorPage($strapiId: Int){
     id
     image {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
       }
     }
     name

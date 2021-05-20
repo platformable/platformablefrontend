@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import EmbedContainer from "react-oembed-container"
 import sectionOneImg from "../assets/home/hero_squares.png"
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function about({ data }) {
   return (
@@ -74,11 +74,14 @@ export default function about({ data }) {
                   key={ind}
                   className=" pt-5 rounded overflow-hidden border-b-4 border-russian-violet-dark bg-gray-50 w-1/1"
                 >
-                  <img
+                  {/* <img
                     src={x.image.childImageSharp.gatsbyImageData.images.fallback.src}
                     alt="Platformable team"
                     className="w-full object-contain h-32 sm:h-48 md:h-64 my-0"
-                  />
+                  /> */}
+                   <div className="flex justify-center">
+                    <GatsbyImage image={getImage(x.image)} className="my-0" alt="Platformable team"/>
+                    </div>
                   <div className="p-4 md:p-6">
                     <h3 className="font-semibold mb-2 text-center text-xl leading-tight sm:leading-normal">
                       {`${x.name} ${x.lastname}`}
@@ -123,7 +126,7 @@ export const query = graphql`
           position
           image {
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
+              gatsbyImageData(width:320, blurredOptions: {width: 100}, placeholder: BLURRED)
             }
           }
           bio

@@ -3,6 +3,7 @@ import { Link, graphql,navigate } from "gatsby"
 // import {GatsbyImage} from 'gatsby-plugin-image'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function blogs({ data, location }) {
   // const authorsData = data.allStrapiPost.edges[0].node.user;
@@ -15,7 +16,7 @@ export default function blogs({ data, location }) {
     },
     {
       name:"Open Government",
-      url:"/open-governance-posts"
+      url:"/open-government-posts"
     },
     {
       name:"Open Health",
@@ -44,12 +45,12 @@ export default function blogs({ data, location }) {
             while (index < 3 && post.node.staging ===false) {
               return (
                 <>
-                  <div className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
+                  <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
                     <div className="top-blog-card-img-container flex justify-center max-h-56">
                       {post.node.featured_image && post.node.featured_image ? (
-                        <Link to={`/${post.node.slug}`}>
+                        <Link to={`/${post.node.slug}`} >
                           {" "}
-                          <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="block object-contain h-48 w-full"/>
+                          <GatsbyImage image={getImage(post.node.featured_image)} className="block object-contain h-48 w-full" alt={post.node.title} />
                         </Link>
                       ) : null}
                     </div>
@@ -112,13 +113,14 @@ while (index > 2 && post.node.staging ===false) {
               <div
                 className="blog-card-main-page flex flex-wrap  p-5 md:p-0 md:flex-nowrap bg-gray-50 shadow-md"
                 alt={post.node.title}
-                key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
+                key={post.node.title}
               >
                 <div className="blog-card--left-main-page">
                   {post.node.featured_image && post.node.featured_image ? (
                     <Link to={`/${post.node.slug}`}>
                       {" "}
-                      <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}/>
+                      {/* <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="block object-contain h-48 w-full"/> */}
+                      <GatsbyImage image={getImage(post.node.featured_image)} className="" alt={post.node.title} />
                     </Link>
                   ) : null}
                 </div>
@@ -195,7 +197,7 @@ export const blogQuery = graphql`
           }
           featured_image {
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
+              gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
             }
           }
           title

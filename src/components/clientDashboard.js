@@ -62,7 +62,7 @@ export default function Dashboard() {
             }
             featured_image {
               childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
+                gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
               }
             }
             title

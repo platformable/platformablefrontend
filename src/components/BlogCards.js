@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function BlogCards({data}) {
     // const authorsData = data.allStrapiPost.edges[0].node.user;
@@ -14,12 +14,7 @@ export default function BlogCards({data}) {
               {/* Check if post has image, if we dont do the check netlify wont build */}
               {post.node.featured_image && post.node.featured_image ? (
                 <Link to={`/${post.node.slug}`}>
-                  <img
-                    alt={post.node.title}
-                    key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}            
-                    src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    className="mb-2"
-                  />
+                  <GatsbyImage image={getImage(post.node.featured_image)} className="mb-3" alt={post.node.title}/>
                 </Link>
               ) : (
                 null

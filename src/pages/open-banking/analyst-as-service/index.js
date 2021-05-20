@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link,graphql} from 'gatsby'
+import {Link,graphql, navigate} from 'gatsby'
 import Layout from '../../../components/layout'
 import GridDisplay from '../../../components/shared-components/GridDisplay'
 import HowWeWork from '../../../components/lp-components/open-banking/analyst-as-service/howWeWork'
@@ -8,7 +8,32 @@ import AnalistAsServiceTitle from '../../../assets/ob-analyst-as-service/ANalyst
 import HowToHire from '../../../components/lp-components/open-banking/analyst-as-service/HowToHire'
 import Form from '../../../components/shared-components/Form'
 import Breadcrumbs from '../../../components/breadcrumbs'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+
+
 export default function index({data,location}) {
+
+  const postsCategories =[
+    {
+      name:"Open Banking / Open Finance",
+      url:"/open-banking-posts"
+    },
+    {
+      name:"Open Government",
+      url:"/open-government-posts"
+    },
+    {
+      name:"Open Health",
+      url:"/open-health-posts"
+    }
+
+  ]
+  const handleCategory = (selectedCategory)=>{
+    const found = postsCategories.find(cat => cat.name === selectedCategory.name);
+    const goTo = found ? navigate(`${found.url}`) : null
+    return goTo
+  }
 
     // const authorsData = data?data.allStrapiPost.edges[0].node.user :null
     return (
@@ -63,7 +88,7 @@ export default function index({data,location}) {
                       {post.node.featured_image && post.node.featured_image ? (
                         <Link to={`/${post.node.slug}`}>
                           {" "}
-                          <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="block object-contain h-48 w-full"/>
+                          <GatsbyImage image={getImage(post.node.featured_image)} className="block object-contain h-48 w-full" alt={post.node.title}/>
                         </Link>
                       ) : null}
                     </div>
@@ -100,6 +125,7 @@ export default function index({data,location}) {
                             <button
                               to={cat.name}
                               className={`bg-${cat.name} py-0 px-2 rounded text-white small-text text-xs`}
+                              onClick={()=> handleCategory(cat)}
                             >
                               {cat.name}
                             </button>
@@ -156,9 +182,10 @@ query AnalystPagePosts {
         }
         featured_image {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
           }
         }
+        publishing_date
         title
         staging
         updated_at

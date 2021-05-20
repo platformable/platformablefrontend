@@ -739,7 +739,8 @@ margin-right:auto;
 
 .bg-Open-Banking-Open-Finance,
 .bg-Open.Banking {
-  background-color: rgba(251, 218, 206, 0.25);
+  /* background-color: rgba(251, 218, 206, 0.75); */
+  background-color:rgba(255, 210, 63,0.25);
   color: var(--russian-violet-dark);
 }
 

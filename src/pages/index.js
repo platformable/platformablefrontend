@@ -28,7 +28,7 @@ const IndexPage = ({data}) => {
     },
     {
       name:"Open Government",
-      url:"/open-governance-posts"
+      url:"/open-government-posts"
     },
     {
       name:"Open Health",
@@ -217,7 +217,7 @@ query HomepagePosts {
         }
         featured_image {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
           }
         }
         title

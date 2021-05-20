@@ -16,6 +16,9 @@ import ProcessImg from '../../../assets/ob-open-ecosystem-mapping/Process.png'
 import Breadcrumbs from '../../../components/breadcrumbs'
 
 export default function index({data,location}) {
+
+
+
     const authorsData = data?data.allStrapiPost.edges[0].node.user :null
     return (
        <Layout>
@@ -150,7 +153,7 @@ export default function index({data,location}) {
                     </h5></Link>
                     <span className="text-gray-600 mr-3 small-text mt-1">
                       Published{" "}
-                      {new Date(post.node.publishing_date).toDateString()}
+                      {new Date(post.node.publishing_date).toDateString()} 
                     </span>{" "}
                     <div className="text-gray-600 text-sm font-medium flex mb-0 mt-0">
                       <small className="small-text mr-1">{`Writen by `} </small>
@@ -194,12 +197,7 @@ export default function index({data,location}) {
             }
           }):null}
         </div>
-
-
         </section>
-
-
-
 
 
         <Form
@@ -210,8 +208,6 @@ export default function index({data,location}) {
       iframeId="submitMailerlite"
       iframeSrc={"https://landing.mailerlite.com/webforms/landing/q8j2m7"}
     />
-     
-    
        </Layout>
     )
 }
@@ -230,12 +226,13 @@ query OBOpenEcosystemPagePosts {
         staging
         slug
         is_featured
+        publishing_date
         tags {
           name
         }
         featured_image {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
           }
         }
         title
