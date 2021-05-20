@@ -3,6 +3,7 @@ require("dotenv").config({
 })
 
 module.exports = {
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
     title: `Platformable`,
     description: `We build tools.`,
@@ -138,6 +139,14 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/',disallow: ['/app','/app/*'] }]
       }
     },
+    {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: 1,
+        matomoUrl: 'https://platformable.matomo.cloud/',
+        siteUrl: 'https://platformable.com'
+      }
+    }
     
   ],
 }

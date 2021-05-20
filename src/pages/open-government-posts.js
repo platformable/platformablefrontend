@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 
 const OpenGovernmentPosts = ({data}) => {
 
-  const authorsData = data.allStrapiPost.edges[0].node.user;
+  // const authorsData = data.allStrapiPost.edges[0].node.user;
 
   return(
   <Layout>

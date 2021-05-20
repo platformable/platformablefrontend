@@ -8,7 +8,7 @@ import EmbedContainer from "react-oembed-container"
 import sectionOneImg from "../assets/home/hero_squares.png"
 
 
-export default function about({ data,location }) {
+export default function about({ data }) {
   return (
     <Layout>
       <SEO title="About" />

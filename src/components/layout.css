@@ -1081,15 +1081,12 @@ hr.blue {
 /* BASIC STRAPI TABLE */
 
 
-body {
-  margin: 30px;
-}
+
 .posts-content figure.table {
 font-size:14px;
   border-collapse: separate;
   border-spacing: 0;
   min-width: 350px;
-
     border-bottom:3px solid #1a014c;
   border-top-left-radius:6px;
   border-top-right-radius:6px;

@@ -10,7 +10,7 @@ import Form from '../../../components/shared-components/Form'
 import Breadcrumbs from '../../../components/breadcrumbs'
 export default function index({data,location}) {
 
-    const authorsData = data?data.allStrapiPost.edges[0].node.user :null
+    // const authorsData = data?data.allStrapiPost.edges[0].node.user :null
     return (
        <Layout>
         <Breadcrumbs location={location}/>

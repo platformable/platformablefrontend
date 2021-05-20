@@ -14,7 +14,7 @@ import DataDictionaryImg from "../../../assets/oh-data-governance/dataDictionary
 import JobImg from "../../../assets/oh-data-governance/job.png"
 import KpiImg from "../../../assets/oh-data-governance/kpi.png"
 import AutomatedImg from "../../../assets/oh-data-governance/automated.png"
-import blackHealthImg from "../../../assets/lp-data_stewardship/black_health.svg"
+// import blackHealthImg from "../../../assets/lp-data_stewardship/black_health.svg"
 import SEO from "../../../components/seo"
 import Breadcrumbs from '../../../components/breadcrumbs'
 const datas = {
@@ -90,10 +90,10 @@ export default function index({location}) {
         <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 items-center px-5 ">
           <div className="hero-data-governance-left">
             <h3 className="font-black text-3xl ">Data Governance</h3>
-            <p className="text-2xl">
+     
               Create a data governance and data stewardship system for your
               agency
-            </p>
+            
           </div>
           <div className="hero-data-governance-right   grid justify-ends ">
             <img src={DataGovernanceHeroImg}></img>
@@ -104,10 +104,10 @@ export default function index({location}) {
       <section>
         <div className="container mx-auto flex justify-center">
           <div className="w-3/4 ">
-            <h3 className="text-center text-2xl my-10 ">
+            <h5 className="text-center  my-10 ">
               Make greater use of data across all of your operations<br></br>
               from fundraising to strategic planning to impact evaluation.
-            </h3>
+            </h5>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import React from "react"
-import {Link, graphql} from 'gatsby'
+import {Link, graphql, navigate} from 'gatsby'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 /*shared-components*/
 import Layout from "../components/layout"
@@ -9,7 +10,7 @@ import Form from "../components/shared-components/Form"
 /*specific-components*/
 import PositionedSection from '../components/home-components/PositionedSection';
 import PostsCards from "../components/home-components/PostsCards"
-// import ProductStreamsCards from './../components/home-components/ProductStreamsCards';
+import ProductStreamsCards from './../components/home-components/ProductStreamsCards';
 import HowWeDoItCards from '../components/home-components/HowWeDoItCards';
 import WorkWithCards from '../components/home-components/WorkWithCards';
 
@@ -20,7 +21,27 @@ import sectionSixImg from '../assets/home/we_publish_analysis.png'
 
 const IndexPage = ({data}) => {
 
-  const authorsData = data?data.allStrapiPost.edges[0].node.user :null
+  const postsCategories =[
+    {
+      name:"Open Banking / Open Finance",
+      url:"/open-banking-posts"
+    },
+    {
+      name:"Open Government",
+      url:"/open-governance-posts"
+    },
+    {
+      name:"Open Health",
+      url:"/open-health-posts"
+    }
+
+  ]
+  const handleCategory = (selectedCategory)=>{
+    const found = postsCategories.find(cat => cat.name === selectedCategory.name);
+    const goTo = found ? navigate(`${found.url}`) : null
+    return goTo
+  }
+  // const authorsData = data?data.allStrapiPost.edges[0].node.user :null
 return(
   <Layout>
     <SEO title="Home" />
@@ -68,6 +89,7 @@ return(
     {/* TOP LATESTS 3 POSTS */}
     <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
           {data?data.allStrapiPost.edges.map((post, index) => {
+           
             while (index < 3 && post.node.staging===false) {
               return (
                 <>
@@ -76,7 +98,7 @@ return(
                       {post.node.featured_image && post.node.featured_image ? (
                         <Link to={`/${post.node.slug}`}>
                           {" "}
-                          <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="block object-contain h-48 w-full"/>
+                          <GatsbyImage image={getImage(post.node.featured_image)} className="block object-contain h-48 w-full" alt={post.node.title}/>
                         </Link>
                       ) : null}
                     </div>
@@ -97,6 +119,7 @@ return(
                       ) : post.node.user.length > 1 ? (
                         post.node.user.map((x, index) => (
                           <Link
+                          key={index}
                             to={`/author/${post.node.user[index].id}`}
                             className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
                           >
@@ -108,11 +131,13 @@ return(
                     </div>
                     <div>
                       {post.node.categories.map(cat => {
+                  
                         return (
                           <div key={post.node.id} className="">
                             <button
                               to={cat.name}
                               className={`bg-${cat.name} py-0 px-2 rounded text-white small-text text-xs`}
+                              onClick={()=> handleCategory(cat)}
                             >
                               {cat.name}
                             </button>

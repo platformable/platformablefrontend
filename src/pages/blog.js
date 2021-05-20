@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import {GatsbyImage} from 'gatsby-plugin-image'
+import { Link, graphql,navigate } from "gatsby"
+// import {GatsbyImage} from 'gatsby-plugin-image'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,6 +8,27 @@ export default function blogs({ data, location }) {
   // const authorsData = data.allStrapiPost.edges[0].node.user;
   const noStagingPosts = data?data.allStrapiPost.edges.filter(post=>post.node.staging !=true):" ";
 
+  const postsCategories =[
+    {
+      name:"Open Banking / Open Finance",
+      url:"/open-banking-posts"
+    },
+    {
+      name:"Open Government",
+      url:"/open-governance-posts"
+    },
+    {
+      name:"Open Health",
+      url:"/open-health-posts"
+    }
+
+  ]
+  const handleCategory = (selectedCategory)=>{
+    console.log('selectedCategory',selectedCategory)
+    const found = postsCategories.find(cat => cat.name === selectedCategory.name);
+    const goTo = found ? navigate(`${found.url}`) : null
+    return goTo
+  }
 
   return (
     <Layout>
@@ -65,6 +86,7 @@ export default function blogs({ data, location }) {
                             <button
                               to={cat.name}
                               className={`bg-${cat.name} py-0 px-2 rounded text-white small-text text-xs`}
+                              onClick={()=> handleCategory(cat)}
                             >
                               {cat.name}
                             </button>
@@ -135,6 +157,7 @@ while (index > 2 && post.node.staging ===false) {
                           <button
                             to={cat.name}
                             className={`bg-${cat.name} py-0 px-2 rounded text-white small-text text-xs`}
+                            onClick={()=> handleCategory(cat)}
                           >
                             {cat.name}
                           </button>

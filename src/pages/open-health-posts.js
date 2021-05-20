@@ -7,7 +7,7 @@ import BlogCards from "../components/BlogCards"
 
 const OpenHealthPosts = ({data}) => {
 
-  const authorsData = data.allStrapiPost.edges[0].node.user;
+  // const authorsData = data.allStrapiPost.edges[0].node.user;
 
   return(
   <Layout>

@@ -2,12 +2,12 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import { Link, navigate } from "gatsby"
 import SEO from "../components/seo"
-import AnalystImg from '../images/Analyst-as-a-service.png'
-import BlogAsServiceImg from '../images/Blogs and articles.png'
-import OpenEcosystemImg from '../images/Open ecosystem mapping.png'
-import PlatformMindsetImg from '../images/Platform mindset training for banks.png'
-import QuarterlyImg from '../images/Quarterly Trends report.png'
-import StateOfMarketImg from '../images/State of the Market reports.png'
+// import AnalystImg from '../images/Analyst-as-a-service.png'
+// import BlogAsServiceImg from '../images/Blogs and articles.png'
+// import OpenEcosystemImg from '../images/Open ecosystem mapping.png'
+// import PlatformMindsetImg from '../images/Platform mindset training for banks.png'
+// import QuarterlyImg from '../images/Quarterly Trends report.png'
+// import StateOfMarketImg from '../images/State of the Market reports.png'
 
 export default function TrendsReport() {
   const [selectedOption, setSelectedOption] = useState("")
