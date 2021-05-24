@@ -1,6 +1,6 @@
 import React from "react"
 import {Link, graphql, navigate} from 'gatsby'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 /*shared-components*/
 import Layout from "../components/layout"
@@ -46,7 +46,7 @@ return(
   <Layout>
     <SEO title="Home" />
 
-    <GridDisplay
+    {/* <GridDisplay
       gridDisplayClass="hero-section  flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
       gridContentClass="md:w-3/5 "
       title="We support open ecosystems that build economic opportunities, solve complex problems, and enable everyone to participate and co-create their own value"
@@ -61,7 +61,32 @@ return(
       imgClass="object-cointain w-96 h-94"
       backImgSrc={sectionOneImg}
       alt="Hero"
-    ></GridDisplay>
+    ></GridDisplay> */}
+
+
+<section className="">
+  <div className="hero-section  container mx-auto flex flex-col sm:flex-row flex-wrap my-6 py-6 px-5 justify-between items-center ">
+  <div className="md:w-3/5">
+    <h3 className="font-black">
+   We support open ecosystems that build economic opportunities, solve complex problems, and enable everyone to participate and co-create their own value
+    </h3>
+    <button className="outlinedBtn text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer">
+      Learn more about us
+    </button>
+  </div>
+
+  <div className="">
+    <div className="">
+    <StaticImage src="../assets/home/hero_squares.png" alt="platformable" className="object-cointain w-96 h-94"/>
+    </div>
+  </div>
+  <div>
+
+  </div>
+  </div>
+</section>
+
+    
 
     <section className="bg-gray-100 py-5">
     <GridDisplay
@@ -81,6 +106,11 @@ return(
       alt="Hero"
     ></GridDisplay>
    </section>
+
+
+
+
+
     {/* <PostsCards/> */}
     <h3 className="text-center font-black mt-5">Latest Posts </h3>
     {/* POSTS */}

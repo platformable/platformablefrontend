@@ -4,6 +4,7 @@ import React, { useState, useContext } from "react"
 import UserContext from "../context/UserContext"
 import Logo from '../images/logo.png'
 
+
 const Header = ({ siteTitle }) => {
   const [user, setUser] = useContext(UserContext || false)
   // const [isOpen, setIsOpen] = useState(false)
@@ -32,6 +33,8 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header>
+
+
       {/* MOBILE NAV */}
       <div className="lg:hidden  block container mx-auto mobile-nav">
         <div className="flex justify-between px-3 py-2">

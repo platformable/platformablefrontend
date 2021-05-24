@@ -142,9 +142,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-matomo',
       options: {
-        siteId: 1,
+        siteId: '1',
         matomoUrl: 'https://platformable.matomo.cloud/',
-        siteUrl: 'https://platformable.com'
+        siteUrl: 'https://platformable.com/'
       }
     }
     

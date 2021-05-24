@@ -2,6 +2,8 @@ import React from "react"
 import Link from './Link';
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Button from "./Button"
+import { StaticImage } from "gatsby-plugin-image"
+
 
 const GridDisplay = ({
   gridDisplayClass,
@@ -76,6 +78,8 @@ const GridDisplay = ({
           src={backImgSrc}
           alt={alt}
         />
+
+        
       </div>
 
     </section>
