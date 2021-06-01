@@ -1,5 +1,5 @@
 import React, { useEffect,useState, useRef,useContext } from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, navigate } from "gatsby"
 import Layout from "../components/layout"
 // import EmbedContainer from "react-oembed-container"
 import { InlineWidget } from "react-calendly";
@@ -13,8 +13,31 @@ import UserContext from '../context/UserContext'
 
 
 const BlogPost = ({ data, pageContext,location }) => {
-  console.log('pageContext',pageContext)
-  console.log('location',location)
+
+
+  const postsCategories =[
+    {
+      name:"Open Banking / Open Finance",
+      url:"/open-banking-posts"
+    },
+    {
+      name:"Open Government",
+      url:"/open-government-posts"
+    },
+    {
+      name:"Open Health",
+      url:"/open-health-posts"
+    }
+
+  ]
+  const handleCategory = (selectedCategory)=>{
+    const found = postsCategories.find(cat => cat.name === selectedCategory.name);
+    const goTo = found ? navigate(`${found.url}`) : null
+    return goTo
+  }
+
+
+
   const {next,prev} = pageContext;
   const [user,setUser] = useContext(UserContext)
   const [scripts,setScripts] = useState([])
@@ -181,6 +204,7 @@ const getMembership = (subscription, isLoggedIn)=>{
                       key={cat.name}
                       
                       className={`bg-${cat.name} py-1 px-2 mr-1 rounded-lg text-black text-xs flex-grow `}
+                      onClick={()=> handleCategory(cat)}
                     >
                       
                       {cat.name}

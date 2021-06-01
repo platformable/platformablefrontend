@@ -696,11 +696,13 @@ MEDIA QUERIES */
   text-decoration: underline;
   text-decoration-color: blue;
 }
-.posts-content a {
+.posts-content a,.footer-pp-link {
   text-decoration: underline;
-  text-decoration-color: blue;
+  text-decoration-color:var(--russian-violet-dark);
 }
-
+.footer-pp-link {
+  margin:0 !important;
+}
 .posts-content p {
   font-size:19px;
   margin-bottom: 20px;
@@ -726,6 +728,12 @@ margin-right:auto;
   padding: 10px 0;
   font-style: italic;
 }
+
+.posts-content figure figcaption {
+  font-size:12px;
+  text-align:center;
+  margin-bottom:20px;
+  }
 
 .bg-Open.Health {
   background-color: red;

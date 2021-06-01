@@ -32,7 +32,7 @@
     "gatsby-source-filesystem": "^3.5.0",
     "gatsby-source-strapi": "0.0.12",
     "gatsby-source-stripe": "^3.2.2",
-    "gatsby-transformer-remark": "^4.2.0",
+    "gatsby-transformer-remark": "^4.3.0",
     "gatsby-transformer-sharp": "^3.5.0",
     "postcss": "^8.2.4",
     "prop-types": "^15.7.2",
