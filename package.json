@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.4",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Platformable.com",
+  "version": "0.1.",
+  "author": "Platformable.com",
   "dependencies": {
     "@raae/gatsby-remark-oembed": "^0.1.1",
     "@react-icons/all-files": "^4.1.0",
@@ -37,7 +37,7 @@
     "postcss": "^8.3.4",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-calendly": "^2.0.4",
+    "react-calendly": "^2.0.2",
     "react-chartjs-2": "^3.0.3",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
