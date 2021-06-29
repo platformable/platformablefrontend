@@ -58,6 +58,7 @@ const BlogPost = ({ data, pageContext,location }) => {
     getLocations(location)
     const loggedInUser = localStorage.getItem("user");
     if(typeof window !==`undefined`) {
+     /*  window.location.reload() */
       if (loggedInUser) {
       
         setUser(prevUser => ({ ...prevUser,loggedInUser }))} else {
@@ -119,8 +120,6 @@ const getMembership = (subscription, isLoggedIn)=>{
   const isInitialMount = useRef(true);
   useEffect(() => {
     
-   
-
     if (isInitialMount.current) {
 
       getScripts()

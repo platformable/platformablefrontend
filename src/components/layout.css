@@ -320,7 +320,7 @@ svg {
 }
 
 .img-thumbnail {
-  width: 150px;
+  width: 125px;
 }
 
 .h-100 {
@@ -4508,3 +4508,32 @@ font-weight:bold;
   font-size:14px;
   
   } */
+
+  /* LABS */
+
+  .labs-hero-right img {
+    max-width:650px;
+    height:auto;
+    
+    }
+
+  .labs-main-color-dark {
+color:#a80075;
+  }
+.lab-component .container {
+  border-bottom:2px solid #a80075;
+  padding-bottom: 30px;
+}
+
+.lab-form img {
+  max-width:650px;
+  height:auto;
+
+  text-align: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.labs-form-inputs input{
+border:2px solid #a80075;
+}
