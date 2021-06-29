@@ -2,7 +2,7 @@
   "name": "gatsby-starter-default",
   "private": true,
   "description": "Platformable.com",
-  "version": "0.1.",
+  "version": "0.1.5",
   "author": "Platformable.com",
   "dependencies": {
     "@raae/gatsby-remark-oembed": "^0.1.1",
