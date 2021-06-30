@@ -264,7 +264,7 @@ const getMembership = (subscription, isLoggedIn)=>{
                 <Link
                 to= {`/author/${user.id}`}
                   key={index}
-                  className="bg-purple-50 flex flex-col items-center justify-center p-4 shadow rounded-lg"
+                  className="flex flex-col items-center justify-center p-4  rounded-lg"
                 >
                   <div className="inline-flex shadow-lg border border-gray-200 rounded-full overflow-hidden h-40 w-40">
                     {/* <img
