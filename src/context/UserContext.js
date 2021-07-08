@@ -15,7 +15,8 @@ const UserContext = createContext();
         stripeId:'',
         isStripeActive:false,
         stripeStartDay:'',
-        stripeEndDay:''
+        stripeEndDay:'',
+        affiliation:''
     })
     return (
         <UserContext.Provider value={[user,setUser]}>

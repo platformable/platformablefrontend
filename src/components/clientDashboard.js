@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext,useEffect } from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -19,9 +19,17 @@ const getStripe = () => {
 
 export default function Dashboard() {
   const [user, setUser] = useContext(UserContext)
-  const [selectedPlan, setSelectedPlan] = useState("")
+  const [localUser,setLocalUser]= useState(JSON.parse(localStorage.getItem('user')))
+  
+/* setUser when user is in localStorage */
+  useEffect(()=>{
+    if (localUser) {
+      setUser(localUser)
+    }
+  },[localUser])
 
-  const data = useStaticQuery(graphql`
+
+const data = useStaticQuery(graphql`
     {
       allStripePrice(sort: {fields: unit_amount, order: ASC}, filter: {product: {metadata: {Category: {eq: "Website Plan"}}}}) {
         edges {
@@ -94,30 +102,7 @@ export default function Dashboard() {
     }
   `)
 
-  // const authorsData = data.allStrapiPost.edges[0].node.user
-  // const connectedUserEmail = user.email
 
-  // useEffect(()=>{
-  //   const getConnectedUserInfo =  (email)=>{
-  //     const result = data.allStripeSubscription.edges.find(registerUser=>registerUser.node.customer.email === connectedUserEmail);
-  //         if(result)
-  //         {
-  //         setUser({...user,
-  //         isStripeActive:true,
-  //         stripeId:result.node.customer.id,
-  //         stripeStartDay:result.node.start_date,
-  //         stripeEndDay:result.node.current_period_end});
-  //       } else {return null}
-
-  //         // console.log(`result: ${JSON.stringify(result)}`)
-  //         console.log(`result: ${JSON.stringify(result.node.customer.start_date)}`)
-
-  //     return result
-  //   }
-
-  //   getConnectedUserInfo(connectedUserEmail);
-
-  // },[])
 
   const redirectToCheckout = async plan => {
     // setLoading(true)
@@ -150,7 +135,7 @@ export default function Dashboard() {
               <div className="dashboard-profile-card-img py-10"></div>
               <div className="dashboard-profile-card-text p-5">
                 <h5 className="font-black text-primary">Hi {user.name}</h5>
-                
+                {user.affiliation}
                 {/* <Link
                   to={`/app/profile/1`}
                   className="text-sm text-white bg-yellow-300 px-5 py-1 text-center rounded"
@@ -164,6 +149,28 @@ export default function Dashboard() {
                 </h6>
               </div>
             </div>
+                      
+            {user.affiliation === 'Team' ? 
+                  <div className="dashboard-profile-card bg-gray-50 rounded-lg flex flex-wrap shadow-xl">
+                  <div className="dashboard-profile-card-img py-10"></div>
+                  <div className="dashboard-profile-card-text p-5">
+                    <h5 className="font-black text-primary">Codegenerator</h5>
+                    <a href="https://platformablecodegen.netlify.app" target="_blank">Codegenerator</a>
+                    {/* <Link
+                      to={`/app/profile/1`}
+                      className="text-sm text-white bg-yellow-300 px-5 py-1 text-center rounded"
+                    >
+                      Edit Profile
+                    </Link> */}
+                    <h6 className="text-xs text-primary">
+                      {user.isStripeActive
+                        ? "Your Plan is Active"
+                        : "No Active Plan yet"}
+                    </h6>
+                  </div>
+                </div>
+            : null}
+      
 
             {/* <div className="dashboard-profile-card bg-gray-50 rounded-lg shadow-sm flex flex-wrap">
               <div className="dashboard-profile-card-img pl-10 py-10 pr-5"></div>

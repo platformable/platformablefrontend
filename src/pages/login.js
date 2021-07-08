@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react"
+import React, { useState,useContext,useEffect } from "react"
 import "../components/layout.css"
 import { Link,navigate, graphql } from "gatsby"
 import Loader from "../components/Loader"
@@ -12,6 +12,20 @@ export default function Login({data,location}) {
  
   const [user,setUser]= useContext(UserContext);
   const [errorMsg,setErrorMsg]=useState(false)
+
+
+  function addToLocalStorage(user) {
+   /*  console.log("function add to localStorage running, user:",user) */
+    localStorage.setItem("user",JSON.stringify(user))
+  }
+
+  useEffect(()=>{
+ 
+
+      addToLocalStorage(user)
+
+  
+  },[user])
 
   // To know if is coming from a post or a page that require login
   let comingFromPreviousUrl=''
@@ -35,18 +49,14 @@ export default function Login({data,location}) {
     }
     axios
     .post('https://websiteserver-ds7cf.ondigitalocean.app/auth/local', {...login})
+    //.post('http://localhost:1337/auth/local', {...login})
     .then(response => {
       // Handle success.
+
       if (typeof window !== `undefined`) {
         // code that references a browser global
         
-        localStorage.setItem("isLoggedIn",true)
-        // setUser({...user,
-        //   name:response.data.user.name,
-        //   isLoggedIn:true,
-        //   email:response.data.user.email,
-        //   membership:'free'})
-
+    
           setUser(prevState => {
             return {
             ...prevState,
@@ -56,12 +66,16 @@ export default function Login({data,location}) {
           isLoggedIn:true,
           email:response.data.user.email,
           membership:'free',
+          affiliation:response.data.user.affiliation,
           userId:response.data.user.id
           }
           })
-  
+         
+          /* REVISAR */
           isActiveMember(response.data.user.email)
-        
+/*             window.localStorage.setItem("user",JSON.stringify(user))
+            return comingFromPreviousUrl ? navigate(-1) : navigate("/app/dashboard"); */
+ 
       }
 
     })
@@ -79,14 +93,7 @@ export default function Login({data,location}) {
     const existingUser =  data.allStripeSubscription.nodes.find(element => element.customer.email === costumerEmail) ;
 
       if(existingUser) {
-      //  setUser({...user,membership:'paid',
-      //  isLoggedIn:true,
-      //  stripeId:existingUser.customer.id,
-      //  isStripeActive:true,
-      //  stripeStartDay:existingUser.current_period_start,
-      //  stripeEndDay:existingUser.current_period_end
-      // } 
-      // ) 
+
       setUser(prevState => {
         return {
         ...prevState,
@@ -97,17 +104,17 @@ export default function Login({data,location}) {
         membership:'paid'
       }
       })
-      setTimeout(()=>{
-        localStorage.setItem("user",user)
+   
+        window.localStorage.setItem("user",JSON.stringify(user))
         return comingFromPreviousUrl ? navigate(-1) : navigate("/app/dashboard");
-      },1500)
+  
       
       
       }else {
-        setTimeout(()=>{
-          localStorage.setItem("user",user)
+        
+          window.localStorage.setItem("user",JSON.stringify(user))
           return comingFromPreviousUrl ? navigate(-1) : navigate("/app/dashboard");
-        },1500)
+
      }
   
   } 

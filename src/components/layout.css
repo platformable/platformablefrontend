@@ -5455,3 +5455,21 @@ font-weight:bold;
   
 }
 }
+
+
+/* INLINE ICON */
+.inline-icon-container  {
+  margin:30px 0;
+  padding:20px ;
+  border-bottom:2px solid #632faf;
+}
+
+.inline-icon-container img {
+  max-width: 125px;
+}
+
+.inline-icon-top {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}

@@ -15,6 +15,9 @@ import UserContext from '../context/UserContext'
 const BlogPost = ({ data, pageContext,location }) => {
 
 
+  const userLocal =   JSON.parse(localStorage.getItem('user'))
+
+
   const postsCategories =[
     {
       name:"Open Banking / Open Finance",
@@ -30,6 +33,7 @@ const BlogPost = ({ data, pageContext,location }) => {
     }
 
   ]
+
   const handleCategory = (selectedCategory)=>{
     const found = postsCategories.find(cat => cat.name === selectedCategory.name);
     const goTo = found ? navigate(`${found.url}`) : null
@@ -39,12 +43,22 @@ const BlogPost = ({ data, pageContext,location }) => {
 
 
   const {next,prev} = pageContext;
-  const [user,setUser] = useContext(UserContext)
+  const [user,setUser] = useContext(UserContext || userLocal)
   const [scripts,setScripts] = useState([])
   const [update,setUpdate]=useState(false);
   const [category,setCategory]=useState('');
   const [urls,setUrls]=useState([])
 
+  const [localUser,setLocalUser]= useState(JSON.parse(localStorage.getItem('user')))
+  
+ 
+
+  
+  useEffect(()=>{
+    if (localUser) {
+      setUser(localUser)
+    }
+  },[localUser])
 
   const getLocations = (location)=> {
     const url = location.href;
@@ -56,9 +70,9 @@ const BlogPost = ({ data, pageContext,location }) => {
 
   useEffect(() => {
     getLocations(location)
-    const loggedInUser = localStorage.getItem("user");
+/*     const loggedInUser = localStorage.getItem("user");
     if(typeof window !==`undefined`) {
-     /*  window.location.reload() */
+   
       if (loggedInUser) {
       
         setUser(prevUser => ({ ...prevUser,loggedInUser }))} else {
@@ -69,13 +83,13 @@ const BlogPost = ({ data, pageContext,location }) => {
     const checkIfCategoryNameIncludesSymbol = (string)=>{
       const myStringReplaced = string.replace(/[/ " "]/g, '-');
       setCategory(myStringReplaced)
-    }
+    } */
 
-   
- 
-  
-    
+
   }, [category]);
+
+
+/* DISPLAY CONTENT BASED ON membership */  
 
 const getMembership = (subscription, isLoggedIn)=>{
  if(subscription==="free") {

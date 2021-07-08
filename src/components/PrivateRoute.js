@@ -7,10 +7,15 @@ import UserContext from '../context/UserContext'
 const PrivateRoute = ({ component: Component, location, ...rest }) => {
 
 
+  let localUser={}
+  const [user,setUser]=useContext(UserContext || localUser);
+  if(typeof window !== undefined) {
+    localUser =JSON.parse(localStorage.getItem('user'));
+  } else {
+    localUser.isLoggedIn=false
+  }
 
-  const [user,setUser]=useContext(UserContext);
-   
-  if (!user.isLoggedIn && location.pathname !== `/login`) {
+  if (!user.isLoggedIn  && !localUser.isLoggedIn && location.pathname !== `/login`) {
     navigate("/login")
     return null
   }
