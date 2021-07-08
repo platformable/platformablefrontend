@@ -10,13 +10,9 @@ import PostContentComponent from '../components/PostContentComponent'
 import UserContext from '../context/UserContext'
 // import { GatsbyImage } from "gatsby-plugin-image"
 
-
+const isBrowser = typeof window !== "undefined"
 
 const BlogPost = ({ data, pageContext,location }) => {
-
-
-  const userLocal =   JSON.parse(localStorage.getItem('user'))
-
 
   const postsCategories =[
     {
@@ -43,16 +39,19 @@ const BlogPost = ({ data, pageContext,location }) => {
 
 
   const {next,prev} = pageContext;
-  const [user,setUser] = useContext(UserContext || userLocal)
+  const [user,setUser] = useContext(UserContext)
   const [scripts,setScripts] = useState([])
   const [update,setUpdate]=useState(false);
   const [category,setCategory]=useState('');
   const [urls,setUrls]=useState([])
 
-  const [localUser,setLocalUser]= useState(JSON.parse(localStorage.getItem('user')))
-  
- 
+  /* get user from localStorage */
+  let  getLocalUser ={}
+  if(isBrowser) {
+    getLocalUser = JSON.parse(window.localStorage.getItem('user'))
+  }
 
+  const [localUser,setLocalUser]= useState(getLocalUser)
   
   useEffect(()=>{
     if (localUser) {
@@ -60,6 +59,8 @@ const BlogPost = ({ data, pageContext,location }) => {
     }
   },[localUser])
 
+
+  /* BREADCRUMBS */
   const getLocations = (location)=> {
     const url = location.href;
     const getUrls = url.split(/[/]/);

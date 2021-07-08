@@ -1,21 +1,23 @@
 
-import React,{useContext} from "react"
+import React,{useContext,useState,useEffect} from "react"
 import { navigate } from "gatsby"
 import UserContext from '../context/UserContext'
 
 
 const PrivateRoute = ({ component: Component, location, ...rest }) => {
+  const isBrowser = typeof window !== "undefined"
+  let localUserData;
+
+  if(isBrowser){
+    localUserData=JSON.parse(window.localStorage.getItem('user'))
+  } 
+/*   console.log('localUserData.isLoggedIn',localUserData.isLoggedIn) */
+  const [user,setUser]=useContext(UserContext);
 
 
-  let localUser={}
-  const [user,setUser]=useContext(UserContext || localUser);
-  if(typeof window !== undefined) {
-    localUser =JSON.parse(localStorage.getItem('user'));
-  } else {
-    localUser.isLoggedIn=false
-  }
 
-  if (!user.isLoggedIn  && !localUser.isLoggedIn && location.pathname !== `/login`) {
+
+  if (!user.isLoggedIn  && location.pathname !== `/login` && !localUserData.isLoggedIn) {
     navigate("/login")
     return null
   }

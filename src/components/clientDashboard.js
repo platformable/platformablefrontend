@@ -7,6 +7,11 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import UserContext from "../context/UserContext"
 
+
+
+const isBrowser = typeof window !== "undefined"
+
+
 // LOAD STRIPE CLIENT SIDE, this way wont be able to modify, edit, just client side checkout
 let stripePromise
 const getStripe = () => {
@@ -19,15 +24,22 @@ const getStripe = () => {
 
 export default function Dashboard() {
   const [user, setUser] = useContext(UserContext)
-  const [localUser,setLocalUser]= useState(JSON.parse(localStorage.getItem('user')))
-  
-/* setUser when user is in localStorage */
-  useEffect(()=>{
-    if (localUser) {
-      setUser(localUser)
-    }
-  },[localUser])
+  const [localUser,setLocalUser]= useState(getLocalUser)
 
+
+  /* get user from localStorage */
+  let  getLocalUser; 
+  if(isBrowser) {
+    getLocalUser = JSON.parse(window.localStorage.getItem('user'))
+  }
+
+  
+  useEffect(()=>{
+
+      setUser(getLocalUser)
+
+  },[])
+  console.log('dashboard user',user)
 
 const data = useStaticQuery(graphql`
     {

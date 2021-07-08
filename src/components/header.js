@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useContext } from "react"
 import UserContext from "../context/UserContext"
@@ -25,9 +25,24 @@ const Header = ({ siteTitle }) => {
   }
 
   const handleLogOut = () => {
-    setUser("")
+    setUser({
+      isLoggedIn:false,
+      userId:'',
+      name:'',
+      username:'',
+      lastname:'',
+      membership:'',
+      email:'',
+      stripeId:'',
+      isStripeActive:false,
+      stripeStartDay:'',
+      stripeEndDay:'',
+      affiliation:''
+    })
     if (typeof window !== `undefined`) {
-      localStorage.clear()
+  /*     localStorage.clear() */
+     
+      navigate("/")
     }
   }
 

@@ -160,7 +160,7 @@ export default function Login({data,location}) {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3"
               id="password"
               type="password"
-              placeholder="******************"
+              placeholder="*******"
               onChange={e => setLogin({ ...login, password: e.target.value })}
             />
             {/* <p className="text-red text-xs italic">Please choose a password.</p> */}
