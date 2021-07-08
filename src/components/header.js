@@ -1,6 +1,6 @@
 import { Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState, useContext } from "react"
+import React, { useState, useContext,useEffect } from "react"
 import UserContext from "../context/UserContext"
 import Logo from '../images/logo.png'
 
@@ -11,6 +11,14 @@ const Header = ({ siteTitle }) => {
   // const [isBurguerActive, setIsBurguerActive] = useState(false)
   // const [isProductsMenuActive, setItsProductsMenuActive] = useState(false)
   // const [isActive, setActive] = useState(false)
+
+  useEffect(()=>{
+
+    if (typeof window !== `undefined`) {
+      window.localStorage.setItem("user",JSON.stringify(user))
+      
+    }
+  },[user])
 
   function openNav() {
     return document
@@ -26,24 +34,10 @@ const Header = ({ siteTitle }) => {
 
   const handleLogOut = () => {
     setUser({
-      isLoggedIn:false,
-      userId:'',
-      name:'',
-      username:'',
-      lastname:'',
-      membership:'',
-      email:'',
-      stripeId:'',
-      isStripeActive:false,
-      stripeStartDay:'',
-      stripeEndDay:'',
-      affiliation:''
+      isLoggedIn:false
     })
-    if (typeof window !== `undefined`) {
-  /*     localStorage.clear() */
-     
-      navigate("/")
-    }
+
+    navigate('/')
   }
 
   return (
