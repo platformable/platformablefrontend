@@ -39,7 +39,7 @@ export default function Dashboard() {
       setUser(getLocalUser)
 
   },[])
-  console.log('dashboard user',user)
+
 
 const data = useStaticQuery(graphql`
     {
@@ -147,13 +147,6 @@ const data = useStaticQuery(graphql`
               <div className="dashboard-profile-card-img py-10"></div>
               <div className="dashboard-profile-card-text p-5">
                 <h5 className="font-black text-primary">Hi {user.name}</h5>
-                {user.affiliation}
-                {/* <Link
-                  to={`/app/profile/1`}
-                  className="text-sm text-white bg-yellow-300 px-5 py-1 text-center rounded"
-                >
-                  Edit Profile
-                </Link> */}
                 <h6 className="text-xs text-primary">
                   {user.isStripeActive
                     ? "Your Plan is Active"
@@ -167,18 +160,7 @@ const data = useStaticQuery(graphql`
                   <div className="dashboard-profile-card-img py-10"></div>
                   <div className="dashboard-profile-card-text p-5">
                     <h5 className="font-black text-primary">Codegenerator</h5>
-                    <a href="https://platformablecodegen.netlify.app" target="_blank">Codegenerator</a>
-                    {/* <Link
-                      to={`/app/profile/1`}
-                      className="text-sm text-white bg-yellow-300 px-5 py-1 text-center rounded"
-                    >
-                      Edit Profile
-                    </Link> */}
-                    <h6 className="text-xs text-primary">
-                      {user.isStripeActive
-                        ? "Your Plan is Active"
-                        : "No Active Plan yet"}
-                    </h6>
+                    <a href="https://platformablecodegen.netlify.app" target="_blank">Go to Codegenerator</a>
                   </div>
                 </div>
             : null}
