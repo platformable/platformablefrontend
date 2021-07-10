@@ -48,15 +48,16 @@ export default function blogs({ data, location }) {
                   <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
                     <div className="top-blog-card-img-container flex justify-center max-h-56">
                       {post.node.featured_image && post.node.featured_image ? (
-                        <Link to={`/${post.node.slug}`} >
+                        <a href={`/${post.node.slug}`} >
                           {" "}
                           <GatsbyImage image={getImage(post.node.featured_image)} className="block object-contain h-48 w-full" alt={post.node.title} />
-                        </Link>
+                        </a>
                       ) : null}
                     </div>
-                    <Link to={`/${post.node.slug}`}><h5 className="text-lg font-bold leading-5 mt-5">
+                    <a href={`/${post.node.slug}`}><h5 className="text-lg font-bold leading-5 mt-5">
                       {post.node.title}
-                    </h5></Link>
+                    </h5></a>
+                    <h3 onClick={()=>{navigate(`/${post.node.slug}`)}}>VER</h3>
                     <span className="text-gray-600 mr-3 small-text mt-1">
                       Published{" "}
                       {new Date(post.node.publishing_date).toDateString()}
@@ -117,18 +118,19 @@ while (index > 2 && post.node.staging ===false) {
               >
                 <div className="blog-card--left-main-page">
                   {post.node.featured_image && post.node.featured_image ? (
-                    <Link to={`/${post.node.slug}`}>
+                    <a href={`/${post.node.slug}`}>
                       {" "}
                       {/* <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="block object-contain h-48 w-full"/> */}
                       <GatsbyImage image={getImage(post.node.featured_image)} className="" alt={post.node.title} />
-                    </Link>
+                    </a>
                   ) : null}
                 </div>
 
                 <div className="blog-card-right-main-page ">
                   <h5 className="text-lg font-bold leading-5 mt-5">
-                    <Link to={`/${post.node.slug}`}> {post.node.title}</Link>
+                    <a href={`/${post.node.slug}`}> {post.node.title}</a>
                   </h5>
+                  <a href={`/${post.node.slug}`}>VER</a>
                   <span className="text-gray-600 mr-3 small-text mt-1">
                     Published{" "}
                     {new Date(post.node.publishing_date).toDateString()}
