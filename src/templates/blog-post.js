@@ -259,8 +259,8 @@ const getMembership = (subscription, isLoggedIn)=>{
 <section>
   <div className="post-next-prev-button container mx-auto grid justify-center">
  <ul className="flex mx-auto">
- {prev && (<li className="mr-5 text-small bg-gray-50 rounded-lg px-5 py-2 "><a href={`/${prev.slug}`} className="small-text">{`< Previous`}</a></li>)}
-   {next && (<li className="mr-5 text-small bg-gray-50 rounded-lg px-5 py-2 text-small"><a href={`/${next.slug}`} className="small-text">{`Next >`}</a></li>)}
+ {prev && (<li className="mr-5 text-small bg-gray-50 rounded-lg px-5 py-2 "><Link to={`/${prev.slug}`} className="small-text">{`< Previous`}</Link></li>)}
+   {next && (<li className="mr-5 text-small bg-gray-50 rounded-lg px-5 py-2 text-small"><Link to={`/${next.slug}`} className="small-text">{`Next >`}</Link></li>)}
    
    
  </ul>
