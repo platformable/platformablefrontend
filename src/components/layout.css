@@ -5262,7 +5262,7 @@ position:relative;
 .policy-lead .personas-top img,.dg-lead .personas-top img,.pm-lead .personas-top img,
 .policy-lead .personas-bottom-text,.dg-lead .personas-bottom-text,.pm-lead .personas-bottom-text 
 {
-  background-color:var(--og-light);
+  background-color:#D8C1FB;
   color:var(--russian-violet-dark)
 }
 
