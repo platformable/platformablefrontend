@@ -73,6 +73,7 @@ const Header = ({ siteTitle }) => {
           <Link to="/about">About</Link>
           <Link to="/sectors">Sectors</Link>
           <Link to="/blog">Blog</Link>
+          <Link to="/labs">Labs</Link>
           {user.isLoggedIn ? "" : <Link to="/login" state={{previousPost:false}} >Login</Link>}
           {user.isLoggedIn ? <Link to="/app/dashboard">Dashboard</Link> : ""}
           {user.isLoggedIn ? (
@@ -148,6 +149,13 @@ const Header = ({ siteTitle }) => {
                     activeClassName="active-top-nav"
                   >
                     Blog
+                  </Link>
+                  <Link
+                    to="/labs"
+                    className="top-nav  hover:bg-yellow-200  px-3 py-2 rounded-md text-sm font-medium"
+                    activeClassName="active-top-nav"
+                  >
+                    Labs
                   </Link>
                   {user && user.isLoggedIn ? (
                     <Link
