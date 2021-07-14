@@ -48,6 +48,7 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
+    "@netlify/plugin-gatsby": "^1.0.3",
     "gatsby-source-github": "^0.0.2",
     "markdown-to-jsx": "^7.1.1",
     "prettier": "2.2.1"
