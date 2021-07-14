@@ -42,7 +42,8 @@ const Labs = () => {
           })
           .then(res => res.json())
           .then(result =>{
-              console.log(result)
+              console.log(typeof result)
+              console.log('RESULTADO:',result)
               if(result==="OK"){
                 setLoading(false)
                 setSuccessMsg(true)
