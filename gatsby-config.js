@@ -4,6 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   flags: { 
+    FUNCTIONS: true,
     PRESERVE_WEBPACK_CACHE: true ,
     DEV_SSR:true
   },
