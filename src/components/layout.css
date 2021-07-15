@@ -4525,6 +4525,10 @@ font-weight:bold;
  text-decoration-color:var(--russian-violet-dark);   
 }
 
+.labs-grid {
+  grid-template-columns:1fr 3fr;
+  }
+
   .labs-hero-right img {
     max-width:650px;
     height:auto;

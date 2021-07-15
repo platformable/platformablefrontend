@@ -86,32 +86,32 @@ const Labs = () => {
             <section className="bg-pink-50 py-10">
             <div className="container mx-auto md:p-0 px-5">
                 <h3 className="text-2xl font-black mb-5 labs-main-color-dark">Current Lab Projects</h3>
-                <div className="current-labs-container flex  flex-wrap ">
-                <div className="lab-container flex gap-4 items-center md:w-1/3 mb-5">
-                    <StaticImage src="../static/labs/codegen.png" className="img-thumbnail md:w-1/3" placeholder="blurred"/>
-                    <h3 className="text-lg flex-grow md:w-2/3">Blog components code generator for headless CMS</h3>
+                <div className="current-labs-container grid md:grid-cols-3 grid-cols-1">
+                <div className="lab-container grid grid-cols-2 gap-4 items-center  labs-grid mb-8">
+                    <StaticImage src="../static/labs/codegen.png" className="img-thumbnail" placeholder="blurred"/>
+                    <h3 className="text-lg md:w-2/3 m-1/2">Blog components code generator for headless CMS</h3>
 
                     </div>
                     
-                    <div className="lab-container flex gap-4 items-center md:w-1/3 mb-8">
-                    <StaticImage src="../static/labs/Open banking-open finance ecosystem data model.png" className="img-thumbnail md:w-1/3" placeholder="blurred"/>
-                    <h3 className="text-lg flex-grow md:w-2/3">Open banking / open finance ecosystem data model</h3>
+                    <div className="lab-container grid grid-cols-2 gap-4 items-center  labs-grid mb-8">
+                    <StaticImage src="../static/labs/Open banking-open finance ecosystem data model.png" className="img-thumbnail md:w-1/3 w-1/3" placeholder="blurred"/>
+                    <h3 className="text-lg  md:w-2/3 w-2/3">Open banking / open finance ecosystem data model</h3>
 
                     </div>
-                    <div className="lab-container flex gap-4 items-center md:w-1/3 mb-8">
-                    <StaticImage src="../static/labs/Open health ecosystem model.png" className="img-thumbnail" placeholder="blurred"/>
-                    <h3 className="text-lg flex-grow md:w-2/3">Open health ecosystem model</h3>
+                    <div className="lab-container grid grid-cols-2 gap-4 items-center  labs-grid mb-8">
+                    <StaticImage src="../static/labs/Open health ecosystem model.png" className="img-thumbnail md:w-1/3 w-1/1" placeholder="blurred"/>
+                    <h3 className="text-lg  md:w-2/3">Open health ecosystem model</h3>
                     </div>
-                    <div className="lab-container flex gap-4 items-center md:w-1/3 mb-8">
-                    <StaticImage src="../static/labs/Equity tool to measure participation in open ecosystems.png" className="img-thumbnail md:w-1/3" placeholder="blurred"/>
+                    <div className="lab-container grid grid-cols-2 gap-4 items-center  labs-grid mb-8">
+                    <StaticImage src="../static/labs/Equity tool to measure participation in open ecosystems.png" className="img-thumbnail md:w-1/3 w-1/1" placeholder="blurred"/>
                     <h3 className="text-lg md:w-2/3">Equity tool to measure participation in open ecosystems</h3>
                     </div>
-                    <div className="lab-container flex gap-4 items-center md:w-1/3 mb-8">
+                    <div className="lab-container grid grid-cols-2 gap-4 items-center  labs-grid mb-8">
                     <StaticImage src="../static/labs/Equity tech financing.png" className="img-thumbnail md:w-1/3" placeholder="blurred"/>
                     <h3 className="text-lg md:w-2/3">Equity tech financing</h3>
                     </div>
-                    <div className="lab-container flex gap-4 items-center md:w-1/3 mb-8">
-                    <StaticImage src="../static/labs/Open sustainability ecosystem data model.png" className="img-thumbnail md:w-1/3" placeholder="blurred"/>
+                    <div className="lab-container grid grid-cols-2 gap-4 items-center  labs-grid mb-8">
+                    <StaticImage src="../static/labs/Open sustainability ecosystem data model.png" className="img-thumbnail md:w-1/3 w-1/1" placeholder="blurred"/>
                     <h3 className="text-lg md:w-2/3">Open sustainability data model</h3>
                     </div>
 
@@ -221,7 +221,6 @@ const Labs = () => {
                             <div className="lab-form-top-left-container">
                                 <h3 className="text-3xl font-black">Support our labs initiatives</h3>
                                 <p>You can help us develop our labs initiatives faster by investing in our efforts, by sponsoring one of our projects, or simply by keeping up to date with our work. Sign up now and we will be in touch
-Change the button “Contact us now” to “Find out more”
 </p>
                             </div>
                             <div className="lab-form-top-right-container flex   items-center">
@@ -243,7 +242,7 @@ Change the button “Contact us now” to “Find out more”
                         setFormMissingValues(false)
                         setForm({...form,email:e.target.value})}} 
                     value={form.email}/>
-                    <button className="btn bg-pink-500 rounded-xl p-3 hover:russian-violet-light" onClick={handleLabForm}>   {loading ? <Loader text="Loading" /> : "Contact us now"}</button>
+                    <button className="btn bg-pink-500 rounded-xl p-3 hover:russian-violet-light" onClick={handleLabForm}>   {loading ? <Loader text="Loading" /> : "Find out more"}</button>
                
               
              
