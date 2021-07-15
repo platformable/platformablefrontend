@@ -1,6 +1,6 @@
 import React from "react"
 import GridDisplayLp from "./GridDisplayLp"
-import backImg from "../assets/help_you_bank.svg"
+import backImg from "../assets/heroImg.png"
 
 const HeroLp = props => {
   return (

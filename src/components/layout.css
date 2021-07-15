@@ -702,7 +702,7 @@ MEDIA QUERIES */
 
 .underline {
   text-decoration: underline;
-  text-decoration-color: blue;
+  text-decoration-color: var(--russian-violet-dark);
 }
 .posts-content a,.footer-pp-link {
   text-decoration: underline;
@@ -4461,7 +4461,7 @@ width:125px !important;
 }
 
 .top-featured-post-image {
-  max-width:320px;
+  max-width:520px;
   /* max-width:100%; */
   height:auto;
   text-align: center;
@@ -4518,6 +4518,12 @@ font-weight:bold;
   } */
 
   /* LABS */
+
+  .internal-link {
+ /*    border-bottom:1px solid var(--russian-violet-dark); */
+ text-decoration: underline;
+ text-decoration-color:var(--russian-violet-dark);   
+}
 
   .labs-hero-right img {
     max-width:650px;

@@ -1,5 +1,5 @@
 import React from "react"
-import backImg from "../assets/hero_trends_report.svg"
+import backImg from "../assets/heroImg.png"
 
 const HeroLp = () => {
   return (

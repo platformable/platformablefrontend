@@ -8,8 +8,9 @@ const FormLp = () => {
       <iframe
         id="submitMailerlite"
         src="https://landing.mailerlite.com/webforms/landing/b9q0r6"
-        frameborder="0"
-        height="350px"
+        overflow="hidden"
+        scrolling="no"
+        height="450px"
       ></iframe>
       </div>
     </section>

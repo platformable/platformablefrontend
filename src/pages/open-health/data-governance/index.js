@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../../../components/layout"
 import Form from '../../../components/shared-components/Form'
-import DataGovernanceHeroImg from "../../../assets/oh-data-governance/data-governance-hero-img.png"
+import DataGovernanceHeroImg from "../../../assets/oh-data-governance/heroImg.png"
 import EthicallyImg from "../../../assets/oh-data-governance/ethically.png"
 import StoredImg from "../../../assets/oh-data-governance/stored.png"
 import ComparableImg from "../../../assets/oh-data-governance/comparable.png"
@@ -95,7 +95,7 @@ export default function index({location}) {
               agency
             
           </div>
-          <div className="hero-data-governance-right   grid justify-ends ">
+          <div className="hero-data-governance-right flex justify-end">
             <img src={DataGovernanceHeroImg}></img>
           </div>
         </div>

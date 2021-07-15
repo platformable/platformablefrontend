@@ -4,7 +4,7 @@ import Layout from '../../../components/layout'
 import GridDisplay from '../../../components/shared-components/GridDisplay'
 import HowWeWork from '../../../components/lp-components/open-banking/analyst-as-service/howWeWork'
 import FourHorizontalCircles from '../../../components/lp-components/open-banking/analyst-as-service/FourHorizontalCircles'
-import AnalistAsServiceTitle from '../../../assets/ob-analyst-as-service/ANalyst as a Service Title.svg'
+import AnalistAsServiceTitle from '../../../assets/ob-analyst-as-service/heroImg.png'
 import HowToHire from '../../../components/lp-components/open-banking/analyst-as-service/HowToHire'
 import Form from '../../../components/shared-components/Form'
 import Breadcrumbs from '../../../components/breadcrumbs'
@@ -61,7 +61,7 @@ export default function index({data,location}) {
       paragraphTwo=""
       paragraphThree=""
       imgContentClass=""
-      imgClass="object-cointain w-96 h-94"
+      imgClass=""
       backImgSrc={AnalistAsServiceTitle}
       alt="Hero"
     ></GridDisplay>

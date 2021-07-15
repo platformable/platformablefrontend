@@ -74,7 +74,7 @@ const GridDisplay = ({
 
       <div className={imgContentClass}>
         <img
-          className={imgClass}
+          className=""
           src={backImgSrc}
           alt={alt}
         />

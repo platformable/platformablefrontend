@@ -13,7 +13,7 @@ import ProductCards from '../../../components/lp-components/policy-development/P
 import HowWeDoIt from '../../../components/lp-components/policy-development/HowWeDoIt';
 import Breadcrumbs from '../../../components/breadcrumbs'
 /*assets*/
-import sectionOneImg from "../../../assets/lp-policy_development/policy_development _and_advocacy_services.svg"
+import sectionOneImg from "../../../assets/lp-policy_development/heroImg.png"
 
 
 
@@ -54,7 +54,7 @@ const LPPolicyDevelopment = ({data,location}) => {
       to emerging policy opportunities
             </p>
           </div>
-          <div className="hero-data-governance-right   grid justify-ends ">
+          <div className="hero-data-governance-right flex justify-end">
             <img src={sectionOneImg}></img>
           </div>
         </div>

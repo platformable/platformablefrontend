@@ -7,7 +7,7 @@ import GridDisplay from '../../../components/shared-components/GridDisplay'
 import HowWeWork from './components/howWeWork'
 import FourHorizontalCircles from '../../../components/lp-components/open-government/open-ecosystem-mapping/FourHorizontalCircles'
 // import OBOpenEcosystemTitle from '../../../assets/ob-open-ecosystem-mapping/OB - Open Ecosystem Title.png'
-import OGOpenEcosystemTitle from '../../../assets/ob-open-ecosystem-mapping/OG-Open-Ecosystem-Title.png' 
+import OGOpenEcosystemTitle from '../../../assets/og/open-ecosystem-mapping/heroImg.png' 
 import Form from '../../../components/shared-components/Form'
 import BuildADataImg from '../../../assets/ob-open-ecosystem-mapping/build-a-data.png'
 import UseOurExistingImg from '../../../assets/ob-open-ecosystem-mapping/use-our-existing.png'
@@ -38,7 +38,7 @@ export default function index({data,location}) {
       paragraphTwo=""
       paragraphThree=""
       imgContentClass=""
-      imgClass="object-cointain w-96 h-94"
+      imgClass=""
       backImgSrc={OGOpenEcosystemTitle}
       alt="Hero"
     ></GridDisplay>

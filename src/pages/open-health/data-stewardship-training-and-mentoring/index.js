@@ -10,7 +10,7 @@ import LearnHowToCollect from "./../../../components/lp-components/data-stewards
 import ProductCards from "./../../../components/lp-components/data-stewardship/ProductCards"
 import CourseStructure from './../../../components/lp-components/data-stewardship/CourseStructure';
 /*assets*/
-import sectionOneImg from "../../../assets/lp-data_stewardship/data_stewardship_training_and_mentoring.svg"
+import sectionOneImg from "../../../assets/lp-data_stewardship/heroImg.png"
 import buildImg from "../../../assets/lp-training/build_your_knowledge.svg"
 import blackHealthImg from "../../../assets/lp-data_stewardship/black_health.svg"
 import Breadcrumbs from '../../../components/breadcrumbs'
