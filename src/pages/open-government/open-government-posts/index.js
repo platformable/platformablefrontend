@@ -1,42 +1,46 @@
 import React from "react"
-import { Link, graphql,navigate } from "gatsby"
-// import {GatsbyImage} from 'gatsby-plugin-image'
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { Link, graphql, navigate } from "gatsby"
+import Layout from "../../../components/layout"
+import SEO from '../../../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Breadcrumbs  from "../../../components/breadcrumbs"
 
-export default function blogs({ data, location }) {
-  // const authorsData = data.allStrapiPost.edges[0].node.user;
+const OpenGovernmentPosts = ({data,location}) => {
+
   const noStagingPosts = data?data.allStrapiPost.edges.filter(post=>post.node.staging !=true):" ";
-
   const postsCategories =[
     {
       name:"Open Banking / Open Finance",
-      url:"/open-banking/open-banking-posts"
+      url:"/open-banking-posts"
     },
     {
       name:"Open Government",
-      url:"/open-government/open-government-posts"
+      url:"/open-government-posts"
     },
     {
       name:"Open Health",
-      url:"/open-health/open-health-posts"
+      url:"/open-health-posts"
     }
 
   ]
   const handleCategory = (selectedCategory)=>{
-    console.log('selectedCategory',selectedCategory)
     const found = postsCategories.find(cat => cat.name === selectedCategory.name);
     const goTo = found ? navigate(`${found.url}`) : null
     return goTo
   }
 
-  return (
-    <Layout>
-      <SEO title="Blog" />
-      <section className="container mx-auto ">
-        <div className="my-10 px-5"></div>
-      </section>
+  // const authorsData = data.allStrapiPost.edges[0].node.user;
+
+  return(
+  <Layout>
+    <SEO title="Blog"/>
+    <section className="container mx-auto all-blog-content  px-5">
+      <Breadcrumbs location={location}/>
+      <h3 className="text-3xl font-black text-center">
+        Open Government 
+      </h3>
+      <h3 className="text-1xl font-black text-center mb-5">Posts and Articles</h3>
+
       <div className="container mx-auto all-blog-content my-20 px-5">
         {/* TOP LATESTS 3 POSTS */}
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
@@ -177,41 +181,53 @@ export default function blogs({ data, location }) {
         </div>
 
       </div>
-    </Layout>
-  )
-}
+     
+      
+      {/* end of all posts */}
+    </section>
+  </Layout>
+)}
+
+export default OpenGovernmentPosts
 
 export const blogQuery = graphql`
-  query AllBlogPosts {
-    allStrapiPost(sort: { fields: publishing_date, order: DESC }) {
-      edges {
-        node {
-          categories {
-            name
-          }
-          id
-          slug
-          is_featured
-          tags {
-            name
-          }
-          featured_image {
-            childImageSharp {
-              gatsbyImageData(width:320, blurredOptions: {width: 100}, placeholder: BLURRED)
-            }
-          }
-          title
-          updated_at
-          user {
-            id
-            username
-          }
-          publishing_date
-          published_at
-          excerpt
-          staging
+query OpenGovernmentBlogPosts {
+    allStrapiPost(
+    sort: {fields: publishing_date, order: DESC}
+    filter: {categories: {elemMatch: {name: {eq: "Open Government"}}}}
+  ) {
+    edges {
+      node {
+        categories {
+          name
         }
+        id
+        slug
+        is_featured
+        tags {
+          name
+        }
+        featured_image {
+          childImageSharp {
+            gatsbyImageData(width: 320, blurredOptions: {width: 100}, placeholder: BLURRED)
+          }
+        }
+        title
+        updated_at
+        user {
+          id
+          username
+        }
+        publishing_date
+        published_at
+        excerpt
+        staging
       }
     }
   }
+}
 `
+
+
+
+

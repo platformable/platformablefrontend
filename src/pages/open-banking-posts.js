@@ -3,8 +3,9 @@ import { Link, graphql, navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Breadcrumbs  from "../components/breadcrumbs"
 
-const OpenBankingPosts = ({data}) => {
+const OpenBankingPosts = ({data,location}) => {
   const postsCategories =[
     {
       name:"Open Banking / Open Finance",
@@ -32,6 +33,7 @@ const OpenBankingPosts = ({data}) => {
   <Layout>
     <SEO title="Blog"/>
     <section className="container mx-auto all-blog-content my-20 px-5">
+    <Breadcrumbs location={location}/>
       <h3 className="text-3xl font-black text-center">
         Open Banking / Open Finance 
       </h3>
@@ -107,7 +109,7 @@ const OpenBankingPosts = ({data}) => {
 export default OpenBankingPosts
 
 export const blogQuery = graphql`
-query OpenBankingBlogPosts {
+query OpenBankingBlogPagePosts {
     allStrapiPost(filter: {categories: {elemMatch: {name: {eq: "Open Banking / Open Finance"}}}}) {
         edges {
           node {

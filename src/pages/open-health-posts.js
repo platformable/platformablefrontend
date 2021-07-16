@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import BlogCards from "../components/BlogCards"
 
 
-const OpenHealthPosts = ({data}) => {
+const OpenHealthPostx = ({data}) => {
 
   // const authorsData = data.allStrapiPost.edges[0].node.user;
 
@@ -25,10 +25,10 @@ const OpenHealthPosts = ({data}) => {
   </Layout>
 )}
 
-export default OpenHealthPosts
+export default OpenHealthPostx
 
 export const blogQuery = graphql`
-query OpenHealthBlogPosts {
+query OpenHealthBlogPostx {
     allStrapiPost(filter: {categories: {elemMatch: {name: {eq: "Open Health"}}}}) {
         edges {
           node {

@@ -46,8 +46,8 @@ const CourseStructure = () => {
     <section className="bg-greyImg py-6 px-8 ">
       
       
-      <div className="my-0  container mx-auto">
-      <h3 className="my-8 md:mx-16 font-black">Course Structure</h3>
+      <div className="my-0  container mx-auto w-3/5">
+      <h3 className="my-8 font-black">Course Structure</h3>
         {images.map((img, i) =>(
           <div key={i} className="mb-5 md:flex items-center"
             >

@@ -3,7 +3,7 @@ import { Link, graphql,navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-const OpenGovernmentPosts = ({data}) => {
+const OpenGovernmentPostx = ({data}) => {
   const postsCategories =[
     {
       name:"Open Banking / Open Finance",
@@ -101,10 +101,10 @@ const OpenGovernmentPosts = ({data}) => {
   </Layout>
 )}
 
-export default OpenGovernmentPosts
+export default OpenGovernmentPostx
 
 export const blogQuery = graphql`
-query OpenGovernmentBlogPosts {
+query OpenGovernmentBlogPostx {
     allStrapiPost(filter: {categories: {elemMatch: {name: {eq: "Open Government"}}}}) {
         edges {
           node {

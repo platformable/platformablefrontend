@@ -40,7 +40,7 @@ export default function index({data,location}) {
 
    <FourHorizontalCircles/>
    <section className="py-10 OH-anOpenEcosystemIs">
-       <div className="container mx-auto md:w-2/5 ">
+       <div className="container mx-auto md:w-3/5 ">
            <h3 className="font-black text-center my-5 oh-oem-anOpenEcosystemis">An open ecosystem is</h3>
            <p className="italic">A network of equitable participation opportunities that <strong>allow
 stakeholders</strong> (including governments and regulators, associations,

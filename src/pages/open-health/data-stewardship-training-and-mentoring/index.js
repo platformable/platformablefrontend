@@ -52,10 +52,24 @@ const LPDataStewardship = ({location}) => (
       label={"Sign up now"}
       btnClass="bg-blueBtn text-white font-bold uppercase my-8 mx-0 py-2 px-10 rounded-full hover:bg-secondary hover:text-primary cursor-pointer"
     />
+<br />
+  <section className="my-5">
+    <div className="bulb-main-container container mx-auto flex w-3/5 items-center">
+      <div className="bulb-left w-2/5">
+        <img src={buildImg} alt="Platformable" />
+      </div>
+      <div className="bulb-right w-3/5">
+        <h3 className="text-3xl font-black mb-3">Build knowledge step by step and at your own pace</h3>
+        <p>You will need to understand how to organize, systematize, and automate data with data models. Streamline collection, ensure storage, and encourage reuse within your agency and with partners.</p>
+      </div>
+    </div>
+  </section>
+  <br />
 
-    <GridDisplay
+
+{/*     <GridDisplay
       gridDisplayClass="flex sm:flex-row-reverse flex-col my-16 mx-auto py-6 sm:px-10 px-2 justify-center items-center"
-      gridContentClass="sm:py-0 py-5 lg:w-2/5"
+      gridContentClass="sm:py-0 py-5 lg:w-1/5"
       title="Build knowledge step by step 
       and at your own pace"
       paragraphOne="You will need to understand how to organize, systematize, and automate data with data models. Streamline collection, ensure storage, and encourage reuse within your agency and with partners."
@@ -63,7 +77,7 @@ const LPDataStewardship = ({location}) => (
       imgClass="object-cointain w-96 h-94"
       backImgSrc={buildImg}
       alt="a lighted bulb on top of stairs"
-    ></GridDisplay>
+    ></GridDisplay> */}
 
     <ProductCards />
     <Form
@@ -74,7 +88,13 @@ const LPDataStewardship = ({location}) => (
       iframeId="submitMailerlite"
       iframeSrc={"https://landing.mailerlite.com/webforms/landing/b9q0r6"}
     />
+    
+    
+    
     <CourseStructure/>
+    
+    
+    
     <section className="blueBkgTest bg-testimBkgBlue my-0 mx-auto py-6">
       <div className="text-center p-8">
         <h4 className="text-white font-black">

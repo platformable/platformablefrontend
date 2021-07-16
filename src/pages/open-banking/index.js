@@ -34,7 +34,7 @@ const data = {
         "title": "Blogs and \nArticles",
         "paragraph": "Read our latest news and analysis",
         "color": "#FBDACE40",
-        "url":"/open-banking-posts"
+        "url":"/open-banking/open-banking-posts"
       },
       {
         "img": OpenEcoIMg,

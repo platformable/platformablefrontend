@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby';
 import axios from 'axios';
@@ -65,7 +66,7 @@ const Labs = () => {
     return (
         <Layout>
 
-
+        <SEO title="Labs"/>
             <div className="container mx-auto">
                 <div className="labs-hero-container flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center">
                     <div className="labs-hero-left md:w-3/5 w:1/1 md:p-0 p-5">

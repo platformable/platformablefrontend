@@ -32,7 +32,7 @@ const data = {
         "title": "Blogs and \nArticles",
         "paragraph": "Read our latest news and articles",
         "color": "#87ACFC40",
-        "url":"/open-health-posts"
+        "url":"/open-health/open-health-posts"
       },
       {
         "img": OpenEcoIMg,

@@ -31,7 +31,7 @@ const data = {
         "title": "Blogs and \nArticles",
         "paragraph": "Read our latest news and articles",
         "color": "#D8C1FB40",
-        "url":"/open-government-posts"
+        "url":"/open-government/open-government-posts"
       },
       {
         "img": OpenEcoIMg,
