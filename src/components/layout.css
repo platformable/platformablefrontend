@@ -4734,7 +4734,10 @@ border:2px solid #a80075;
 /* LARGE QUOTE */
 .large-quote {
   margin:20px 0;
-  padding:5px 10px;
+  padding:10px 20px;
+  background-color:#f4f4f4;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
 }
 .large-quote p {
   font-style:italic;
