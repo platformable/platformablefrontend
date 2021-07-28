@@ -69,10 +69,10 @@ return(
   <div className="md:w-3/5">
     <h3 className="font-black">
    We support open ecosystems that build economic opportunities, solve complex problems, and enable everyone to participate and co-create their own value
-    </h3>
-    <button className="outlinedBtn text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer">
+    </h3> <br />
+    <Link to="/about" className="outlinedBtn text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer">
       Learn more about us
-    </button>
+    </Link>
   </div>
 
   <div className="">
