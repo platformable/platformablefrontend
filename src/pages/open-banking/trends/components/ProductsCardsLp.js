@@ -4,7 +4,10 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 const ProductsCardsLp = () => {
   const data = useStaticQuery(graphql`
   query MyFileQuery {
-    file(ext: {eq: ".pdf"}) {
+    file(
+      ext: {eq: ".pdf"}
+      name: {eq: "Platformable-Q2-2021-Open-Banking-Open-Finance-Trends-Report"}
+    ) {
       id
       name
       publicURL
