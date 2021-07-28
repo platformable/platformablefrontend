@@ -16,7 +16,7 @@ import WorkWithCards from '../components/home-components/WorkWithCards';
 
 /*assets*/
 import sectionOneImg from "../assets/home/hero_squares.png"
-import sectionTwoImg from "../assets/home/quarterly_trends.png"
+import sectionTwoImg from "../assets/home/quarterly_trends1.png"
 import sectionSixImg from '../assets/home/we_publish_analysis.png'
 
 const IndexPage = ({data}) => {
@@ -94,7 +94,7 @@ return(
       gridContentClass="md:w-2/5"
       firstParagraph="Download our latest release"
       title={`Open Banking/Open Finance Quarterly Trend Reports`}
-      quarter="Q1 2021"
+      quarter="Q2 2021"
       doNotDisplayAnchor="hidden"
       url={"/open-banking/trends"}
       type="button"
