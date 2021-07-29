@@ -6,7 +6,7 @@ import openBankingImg from "../../assets/home/open_banking.png"
 import openGovImg from '../../assets/home/open_government.png'
 import openHealthImg from '../../assets/home/open_health.png'
 import openSustainabilityImg from '../../assets/home/open_sustainability.png'
-
+import { StaticImage } from "gatsby-plugin-image"
 
 const OpenEcosystemSection = () => {
   const images = [
@@ -38,7 +38,17 @@ const OpenEcosystemSection = () => {
   ]
   return (
     <section className="container mx-auto bg-card px-8 py-2 rounded-2xl  lg:absolute -bottom-4/4 inset-x-0 ">
-      <img src={sectionImg} alt="we measure the growth" className=" h-72 mx-auto"/>
+      {/* <img src={sectionImg} alt="we measure the growth" className=" h-72 mx-auto"/> */}
+      <div className="flex justify-center">
+      <StaticImage
+                    src="../../assets/home/we_measure_the_growth.png"
+                    alt="Platformable"
+                    placeholder="blurred"
+                    layout="fixed"
+                  
+
+                  />
+</div>
       <h3 className="my-4 mx-auto text-center font-black text-3xl">We measure the growth of digital open ecosystems</h3>
       <p className="text-center">Across 4 sectors</p>
       <div className="my-0 md:mx-16 mx-2 py-0 px-3 flex flex-wrap flex-col sm:flex-row justify-evenly">
