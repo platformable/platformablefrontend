@@ -3,10 +3,12 @@ import OpenEcosystemSection from './OpenEcosystemSection';
 import ApiprovidersImg from '../../assets/home/home-apiproviders.png'
 import hometheyopenvaluesImg from '../../assets/home/home-theyopenvalues.png'
 
-/*assets*/
-// import sectionImg from '../../assets/home/platform_approaches.png'
+
+
 
 const PositionedSection = () => {
+
+
   return (
     <section className="bg-primary relative sm:mb-72 mb-8 w-auto lg:py-20 text-center">
       <h3 className="text-white">Platform approaches</h3>
@@ -22,8 +24,7 @@ const PositionedSection = () => {
       </div>
 
       </div>
-      {/* <img src={sectionImg} alt="two squares with a lock and a hand holding a dollar sign" className="mx-auto mb-24"/> */}
-
+   
       <OpenEcosystemSection/>
 
     </section>

@@ -71,21 +71,6 @@ const BlogPost = ({ data, pageContext,location }) => {
 
   useEffect(() => {
     getLocations(location)
-/*     const loggedInUser = localStorage.getItem("user");
-    if(typeof window !==`undefined`) {
-   
-      if (loggedInUser) {
-      
-        setUser(prevUser => ({ ...prevUser,loggedInUser }))} else {
-        // console.log('not logged')
-      }
-    }
-
-    const checkIfCategoryNameIncludesSymbol = (string)=>{
-      const myStringReplaced = string.replace(/[/ " "]/g, '-');
-      setCategory(myStringReplaced)
-    } */
-
 
   }, [category]);
 
@@ -130,7 +115,7 @@ const getMembership = (subscription, isLoggedIn)=>{
  return results
   }
  
-  // console.log('scripts', scripts)
+
 
   const isInitialMount = useRef(true);
   useEffect(() => {
@@ -141,11 +126,10 @@ const getMembership = (subscription, isLoggedIn)=>{
       setUpdate(true)
       isInitialMount.current = false;
     } else {
-      console.log("hey not initial mount")
-      //getScripts()
+   
+  
     }
-    // window.instgrm.Embeds.process()
-    // window.twttr.widgets.load()
+
   }, [data])
 
 
@@ -180,7 +164,7 @@ const getMembership = (subscription, isLoggedIn)=>{
           <div className="autor flex flex-wrap items-start">
             <div className="autores flex  ">
               <div className="autorInfo flex items-start">
-                {/* <h2 className="text-sm tracking-tighter text-gray-900"> */}
+               
             
                   {data.strapiPost.user.length === 1 ? (
                     <>

@@ -1,16 +1,13 @@
 import { Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState, useContext,useEffect } from "react"
+import React, {useContext,useEffect } from "react"
 import UserContext from "../context/UserContext"
 import Logo from '../images/logo.png'
-
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => {
   const [user, setUser] = useContext(UserContext || false)
-  // const [isOpen, setIsOpen] = useState(false)
-  // const [isBurguerActive, setIsBurguerActive] = useState(false)
-  // const [isProductsMenuActive, setItsProductsMenuActive] = useState(false)
-  // const [isActive, setActive] = useState(false)
+
 
   useEffect(()=>{
 
@@ -49,11 +46,13 @@ const Header = ({ siteTitle }) => {
         <div className="flex justify-between px-3 py-2">
           <div>
             <Link to="/">
-              <img
-                className="block  h-8 w-auto mt-2"
-                src={Logo}
-                alt="Workflow"
-              />{" "}
+            <StaticImage src="../images/logo.png" 
+            alt="platformable" 
+            placeholder="blurred"
+            layout="fixed"
+            width={225}
+            />
+              
             </Link>{" "}
           </div>
           <div onClick={openNav}>
@@ -95,11 +94,13 @@ const Header = ({ siteTitle }) => {
               <div className="hidden sm:block flex justify-between  sm:py-2">
                 <div>
                   <Link to="/">
-                    <img
-                      className="block  h-8 w-auto mt-2"
-                      src={Logo}
-                      alt="Workflow"
-                    />{" "}
+                  <StaticImage 
+                  src="../images/logo.png" 
+                  alt="platformable" 
+                  placeholder="blurred"
+                  layout="fixed"
+                  width={225}
+                  />
                   </Link>
                 </div>
                 <div>

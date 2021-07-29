@@ -31,19 +31,6 @@ export default function about({ data }) {
             </div>
           </div>
 
-          {/* <div className="py-10">
-            <h3 className="text-2xl md:text-4xl font-black text-center">{data.strapiAbout.key_work_title && data.strapiAbout.key_work_title ? data.strapiAbout.key_work_title : '' }</h3>
-            <p className="text-center text-2xl font-black">{data.strapiAbout.key_work_subtitle ? data.strapiAbout.key_work_subtitle : ''}</p>
-            <ul>
-              {data.strapiAbout.key_work_areas_items ? data.strapiAbout.key_work_areas_items.map(item=> {
-                         return  <li className="text-center text-2xl " key={item.id}><span className="text-2xl font-black">{`> `}</span>{item.key_item}</li>
-              }) : ''}
-            </ul>
-
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-
-          </div>
-          </div> */}
         </section>
       </div>
 
@@ -74,11 +61,7 @@ export default function about({ data }) {
                   key={ind}
                   className=" pt-5 rounded overflow-hidden border-b-4 border-russian-violet-dark bg-gray-50 w-1/1"
                 >
-                  {/* <img
-                    src={x.image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    alt="Platformable team"
-                    className="w-full object-contain h-32 sm:h-48 md:h-64 my-0"
-                  /> */}
+      
                    <div className="flex justify-center">
                     <GatsbyImage image={getImage(x.image)} className="my-0" alt="Platformable team"/>
                     </div>
@@ -102,14 +85,6 @@ export default function about({ data }) {
           })}
         </div>
       </section>
-
-      {/* <section className="about-cta bg-russian-violet-dark py-40">
-        <h3 className="font-black text-center text-white text-4xl">Have an idea in mind?</h3>
-        <div className="text-center my-5">
-        <button className="bg-red-orange-dark rounded-md px-10 py-2 text-center text-white">LET'S TALK!</button>
-        </div>
-        
-        </section> */}
     </Layout>
   )
 }

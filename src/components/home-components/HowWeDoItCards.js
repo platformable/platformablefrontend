@@ -5,6 +5,8 @@ import measureImg from '../../assets/home/measuring_value.png'
 import bestPracticesImg from '../../assets/home/sharing_best_practices.png'
 import connectImg from '../../assets/home/connecting_partners.png'
 
+
+
 const HowWeDoItCards = () => {
   const images = [
     {
@@ -38,6 +40,7 @@ const HowWeDoItCards = () => {
 
       <div className="my-0 md:mx-16 mx-2 py-0 px-4 flex flex-wrap flex-col sm:flex-row justify-evenly items-center">
         {images.map((img, i) => (
+          
           <div
             key={i}
             className="lg:w-2/5 w-full max-w-xl my-6 mx-2 p-4 rounded-full bg-card
@@ -45,7 +48,6 @@ const HowWeDoItCards = () => {
           transition-shadow hover:shadow-hover"
           >
             <img src={img.src} alt={img.title} className="mr-8 w-20 h-20" />
-
             <div className="w-8/12">
               <h6 className="my-1 text-secondary font-black">{img.title}</h6>
               <p className="text-darkGrey">{img.paragraph}</p>
