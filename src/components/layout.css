@@ -4729,7 +4729,9 @@ border:2px solid #a80075;
   padding:20px;
 }
 
-
+.top-blog-card-img-container img{
+ width: 30px;
+}
 
 /* LARGE QUOTE */
 .large-quote {

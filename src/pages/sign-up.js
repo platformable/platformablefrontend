@@ -30,10 +30,6 @@ export default function SignUp() {
     axios
     .post('https://websiteserver-ds7cf.ondigitalocean.app/auth/local/register', {...register})
     .then(response => {
-      // Handle success.
-      // console.log('Well done!');
-      // console.log('User profile', response.data.user);
-      // console.log('User token', response.data.jwt);
       navigate("/registration-success")
     })
     .catch(error => {

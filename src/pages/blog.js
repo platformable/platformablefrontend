@@ -25,7 +25,7 @@ export default function blogs({ data, location }) {
 
   ]
   const handleCategory = (selectedCategory)=>{
-    console.log('selectedCategory',selectedCategory)
+
     const found = postsCategories.find(cat => cat.name === selectedCategory.name);
     const goTo = found ? navigate(`${found.url}`) : null
     return goTo

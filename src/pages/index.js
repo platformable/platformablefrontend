@@ -44,35 +44,36 @@ return (
   <Layout>
     <SEO title="Home" />
 
-    <section className="">
-      <div className="hero-section  container mx-auto flex flex-col sm:flex-row flex-wrap my-6 py-6 px-5 justify-between items-center ">
-        <div className="md:w-3/5">
-          <h3 className="font-black">
+
+    <section className="publish_analysis my-14">
+      <br /><br />
+      <div className="container mx-auto grid md:grid-cols-2 grid-cols-1">
+        <div className="left flex items-center">
+          <div>
+            <h3 className="font-black mb-5">
             We support open ecosystems that build economic opportunities, solve
             complex problems, and enable everyone to participate and co-create
             their own value
-          </h3>{" "}
-          <br />
-          <Link
+            </h3>
+            <Link
             to="/about"
-            className="outlinedBtn text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
+            className="outlinedBtn mt-3 text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
           >
             Learn more about us
           </Link>
-        </div>
-
-        <div className="">
-          <div className="">
-            <StaticImage
-              src="../assets/home/hero_squares.png"
-              alt="platformable"
-              className="object-cointain w-96 h-94"
-            />
           </div>
         </div>
-        <div></div>
+        <div className="right flex justify-end">
+          <StaticImage
+            src="../assets/home/hero_squares.png"
+            alt="platformable"
+            width={400}
+          />
+        </div>
       </div>
+      <br /><br />
     </section>
+
 
     <section className="bg-gray-100 py-5">
       <GridDisplay
@@ -112,8 +113,11 @@ return (
                             {" "}
                             <GatsbyImage
                               image={getImage(post.node.featured_image)}
-                              className="block object-contain h-48 w-full"
+                              className=""
                               alt={post.node.title}
+                              layout="fixed"
+                              width={200}
+                              height={200}
                             />
                           </Link>
                         ) : null}
@@ -239,7 +243,12 @@ query HomepagePosts {
         }
         featured_image {
           childImageSharp {
-            gatsbyImageData(blurredOptions: {width: 100}, placeholder: BLURRED)
+            gatsbyImageData(
+              width:300
+              blurredOptions: {width: 100}
+              placeholder: BLURRED
+              formats: PNG
+            )
           }
         }
         title

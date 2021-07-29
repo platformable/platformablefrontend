@@ -11,7 +11,7 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
   if(isBrowser){
     localUserData=JSON.parse(window.localStorage.getItem('user'))
   } 
-/*   console.log('localUserData.isLoggedIn',localUserData.isLoggedIn) */
+
   const [user,setUser]=useContext(UserContext);
 
 

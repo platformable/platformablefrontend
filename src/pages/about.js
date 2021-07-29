@@ -53,7 +53,7 @@ export default function about({ data }) {
           Platformable's Team
         </h3>
         <div class="container mx-auto mt-20 grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-3 md:px-5">
-          {/* {console.log(data.strapiAbout)} */}
+
           {data.strapiAbout.Author.map((userauthor, index) => {
             return userauthor.user.map((x, ind) => {
               return (

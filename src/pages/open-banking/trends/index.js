@@ -22,7 +22,7 @@ const IndexPage = ({location}) => {
   const [user,setUser]=useContext(UserContext)
 
   const handleIsLoggedIn = () => {
-    console.log('click')
+
    user.isLoggedIn ? navigate('/app/dashboard') : navigate('/login')
   }
   return(

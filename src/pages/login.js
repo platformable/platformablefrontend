@@ -15,7 +15,7 @@ export default function Login({data,location}) {
 
 
   function addToLocalStorage(user) {
-   /*  console.log("function add to localStorage running, user:",user) */
+
     localStorage.setItem("user",JSON.stringify(user))
   }
 

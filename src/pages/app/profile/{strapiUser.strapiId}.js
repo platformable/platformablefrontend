@@ -9,20 +9,8 @@ import axios from "axios"
 
 function StrapiUser({ data }) {
   const [user, setUser] = useContext(UserContext)
-  // const data = useStaticQuery(graphql`
-  // query strapiUser($strapiId: Int) {
-  //     strapiUser(strapiId: {eq: $strapiId}) {
-  //       email
-  //       id
-  //       lastname
-  //       name
-  //       username
-  //       strapiId
-  //     }
-  //   }
-  // `)
 if(data) {
-  console.log('data', data)
+
 }
   const [register, setRegister] = useState({
     username: "",
@@ -48,21 +36,9 @@ if(data) {
       setErrorMsg(true)
       return null
     }
-    console.log("updating")
+
     setLoading(true)
-    // axios
-    // .post('https://websiteserver-ds7cf.ondigitalocean.app/auth/local/register', {...register})
-    // .then(response => {
-    //   // Handle success.
-    //   console.log('Well done!');
-    //   console.log('User profile', response.data.user);
-    //   console.log('User token', response.data.jwt);
-    //   navigate("/registration-success")
-    // })
-    // .catch(error => {
-    //   // Handle error.
-    //   console.log('An error occurred:', error.response);
-    // });
+  
   }
   return (
     <Layout>
@@ -71,9 +47,7 @@ if(data) {
         <div className="grid md:grid-cols-6 md:gap-4 grid-cols-1 md:gap-2 px-5 justify-center items-center h-screen  ">
           <div className="col-start-3 col-span-2 bg-gray-100 rounded-xl  px-10 py-10">
             <h3 className="font-black text-lg">Edit Profile</h3>
-            {/* <p>{data.strapiUser.name}</p>
-          <p>id: {data.strapiUser.id}</p>
-          <p>strapiId: {data.strapiUser.strapiId}</p> */}
+
             <div className="mb-4">
               <label
                 className="block text-grey-darker text-sm font-bold mb-2"
