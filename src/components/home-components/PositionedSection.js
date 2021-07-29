@@ -1,9 +1,8 @@
 import React from "react"
 import OpenEcosystemSection from './OpenEcosystemSection';
-import ApiprovidersImg from '../../assets/home/home-apiproviders.png'
-import hometheyopenvaluesImg from '../../assets/home/home-theyopenvalues.png'
 
 
+import { StaticImage } from "gatsby-plugin-image"
 
 
 const PositionedSection = () => {
@@ -14,13 +13,31 @@ const PositionedSection = () => {
       <h3 className="text-white">Platform approaches</h3>
       <h3 className="text-white font-black">have two big advantages</h3>
       <div className="md:w-3/6  text-center mx-auto  advantageImgs flex flex-wrap md:flex-nowrap justify-center flex-wrap">
-      <div className="mx-auto ">
-        <img src={ApiprovidersImg} alt="Platformable Advantages"/>
+      <div className="flex justify-center text-center">
+        
+        <div className="flex flex-col items-center text-center">
+        <StaticImage
+        src="../../assets/home/home-apiproviders.png"
+        alt="Platformable Advantages"
+        placeholder="blurred"
+        layout="fixed"
+        width={300}
+        />
         <p className="p-5 text-center text-white">They open up the value previously locked in data and capabilties</p>
+        </div>
       </div>
-      <div className="mx-auto ">
-        <img src={hometheyopenvaluesImg} alt="Platformable Advantages"/>
+      <div className="">
+     <div className="flex flex-col items-center text-center">
+        <StaticImage
+        src="../../assets/home/home-theyopenvalues.png"
+        alt="Platformable Advantages"
+        placeholder="blurred"
+        layout="fixed"
+        width={300}
+
+   />
         <p className="p-5 text-center text-white">They enable digital ecosystems where everyone can participate and co-create</p>
+        </div>
       </div>
 
       </div>

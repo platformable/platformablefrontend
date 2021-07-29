@@ -2,7 +2,7 @@ import React,{useContext} from 'react'
 import {Link } from 'gatsby'
 import UserContext from "../context/UserContext"
 import CCLogo from '../images/CCLogo.png'
-
+import { StaticImage } from "gatsby-plugin-image"
 export default function Footer() {
     const [user, setUser] = useContext(UserContext || false)
     const handleLogOut = () => {
@@ -20,11 +20,14 @@ export default function Footer() {
               <div className="hidden sm:block flex justify-between  sm:py-2">
                 <div className="text-center ">
                   <Link to="/">
-                    <img
-                      className="block  h-8 w-auto mt-2 mb-1"
-                      src={CCLogo}
-                      alt="Workflow"
-                    />
+                     <StaticImage
+                    src="../images/CCLogo.png"
+                    alt="Workflow"
+                    placeholder="blurred"
+                    layout="fixed"
+                    width={100}
+
+                  />
                     <p className="small-text">All free, accessible content is CC BY-SA. Logged in and paid content is © Platformable S.L. 2021 </p>
 
                   </Link>
@@ -56,13 +59,7 @@ export default function Footer() {
                   >
                     About
                   </Link>
-                  {/* <Link
-                    to="/products"
-                    className=" top-nav text-gray-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    activeClassName="active-top-nav"
-                  >
-                    Products
-                  </Link> */}
+  
                   <Link
                     to="/sectors"
                     className=" top-nav text-sm hover:bg-yellow-200 px-3 py-2 rounded-md text-sm font-medium"
