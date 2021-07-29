@@ -45,7 +45,7 @@ return (
     <SEO title="Home" />
 
 
-    <section className="publish_analysis my-14">
+    <section className="my-14">
       <br /><br />
       <div className="container mx-auto grid md:grid-cols-2 grid-cols-1">
         <div className="left flex items-center">
@@ -76,23 +76,37 @@ return (
 
 
     <section className="bg-gray-100 py-5">
-      <GridDisplay
-        gridDisplayClass="bg-lightBlue flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
-        gridContentClass="md:w-2/5"
-        firstParagraph="Download our latest release"
-        title={`Open Banking/Open Finance Quarterly Trend Reports`}
-        quarter="Q2 2021"
-        doNotDisplayAnchor="hidden"
-        url={"/open-banking/trends"}
-        type="button"
-        label={"More info on our reports"}
-        btnClass="bg-secondary text-primary font-bold my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
-        imgContentClass=""
-        imgClass="object-cointain w-96 h-94"
-        backImgSrc={sectionTwoImg}
-        alt="Hero"
-      ></GridDisplay>
+      <br /><br />
+      <div className="container mx-auto grid md:grid-cols-2 grid-cols-1">
+        <div className="left flex items-center">
+          <div>
+            <p>Download our latest release</p>
+            <h2 className="font-black mb-5">
+            Open Banking/Open Finance Quarterly Trend Reports
+            Q2 2021
+
+            </h2>
+            <Link
+            to="/open-banking/trends"
+            className="bg-secondary text-primary font-bold my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
+          >
+            More info on our reports
+          </Link>
+          </div>
+        </div>
+        <div className="right flex justify-end">
+          <StaticImage
+            src="../assets/home/quarterly_trends1.png"
+            alt="platformable"
+            width={400}
+          />
+        </div>
+      </div>
+      <br /><br />
     </section>
+
+    
+
 
     {/* <PostsCards/> */}
     <h3 className="text-center font-black mt-5">Latest Posts </h3>

@@ -186,6 +186,7 @@ i {
 }
 
 img {
+  aspect-ratio: attr(width) / attr(height);
   max-width: 100%;
   display: inline !important;
 }
