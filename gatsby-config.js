@@ -10,7 +10,7 @@ module.exports = {
   },
   siteMetadata: {
     title: `Platformable`,
-    description: `We build tools.`,
+    description: `We measure the value of open ecosystems`,
     author: `Mark Boyd`,
     siteUrl:`https://www.platformable.com`
   },
