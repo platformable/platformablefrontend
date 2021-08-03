@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `Platformable`,
     description: `We build tools.`,
-    author: `@platformable`,
+    author: `Mark Boyd`,
     siteUrl:`https://www.platformable.com`
   },
   plugins: [
