@@ -266,11 +266,7 @@ const getMembership = (subscription, isLoggedIn)=>{
                   className="flex flex-col items-center justify-center p-4  rounded-lg"
                 >
                   <div className="inline-flex shadow-lg border border-gray-200 rounded-full overflow-hidden h-40 w-40">
-                    {/* <img
-              src="https://platformable.com/content/images/2020/03/headshot-profile.png"
-              alt=""
-              className="h-full w-full my-0"
-            /> */}
+          
                     <img
                       alt={data.strapiPost.title}
                       key={index}

@@ -112,6 +112,8 @@ return (
     <h3 className="text-center font-black mt-5">Latest Posts </h3>
     {/* POSTS */}
     <section className="container mx-auto all-blog-content my-20 px-5">
+
+
       {/* TOP LATESTS 3 POSTS */}
       <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
         {data
@@ -120,7 +122,7 @@ return (
                 return (
                   <>
                     <div className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
-                      <div className="top-blog-card-img-container flex justify-center max-h-56">
+                      <div className="top-blog-card-img-container flex justify-center md:h-2/5 items-center">
                         {post.node.featured_image &&
                         post.node.featured_image ? (
                           <Link to={`/${post.node.slug}`}>
