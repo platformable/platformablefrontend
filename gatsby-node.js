@@ -30,6 +30,9 @@ exports.createPages = ({ actions, graphql }) => {
             id
             title
             slug
+            categories {
+              name
+            }
           }
         }
       }
@@ -39,11 +42,13 @@ exports.createPages = ({ actions, graphql }) => {
     const posts= result.data.allStrapiPost.edges;
 
     posts.forEach(({ node }, index) => {
+      
       createPage({
         path: `/${node.slug}`,
         component: path.resolve(`src/templates/blog-post.js`),
         context: {
           slug:node.slug,
+          categories:node.categories[0].name,
           prev: index===0  ? null : posts[index-1].node,
           next: index ===(posts.length -1) ? null : posts[index +1].node
         },
@@ -55,24 +60,6 @@ exports.createPages = ({ actions, graphql }) => {
   return getPosts;
 };
 
-// exports.sourceNodes = ({actions})=> {
-//   const {createTypes} = actions;
-//   const typeDefs = `
-//   type StrapiAbout implements Node {
-//     content: String 
-
-//   }
-
-//   type StrapiPost implements Node  {
-//     slug: String
-//     content: String
-//     featured_image: File @fileByRelativePath
-//   } 
-
-//   `
-
-//   createTypes(typeDefs);
-// }
 
 
 exports.createSchemaCustomization = ({ actions }) => {

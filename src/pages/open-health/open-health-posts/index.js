@@ -44,20 +44,28 @@ const OpenHealthPosts = ({data,location}) => {
       <div className="container mx-auto all-blog-content my-20 px-5">
         {/* TOP LATESTS 3 POSTS */}
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-          {data?noStagingPosts.map((post, index) => {
+        {data?noStagingPosts.map((post, index) => {
             
             while (index < 3 && post.node.staging ===false) {
               return (
                 <>
-                  <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
-                    <div className="top-blog-card-img-container flex justify-center md:h-2/5 items-center">
+                  <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow py-5 top-blog-cards flex flex-col justify-between">
+                    <div className="top-blog-card-img-container flex justify-center items-center  md:h-3/5">
+                      <div className="">
                       {post.node.featured_image && post.node.featured_image ? (
                         <Link to={`/${post.node.slug}`} >
                           {" "}
-                          <GatsbyImage image={getImage(post.node.featured_image)} className="block object-contain h-48 w-full" alt={post.node.title} />
+                          <GatsbyImage
+                              image={getImage(post.node.featured_image)}
+                              className=""
+                              alt={post.node.title}
+                         
+                            />
                         </Link>
                       ) : null}
+                      </div>
                     </div>
+                    <div className="md:h-2/5">
                     <Link to={`/${post.node.slug}`}><h5 className="text-lg font-bold leading-5 mt-5">
                       {post.node.title}
                     </h5></Link>
@@ -100,8 +108,9 @@ const OpenHealthPosts = ({data,location}) => {
                       })}
                     </div>
                     <p className="text-xs leading-5 my-1 small-text">
-                      {post.node.excerpt ? post.node.excerpt : ""}
+                      {post.node.excerpt ? post.node.excerpt.substr(0,120)+" ..." : ""}
                     </p>
+                    </div>
                   </div>
                 </>
               )

@@ -121,7 +121,7 @@ return (
               while (index < 3 && post.node.staging === false) {
                 return (
                   <>
-                    <div className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
+                    <div className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between" key={index}>
                       <div className="top-blog-card-img-container flex justify-center md:h-2/5 items-center">
                         {post.node.featured_image &&
                         post.node.featured_image ? (
