@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import GridDisplay from "../components/shared-components/GridDisplay"
 /*specific-components*/
 import ProductStreamsCards from "../components/product-streams/ProductStreamsCards"
-
+import { StaticImage } from "gatsby-plugin-image"
 
 /*assets*/
 import sectionHeroImg from "../assets/product-streams/home_hero.svg"
@@ -237,19 +237,19 @@ const ProductStreams = ({location}) => {
       </div>
       </section>
 
-      <GridDisplay
-        gridDisplayClass="hero-section container flex flex-col sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-between items-center "
-        gridContentClass="md:w-3/5"
-        title="Sectors"
-        titleClass="my-5"
-        paragraphOne="We track the growth and opportunities of open ecosystems in key sectors. Open ecosystems can help solve today’s complex challenges by building to open standards and using open data models, encouraging multi-stakeholder networks, and measuring value and impact."
-        doNotDisplayLink="hidden"
-        doNotDisplayAnchor="hidden"
-        imgContentClass=""
-        imgClass="object-cointain w-96 h-94"
-        backImgSrc={sectionHeroImg}
-        alt="Hero"
-      ></GridDisplay>
+      <div className="container mx-auto">
+                <div className="flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center">
+                    <div className="labs-hero-left md:w-3/5 w:1/1 md:p-0 p-5">
+                        <h3 className="text-3xl font-black ">Sectors</h3>
+                        <p>We track the growth and opportunities of open ecosystems in key sectors. Open ecosystems can help solve today’s complex challenges by building to open standards and using open data models, encouraging multi-stakeholder networks, and measuring value and impact.</p>
+                    </div>
+                    <div className="labs-hero-right md:w-2/5 flex justify-end">
+                  {/* <img src={sectionHeroImg} alt="" /> */}
+                  <StaticImage src="../assets/product-streams/home_hero.svg" placeholder="blurred" /> 
+                    </div>
+                </div>
+      </div>
+
 
       <ProductStreamsCards
         data={data["products"]}

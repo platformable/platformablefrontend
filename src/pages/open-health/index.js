@@ -4,7 +4,7 @@ import {Link} from 'gatsby'
 import GridDisplay from "../../components/shared-components/GridDisplay"
 /*specific-components*/
 import SectorSubCards from "../../components/product-streams/sectorSubCards"
-
+import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout"
 /*assets*/
 import openHealthImg from "../../assets/product-streams/open_health.svg"
@@ -17,6 +17,7 @@ import PlatFormImg from '../../assets/product-streams/platform_mindset_training_
 import QuarterlyImg from '../../assets/product-streams/quarterly_trends_report.svg'
 import StateImg from '../../assets/product-streams/state_of_the_market_reports.svg'
 import Breadcrumbs from '../../components/breadcrumbs'
+import SEO from '../../components/seo'
 const data = {
   "OpenHealth": {
     "elements": [
@@ -68,25 +69,22 @@ const data = {
 export default function openHealth({location}) {
     return (
         <Layout>
+          <SEO title="Open Health"/>
           <Breadcrumbs location={location}/>
+          <div className="container mx-auto">
+                <div className="flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center">
+                    <div className="labs-hero-left md:w-3/5 w:1/1 md:p-0 p-5">
+                        <h3 className="text-3xl font-black ">Open Health</h3>
+                        <p>Supporting community-based health organisations with data governance and data management.</p>
+                        <p>Mapping the health data and emerging health tech open ecosystem.</p>
+                    </div>
+                    <div className="labs-hero-right md:w-2/5 flex justify-end">
+                 {/*  <img src="../../assets/product-streams/open_banking-open_finance" alt="" /> */}
+                  <StaticImage src="../../assets/product-streams/open_health.png" placeholder="blurred" /> 
+                    </div>
+                </div>
+          </div>
             <div id="openHealth">
-
-        <GridDisplay
-          gridDisplayClass="flex flex-col container sm:flex-row flex-wrap my-6 mx-auto py-6 px-5 justify-between items-center "
-          gridContentClass="md:w-3/5"
-          title="Open Health"
-          titleClass="my-5 text-blue"
-          paragraphOne="Supporting community-based health organisations with data governance and data management."
-          paragraphTwo="Mapping the health data and emerging health tech open ecosystem."
-          doNotDisplayLink="hidden"
-          doNotDisplayAnchor="hidden"
-          imgContentClass=""
-          imgClass="object-cointain w-96 h-94"
-          backImgSrc={openHealthImg}
-          alt="Hero"
-          paragraphOneClass="mb-5"
-          subtitle={true}
-        ></GridDisplay>
         <SectorSubCards
           data={data["OpenHealth"]}
           className="my-0 md:mx-8 mx-2 py-0  flex flex-wrap flex-col sm:flex-row justify-between text-sm items-center"

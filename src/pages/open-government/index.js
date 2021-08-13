@@ -15,6 +15,8 @@ import PlatFormImg from '../../assets/product-streams/platform_mindset_training_
 import QuarterlyImg from '../../assets/product-streams/quarterly_trends_report.svg'
 import StateImg from '../../assets/product-streams/state_of_the_market_reports.svg'
 import Breadcrumbs from '../../components/breadcrumbs'
+import { StaticImage } from "gatsby-plugin-image"
+import SEO from '../../components/seo'
 const data = {
   
   "OpenGovernement": {
@@ -65,10 +67,23 @@ const data = {
 export default function openGovernment({location}) {
     return (
         <Layout>
+          <SEO title="Open Government"/>
           <Breadcrumbs location={location}/>
+          <div className="container mx-auto">
+                <div className="flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center">
+                    <div className="labs-hero-left md:w-3/5 w:1/1 md:p-0 p-5">
+                        <h3 className="text-3xl font-black ">Open Government</h3>
+                        <p>Optimising digital government, unlocking data access, and ensuring greater participation.</p>
+                    </div>
+                    <div className="labs-hero-right md:w-2/5 flex justify-end">
+                 {/*  <img src="../../assets/product-streams/open_banking-open_finance" alt="" /> */}
+                  <StaticImage src="../../assets/product-streams/open_government.png" placeholder="blurred" /> 
+                    </div>
+                </div>
+          </div>
           
            <div id="openGovernment">
-        <GridDisplay
+       {/*  <GridDisplay
           gridDisplayClass="flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center "
           gridContentClass="md:w-2/5"
           title="Open Government"
@@ -80,7 +95,7 @@ export default function openGovernment({location}) {
           imgClass="object-cointain w-96 h-94"
           backImgSrc={openGovImg}
           alt="Hero"
-        ></GridDisplay>
+        ></GridDisplay> */}
         <SectorSubCards
           data={data["OpenGovernement"]}
           className="my-0 md:mx-8 mx-2 py-0  flex flex-wrap flex-col sm:flex-row justify-between text-sm items-center"
