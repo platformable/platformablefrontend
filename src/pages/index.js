@@ -125,7 +125,7 @@ return (
             while (index < 3 && post.node.staging ===false) {
               return (
                 <>
-                  <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow py-5 top-blog-cards flex flex-col justify-between">
+                  <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow pt-5 pb-10 top-blog-cards flex flex-col justify-between">
                     <div className="top-blog-card-img-container flex justify-center items-center  md:h-3/5">
                       <div className="">
                       {post.node.featured_image && post.node.featured_image ? (
@@ -183,8 +183,8 @@ return (
                         )
                       })}
                     </div>
-                    <p className="text-xs leading-5 my-1 small-text">
-                      {post.node.excerpt ? post.node.excerpt.substr(0,120)+" ..." : ""}
+                    <p className="text-xs leading-5 my-1 py-5 small-text">
+                      {post.node.excerpt ? post.node.excerpt.substr(0,100)+" ..." : ""}
                     </p>
                     </div>
                   </div>

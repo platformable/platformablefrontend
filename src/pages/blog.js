@@ -45,8 +45,8 @@ export default function blogs({ data, location }) {
             while (index < 3 && post.node.staging ===false) {
               return (
                 <>
-                  <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow py-5 top-blog-cards flex flex-col justify-between">
-                    <div className="top-blog-card-img-container flex justify-center items-center  md:h-3/5">
+                  <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow pt-5 pb-10 top-blog-cards flex flex-col justify-between">
+                  <div className="top-blog-card-img-container flex justify-center items-center md:h-2/4">
                       <div className="">
                       {post.node.featured_image && post.node.featured_image ? (
                         <Link to={`/${post.node.slug}`} >
@@ -61,7 +61,7 @@ export default function blogs({ data, location }) {
                       ) : null}
                       </div>
                     </div>
-                    <div className="md:h-2/5">
+                    <div className="md:h-2/4">
                     <Link to={`/${post.node.slug}`}><h5 className="text-lg font-bold leading-5 mt-5">
                       {post.node.title}
                     </h5></Link>
@@ -103,9 +103,12 @@ export default function blogs({ data, location }) {
                         )
                       })}
                     </div>
-                    <p className="text-xs leading-5 my-1 small-text">
+          
+                    <p className="text-xs leading-5 my-1 pb-5 small-text">
                       {post.node.excerpt ? post.node.excerpt.substr(0,120)+" ..." : ""}
+                      {/* {post.node.excerpt ? post.node.excerpt : ""} */}
                     </p>
+              
                     </div>
                   </div>
                 </>
