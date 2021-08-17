@@ -15,7 +15,7 @@ import PanoramaImg from '../../../assets/ob-open-ecosystem-mapping/Panorama.png'
 import PolicyImg from '../../../assets/ob-open-ecosystem-mapping/Policy.png'
 import ProcessImg from '../../../assets/ob-open-ecosystem-mapping/Process.png'
 import Breadcrumbs from '../../../components/breadcrumbs'
-
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 export default function index({data,location}) {
     // const authorsData = data?data.allStrapiPost.edges[0].node.user :null
     return (
@@ -147,7 +147,12 @@ tools (APIs) and data infrastructures.</p>
                       {post.node.featured_image && post.node.featured_image ? (
                         <Link to={`/${post.node.slug}`}>
                           {" "}
-                          <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="block object-contain h-48 w-full"/>
+                          <GatsbyImage
+                              image={getImage(post.node.featured_image)}
+                              className=""
+                              alt={post.node.title}
+                         
+                            />
                         </Link>
                       ) : null}
                     </div>
@@ -241,7 +246,12 @@ query OHOpenEcosystemPagePosts {
         }
         featured_image {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(
+              width:300
+              blurredOptions: {width: 100}
+              placeholder: BLURRED
+              formats: PNG
+            )
           }
         }
         title
