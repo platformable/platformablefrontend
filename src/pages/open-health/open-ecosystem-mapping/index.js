@@ -255,6 +255,8 @@ query OHOpenEcosystemPagePosts {
           }
         }
         title
+        publishing_date
+        published_at
         updated_at
         user {
           id
