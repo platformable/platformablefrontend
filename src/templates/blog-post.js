@@ -16,6 +16,12 @@ const BlogPost = ({ data, pageContext,location }) => {
   const actualPostCategory=data.strapiPost.categories[0].name;
   const noStagingPosts = data?data.allStrapiPost.edges.filter(post=>post.node.staging !=true):" ";
   const sameCatergoryPosts = noStagingPosts.filter(post=> post.node.categories[0].name === actualPostCategory)
+  const activePostTitle = data.strapiPost.title;
+
+  const cleanCategoryPosts = sameCatergoryPosts.filter(post=>post.node.title !==activePostTitle)
+  console.log("cleanCategoryPosts",cleanCategoryPosts)
+
+  /* const cleanCategoryPosts = sameCatergoryPosts.filter(post.node.slug !==) */
   console.log("noStagingPosts",noStagingPosts)
 
 
@@ -308,7 +314,7 @@ const getMembership = (subscription, isLoggedIn)=>{
       <h3 className="font-black my-5 text-center">Related Posts</h3>
    {/* TOP LATESTS 3 POSTS */}
    <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-   {data?sameCatergoryPosts.map((post, index) => {
+   {data?cleanCategoryPosts.map((post, index) => {
             
             while (index < 3 && post.node.staging ===false) {
               return (
@@ -371,9 +377,10 @@ const getMembership = (subscription, isLoggedIn)=>{
                         )
                       })}
                     </div>
-                    <p className="text-xs leading-5 my-1 small-text">
+                    {/* <p className="text-xs leading-5 my-1 small-text">
                       {post.node.excerpt ? post.node.excerpt.substr(0,120)+" ..." : ""}
-                    </p>
+                    </p> */}
+                    <br /><br />
                     </div>
                   </div>
                 </>

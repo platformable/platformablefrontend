@@ -39,14 +39,14 @@ export default function blogs({ data, location }) {
       </section>
       <div className="container mx-auto all-blog-content my-20 px-5">
         {/* TOP LATESTS 3 POSTS */}
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-          {data?noStagingPosts.map((post, index) => {
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
+      {data?noStagingPosts.map((post, index) => {
             
             while (index < 3 && post.node.staging ===false) {
               return (
                 <>
                   <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow pt-5 pb-10 top-blog-cards flex flex-col justify-between">
-                  <div className="top-blog-card-img-container flex justify-center items-center md:h-2/4">
+                    <div className="top-blog-card-img-container flex justify-center items-center  md:h-3/5">
                       <div className="">
                       {post.node.featured_image && post.node.featured_image ? (
                         <Link to={`/${post.node.slug}`} >
@@ -61,7 +61,7 @@ export default function blogs({ data, location }) {
                       ) : null}
                       </div>
                     </div>
-                    <div className="md:h-2/4">
+                    <div className="md:h-2/5">
                     <Link to={`/${post.node.slug}`}><h5 className="text-lg font-bold leading-5 mt-5">
                       {post.node.title}
                     </h5></Link>
@@ -103,19 +103,17 @@ export default function blogs({ data, location }) {
                         )
                       })}
                     </div>
-          
-                    <p className="text-xs leading-5 my-1 pb-5 small-text">
-                      {post.node.excerpt ? post.node.excerpt.substr(0,120)+" ..." : ""}
-                      {/* {post.node.excerpt ? post.node.excerpt : ""} */}
+                    <p className="text-xs  my-5 py-1 small-text">
+                      {post.node.excerpt ? post.node.excerpt.substr(0,100)+" ..." : ""}
                     </p>
-              
+                    <br /> <br />
                     </div>
                   </div>
                 </>
               )
             }
           }):null}
-        </div>
+      </div>
 
 
 
@@ -126,7 +124,7 @@ while (index > 2 && post.node.staging ===false) {
     return (
 <div className="my-4" key={index}>
 
-        <div className="horizontal-blog-card rounded bg-gray-50 shadow-md">
+        <div className="horizontal-blog-card rounded-xl bg-gray-50 shadow-md">
       
           <div className="blog-card-image">
           <GatsbyImage
@@ -139,7 +137,7 @@ while (index > 2 && post.node.staging ===false) {
           <h5 className="text-lg font-bold leading-5 mt-5">
                     <Link to={`/${post.node.slug}`}> {post.node.title}</Link>
           </h5>
-          <span className="text-gray-600 mr-3 small-text mt-1">
+          <span className="text-gray-600 mr-3 small-text mt-4">
                     Published{" "}
                     {new Date(post.node.publishing_date).toDateString()}
           </span>{" "}
@@ -210,10 +208,10 @@ export const blogQuery = graphql`
           featured_image {
             childImageSharp {
               gatsbyImageData(
+                width:300
                 blurredOptions: {width: 100}
                 placeholder: BLURRED
                 formats: PNG
-                layout: CONSTRAINED
               )
             }
           }
