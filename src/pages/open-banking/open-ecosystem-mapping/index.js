@@ -232,6 +232,7 @@ query OBOpenEcosystemPagePosts {
         slug
         is_featured
         publishing_date
+        published_at
         tags {
           name
         }

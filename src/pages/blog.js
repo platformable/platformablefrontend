@@ -122,7 +122,7 @@ export default function blogs({ data, location }) {
 
 while (index > 2 && post.node.staging ===false) {
     return (
-<div className="my-4" key={index}>
+      <div className="my-4" key={index}>
 
         <div className="horizontal-blog-card rounded-xl bg-gray-50 shadow-md">
       

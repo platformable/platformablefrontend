@@ -90,7 +90,7 @@ const Labs = () => {
                 <div className="current-labs-container grid md:grid-cols-3 grid-cols-1">
                 <div className="lab-container grid grid-cols-2 gap-4 items-center  labs-grid mb-8">
                     <StaticImage src="../static/labs/codegen.png" className="img-thumbnail" placeholder="blurred"/>
-                    <h3 className="text-lg md:w-2/3 m-1/2">Blog components code generator for headless CMS</h3>
+                    <h3 className="text-lg md:w-2/3 m-1/2">Blog component code generator for headless CMS</h3>
 
                     </div>
                     
@@ -127,7 +127,7 @@ const Labs = () => {
                 <div className="container mx-auto">
                     <div className="lab-component-container flex px-5">
                         <div className="lab-component-left md:w-3/5 w-1/1 ">
-                            <h3 className="text-2xl md:text-3xl font-black mb-5">Blog components code generator for headless CMS</h3>
+                            <h3 className="text-2xl md:text-3xl font-black mb-5">Blog component code generator for headless CMS</h3>
                             <p className="text-sm mb-5">Our open source tool enables site designers that use a headless CMS to create custom blog elements based on a site’s style guide. This makes it easy for content creators to use a low code approach to copy and paste HTML code snippets and create engaging web content that aligns with the site’s style guide </p>      
                         </div>
                         <div className="lab-component-right md:w-2/5  hidden inline-block md:flex md:justify-end md:items-start">
