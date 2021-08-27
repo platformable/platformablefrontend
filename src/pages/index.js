@@ -49,19 +49,19 @@ return (
     <SEO title="Home" />
 
 
-    <section className="my-14">
+    <section className="md:my-14 my-5 md:px-0 px-5">
       <br /><br />
       <div className="container mx-auto grid md:grid-cols-2 grid-cols-1">
         <div className="left flex items-center">
           <div>
-            <h3 className="font-black mb-5">
+            <h3 className="font-black mb-5 text-base md:text-2xl">
             We support open ecosystems that build economic opportunities, solve
             complex problems, and enable everyone to participate and co-create
             their own value
             </h3>
             <Link
             to="/about"
-            className="outlinedBtn mt-3 text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
+            className="outlinedBtn mt-3 text-sm md:text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
           >
             Learn more about us
           </Link>
@@ -79,20 +79,20 @@ return (
     </section>
 
 
-    <section className="bg-gray-100 py-5">
+    <section className="bg-gray-100 py-5 md:px-0 px-5">
       <br /><br />
       <div className="container mx-auto grid md:grid-cols-2 grid-cols-1">
         <div className="left flex items-center">
           <div>
             <p>Download our latest release</p>
-            <h2 className="font-black mb-5">
+            <h3 className="font-black mb-5">
             Open Banking/Open Finance Quarterly Trend Reports
             Q2 2021
 
-            </h2>
+            </h3>
             <Link
             to="/open-banking/trends"
-            className="bg-secondary text-primary font-bold my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
+            className="bg-secondary text-sm md:text-primary font-bold my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
           >
             More info on our reports
           </Link>
