@@ -54,7 +54,7 @@ const CourseStructure = () => {
             <img src={img.src} alt={img.title} className="mr-5 img-thumbnail" />
             
             <div className="">
-              <h5 className="font-black">{img.title}</h5>
+              <h3 className="font-black">{img.title}</h3>
               <p>{img.paragraph}</p>
             </div>
           </div>

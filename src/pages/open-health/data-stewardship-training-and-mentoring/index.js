@@ -59,7 +59,7 @@ const LPDataStewardship = ({location}) => (
         <img src={buildImg} alt="Platformable" />
       </div>
       <div className="bulb-right w-3/5">
-        <h3 className="text-3xl font-black mb-3">Build knowledge step by step and at your own pace</h3>
+        <h3 className="font-black mb-3">Build knowledge step by step and at your own pace</h3>
         <p>You will need to understand how to organize, systematize, and automate data with data models. Streamline collection, ensure storage, and encourage reuse within your agency and with partners.</p>
       </div>
     </div>

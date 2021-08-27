@@ -74,7 +74,7 @@ export default function openHealth({location}) {
           <div className="container mx-auto">
                 <div className="flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center">
                     <div className="labs-hero-left md:w-3/5 w:1/1 md:p-0 p-5">
-                        <h3 className="text-3xl font-black ">Open Health</h3>
+                        <h3 className="font-black ">Open Health</h3>
                         <p>Supporting community-based health organisations with data governance and data management.</p>
                         <p>Mapping the health data and emerging health tech open ecosystem.</p>
                     </div>

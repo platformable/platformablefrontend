@@ -9,8 +9,8 @@ const PositionedSection = ({ handleIsLoggedIn}) => {
   return (
     <section className="bg-primary relative sm:mb-72 mb-8 w-auto lg:h-96">
       <div className="mb-36 text-white text-center py-4 mx-auto py-6 self-center">
-        <h2 className="font-normal">Subscribe to the Platformable</h2>
-        <h2>Open Banking and Open Finance Quarterly Trends Report</h2>
+        <h3 className="font-normal">Subscribe to the Platformable</h3>
+        <h3>Open Banking and Open Finance Quarterly Trends Report</h3>
         <Link url={"https://platformable.com/signup/"}>
             <Button 
               type="button"

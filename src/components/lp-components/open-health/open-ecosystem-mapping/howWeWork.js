@@ -30,7 +30,7 @@ const OGOpenEcosystemMapping = () => {
   
   return (
     <section className="bg-oh-open-ecosystem-mapping-audience py-10 ">
-      <h2 className="my-10  md:mx-8 text-center font-black">Audience</h2>
+      <h3 className="my-10  md:mx-8 text-center font-black">Audience</h3>
       <div classname="container mx-auto ">
       <div className="md:w-3/5 mx-auto">
         {images.map((img, i) =>(

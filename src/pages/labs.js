@@ -70,7 +70,7 @@ const Labs = () => {
             <div className="container mx-auto">
                 <div className="labs-hero-container flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center">
                     <div className="labs-hero-left md:w-3/5 w:1/1 md:p-0 p-5">
-                        <h3 className="text-3xl font-black labs-main-color-dark">Labs</h3>
+                        <h3 className="font-black labs-main-color-dark">Labs</h3>
                         <p>Learn about our experimental and developmental work to build tools that support open ecosystems.</p>
 
                     </div>
@@ -86,7 +86,7 @@ const Labs = () => {
 
             <section className="bg-pink-50 py-10">
             <div className="container mx-auto md:p-0 px-5">
-                <h3 className="text-2xl font-black mb-5 labs-main-color-dark">Current Lab Projects</h3>
+                <h3 className="font-black mb-5 labs-main-color-dark">Current Lab Projects</h3>
                 <div className="current-labs-container grid md:grid-cols-3 grid-cols-1">
                 <div className="lab-container grid grid-cols-2 gap-4 items-center  labs-grid mb-8">
                     <StaticImage src="../static/labs/codegen.png" className="img-thumbnail" placeholder="blurred"/>
@@ -127,7 +127,7 @@ const Labs = () => {
                 <div className="container mx-auto">
                     <div className="lab-component-container flex px-5">
                         <div className="lab-component-left md:w-3/5 w-1/1 ">
-                            <h3 className="text-2xl md:text-3xl font-black mb-5">Blog component code generator for headless CMS</h3>
+                            <h3 className="font-black mb-5">Blog component code generator for headless CMS</h3>
                             <p className="text-sm mb-5">Our open source tool enables site designers that use a headless CMS to create custom blog elements based on a site’s style guide. This makes it easy for content creators to use a low code approach to copy and paste HTML code snippets and create engaging web content that aligns with the site’s style guide </p>      
                         </div>
                         <div className="lab-component-right md:w-2/5  hidden inline-block md:flex md:justify-end md:items-start">
@@ -143,7 +143,7 @@ const Labs = () => {
                 <div className="container mx-auto">
                     <div className="lab-component-container flex px-5">
                         <div className="lab-component-left md:w-3/5 w-1/1 ">
-                            <h3 className="text-2xl md:text-3xl font-black mb-5">Open banking / open finance ecosystem data model</h3>
+                            <h3 className="font-black mb-5">Open banking / open finance ecosystem data model</h3>
                             <p className="text-sm mb-5">Governments around the world are introducing new open banking and open finance regulations, but there are no commonly agreed international metrics that consistently measure and report whether these new digital ecosystems are meeting their intended goals and creating value for all stakeholders. Our work aims to develop a common set of indicators that can be applied globally to measure the value distribution of open banking and open finance ecosystems</p>      
                         </div>
                         <div className="lab-component-right md:w-2/5  hidden inline-block md:flex md:justify-end md:items-start">
@@ -159,7 +159,7 @@ const Labs = () => {
                 <div className="container mx-auto">
                     <div className="lab-component-container flex px-5">
                         <div className="lab-component-left md:w-3/5 w-1/1 ">
-                            <h3 className="text-2xl md:text-3xl font-black mb-5">Open health ecosystem model</h3>
+                            <h3 className="font-black mb-5">Open health ecosystem model</h3>
                             <p className="text-sm mb-5">Drawing on ecosystem <Link className="internal-link" to="/health-data-governance-understanding-the-ecosystem-and-current-maturity">models we created with the Open Data Institute for the World Health Organization</Link>, we are documenting an evidence-based data governance framework and identifying indicators that could be applied to determine the level of maturity of data-enabled open health ecosystems</p>      
                         </div>
                         <div className="lab-component-right md:w-2/5  hidden inline-block md:flex md:justify-end md:items-start">
@@ -174,7 +174,7 @@ const Labs = () => {
                 <div className="container mx-auto">
                     <div className="lab-component-container flex px-5">
                         <div className="lab-component-left md:w-3/5 w-1/1 ">
-                            <h3 className="text-2xl md:text-3xl font-black mb-5">Open sustainability data model</h3>
+                            <h3 className="font-black mb-5">Open sustainability data model</h3>
                             <p className="text-sm mb-5">Drawing on what we have learnt in our open banking/open finance, open health, and open government framework models, we will be creating a data model to measure the growth of open ecosystems that build circular economy and climate crisis response solutions </p>      
                         </div>
                         <div className="lab-component-right md:w-2/5  hidden inline-block md:flex md:justify-end md:items-start">
@@ -189,7 +189,7 @@ const Labs = () => {
                 <div className="container mx-auto">
                     <div className="lab-component-container flex px-5">
                         <div className="lab-component-left md:w-3/5 w-1/1 ">
-                            <h3 className="text-2xl md:text-3xl font-black mb-5">Equity tool to measure participation in open ecosystem</h3>
+                            <h3 className="font-black mb-5">Equity tool to measure participation in open ecosystem</h3>
                             <p className="text-sm mb-5">This new tool will be developed in two stages. In stage one, we are developing a tracking and dashboard tool for blogs and media sites that want to monitor whether their content includes diverse spokespeople, interviewees, and profiles diverse businesses. Platformable already uses a basic version of this tool to ensure our coverage of open ecosystems. In stage two, we will expand on this approach to support API providers to better understand how their APIs are enabling non-traditional businesses to participate in their ecosystems</p>      
                         </div>
                         <div className="lab-component-right md:w-2/5  hidden inline-block md:flex md:justify-end md:items-start">
@@ -204,7 +204,7 @@ const Labs = () => {
                 <div className="container mx-auto">
                     <div className="lab-component-container flex px-5">
                         <div className="lab-component-left md:w-3/5 w-1/1 ">
-                            <h3 className="text-2xl md:text-3xl font-black mb-5">Equity tech financing</h3>
+                            <h3 className="font-black mb-5">Equity tech financing</h3>
                             <p className="text-sm mb-5">We are excited by some of the new approaches that industry and non-profits are taking to invest in new social impact and equity-focused tech solutions. Our research program identifies what financing models are emerging and how organisations including philanthropies, think tanks, investors, and large community agencies can establish financing and seed grant programs to support viable tech for good</p>      
                         </div>
                         <div className="lab-component-right md:w-2/5  hidden inline-block md:flex md:justify-end md:items-start">

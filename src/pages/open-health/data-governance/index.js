@@ -89,7 +89,7 @@ export default function index({location}) {
       <section className="hero-data-governance py-10">
         <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 items-center px-5 ">
           <div className="hero-data-governance-left">
-            <h3 className="font-black text-3xl ">Data Governance</h3>
+            <h3 className="font-black ">Data Governance</h3>
      
               Create a data governance and data stewardship system for your
               agency

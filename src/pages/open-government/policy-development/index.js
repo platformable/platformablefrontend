@@ -1,6 +1,6 @@
 import React from "react"
 import {Link, graphql,navigate} from 'gatsby'
-
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 /*shared-components*/
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
@@ -18,6 +18,9 @@ import sectionOneImg from "../../../assets/lp-policy_development/heroImg.png"
 
 
 const LPPolicyDevelopment = ({data,location}) => {
+
+  const noStagingPosts = data?data.allStrapiPost.edges.filter(post=>post.node.staging !=true):" ";
+
   const postsCategories =[
     {
       name:"Open Banking / Open Finance",
@@ -47,9 +50,9 @@ const LPPolicyDevelopment = ({data,location}) => {
     <section className="hero-data-governance py-10">
         <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 items-center px-5 ">
           <div className="hero-data-governance-left">
-            <h3 className="font-black text-3xl ">Policy development
+            <h3 className="font-black">Policy development
       and advocacy services</h3>
-            <p className="text-2xl">
+            <p className="">
             Join us as we map and respond
       to emerging policy opportunities
             </p>
@@ -76,7 +79,7 @@ const LPPolicyDevelopment = ({data,location}) => {
     <ProductCards/>
     <section className="mt-6  py-6 px-5 bg-whitePurple">
       <div className="container mx-auto">
-      <h2 className="text-center font-black">Current policy consultation opportunities</h2>
+      <h3 className="text-center font-black">Current policy consultation opportunities</h3>
       <iframe src="https://airtable.com/embed/shrHdOaxfkJmBJUno?backgroundColor=red&viewControls=on" frameborder="0"  width="100%" height="533" className="my-8 mx-auto px-8">
       </iframe>
       </div>
@@ -88,19 +91,28 @@ const LPPolicyDevelopment = ({data,location}) => {
     <div className="blog-cards container mx-auto all-blog-content my-20 px-5">
       <h3 className="text-center font-black my-5 text-white">{`See our recent submissions\n and contribute to our next response`}</h3>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-          {data?data.allStrapiPost.edges.map((post, index) => {
+      {data?noStagingPosts.map((post, index) => {
+            
             while (index < 3 && post.node.staging ===false) {
               return (
                 <>
-                  <div className="px-2 rounded-xl bg-gray-50 shadow py-2 top-blog-cards flex flex-col justify-between">
-                    <div className="top-blog-card-img-container flex justify-center max-h-56">
+                  <div key={post.node.title} className="px-2 rounded-xl bg-gray-50 shadow pt-5 pb-10 top-blog-cards flex flex-col justify-between">
+                    <div className="top-blog-card-img-container flex justify-center items-center  md:h-3/5">
+                      <div className="">
                       {post.node.featured_image && post.node.featured_image ? (
-                        <Link to={`/${post.node.slug}`}>
+                        <Link to={`/${post.node.slug}`} >
                           {" "}
-                          <img src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src} className="block object-contain h-48 w-full"/>
+                          <GatsbyImage
+                              image={getImage(post.node.featured_image)}
+                              className=""
+                              alt={post.node.title}
+                         
+                            />
                         </Link>
                       ) : null}
+                      </div>
                     </div>
+                    <div className="md:h-2/5">
                     <Link to={`/${post.node.slug}`}><h5 className="text-lg font-bold leading-5 mt-5">
                       {post.node.title}
                     </h5></Link>
@@ -142,9 +154,10 @@ const LPPolicyDevelopment = ({data,location}) => {
                         )
                       })}
                     </div>
-                    <p className="text-xs leading-5 my-1 small-text">
-                      {post.node.excerpt ? post.node.excerpt : ""}
+                    <p className="text-xs leading-5 my-1 py-5 small-text">
+                      {post.node.excerpt ? post.node.excerpt.substr(0,100)+" ..." : ""}
                     </p>
+                    </div>
                   </div>
                 </>
               )
@@ -190,7 +203,12 @@ query OGPolicyPostIndex {
         }
         featured_image {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(
+              width:300
+              blurredOptions: {width: 100}
+              placeholder: BLURRED
+              formats: PNG
+            )
           }
         }
         title

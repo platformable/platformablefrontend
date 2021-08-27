@@ -30,10 +30,10 @@ const LearnHowToCollect = () => {
   ]
   return (
     <section className="px-8 py-6 container mx-auto mx-4">
-      <h4 className="my-4 mx-auto text-center font-black">
+      <h3 className="my-4 mx-auto text-center font-black">
         Learn how to collect, manage, analyse and reuse data in ways that are
         ethical, responsible and participatory.
-      </h4>
+      </h3>
       <p className="text-center">This will help you to:</p>
       <div className="my-0 md:mx-8 mx-2 py-0 px-3 flex flex-wrap flex-col sm:flex-row justify-center items-center">
         {images.map((img, i) => (

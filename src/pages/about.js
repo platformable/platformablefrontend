@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import EmbedContainer from "react-oembed-container"
 import sectionOneImg from "../assets/home/hero_squares.png"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 export default function about({ data }) {
   return (
@@ -16,22 +16,19 @@ export default function about({ data }) {
       <div className="container mx-auto my-10 px-5">
      
       {/* <Breadcrumb location={location} crumbLabel="About" /> */}
-        <section>
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-4 items-center">
-            <div>
-              <h3 className="text-2xl md:text-4xl font-black mt-5 md:mt-10 md:mt-32 mb-5 md:mb-20">
-                {/* We build platforms and ecosystems that allow users to
-                participate and co-create */}
-                {data.strapiAbout.heroText}
-              </h3>
-            </div>
-
-            <div>
-              <img src={sectionOneImg} alt="platformable" />
-            </div>
-          </div>
-
-        </section>
+      <div className="container mx-auto">
+                <div className="flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center">
+                    <div className="labs-hero-left md:w-3/5 w:1/1 md:p-0 p-5">
+                        <h3 className="font-black "> {data.strapiAbout.heroText}</h3>
+                        
+                    </div>
+                    <div className="labs-hero-right md:w-2/5 flex justify-end">
+                  {/* <img src={sectionHeroImg} alt="" /> */}
+                  <StaticImage src="../assets/product-streams/home_hero.svg" placeholder="blurred" /> 
+                    </div>
+                </div>
+      </div>
+    
       </div>
 
       <section className="content">
