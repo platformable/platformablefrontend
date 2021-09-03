@@ -143,9 +143,9 @@ export default function about({ data }) {
       </section>
 
       <section className="privacy-policy my-16">
-        <div className="container mx-auto">
+        <div className="container mx-auto md:px-0 px-5">
           <h3 className="font-black md:text-2xl text-xl text-center mb-8">Privacy Policy</h3>
-          <p className="text-center">Platformable is committed to managing people´s data responsibly.</p>
+          <p className="text-center  text-sm">Platformable is committed to managing people´s data responsibly.</p>
           <p className="text-center">Check out our <Link to="/privacy-policy" className="font-black">Privacy Policy</Link></p>
         </div>
 
@@ -171,11 +171,11 @@ export default function about({ data }) {
                     <GatsbyImage image={getImage(x.image)} className="my-0 img-thumbnail" alt="Platformable team"/>
                     </div>
 
-                  <div className="p-4 md:p-6 md:block px-16">
-                    <div className="flex gap-4 items-center mb-5 justify-center px-8">
+                  <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                    <div className="flex gap-4 items-center mb-5 justify-center ">
                     <img src="https://dummyimage.com/32x25/000/fff" alt="" className="self-start" />
                     <div>
-                    <h3 className="font-black text-lg leading-tight sm:leading-normal">
+                    <h3 className="font-black text-lg leading-tight sm:leading-normal md:text-sm">
                       {`${x.name} ${x.lastname}`}
                     </h3>
                     <p className="text-xs">{x.position}</p>
