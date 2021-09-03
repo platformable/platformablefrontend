@@ -28,6 +28,23 @@ body {
 }
 
 
+/* ABOUT */
+
+.OurMission .container{
+  border-bottom:2px solid var(--russian-violet-dark)
+}
+ 
+.about-clients .container {
+  border-bottom:2px solid var(--sunglow-dark)
+}
+
+.commitment-left-borders {
+  border-right:1px solid var(--russian-violet-dark);
+  border-bottom:1px solid var(--russian-violet-dark);
+}
+.commitment-right-borders {
+  border-bottom:1px solid var(--russian-violet-dark);
+}
 
 .posts-content ol li {
   list-style-type: decimal !important;
