@@ -221,7 +221,7 @@ return (
         </div>
       </div>
     </section>
-
+{/* 
     <Form
       id="submitMailerlite"
       formClass="text-center my-6 mx-auto"
@@ -231,7 +231,7 @@ return (
       iframeSrc={"https://landing.mailerlite.com/webforms/landing/b9q0r6"}
       paragraph="We share monthly updates on the growth of open ecosystems"
       paragraphClass="mb-12"
-    />
+    /> */}
   </Layout>
 )
             }

@@ -69,7 +69,7 @@ export default function about({ data }) {
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/odi.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/odi.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5">
                 <p className="text-sm md:text-md">Working on projects to document data institutions and
@@ -79,7 +79,7 @@ policy landscape models with Open Data Institute</p>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/cgap.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/cgap.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5">
                 <p className="text-sm md:text-md">Work with the World Bank’s Consultative Group to Assist the
@@ -252,7 +252,7 @@ all stakeholder groups equitably.</strong></p>
 
 
       <section className="our-team bg-gray-50 py-10 ">
-        <h3 className="font-black md:text-2xl text-xl text-center mb-8">
+        <h3 className="font-black md:text-2xl text-xl text-center mb-4">
           Platformable's Team
         </h3>
         <div className="container mx-auto mt-20 grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-3 md:px-28 px-5">
