@@ -64,7 +64,7 @@ export default function about({ data }) {
       </section>
 
       <section className="about-clients mt-10 mb-5">
-        <div className="container mx-auto pb-12">
+        <div className="container mx-auto pb-12 md:px-28 px-5">
           <h3 className="text-center font-black my-5 md:text-2xl text-xl">Current and previous clients</h3>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
@@ -91,7 +91,7 @@ financial inclusion</p>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/blackHealth.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/blackHealth.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5 flex items-center">
                 <p className="text-sm md:text-md ">Work with National Black Leadership Commission on
@@ -103,7 +103,7 @@ data stewardship training</p>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/axway.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/axway.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5">
                 <p className="text-sm md:text-md">Working with Axway API management provider on a range
@@ -113,7 +113,7 @@ of data reports and content products</p>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/iconEquity.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/iconEquity.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5">
                 <p className="text-sm md:text-md">Creation of value-based data models that include equity as
@@ -124,7 +124,7 @@ a core component for open banking and digital government</p>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/europeanCommission.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/europeanCommission.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5">
                 <p className="text-sm md:text-md">Lead author for European Commission report documenting
@@ -136,7 +136,7 @@ resources to guide API discoverability</p>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/githubApiDays.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/githubApiDays.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5">
                 <p className="text-sm md:text-md">GitHub APIdays GraphQL State of the Market report</p>
@@ -145,7 +145,7 @@ resources to guide API discoverability</p>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/42ChrunchWhitePaper.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/42ChrunchWhitePaper.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5">
                 <p className="text-sm md:text-md">42Crunch white paper</p>
@@ -155,7 +155,7 @@ resources to guide API discoverability</p>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/netlify.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/netlify.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5">
                 <p className="text-sm md:text-md">Netlify white paper</p>
@@ -164,7 +164,7 @@ resources to guide API discoverability</p>
           
 <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../../static/about/clients/eudatathon.png" alt="Platformable client" className=""/>
+            <StaticImage src="../../static/about/clients/eudatathon.png" alt="Platformable client" className="img-thumbnail"/>
             </div>
             <div className="about-client-box-text md:w-4/5">
                 <p className="text-sm md:text-md">Second-place prize winner in European Datathon 2020 to
@@ -178,62 +178,62 @@ createa dashboard on Government API value</p>
 
       <section className="commitment">
         <div className="container mx-auto">
-        <h3 className="text-center font-black my-5 md:text-2xl text-xl">Our commitment</h3>
+        <h3 className="text-center font-black my-5 md:text-2xl text-xl">Our commitment...</h3>
 
         <div className="commitment-container grid md:grid-cols-2 grid-cols-1">
           <div className="commitment-left px-10 commitment-left-borders py-5">
               <div className="commitment-left-top">
                 <div className="flex justify-center items-center my-5 gap-4">
                 <StaticImage src="../../static/about/our-commitment/open source icon.png" alt="platformable" className="img-md-thumbnail"/>
-                <h4 className="font-black text-center md:text-lg text-sm">to open source <br />  and open ecosystems</h4>
+                <h4 className="font-black text-center md:text-lg text-sm">...to open source <br />  and open ecosystems</h4>
                 <StaticImage src="../../static/about/our-commitment/open ecosystem icon.png" alt="platformable" className="img-md-thumbnail"/>
                 </div>
-                <p className="mb-5 md:text-md text-sm"><strong>We donate/volunteer a percentage
+                <p className="mb-5 md:text-md text-sm">We donate/volunteer a percentage
 of our work projects to open source
 projects and we select open source
-technologies where we can.</strong>
+technologies where we can.
 We allocate internal team time on
 building content and products that
 can be shared in the open.</p>
-                <p className="mb-5 md:text-md text-sm">We offer a <strong>10% discount on our project
+                <p className="mb-5 md:text-md text-sm">We offer a 10% discount on our project
 pricing to open source community
-organisations and non-profits.</strong></p>
-                <p className="mb-5"><strong>We are building partnerships with
+organisations and non-profits.</p>
+                <p className="mb-5">We are building partnerships with
 organisations that work on reducing
 health inequalities and we look for
 opportunities to extend our industry
 knowledge in support of vanguards
-working in this area.</strong></p>            
+working in this area.</p>            
               </div>
             </div>
             <div className="commitment-right px-10 commitment-right-borders py-5">
               <div className="commitment-right-top">
               <div className="flex justify-center items-center my-5 gap-4">
               <StaticImage src="../../static/about/our-commitment/diversity icon.png" alt="platformable" className="img-md-thumbnail"/>
-              <h4 className="font-black text-center md:text-lg text-sm">to diversisty <br /> and equity</h4>
+              <h4 className="font-black text-center md:text-lg text-sm">...to diversisty <br /> and equity</h4>
               
-              <StaticImage src="../../static/about/our-commitment/open ecosystem icon.png" alt="platformable" className="img-md-thumbnail"/>
+              <StaticImage src="../../static/about/our-commitment/equity icon.png" alt="platformable" className="img-md-thumbnail"/>
               </div>
-              <p className="mb-5 md:text-md text-sm"><strong> We are committed to hiring a diverse
+              <p className="mb-5 md:text-md text-sm">We are committed to hiring a diverse
 workforce that represents the
 communities that are not traditionally
- prioritised </strong> when building communities,
+prioritised when building communities,
 products or services.
-<strong>This is our hidden strength!</strong></p>
-                <p className="mb-5 md:text-md text-sm">We track metrics <strong>to ensure that when
+This is our hidden strength</p>
+                <p className="mb-5 md:text-md text-sm">We track metrics to ensure that when
 we highlight examples of best
 practices and when we reach out to
 industry stakeholders, we reflect
 women and migrant-owned
 businesses and we cover a diverse
-range of use cases for ecosystem</strong></p>
-                <p className="mb-5"><strong>We collect metrics that measure
+range of use cases for ecosystem.</p>
+                <p className="mb-5">We collect metrics that measure
 the capacity for open ecosystems
 to ensure participation from
-under-represented populations </strong>
+under-represented populations
 and whether the value of open
-ecosystem models is <strong>distributed to
-all stakeholder groups equitably.</strong></p>            
+ecosystem models is distributed to
+all stakeholder groups equitably.</p>            
               </div>
             </div>
           </div>
@@ -271,12 +271,14 @@ all stakeholder groups equitably.</strong></p>
 
                   <div className="p-4 md:p-6 md:block md:px-5 px-5">
                     <div className="flex gap-4 items-center mb-5 justify-center ">
-                    <GatsbyImage image={getImage(x.position_icon)} alt="Platformable Team"/>
+                    {/* <GatsbyImage image={getImage(x.position_icon)} alt="Platformable Team"/> */}
                     <div>
-                    <h3 className="font-black text-lg leading-tight sm:leading-normal md:text-sm">
+                    <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
                       {`${x.name} ${x.lastname}`}
                     </h3>
-                    <p className="text-xs">{x.position}</p>
+                   
+                    <p className="text-xs text-center italic font-black">{x.position}</p>
+                    {x.pronounce && <p className="text-xs text-center">{x.pronounce}</p>}
                     </div>
                     </div>
                     <div className="text-sm">
@@ -363,6 +365,7 @@ export const query = graphql`
           name
           lastname
           position
+          pronounce
           image {
             childImageSharp {
               gatsbyImageData(width:320, blurredOptions: {width: 100}, placeholder: BLURRED)
