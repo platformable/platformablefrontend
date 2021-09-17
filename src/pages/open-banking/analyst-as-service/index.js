@@ -39,16 +39,7 @@ export default function index({data,location}) {
     return (
        <Layout>
         <Breadcrumbs location={location}/>
-         {/* <section className="mainHero py-20">
-           <div className="container mx-auto flex">
-          <div className="heroLeft">
-            <h3 className="font-black text-3xl">Analyst as a service</h3>
-          </div>
-          <div className="heroRight">
-            <img src={AnalistAsServiceTitle} />
-          </div>
-          </div>
-         </section> */}
+
 
         <GridDisplay
       gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
@@ -150,14 +141,14 @@ export default function index({data,location}) {
 
         <HowToHire/>
 
-        <Form
+  {/*       <Form
       formClass="text-center my-5 mx-auto overflow-hidden py-6"
       formID="lp-training-form"
       titleClass=""
       title="Sign up now to gain new insights into your open banking / open finance strategy"
       iframeId="submitMailerlite"
       iframeSrc={"https://landing.mailerlite.com/webforms/landing/b9q0r6"}
-    />
+    /> */}
      
     
        </Layout>

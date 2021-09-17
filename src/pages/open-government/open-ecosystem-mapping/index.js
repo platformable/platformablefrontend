@@ -135,77 +135,7 @@ tools (APIs) and data infrastructures.</p>
    </div>
    </section>
 
-  
 
-
-   {/* <h3 className="text-center font-black mt-5">Our Latest Work </h3>
- 
-    <section className="container mx-auto all-blog-content my-20 px-5">
-          
-    <div className="blog-cards">
-          <div className="home-posts-container-index grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4">
-          {data?data.allStrapiPost.edges.map(post =>{
-              return (
-     
-            <div class="item rounded bg-gray-100  p-2  shadow-lg">
-    
-              {post.node.featured_image && post.node.featured_image ? (
-                <Link to={`/${post.node.slug}`}>
-                  <img
-                    alt={post.node.title}
-                    key={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    src={post.node.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}
-                    className="mb-2"
-                  />
-                </Link>
-              ) : (
-                ""
-              )}
-
-              <h5 className="text-lg font-bold leading-5">
-                <Link to={`/${post.node.slug}`}> {post.node.title}</Link>
-              </h5>
-              <div className="text-gray-600 text-sm font-medium flex mb-4 mt-2">
-                <small className="text-xs mr-1">{`Writen by `} </small>
-                {post.node.user.length === 1 ? (
-                  <div
-                    className="hover:text-black transition duration-300 ease-in-out text-xs mr-1"
-                    to="/"
-                  >{` ${post.node.user[0].username}`}</div>
-                ) : post.node.user.length === 2 ? (
-                  post.node.user.map((x, index) => (
-                    <Link
-                      to={"/"}
-                      className="hover:text-black transition duration-300 ease-in-out text-xs mr-1"
-                    >
-                      {x.username} {index < post.node.user.length - 1 ? " & " : ""}
-                    </Link>
-                  ))
-                ) : null}
-              </div>
-              <div>
-                {post.node.categories.map(cat => {
-                  return (
-                    <div key={post.node.id} className="">
-                      <button
-                        to={cat.name}
-                        className={`bg-${cat.name} py-1 px-2 rounded text-white small-text text-xs`}
-                      >
-                        {cat.name}
-                      </button>
-                    </div>
-                  )
-                })}
-              </div>
-            
-            </div>
-            )
-             }) : ''}
-          </div>
-        </div>
-
-
-        </section> */}
 
 
 

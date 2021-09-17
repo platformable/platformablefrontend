@@ -1,10 +1,8 @@
 import React from "react"
 import {graphql} from 'gatsby';
 import Layout from "../../components/layout"
-import AboutTeamComponent from "../../components/AboutTeamComponent"
 import SEO from "../../components/seo"
-import EmbedContainer from "react-oembed-container"
-import foto from "../../assets/about/example.png"
+
 import { Link } from "gatsby";
 
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
@@ -296,61 +294,6 @@ all stakeholder groups equitably.</p>
         </div>
       </section>
 
-
-
-
-         {/*  DELETE THIS SOON */}
-      {/* <section className="content">
-        <div className="posts-container mx-auto my-10 px-5 about-page">
-          {data.strapiAbout.content && (
-            <EmbedContainer markup={data.strapiAbout.content}>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: unescape(data.strapiAbout.content),
-                }}
-              />
-            </EmbedContainer>
-          )}
-        </div>
-      </section> */}
-      {/*end of container */}
-      {/* <section className="our-team bg-gray-50 py-10">
-        <h3 className="text-5xl font-black text-center mb-5 mt-20">
-          Platformable's Team
-        </h3>
-        <div className="container mx-auto mt-20 grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-3 md:px-5">
-
-          {data.strapiAbout.Author.map((userauthor, index) => {
-            return userauthor.user.map((x, ind) => {
-              return (
-                <div
-                  key={ind}
-                  className=" pt-5 rounded overflow-hidden border-b-4 border-russian-violet-dark bg-gray-50 w-1/1"
-                >
-      
-                   <div className="flex justify-center">
-                    <GatsbyImage image={getImage(x.image)} className="my-0" alt="Platformable team"/>
-                    </div>
-                  <div className="p-4 md:p-6">
-                    <h3 className="font-semibold mb-2 text-center text-xl leading-tight sm:leading-normal">
-                      {`${x.name} ${x.lastname}`}
-                    </h3>
-                    <p className="text-center text-xs bg-red-orange-dark text-white rounded px-1 py-1 my-5">
-                      {x.position}
-                    </p>
-                    <div className="text-sm">
-                      <div
-                        className="leading-none text-xs"
-                        dangerouslySetInnerHTML={{ __html: x.bio }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              )
-            })
-          })}
-        </div>
-      </section> */}
     </Layout>
   )
 }
