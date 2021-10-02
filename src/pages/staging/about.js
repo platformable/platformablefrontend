@@ -276,7 +276,7 @@ all stakeholder groups equitably.</p>
                     </h3>
                    
                     <p className="text-xs text-center italic font-black">{x.position}</p>
-                    {x.pronounce && <p className="text-xs text-center">{x.pronounce}</p>}
+                    {x.pronoun && <p className="text-xs text-center">{x.pronoun}</p>}
                     </div>
                     </div>
                     <div className="text-sm">
@@ -308,7 +308,7 @@ export const query = graphql`
           name
           lastname
           position
-          pronounce
+          pronoun
           image {
             childImageSharp {
               gatsbyImageData(width:320, blurredOptions: {width: 100}, placeholder: BLURRED)
