@@ -206,6 +206,11 @@ p {
 .bg-red-orange-dark {
   background-color: var(--red-orange-dark);
 }
+
+
+.top-nav:hover {
+background-color: var(--sunglow-dark);
+}
 i {
   margin: 5px;
 }

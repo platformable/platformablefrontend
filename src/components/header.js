@@ -118,14 +118,14 @@ const Header = ({ siteTitle }) => {
                 <div className="flex space-x-4">
                   <Link
                     to="/"
-                    className="top-nav  hover:bg-yellow-200  px-3 py-2 rounded-md text-sm font-medium"
+                    className="top-nav  hover:bg-sunglow  px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName="active-top-nav"
                   >
                     Home
                   </Link>
                   <Link
                     to="/about"
-                    className="top-nav  hover:bg-yellow-200  px-3 py-2 rounded-md text-sm font-medium"
+                    className="top-nav  hover:bg-sunglow  px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName="active-top-nav"
                   >
                     About
@@ -139,21 +139,21 @@ const Header = ({ siteTitle }) => {
                   </Link> */}
                   <Link
                     to="/sectors"
-                    className=" top-nav  hover:bg-yellow-200  px-3 py-2 rounded-md text-sm font-medium"
+                    className=" top-nav  hover:bg-sunglow  px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName="active-top-nav"
                   >
                     Sectors
                   </Link>
                   <Link
                     to="/blog"
-                    className="top-nav  hover:bg-yellow-200  px-3 py-2 rounded-md text-sm font-medium"
+                    className="top-nav  hover:bg-sunglow  px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName="active-top-nav"
                   >
                     Blog
                   </Link>
                   <Link
                     to="/labs"
-                    className="top-nav  hover:bg-yellow-200  px-3 py-2 rounded-md text-sm font-medium"
+                    className="top-nav  hover:bg-sunglow  px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName="active-top-nav"
                   >
                     Labs
@@ -161,7 +161,7 @@ const Header = ({ siteTitle }) => {
                   {user && user.isLoggedIn ? (
                     <Link
                       to="/app/dashboard"
-                      className="top-nav  hover:bg-yellow-200  px-3 py-2 rounded-md text-sm font-medium"
+                      className="top-nav  hover:bg-sunglow  px-3 py-2 rounded-md text-sm font-medium"
                       activeClassName="active-top-nav"
                     >
                       Dashboard
