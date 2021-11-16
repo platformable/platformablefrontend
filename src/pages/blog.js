@@ -155,6 +155,7 @@ export default function Blogs({ data, location }) {
               ) : props.user.length > 1 ? (
                 props.user.map((x, index) => (
                   <Link
+                    key={index}
                     to={`/author/${props.user[index].id}`}
                     className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
                   >
@@ -167,9 +168,8 @@ export default function Blogs({ data, location }) {
 
           {props.categories.map(cat => {
             return (
-              <div className="absolute right-5 w-full bottom-5">
+              <div key={props.id} className="absolute right-5 w-full bottom-5">
                 <p
-                  key={props.id}
                   className={`text-right text-sm font-bold text-dark-${cat.name}`}
                 >
                   {props.content
