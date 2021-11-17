@@ -5774,13 +5774,9 @@ section#timeline article div.inner {
 .shaded-inline-icon-sustain-dark-btn {
   background-color: var(--os-dark);
 }
-/* .blog-page-date-text {
-  color: var(--russian-violet-dark);
-} */
+
 .bg-dark-Open.Ecosystems,
-.bg-dark-Open-Ecosystems,
-.hover-dark-Open.Ecosystems:hover,
-.hover-dark-Open-Ecosystems:hover {
+.bg-dark-Open-Ecosystems {
   background-color: var(--russian-violet-dark);
 }
 .text-dark-Open.Ecosystems,
@@ -5793,9 +5789,7 @@ section#timeline article div.inner {
   border: 4px solid var(--russian-violet-dark);
 }
 .bg-dark-Open-Banking-Open-Finance,
-.bg-dark-Open.Banking,
-.hover-dark-Open-Banking-Open-Finance:hover,
-.hover-dark-Open.Banking:hover {
+.bg-dark-Open.Banking {
   background-color: var(--ob-dark);
 }
 .text-dark-Open-Banking-Open-Finance,
@@ -5808,9 +5802,7 @@ section#timeline article div.inner {
   border: 4px solid var(--ob-dark);
 }
 .bg-dark-Open.Health,
-.bg-dark-Open-Health,
-.hover-dark-Open.Health:hover,
-.hover-dark-Open-Health:hover {
+.bg-dark-Open-Health {
   background-color: var(--oh-dark);
 }
 .text-dark-Open.Health,
@@ -5823,9 +5815,7 @@ section#timeline article div.inner {
 }
 
 .bg-dark-Open-Government,
-.bg-dark-Open.Government,
-.hover-dark-Open-Government:hover,
-.hover-dark-Open.Government:hover {
+.bg-dark-Open.Government {
   background-color: var(--og-dark);
 }
 .text-dark-Open-Government,
@@ -5837,9 +5827,7 @@ section#timeline article div.inner {
   border: 4px solid var(--og-dark);
 }
 .bg-dark-Open-Sustainability,
-.bg-dark-Open.Sustainability,
-.hover-dark-Open-Sustainability:hover,
-.hover-dark-Open.Sustainability:hover {
+.bg-dark-Open.Sustainability {
   background-color: var(--os-dark);
 }
 .text-dark-Open-Sustainability,
@@ -5853,8 +5841,7 @@ section#timeline article div.inner {
 .text-dark-Labs {
   color: var(--labs-dark);
 }
-.bg-dark-Labs,
-.hover-dark-Labs:hover {
+.bg-dark-Labs {
   background-color: var(--labs-dark);
 }
 .border-dark-Labs {
@@ -5865,9 +5852,6 @@ section#timeline article div.inner {
   border-bottom: 4px solid var(--sunglow-dark);
 }
 .bg-sunglow-dark {
-  background-color: var(--sunglow-dark);
-}
-.hover-all-categories:hover {
   background-color: var(--sunglow-dark);
 }
 .border-sunglow-dark {
