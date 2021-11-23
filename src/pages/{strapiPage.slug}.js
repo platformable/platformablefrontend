@@ -3,9 +3,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import EmbedContainer from "react-oembed-container"
-import SEO from '../components/seo'
-
-
+import SEO from "../components/seo"
 
 const BlogPost = ({ data }) => {
   useEffect(() => {
@@ -15,19 +13,13 @@ const BlogPost = ({ data }) => {
   return (
     <>
       <Layout>
-       {/* PAGE TITLE ON BROWSER */}
+        {/* PAGE TITLE ON BROWSER */}
         {/* <SEO title={data.strapiPage.title}/> */}
         <section className="posts-container mx-auto all-blog-content my-5 sm:my-20 px-5">
           <h3 className="text-1xl sm:text-3xl font-black mb-3">
-
-            {data.strapiPage.title} 
+            {data.strapiPage.title}
           </h3>
-
-         
-
           <div className="posts-content">
-     
-
             <EmbedContainer markup={data.strapiPage.content}>
               <div
                 dangerouslySetInnerHTML={{ __html: data.strapiPage.content }}
@@ -35,8 +27,6 @@ const BlogPost = ({ data }) => {
             </EmbedContainer>
           </div>
         </section>
-
-       
       </Layout>
     </>
   )
@@ -45,8 +35,8 @@ const BlogPost = ({ data }) => {
 export default BlogPost
 
 export const query = graphql`
-query strapiPage($slug: String!){
-    strapiPage(slug: { eq: $slug })  {
+  query strapiPage($slug: String!) {
+    strapiPage(slug: { eq: $slug }) {
       id
       featured_image {
         childImageSharp {
