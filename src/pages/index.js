@@ -203,10 +203,10 @@ return (
 
     <section className="publish_analysis">
       <div className="container mx-auto grid md:grid-cols-2 grid-cols-1">
-        <div className="left flex items-center">
+        <div className="left flex items-center px-5 sm:px-0">
           <div>
-            <h3 className="font-black">We publish analysis and insights</h3>
-            <p>
+            <h3 className="font-black ">We publish analysis and insights</h3>
+            <p className="">
               We share data on the growth of open ecosystems, and track how
               value is being generated and distributed
             </p>
