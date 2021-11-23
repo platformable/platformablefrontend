@@ -248,23 +248,6 @@ const IndexPage = ({ data }) => {
                             </div>
                           )
                         })}
-                        {/* {post.node.categories.map(cat => {
-                          return (
-                            <div
-                              key={index}
-                              className="absolute right-5 w-full bottom-5"
-                            >
-                              <p
-                                className={`text-right text-sm font-bold text-dark-${cat.name}`}
-                              >
-                                {post.node.content
-                                  ? calculateTimeToRead(post.node.content)
-                                  : "less than 1"}{" "}
-                                min read
-                              </p>
-                            </div>
-                          )
-                        })} */}
                       </div>
                     </div>
                   )
