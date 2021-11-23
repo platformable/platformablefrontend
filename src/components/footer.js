@@ -172,6 +172,18 @@ export default function Footer() {
           </Link>{" "}
           for more details{" "}
         </p>
+        <div className="flex items-center justify-center">
+          <span>Proudly</span>
+          <StaticImage
+            src="../images/footer_heart.png"
+            alt="Workflow"
+            placeholder="blurred"
+            layout="fixed"
+            width={30}
+            className="mx-1"
+          />
+          <span> based in Barcelona</span>
+        </div>
       </div>
     </footer>
   )

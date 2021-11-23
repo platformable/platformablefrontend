@@ -5869,33 +5869,33 @@ section#timeline article div.inner {
 .fill-dark-Open.Sustainability {
   fill: var(--os-dark);
 }
-.border-top-Open-Sustainability,
-.border-top-OpenSustainability {
-  border-top: 2px solid var(--os-dark);
+.border-bottom-Open-Sustainability,
+.border-bottom-OpenSustainability {
+  border-bottom: 2px solid var(--os-dark);
 }
 .fill-dark-Open.Health,
 .fill-dark-Open-Health {
   fill: var(--oh-dark);
 }
-.border-top-Open-Health,
-.border-top-Open.Health {
-  border-top: 2px solid var(--oh-dark);
+.border-bottom-Open-Health,
+.border-bottom-Open.Health {
+  border-bottom: 2px solid var(--oh-dark);
 }
 .fill-dark-Open-Government,
 .fill-dark-Open.Government {
   fill: var(--og-dark);
 }
-.border-top-Open-Government,
-.border-top-Open-Government {
-  border-top: 2px solid var(--og-dark);
+.border-bottom-Open-Government,
+.border-bottom-Open-Government {
+  border-bottom: 2px solid var(--og-dark);
 }
 .fill-dark-Open-Banking-Open-Finance,
 .fill-dark-Open.Banking {
   fill: var(--ob-dark);
 }
-.border-top-Open-Banking-Open-Finance,
-.border-top-Open.Banking {
-  border-top: 2px solid var(--ob-dark);
+.border-bottom-Open-Banking-Open-Finance,
+.border-bottom-Open.Banking {
+  border-bottom: 2px solid var(--ob-dark);
 }
 .fill-dark-Labs {
   fill: var(--labs-dark);
@@ -5904,10 +5904,14 @@ section#timeline article div.inner {
 .fill-dark-Open-Ecosystems {
   fill: var(--russian-violet-dark);
 }
-.border-top-Open.Ecosystems,
-.border-top-Open-Ecosystems {
-  border-top: 2px solid var(--ob-dark);
+.border-bottom-Open.Ecosystems,
+.border-bottom-Open-Ecosystems {
+  border-bottom: 2px solid var(--ob-dark);
 }
 .border-bottom-russian-violet-dark-thin {
   border-bottom: 2px solid var(--russian-violet-dark);
 }
+
+/* .post-next-prev-button ul li {
+  width: 115px;
+} */

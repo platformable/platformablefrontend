@@ -225,7 +225,7 @@ const BlogPost = ({ data, pageContext, location }) => {
                       <>
                         <Link
                           to={`/author/${data.strapiPost.user[0].id}`}
-                          className="hover:text-black transition duration-300 ease-in-out mr-1"
+                          className="hover:text-black transition duration-300 ease-in-out"
                         >
                           {" "}
                           <span className="tracking-tighter">
@@ -263,13 +263,18 @@ const BlogPost = ({ data, pageContext, location }) => {
                 return (
                   <div className="flex gap-1 mt-3 items-center" key={index}>
                     <p>Share this article</p>
+
                     {/* <LinkedinShareButton url={shareUrl}>
                       <LinkedinIcon size={28} round={true} title={quote} />
                     </LinkedinShareButton> */}
                     <TwitterShareButton url={shareUrl} title={quote}>
                       <TwitterIcon size={28} round={true} />
                     </TwitterShareButton>
-                    <EmailShareButton url={shareUrl} title={quote}>
+                    <EmailShareButton
+                      url={shareUrl}
+                      subject={quote}
+                      body={quote}
+                    >
                       <EmailIcon size={28} round={true} />
                     </EmailShareButton>
                   </div>
@@ -315,10 +320,9 @@ const BlogPost = ({ data, pageContext, location }) => {
         </section>
         {data.strapiPost.categories.map(cat => {
           return (
-            <section className={`posts-container mx-auto`}>
-              {/* <div
-                className={`grid grid-cols-1 sm:grid-cols-${data.strapiPost.user.length} md:grid-cols-${data.strapiPost.user.length} xl:grid-cols-${data.strapiPost.user.length} gap-4 my-5`}
-              > */}
+            <section
+              className={`posts-container mx-5 lg:mx-auto border-bottom-${cat.name}`}
+            >
               <div className="flex flex-col sm:flex-row justify-center gap-5">
                 {data.strapiPost.user.map((user, index) => {
                   return (
@@ -353,27 +357,48 @@ const BlogPost = ({ data, pageContext, location }) => {
                   )
                 })}
               </div>
-              {/* </div> */}
             </section>
           )
         })}
 
-        {/* <section>
-  <div className="post-next-prev-button container mx-auto grid justify-center">
- <ul className="flex mx-auto">
-  {prev && (<li className="mr-5 text-small bg-gray-50 rounded-lg px-5 py-2 "><Link to={`/${prev.slug}`} className="small-text">{`< Previous`}</Link></li>)}
-   {next && (<li className="mr-5 text-small bg-gray-50 rounded-lg px-5 py-2 text-small"><Link to={`/${next.slug}`} className="small-text">{`Next >`}</Link></li>)}
-   
-   
- </ul>
-  </div>
-</section> */}
+        <section>
+          {data.strapiPost.categories.map(cat => {
+            return (
+              <div
+                className={`post-next-prev-button container mx-auto grid justify-center mt-5`}
+              >
+                <ul className="flex mx-auto gap-5">
+                  {prev && (
+                    <li
+                      className={` bg-dark-${cat.name} text-white rounded-lg text-lg px-5 py-2 w-28 text-center`}
+                    >
+                      <Link
+                        to={`/${prev.slug}`}
+                        className="small-text"
+                      >{`< Previous`}</Link>
+                    </li>
+                  )}
+                  {next && (
+                    <li
+                      className={`bg-dark-${cat.name} text-white text-lg rounded-lg px-5 py-2 w-28 text-center `}
+                    >
+                      <Link
+                        to={`/${next.slug}`}
+                        className="small-text"
+                      >{`Next >`}</Link>
+                    </li>
+                  )}
+                </ul>
+              </div>
+            )
+          })}
+        </section>
 
         <section className="related-posts container mx-auto my-5">
           {data.strapiPost.categories.map(cat => {
             return (
               <h3
-                className={`font-black my-5 text-center text-dark-${cat.name} border-top-${cat.name} pt-5 w-3/5 mx-auto`}
+                className={`font-black my-5 text-center text-dark-${cat.name} pt-5 w-3/5 mx-auto`}
               >
                 Related Articles
               </h3>
@@ -381,7 +406,7 @@ const BlogPost = ({ data, pageContext, location }) => {
           })}
           {/* TOP LATESTS 3 POSTS */}
 
-          <div className="container mx-auto all-blog-content my-20 px-5">
+          <div className="container mx-auto all-blog-content mb-20 mt-10 px-5">
             <div className="container mx-auto all-blog-content sm:px-5">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {data
@@ -406,13 +431,6 @@ const BlogPost = ({ data, pageContext, location }) => {
               </div>
             </div>
           </div>
-          <Link to="/blog">
-            <h3
-              className={`font-black my-5 text-center border-bottom-russian-violet-dark-thin pb-5 w-3/5 mx-auto`}
-            >
-              Other Articles
-            </h3>
-          </Link>
         </section>
       </Layout>
     </>

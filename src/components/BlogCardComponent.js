@@ -98,7 +98,7 @@ const BlogCardComponent = props => {
             <small className="small-text">{`Writen by `} </small>
             {props.user.length === 1 ? (
               <Link
-                className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
+                className="hover:text-black transition duration-300 ease-in-out small-text"
                 to={`/author/${props.user[0].id}`}
               >{` ${props.user[0].username}`}</Link>
             ) : props.user.length > 1 ? (
@@ -106,7 +106,7 @@ const BlogCardComponent = props => {
                 <Link
                   key={index}
                   to={`/author/${props.user[index].id}`}
-                  className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
+                  className="hover:text-black transition duration-300 ease-in-out small-text"
                 >
                   {x.username} {index < props.user.length - 1 ? " & " : ""}
                 </Link>

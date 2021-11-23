@@ -53,6 +53,7 @@ export default OpenBankingPosts
 export const blogQuery = graphql`
   query OpenBankingBlogPagePosts {
     allStrapiPost(
+      sort: { fields: publishing_date, order: DESC }
       filter: {
         categories: {
           elemMatch: { name: { eq: "Open Banking / Open Finance" } }

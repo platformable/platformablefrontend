@@ -57,6 +57,7 @@ export default OpenHealthPostx
 export const blogQuery = graphql`
   query OpenHealthBlogPostx {
     allStrapiPost(
+      sort: { fields: publishing_date, order: DESC }
       filter: { categories: { elemMatch: { name: { eq: "Open Health" } } } }
     ) {
       edges {

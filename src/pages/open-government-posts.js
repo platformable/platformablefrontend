@@ -46,6 +46,7 @@ export default OpenGovernmentPostx
 export const blogQuery = graphql`
   query OpenGovernmentBlogPostx {
     allStrapiPost(
+      sort: { fields: publishing_date, order: DESC }
       filter: { categories: { elemMatch: { name: { eq: "Open Government" } } } }
     ) {
       edges {

@@ -124,7 +124,7 @@ const IndexPage = ({ data }) => {
       {/* <PostsCards/> */}
       <h3 className="text-center font-black mt-5">Latest Posts </h3>
       {/* POSTS */}
-      <section className="cards-section my-6 container mx-auto py-8">
+      <section className="cards-section my-6 container px-3 sm:mx-auto py-8">
         <div className="grid grid-cols-1 grid-cols-1 md:grid-cols-3 text-lg md:text-sm lg:text-sm xl:text-lg gap-5">
           {data
             ? noStagingPosts.map((post, index) => {

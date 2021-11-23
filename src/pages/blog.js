@@ -181,14 +181,14 @@ export default function Blogs({ data, location }) {
                               {`Writen by `}{" "}
                               {post.node.user.length === 1 ? (
                                 <Link
-                                  className="hover:text-black transition duration-300 ease-in-out mr-1"
+                                  className="hover:text-black transition duration-300 ease-in-out"
                                   to={`/author/${post.node.user[0].id}`}
                                 >{` ${post.node.user[0].username}`}</Link>
                               ) : post.node.user.length > 1 ? (
                                 post.node.user.map((x, index) => (
                                   <Link
                                     to={`/author/${post.node.user[index].id}`}
-                                    className="hover:text-black transition duration-300 ease-in-out mr-1"
+                                    className="hover:text-black transition duration-300 ease-in-out"
                                     key={index}
                                   >
                                     {x.username}{" "}
@@ -208,7 +208,7 @@ export default function Blogs({ data, location }) {
                             {post.node.categories.map(cat => {
                               return (
                                 <div
-                                  className={`flex gap-2 items-center justify-end fill-dark-${cat.name}`}
+                                  className={`flex gap-1 items-center justify-end fill-dark-${cat.name}`}
                                   key={post}
                                 >
                                   <svg
