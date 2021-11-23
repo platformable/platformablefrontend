@@ -65,15 +65,7 @@ export default function about({ data }) {
         <div className="container mx-auto pb-12 md:px-28 px-5">
           <h3 className="text-center font-black my-5 md:text-2xl text-xl">Current and previous clients</h3>
 
-          <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
-            <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
-            <StaticImage src="../static/about/clients/odi.png" alt="Platformable client" className="img-thumbnail"/>
-            </div>
-            <div className="about-client-box-text md:w-4/5">
-                <p className="text-sm md:text-md">Working on projects to document data institutions and
-policy landscape models with Open Data Institute</p>
-            </div>
-          </div>
+         
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
