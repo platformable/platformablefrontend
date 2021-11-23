@@ -68,6 +68,14 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+
+        { name: "og:url", content: "https://platformable.com/" },
+
+        {
+          name: "og:image",
+          content:
+            "https://platformable.com/static/ddde48c2cbfbea90ae3a339f3cffc006/39f25/hero_squares.webp",
+        },
       ].concat(meta)}
     />
   )

@@ -42,13 +42,15 @@ const BlogCardComponent = props => {
 
   return (
     <div className="rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
-      <div className="px-7 text-center justify-center mb-3 h-44 overflow-hidden">
-        <GatsbyImage
-          image={getImage(props.img)}
-          className=""
-          alt={props.title}
-        />
-      </div>
+      <Link to={`/${props.slug}`}>
+        <div className="px-7 text-center justify-center mb-3 h-44 overflow-hidden">
+          <GatsbyImage
+            image={getImage(props.img)}
+            className=""
+            alt={props.title}
+          />
+        </div>
+      </Link>
       <div>
         <div className="flex flex-col gap-3 h-auto mr-5 h-11 mb-2">
           {props.categories.map((cat, index) => {
@@ -56,7 +58,7 @@ const BlogCardComponent = props => {
               <div key={index} className="flex justify-between">
                 <div className="w-1/5">
                   <div
-                    className={`flex text-center items-center w-16 h-16 xl:w-14 xl:h-14 bg-dark-${cat.name}
+                    className={`flex text-center items-center w-14 h-14 md:h-16 md:w-16 lg:h-14 lg:w-14 bg-dark-${cat.name}
                                  justify-center`}
                   >
                     <div className="flex flex-col text-white">
@@ -72,8 +74,8 @@ const BlogCardComponent = props => {
                 <div
                   className={
                     cat.name === "Open Banking / Open Finance"
-                      ? `flex items-end justify-center flex-nowrap w-full`
-                      : `flex items-end justify-center flex-nowrap w-full sm:-ml-11`
+                      ? `flex items-end justify-center flex-nowrap w-full sm:-ml-11 md:ml-0`
+                      : `flex items-end justify-center flex-nowrap w-full -ml-11`
                   }
                 >
                   <button
@@ -96,7 +98,7 @@ const BlogCardComponent = props => {
             <small className="small-text">{`Writen by `} </small>
             {props.user.length === 1 ? (
               <Link
-                className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
+                className="hover:text-black transition duration-300 ease-in-out small-text"
                 to={`/author/${props.user[0].id}`}
               >{` ${props.user[0].username}`}</Link>
             ) : props.user.length > 1 ? (
@@ -104,7 +106,7 @@ const BlogCardComponent = props => {
                 <Link
                   key={index}
                   to={`/author/${props.user[index].id}`}
-                  className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
+                  className="hover:text-black transition duration-300 ease-in-out small-text"
                 >
                   {x.username} {index < props.user.length - 1 ? " & " : ""}
                 </Link>
@@ -116,14 +118,27 @@ const BlogCardComponent = props => {
         {props.categories.map(cat => {
           return (
             <div key={props.id} className="absolute right-5 w-full bottom-5">
-              <p
-                className={`text-right text-sm font-bold text-dark-${cat.name}`}
+              <div
+                className={`flex gap-1 items-center justify-end fill-dark-${cat.name}`}
               >
-                {props.content
-                  ? calculateTimeToRead(props.content)
-                  : "less than 1"}{" "}
-                min read
-              </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <p
+                  className={`text-dark-${cat.name} text-sm font-bold text-red-orange-dark`}
+                >
+                  {props.content ? calculateTimeToRead(props.content) : "0"} min
+                  read
+                </p>
+              </div>
             </div>
           )
         })}

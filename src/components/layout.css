@@ -716,7 +716,6 @@ MEDIA QUERIES */
 .border-russian-violet-dark {
   border-bottom: 4px solid var(--russian-violet-dark);
 }
-
 /* POST PAGE */
 
 .posts-container {
@@ -5857,3 +5856,62 @@ section#timeline article div.inner {
 .border-sunglow-dark {
   border: 4px solid var(--sunglow-dark);
 }
+.icons8-clock {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  color: #8a0fb6;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIKdmlld0JveD0iMCAwIDQ4IDQ4IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxwYXRoIGQ9Ik0yNCw0QzEzLDQsNCwxMyw0LDI0czksMjAsMjAsMjBzMjAtOSwyMC0yMFMzNSw0LDI0LDR6IE0zMS41LDI3aC04Yy0wLjgsMC0xLjUtMC43LTEuNS0xLjV2LTEyYzAtMC44LDAuNy0xLjUsMS41LTEuNQlzMS41LDAuNywxLjUsMS41VjI0aDYuNWMwLjgsMCwxLjUsMC43LDEuNSwxLjVTMzIuMywyNywzMS41LDI3eiI+PC9wYXRoPjwvc3ZnPg==")
+    50% 50% no-repeat;
+  background-size: 100%;
+}
+.fill-dark-Open-Sustainability,
+.fill-dark-Open.Sustainability {
+  fill: var(--os-dark);
+}
+.border-bottom-Open-Sustainability,
+.border-bottom-OpenSustainability {
+  border-bottom: 2px solid var(--os-dark);
+}
+.fill-dark-Open.Health,
+.fill-dark-Open-Health {
+  fill: var(--oh-dark);
+}
+.border-bottom-Open-Health,
+.border-bottom-Open.Health {
+  border-bottom: 2px solid var(--oh-dark);
+}
+.fill-dark-Open-Government,
+.fill-dark-Open.Government {
+  fill: var(--og-dark);
+}
+.border-bottom-Open-Government,
+.border-bottom-Open-Government {
+  border-bottom: 2px solid var(--og-dark);
+}
+.fill-dark-Open-Banking-Open-Finance,
+.fill-dark-Open.Banking {
+  fill: var(--ob-dark);
+}
+.border-bottom-Open-Banking-Open-Finance,
+.border-bottom-Open.Banking {
+  border-bottom: 2px solid var(--ob-dark);
+}
+.fill-dark-Labs {
+  fill: var(--labs-dark);
+}
+.fill-dark-Open.Ecosystems,
+.fill-dark-Open-Ecosystems {
+  fill: var(--russian-violet-dark);
+}
+.border-bottom-Open.Ecosystems,
+.border-bottom-Open-Ecosystems {
+  border-bottom: 2px solid var(--ob-dark);
+}
+.border-bottom-russian-violet-dark-thin {
+  border-bottom: 2px solid var(--russian-violet-dark);
+}
+
+/* .post-next-prev-button ul li {
+  width: 115px;
+} */

@@ -20,7 +20,7 @@ const OpenBankingPosts = ({ data, location }) => {
           Posts and Articles
         </h3>
         <div className="container mx-auto all-blog-content my-20 px-5">
-          <div className="container mx-auto all-blog-content px-5">
+          <div className="container mx-auto all-blog-content sm:px-5">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {data
                 ? data.allStrapiPost.edges.map((post, index) => {
@@ -53,6 +53,7 @@ export default OpenBankingPosts
 export const blogQuery = graphql`
   query OpenBankingBlogPagePosts {
     allStrapiPost(
+      sort: { fields: publishing_date, order: DESC }
       filter: {
         categories: {
           elemMatch: { name: { eq: "Open Banking / Open Finance" } }
