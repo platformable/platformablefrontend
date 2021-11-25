@@ -8,6 +8,9 @@ import { Link } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 export default function about({ data }) {
+
+
+  console.log("data.strapiAbout.Author",data.strapiAbout.Author)
   return (
     <Layout>
       <SEO title="About" />
@@ -140,7 +143,7 @@ export default function about({ data }) {
                                   <p className="mb-1 md:text-md text-sm">We offer a 10% discount on our project
                   pricing to open source community
                   organisations and non-profits.</p>
-                                  <p className="mb-5">We are building partnerships with
+                                  <p className="mb-5 md:text-md text-sm">We are building partnerships with
                   organisations that work on reducing
                   health inequalities and we look for
                   opportunities to extend our industry
@@ -159,7 +162,7 @@ export default function about({ data }) {
               <p className="mb-1 md:text-md text-sm">We are an LGBT-owned startup committed to hiring a diverse workforce that represents all of us who are not traditionally prioritised when building communities, products or services.
 </p>
                 <p className="mb-1 md:text-md text-sm">We collect data on the participation and work of businesses that are women-led and have diverse management and we ensure that when we discuss the role of open ecosystems we give representation to these businesses. We ensure that when we discuss open ecosystems we reflect on whether they are supporting the needs of all market segments and use case needs.</p>
-                <p className="mb-1">We collect metrics that measure
+                <p className="mb-1 md:text-md text-sm">We collect metrics that measure
 the capacity for open ecosystems
 to ensure participation from
 under-represented populations
@@ -181,7 +184,7 @@ all stakeholder groups equitably.</p>
 
       </section>
 
-      <section className="privacy-policy my-16">
+      <section className="privacy-policy  py-16 bg-gray-50">
         <div className="container mx-auto md:px-0 px-5">
        
         <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
@@ -202,7 +205,9 @@ all stakeholder groups equitably.</p>
         <h3 className="font-black md:text-2xl text-xl text-center mb-4">
           Platformable's Team
         </h3>
-        <div className="container mx-auto mt-20 grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-3 md:px-28 px-5">
+
+        <div className="container mx-auto md:px-0 px-5">
+        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-3">
 
           {data.strapiAbout.Author.map((userauthor, index) => {
             return userauthor.user.map((x, ind) => {
@@ -240,7 +245,17 @@ all stakeholder groups equitably.</p>
               )
             })
           })}
+
+
+          </div>
         </div>
+
+        <div className="container mx-auto">
+
+        <p className="text-center my-5 text-sm px-5 md:px-0">
+          We are grateful for the work that has been contributed by trainees including: <a href="http://www.linkedin.com/in/elmira-saifullina" className="border-b-2" target="_blank">Elmira Saifullina</a>, <a href="https://www.linkedin.com/simon-luquegonzalez" className="border-b-2" target="_blank">Simón Luque</a>, <a href="https://www.linkedin.com/in/joannasmerea/" className="border-b-2" target="_blank">Joanna Smerea</a>, <a href="https://www.linkedin.com/in/anudeep-ayilalath-puthalath-5a383666/" className="border-b-2" target="_blank">Anudeep Ayilalath Puthalath</a> and <a href="https://www.linkedin.com/in/farhana-tasnin-bipasha-02014119a/" className="border-b-2" target="_blank">Farhana Tasnin Bipasha</a>
+          </p>
+          </div>
       </section>
 
     </Layout>
