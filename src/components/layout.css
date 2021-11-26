@@ -735,8 +735,7 @@ MEDIA QUERIES */
   text-decoration: underline;
   text-decoration-color: var(--russian-violet-dark);
 }
-.posts-content a,
-.footer-pp-link,.external-link {
+.posts-content a,.footer-pp-link,.external-link {
   text-decoration: underline;
   text-decoration-color: var(--russian-violet-dark);
 }
@@ -5909,7 +5908,7 @@ section#timeline article div.inner {
 }
 .border-bottom-Open.Ecosystems,
 .border-bottom-Open-Ecosystems {
-  border-bottom: 2px solid var(--ob-dark);
+  border-bottom: 2px solid var(--russian-violet-dark);
 }
 .border-bottom-russian-violet-dark-thin {
   border-bottom: 2px solid var(--russian-violet-dark);

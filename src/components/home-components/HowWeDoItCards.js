@@ -1,46 +1,41 @@
-import React from 'react'
+import React from "react"
 /*assets*/
 import buildImg from "../../assets/home/building_tools.png"
-import measureImg from '../../assets/home/measuring_value.png'
-import bestPracticesImg from '../../assets/home/sharing_best_practices.png'
-import connectImg from '../../assets/home/connecting_partners.png'
-
-
+import measureImg from "../../assets/home/measuring_value.png"
+import bestPracticesImg from "../../assets/home/sharing_best_practices.png"
+import connectImg from "../../assets/home/connecting_partners.png"
 
 const HowWeDoItCards = () => {
   const images = [
     {
       src: buildImg,
-      title:
-        "Building Tools",
+      title: "Building Tools",
       paragraph: "To grow platforms and ecosystems",
     },
     {
       src: measureImg,
-      title:
-        "Measuring Value",
+      title: "Measuring Value",
       paragraph: "To identify gaps and opportunities in open ecosystems",
     },
     {
       src: bestPracticesImg,
-      title:
-        "Sharing Best Practices",
+      title: "Sharing Best Practices",
       paragraph: "To learn from what works",
     },
     {
       src: connectImg,
-      title:
-        "Connecting Partners",
+      title: "Connecting Partners",
       paragraph: "To collaborate effectively",
     },
   ]
   return (
-    <section className="cards-section my-6 container mx-auto lg:pt-72 pb-8">
-      <h2 className="text-center my-20 text-secondary font-black">How we do it</h2>
+    <section className="cards-section my-6 container mx-auto pb-8">
+      <h2 className="text-center mt-20 mb-5 text-secondary font-black">
+        How we do it
+      </h2>
 
       <div className="my-0 md:mx-16 mx-2 py-0 px-4 flex flex-wrap flex-col sm:flex-row justify-evenly items-center">
         {images.map((img, i) => (
-          
           <div
             key={i}
             className="lg:w-2/5 w-full max-w-xl my-6 mx-2 p-4 rounded-full bg-card
@@ -55,8 +50,6 @@ const HowWeDoItCards = () => {
           </div>
         ))}
       </div>
-
-      
     </section>
   )
 }

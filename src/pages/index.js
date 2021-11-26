@@ -168,7 +168,7 @@ const IndexPage = ({ data }) => {
                                   className={
                                     cat.name === "Open Banking / Open Finance"
                                       ? `flex items-end justify-center flex-nowrap w-full sm:-ml-11 md:ml-0`
-                                      : `flex items-end justify-center flex-nowrap w-full -ml-11`
+                                      : `flex items-end justify-center flex-nowrap w-full -ml-11 md:ml-0 lg:-ml-11`
                                   }
                                 >
                                   <button
@@ -302,11 +302,7 @@ export default IndexPage
 
 export const blogQuery = graphql`
   query HomepagePosts {
-    allStrapiPost(
-      sort: { fields: publishing_date, order: DESC }
-      filter: { is_featured: { eq: true } }
-      limit: 3
-    ) {
+    allStrapiPost(sort: { fields: publishing_date, order: DESC }, limit: 3) {
       edges {
         node {
           categories {
