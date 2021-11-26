@@ -28,7 +28,7 @@ body {
 
 /* ABOUT */
 .our-mission-bg {
-  background-color: var(--sunglow-dark);
+  background-color:var(--sunglow-dark);
 }
 
 .OurMission .container {
@@ -735,9 +735,7 @@ MEDIA QUERIES */
   text-decoration: underline;
   text-decoration-color: var(--russian-violet-dark);
 }
-.posts-content a,
-.footer-pp-link,
-.external-link {
+.posts-content a,.footer-pp-link,.external-link {
   text-decoration: underline;
   text-decoration-color: var(--russian-violet-dark);
 }

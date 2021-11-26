@@ -20,7 +20,28 @@ export default function SignUp() {
 
   const [loading, setLoading] = useState(false)
 
+   const handleMailerLiteSubscription = async (e)=>{
+    const name= register.name
+    const email= register.email
+
+
+    const mailerlite = {
+      name,
+      email
+    }
+    const response = await window
+    .fetch(`/api/mailerliteSubscription`, {
+      method: `POST`,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(mailerlite),
+    })
+  }
+
   const handleSignUp = () => {
+    
+
     setLoading(true) // Request API.
     if( register.username ==="" || register.name=== "" || register.email==="" || register.password=== "") {
       setLoading(false) // Request API.
@@ -30,6 +51,7 @@ export default function SignUp() {
     axios
     .post('https://websiteserver-ds7cf.ondigitalocean.app/auth/local/register', {...register})
     .then(response => {
+      handleMailerLiteSubscription()
       navigate("/registration-success")
     })
     .catch(error => {

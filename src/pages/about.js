@@ -8,12 +8,16 @@ import { Link } from "gatsby"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 export default function about({ data }) {
+
   console.log("data.strapiAbout.Author", data.strapiAbout.Author)
+
+
   return (
     <Layout>
       <SEO title="About" />
 
       <div className="container mx-auto my-10 px-5">
+
         {/* <Breadcrumb location={location} crumbLabel="About" /> */}
         <div className="container mx-auto">
           <div className="flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center">
@@ -35,16 +39,19 @@ export default function about({ data }) {
             </div>
           </div>
         </div>
+
       </div>
 
       <section className="OurMission pt-5 our-mission-bg">
         <div className="container mx-auto pb-5 md:px-0 px-5">
+
           <h3 className="font-black text-center md:text-2xl text-xl">
             Our Mission
           </h3>
           <h4 className="text-center md:text-2xl text-xl">
             We support <span className="">open ecosystems</span> that:
           </h4>
+
 
           <div className="our-mission-cards-container grid md:grid-cols-3 grid-cols-1 md:gap-24 gap-4 my-5">
             <div className="our-mission-card grid  justify-center rounded-xl shadow p-5 bg-white">
@@ -86,6 +93,7 @@ export default function about({ data }) {
 
       <section className="about-clients mt-10 mb-5">
         <div className="container mx-auto pb-12 md:px-28 px-5">
+
           <h3 className="text-center font-black my-5 md:text-2xl text-xl">
             Current and previous clients
           </h3>
@@ -103,11 +111,13 @@ export default function about({ data }) {
                 We work with ALIAS.dev on resources that encourage the growth of
                 a data privacy and protection workforce and tech ecosystem
               </p>
+
             </div>
           </div>
 
           <div className="about-client-box md:flex gap-4 my-5 md:px-0 px-5 items-center">
             <div className="about-client-box-image md:w-1/5 w-full md:mb-0 mb-5">
+
               <StaticImage
                 src="https://www.apidays.global/wp-content/uploads/2020/05/logo-v2-2.png.webp"
                 alt="Platformable client"
@@ -171,6 +181,7 @@ export default function about({ data }) {
                 Poor (CGAP) to demonstrate the value of open APIs for financial
                 inclusion
               </p>
+
             </div>
           </div>
         </div>
@@ -186,6 +197,7 @@ export default function about({ data }) {
             <div className="commitment-left px-10 commitment-left-borders py-5">
               <div className="commitment-left-top">
                 <div className="flex justify-center items-center my-5 gap-4">
+
                   <StaticImage
                     src="../static/about/our-commitment/open source icon.png"
                     alt="platformable"
@@ -219,10 +231,12 @@ export default function about({ data }) {
                   extend our industry knowledge in support of vanguards working
                   in this area.
                 </p>
+
               </div>
             </div>
             <div className="commitment-right px-10 commitment-right-borders py-5">
               <div className="commitment-right-top">
+
                 <div className="flex justify-center items-center my-5 gap-4">
                   <StaticImage
                     src="../static/about/our-commitment/diversity icon.png"
@@ -259,6 +273,7 @@ export default function about({ data }) {
                   populations and whether the value of open ecosystem models is
                   distributed to all stakeholder groups equitably.
                 </p>
+
               </div>
             </div>
           </div>
@@ -267,6 +282,7 @@ export default function about({ data }) {
 
       <section className="privacy-policy my-16">
         <div className="container mx-auto md:px-0 px-5">
+
           <h3 className="md:text-2xl text-xl text-center mb-8">
             Privacy Policy
           </h3>
@@ -279,6 +295,7 @@ export default function about({ data }) {
               Privacy Policy
             </Link>
           </p>
+
         </div>
       </section>
 
@@ -312,10 +329,12 @@ export default function about({ data }) {
         </div>
       </section>
 
+
       <section className="our-team our-mission-bg py-10 ">
         <h3 className="font-black md:text-2xl text-xl text-center mb-4">
           Platformable's Team
         </h3>
+
 
         <div className="container mx-auto md:px-0 px-5">
           <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-3">
@@ -332,6 +351,7 @@ export default function about({ data }) {
                         className="my-0 img-thumbnail"
                         alt="Platformable team"
                       />
+
                     </div>
 
                     <div className="p-4 md:p-6 md:block md:px-5 px-5">
@@ -363,6 +383,7 @@ export default function about({ data }) {
             })}
           </div>
         </div>
+
 
         <div className="container mx-auto">
           <p className="text-center my-5 text-sm px-5 md:px-0">
@@ -409,6 +430,13 @@ export default function about({ data }) {
             </a>
           </p>
         </div>
+
+        <div className="container mx-auto">
+
+        <p className="text-center my-5 text-sm px-5 md:px-0">
+          We are grateful for the work that has been contributed by trainees including: <a href="http://www.linkedin.com/in/elmira-saifullina" className="border-b-2" target="_blank">Elmira Saifullina</a>, <a href="https://www.linkedin.com/simon-luquegonzalez" className="border-b-2" target="_blank">Simón Luque</a>, <a href="https://www.linkedin.com/in/joannasmerea/" className="border-b-2" target="_blank">Joanna Smerea</a>, <a href="https://www.linkedin.com/in/anudeep-ayilalath-puthalath-5a383666/" className="border-b-2" target="_blank">Anudeep Ayilalath Puthalath</a> and <a href="https://www.linkedin.com/in/farhana-tasnin-bipasha-02014119a/" className="border-b-2" target="_blank">Farhana Tasnin Bipasha</a>
+          </p>
+          </div>
       </section>
     </Layout>
   )
