@@ -88,7 +88,7 @@ const Header = ({ siteTitle }) => {
 
       {/* DESKTOP NAV */}
       <nav className="bg-white hidden lg:block container mx-auto">
-        <div className="px-2 sm:px-6">
+        <div className="">
           <div className="relative flex items-center justify-between h-16">
             <div className="flex-1 flex items-center  sm:items-stretch sm:justify-start ">
               <div className="hidden sm:block flex justify-between  sm:py-2">

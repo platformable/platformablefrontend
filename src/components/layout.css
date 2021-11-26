@@ -27,6 +27,9 @@ body {
 }
 
 /* ABOUT */
+.our-mission-bg {
+  background-color: var(--sunglow-dark);
+}
 
 .OurMission .container {
   border-bottom: 2px solid var(--russian-violet-dark);
@@ -733,7 +736,8 @@ MEDIA QUERIES */
   text-decoration-color: var(--russian-violet-dark);
 }
 .posts-content a,
-.footer-pp-link {
+.footer-pp-link,
+.external-link {
   text-decoration: underline;
   text-decoration-color: var(--russian-violet-dark);
 }
@@ -5906,7 +5910,7 @@ section#timeline article div.inner {
 }
 .border-bottom-Open.Ecosystems,
 .border-bottom-Open-Ecosystems {
-  border-bottom: 2px solid var(--ob-dark);
+  border-bottom: 2px solid var(--russian-violet-dark);
 }
 .border-bottom-russian-violet-dark-thin {
   border-bottom: 2px solid var(--russian-violet-dark);
