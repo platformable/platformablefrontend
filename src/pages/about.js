@@ -431,12 +431,6 @@ export default function about({ data }) {
           </p>
         </div>
 
-        <div className="container mx-auto">
-
-        <p className="text-center my-5 text-sm px-5 md:px-0">
-          We are grateful for the work that has been contributed by trainees including: <a href="http://www.linkedin.com/in/elmira-saifullina" className="border-b-2" target="_blank">Elmira Saifullina</a>, <a href="https://www.linkedin.com/simon-luquegonzalez" className="border-b-2" target="_blank">Simón Luque</a>, <a href="https://www.linkedin.com/in/joannasmerea/" className="border-b-2" target="_blank">Joanna Smerea</a>, <a href="https://www.linkedin.com/in/anudeep-ayilalath-puthalath-5a383666/" className="border-b-2" target="_blank">Anudeep Ayilalath Puthalath</a> and <a href="https://www.linkedin.com/in/farhana-tasnin-bipasha-02014119a/" className="border-b-2" target="_blank">Farhana Tasnin Bipasha</a>
-          </p>
-          </div>
       </section>
     </Layout>
   )
