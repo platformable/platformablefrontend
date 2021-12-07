@@ -20,6 +20,23 @@ export default function SignUp() {
 
   const [loading, setLoading] = useState(false)
 
+  const handleMailerLiteSubscription = async e => {
+    const name = register.name
+    const email = register.email
+
+    const mailerlite = {
+      name,
+      email,
+    }
+    const response = await window.fetch(`/api/mailerliteSubscription`, {
+      method: `POST`,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(mailerlite),
+    })
+  }
+
   const handleSignUp = () => {
     setLoading(true) // Request API.
     if (
@@ -38,6 +55,7 @@ export default function SignUp() {
         { ...register }
       )
       .then(response => {
+        handleMailerLiteSubscription()
         navigate("/registration-success")
       })
       .catch(error => {

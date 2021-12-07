@@ -9,13 +9,11 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 export default function about({ data }) {
   console.log("data.strapiAbout.Author", data.strapiAbout.Author)
+
   return (
     <Layout>
       <SEO title="About" />
-      {/* 
-      <section className="cards-section my-6 container py-8 sm:mx-auto md:px-0 px-5">
-        <div className="px-0 md:px-3 lg:px-0 xl:px-3">
- */}
+
       <div className="container my-10 sm:mx-auto md:px-0 px-5">
         {/* <Breadcrumb location={location} crumbLabel="About" /> */}
         <div className="container mx-auto">
@@ -91,8 +89,6 @@ export default function about({ data }) {
         </div>
       </section>
 
-      {/* <section className="cards-section my-6 container py-8 sm:mx-auto md:px-0 px-5">
-        <div className="px-0 md:px-3 lg:px-0 xl:px-3"> */}
       <section className="container about-clients mt-10 mb-5 sm:mx-auto md:px-0 px-5 ">
         <div className=" pb-12 px-0 md:px-3 lg:px-0 xl:px-3">
           <h3 className="text-center font-black my-5 md:text-2xl text-xl">
@@ -344,7 +340,6 @@ export default function about({ data }) {
                             alt="Platformable team"
                           />
                         </div>
-
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             {/* <GatsbyImage image={getImage(x.position_icon)} alt="Platformable Team"/> */}
@@ -375,7 +370,6 @@ export default function about({ data }) {
                   })
                 })}
               </div>
-
               <div className="container mx-auto">
                 <p className="text-center my-5 text-sm px-5 md:px-0">
                   We are grateful for the work that has been contributed by
@@ -423,6 +417,52 @@ export default function about({ data }) {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="container mx-auto">
+          <p className="text-center my-5 text-sm px-5 md:px-0">
+            We are grateful for the work that has been contributed by trainees
+            including:{" "}
+            <a
+              href="http://www.linkedin.com/in/elmira-saifullina"
+              className="border-b-2"
+              target="_blank"
+            >
+              Elmira Saifullina
+            </a>
+            ,{" "}
+            <a
+              href="https://www.linkedin.com/simon-luquegonzalez"
+              className="border-b-2"
+              target="_blank"
+            >
+              Simón Luque
+            </a>
+            ,{" "}
+            <a
+              href="https://www.linkedin.com/in/joannasmerea/"
+              className="border-b-2"
+              target="_blank"
+            >
+              Joanna Smerea
+            </a>
+            ,{" "}
+            <a
+              href="https://www.linkedin.com/in/anudeep-ayilalath-puthalath-5a383666/"
+              className="border-b-2"
+              target="_blank"
+            >
+              Anudeep Ayilalath Puthalath
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://www.linkedin.com/in/farhana-tasnin-bipasha-02014119a/"
+              className="border-b-2"
+              target="_blank"
+            >
+              Farhana Tasnin Bipasha
+            </a>
+          </p>
         </div>
       </section>
     </Layout>
