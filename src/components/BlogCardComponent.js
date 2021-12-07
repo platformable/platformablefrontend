@@ -41,7 +41,7 @@ const BlogCardComponent = props => {
   }
 
   return (
-    <div className="rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
+    <div className="bg-white rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
       <Link to={`/${props.slug}`}>
         <div className="px-7 text-center justify-center mb-3 h-44 overflow-hidden">
           <GatsbyImage

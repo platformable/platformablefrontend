@@ -1,21 +1,18 @@
 import { Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
-import React, {useContext,useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import UserContext from "../context/UserContext"
-import Logo from '../images/logo.png'
+import Logo from "../images/logo.png"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => {
   const [user, setUser] = useContext(UserContext || false)
 
-
-  useEffect(()=>{
-
+  useEffect(() => {
     if (typeof window !== `undefined`) {
-      window.localStorage.setItem("user",JSON.stringify(user))
-      
+      window.localStorage.setItem("user", JSON.stringify(user))
     }
-  },[user])
+  }, [user])
 
   function openNav() {
     return document
@@ -31,28 +28,26 @@ const Header = ({ siteTitle }) => {
 
   const handleLogOut = () => {
     setUser({
-      isLoggedIn:false
+      isLoggedIn: false,
     })
 
-    navigate('/')
+    navigate("/")
   }
 
   return (
     <header>
-
-
       {/* MOBILE NAV */}
       <div className="lg:hidden  block container mx-auto mobile-nav">
-        <div className="flex justify-between px-3 py-2">
+        <div className="flex justify-between px-5 md:px-3 py-2">
           <div>
             <Link to="/">
-            <StaticImage src="../images/logo.png" 
-            alt="platformable" 
-            placeholder="blurred"
-            layout="fixed"
-            width={225}
-            />
-              
+              <StaticImage
+                src="../images/logo.png"
+                alt="platformable"
+                placeholder="blurred"
+                layout="fixed"
+                width={225}
+              />
             </Link>{" "}
           </div>
           <div onClick={openNav}>
@@ -69,11 +64,18 @@ const Header = ({ siteTitle }) => {
           <a className="closebtn" onClick={closeNav}>
             &times;
           </a>
+          <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/sectors">Sectors</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/labs">Labs</Link>
-          {user.isLoggedIn ? "" : <Link to="/login" state={{previousPost:false}} >Login</Link>}
+          {user.isLoggedIn ? (
+            ""
+          ) : (
+            <Link to="/login" state={{ previousPost: false }}>
+              Login
+            </Link>
+          )}
           {user.isLoggedIn ? <Link to="/app/dashboard">Dashboard</Link> : ""}
           {user.isLoggedIn ? (
             <span onClick={handleLogOut} className="cursor-pointer">
@@ -87,20 +89,20 @@ const Header = ({ siteTitle }) => {
       </div>
 
       {/* DESKTOP NAV */}
-      <nav className="bg-white hidden lg:block container mx-auto">
+      <nav className="bg-white hidden lg:block container mx-auto xl:px-3">
         <div className="">
           <div className="relative flex items-center justify-between h-16">
             <div className="flex-1 flex items-center  sm:items-stretch sm:justify-start ">
               <div className="hidden sm:block flex justify-between  sm:py-2">
                 <div>
                   <Link to="/">
-                  <StaticImage 
-                  src="../images/logo.png" 
-                  alt="platformable" 
-                  placeholder="blurred"
-                  layout="fixed"
-                  width={225}
-                  />
+                    <StaticImage
+                      src="../images/logo.png"
+                      alt="platformable"
+                      placeholder="blurred"
+                      layout="fixed"
+                      width={225}
+                    />
                   </Link>
                 </div>
                 <div>
@@ -176,7 +178,7 @@ const Header = ({ siteTitle }) => {
                       to="/login"
                       className=" top-nav text-white   px-3 py-2 rounded-md text-sm font-medium bg-russian-violet-dark"
                       activeClassName="active-top-nav"
-                      state={{previousPost:false}} 
+                      state={{ previousPost: false }}
                     >
                       Login
                     </Link>

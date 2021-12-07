@@ -151,20 +151,22 @@ const BlogPost = ({ data, pageContext, location }) => {
   return (
     <>
       <Layout>
-        <section className="container mx-auto p-5">
-          <ul className="flex">
-            <li className="small-text">
-              <Link to={`/blog`}>Blog</Link>
-            </li>
-            {urls &&
-              urls.map((url, index) => {
-                return (
-                  <>
-                    <li className="small-text font-black">{`/${url}`}</li>
-                  </>
-                )
-              })}
-          </ul>
+        <section className="container mx-auto py-5 sm:mx-auto md:px-0 px-5">
+          <div className=" px-0 md:px-3 lg:px-0 xl:px-3">
+            <ul className="flex">
+              <li className="small-text">
+                <Link to={`/blog`}>Blog</Link>
+              </li>
+              {urls &&
+                urls.map((url, index) => {
+                  return (
+                    <>
+                      <li className="small-text font-black">{`/${url}`}</li>
+                    </>
+                  )
+                })}
+            </ul>
+          </div>
         </section>
         <Helmet>
           {scripts
@@ -393,7 +395,6 @@ const BlogPost = ({ data, pageContext, location }) => {
             )
           })}
         </section>
-
         <section className="related-posts container mx-auto my-5">
           {data.strapiPost.categories.map(cat => {
             return (
@@ -406,8 +407,8 @@ const BlogPost = ({ data, pageContext, location }) => {
           })}
           {/* TOP LATESTS 3 POSTS */}
 
-          <div className="container mx-auto all-blog-content mb-20 mt-10 px-5">
-            <div className="container mx-auto all-blog-content sm:px-5">
+          <div className="container mx-auto all-blog-content mb-20 mt-10 sm:mx-auto md:px-0 px-5">
+            <div className="container mx-auto all-blog-content px-0 md:px-3 lg:px-0 xl:px-3">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {data
                   ? cleanCategoryPosts.map((post, index) => {

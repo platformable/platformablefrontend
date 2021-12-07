@@ -110,10 +110,12 @@ export default function Blogs({ data, location }) {
   return (
     <Layout>
       <SEO title="Blog" />
-      <section className="container mx-auto ">
+      {/* <section className="container mx-auto ">
         <div className="my-10 px-5"></div>
-      </section>
-      <div className="container mx-auto all-blog-content my-20 px-5">
+      </section> */}
+      {/* <section className="cards-section my-6 container py-8 sm:mx-auto md:px-0 px-5">
+        <div className="px-0 md:px-3 lg:px-0 xl:px-3"> */}
+      <div className="container mx-auto all-blog-content my-20 sm:mx-auto md:px-0 px-5">
         {data
           ? noStagingPosts.map((post, index) => {
               if (index === 0 && post.node.staging === false) {
@@ -122,7 +124,7 @@ export default function Blogs({ data, location }) {
                     {/* FEATURED POST */}
                     <div
                       key={post.node.title}
-                      className="container mx-auto all-blog-content px-5"
+                      className="container all-blog-content px-0 md:px-3 lg:px-0 xl:px-3"
                     >
                       <div class="flex flex-col mb-5 w-full shadow-md lg:flex-row xl:flex-row">
                         <div class="w-full lg:w-1/2 flex flex-col gap-8">
@@ -261,7 +263,7 @@ export default function Blogs({ data, location }) {
         {/* end of the featured post*/}
 
         {/* start of the search component*/}
-        <div className="container mx-auto all-blog-content my-20 px-5">
+        <div className="container mx-auto all-blog-content my-20 px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="flex justify-center flex-col mt-10 mb-10">
             <div>
               <h4 className="capitalize font-bold text-center text-russian-violet-dark">
@@ -284,18 +286,18 @@ export default function Blogs({ data, location }) {
         </div>
         {/* end of the search component */}
         {/* Posts component */}
-        <div className="container mx-auto all-blog-content px-5">
+        <div className="container mx-auto all-blog-content px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {/* Categories component */}
-            <div className="pl-2 pr-5 rounded-xl pt-5 pb-5 top-blog-cards flex flex-col">
+            <div className=" pr-5 rounded-xl pt-5 pb-5 top-blog-cards flex flex-col">
               <h5 className="font-bold sm:pb-2 md:pb-0 text-xl ml-2">
                 Categories
               </h5>
               <button
                 className={
                   filterState === ""
-                    ? `bg-sunglow-dark mt-2 text-left`
-                    : `text-left`
+                    ? `bg-sunglow-dark mt-2 text-left padding-bottom-4`
+                    : `text-left mt-2`
                 }
                 onClick={resetFilters}
               >
@@ -314,8 +316,8 @@ export default function Blogs({ data, location }) {
                   key={index}
                   className={
                     filterState === cat.name
-                      ? `bg-dark-${cat.name} mt-2 text-left text-white`
-                      : `text-left`
+                      ? `bg-dark-${cat.name} mt-2 text-left text-white padding-bottom-4`
+                      : `text-left mt-2`
                   }
                   onClick={() => {
                     setSearchedValue("")
@@ -325,8 +327,8 @@ export default function Blogs({ data, location }) {
                   <h6
                     className={
                       filterState === cat.name
-                        ? `font-medium md:text-lg pt-4 pb-2  pl-2`
-                        : `font-medium md:text-lg pt-4 pb-2 border-b-px border-russian-violet-dark text-dark-${cat.name}`
+                        ? `font-medium md:text-lg pt-4 pb-2 pl-2`
+                        : `font-medium md:text-lg pt-4 pl-2 pb-2 border-russian-violet-dark text-dark-${cat.name}`
                     }
                   >
                     {cat.name}

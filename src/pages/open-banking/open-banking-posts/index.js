@@ -11,7 +11,7 @@ const OpenBankingPosts = ({ data, location }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <section className="container mx-auto all-blog-content  px-5">
+      <section className="container mx-auto all-blog-content px-5">
         <Breadcrumbs location={location} />
         <h3 className="text-3xl font-black text-center">
           Open Banking / Open Finance

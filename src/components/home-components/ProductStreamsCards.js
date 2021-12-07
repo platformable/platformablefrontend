@@ -6,34 +6,32 @@ const ProductStreamsCards = () => {
   const images = [
     {
       src: testImg,
-      title:
-        "Open Banking/Open Finance",
+      title: "Open Banking/Open Finance",
       paragraph: "Short description of the field lorem ipsum dolor sit amet",
     },
     {
       src: testImg,
-      title:
-        "Digital Government",
+      title: "Digital Government",
       paragraph: "Short description of the field lorem ipsum dolor sit amet",
     },
     {
       src: testImg,
-      title:
-        "Public Health",
+      title: "Public Health",
       paragraph: "Short description of the field lorem ipsum dolor sit amet",
     },
     {
       src: testImg,
-      title:
-        "Circular Economy",
+      title: "Circular Economy",
       paragraph: "Short description of the field lorem ipsum dolor sit amet",
     },
   ]
   return (
     <section className="cards-section my-4 mx-auto py-8">
       <h2 className="text-center my-5">Product Streams</h2>
-      <p className="text-center w-2/5 my-5 mx-auto">Select your area of interest and see how we can
-    help your users co-create the value they need.</p>
+      <p className="text-center w-2/5 my-5 mx-auto">
+        Select your area of interest and see how we can help your users
+        co-create the value they need.
+      </p>
 
       <div className="my-0 md:mx-16 mx-2 py-0 px-3 flex flex-wrap flex-col sm:flex-row justify-center items-center">
         {images.map((img, i) => (
@@ -47,13 +45,13 @@ const ProductStreamsCards = () => {
 
             <div className="">
               <h4 className="my-5 text-center h-14">{img.title}</h4>
-              <p className="text-grayed my-5 border-t border-darkGrey pt-3">{img.paragraph}</p>
+              <p className="text-grayed my-5 border-t border-darkGrey pt-3">
+                {img.paragraph}
+              </p>
             </div>
           </div>
         ))}
       </div>
-
-
     </section>
   )
 }

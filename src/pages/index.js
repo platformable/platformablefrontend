@@ -59,11 +59,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-
-      <section className="md:my-14 my-5 md:px-0 px-5">
+      <section className="container md:my-14 my-5 sm:mx-auto md:px-0 px-5">
         <br />
         <br />
-        <div className="container mx-auto grid md:grid-cols-2 grid-cols-1">
+        <div className="grid md:grid-cols-2 grid-cols-1 px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="left flex items-center">
             <div>
               <h3 className="font-black mb-5 text-base md:text-2xl">
@@ -90,184 +89,201 @@ const IndexPage = ({ data }) => {
         <br />
         <br />
       </section>
-
-      <section className="bg-gray-100 py-5 md:px-0 px-5">
-        <br />
-        <br />
-        <div className="container mx-auto grid md:grid-cols-2 grid-cols-1">
-          <div className="left flex items-center">
-            <div>
-              <p>Download our latest release</p>
-              <h3 className="font-black mb-5">
-                Open Banking/Open Finance Quarterly Trend Reports Q2 2021
-              </h3>
-              <Link
-                to="/open-banking/trends"
-                className="bg-secondary text-sm md:text-primary font-bold my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
-              >
-                More info on our reports
-              </Link>
+      <section className="bg-gray-100 py-5">
+        <div className="container sm:mx-auto md:px-0 px-5">
+          <br />
+          <br />
+          <div className=" grid md:grid-cols-2 grid-cols-1 px-0 md:px-3 lg:px-0 xl:px-3">
+            <div className="left flex items-center">
+              <div>
+                <p>Download our latest release</p>
+                <h3 className="font-black mb-5">
+                  Open Banking/Open Finance Quarterly Trend Reports Q2 2021
+                </h3>
+                <Link
+                  to="/open-banking/trends"
+                  className="bg-secondary text-sm md:text-primary font-bold my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
+                >
+                  More info on our reports
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="right flex justify-end">
-            <StaticImage
-              src="../assets/home/quarterly_trends1.png"
-              alt="platformable"
-              width={400}
-            />
+            <div className="right flex justify-end">
+              <StaticImage
+                src="../assets/home/quarterly_trends1.png"
+                alt="platformable"
+                width={400}
+              />
+            </div>
+
+            <br />
+            <br />
           </div>
         </div>
-        <br />
-        <br />
       </section>
-
       {/* <PostsCards/> */}
-      <h3 className="text-center font-black mt-5">Latest Posts </h3>
       {/* POSTS */}
-      <section className="cards-section my-6 container px-3 sm:mx-auto py-8">
-        <div className="grid grid-cols-1 grid-cols-1 md:grid-cols-3 text-lg md:text-sm lg:text-sm xl:text-lg gap-5">
-          {data
-            ? noStagingPosts.map((post, index) => {
-                while (index < 3 && post.node.staging === false) {
-                  return (
-                    <div className="rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
-                      <Link to={`/${post.node.slug}`}>
-                        <div className="px-7 text-center justify-center mb-3 h-44 overflow-hidden">
-                          <GatsbyImage
-                            image={getImage(post.node.featured_image)}
-                            className=""
-                            alt={post.node.title}
-                          />
-                        </div>
-                      </Link>
-                      <div>
-                        <div className="flex flex-col gap-3 h-auto mr-5 h-11 mb-2">
-                          {post.node.categories.map((cat, index) => {
-                            return (
-                              <div key={index} className="flex justify-between">
-                                <div className="w-1/5">
-                                  <div
-                                    className={`flex text-center items-center w-16 h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-14 xl:h-14 bg-dark-${cat.name}
+      <section className="cards-section my-6 container py-8 sm:mx-auto md:px-0 px-5">
+        <div className="px-0 md:px-3 lg:px-0 xl:px-3">
+          <h2 className="text-center font-black mb-5 mt-6">Latest Posts </h2>
+          <div className="grid grid-cols-1 grid-cols-1 md:grid-cols-3 text-lg md:text-sm lg:text-sm xl:text-lg gap-5">
+            {data
+              ? noStagingPosts.map((post, index) => {
+                  while (index < 3 && post.node.staging === false) {
+                    return (
+                      <div className="rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
+                        <Link to={`/${post.node.slug}`}>
+                          <div className="px-7 text-center justify-center mb-3 h-44 overflow-hidden">
+                            <GatsbyImage
+                              image={getImage(post.node.featured_image)}
+                              className=""
+                              alt={post.node.title}
+                            />
+                          </div>
+                        </Link>
+                        <div>
+                          <div className="flex flex-col gap-3 h-auto mr-5 h-11 mb-2">
+                            {post.node.categories.map((cat, index) => {
+                              return (
+                                <div
+                                  key={index}
+                                  className="flex justify-between"
+                                >
+                                  <div className="w-1/5">
+                                    <div
+                                      className={`flex text-center items-center w-16 h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-14 xl:h-14 bg-dark-${cat.name}
                                                     justify-center`}
-                                  >
-                                    <div className="flex flex-col text-white">
-                                      <p className="font-bold text-xl">
-                                        {getDayString(
-                                          post.node.publishing_date
-                                        )}
-                                      </p>
-                                      <p className="font-bold text-xl">
-                                        {getMonthString(
-                                          post.node.publishing_date
-                                        )}
-                                      </p>
+                                    >
+                                      <div className="flex flex-col text-white">
+                                        <p className="font-bold text-xl">
+                                          {getDayString(
+                                            post.node.publishing_date
+                                          )}
+                                        </p>
+                                        <p className="font-bold text-xl">
+                                          {getMonthString(
+                                            post.node.publishing_date
+                                          )}
+                                        </p>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                                <div
-                                  className={
-                                    cat.name === "Open Banking / Open Finance"
-                                      ? `flex items-end justify-center flex-nowrap w-full sm:-ml-11 md:ml-0`
-                                      : `flex items-end justify-center flex-nowrap w-full -ml-11 md:ml-0 lg:-ml-11`
-                                  }
-                                >
-                                  <button
-                                    key={index}
-                                    to={cat.name}
-                                    className={`text-dark-${cat.name} capitalise self-end md:self-center lg:self-end text-center`}
-                                    onClick={() => handleCategory(cat)}
+                                  <div
+                                    className={
+                                      cat.name === "Open Banking / Open Finance"
+                                        ? `flex items-end justify-center flex-nowrap w-full ml-2 sm:-ml-11 md:ml-0`
+                                        : `flex items-end justify-center flex-nowrap w-full -ml-11 md:ml-0 lg:-ml-11`
+                                    }
                                   >
-                                    {cat.name}
-                                  </button>
+                                    <button
+                                      key={index}
+                                      to={cat.name}
+                                      className={`text-dark-${cat.name} capitalise self-end md:self-center lg:self-end text-center`}
+                                      onClick={() => handleCategory(cat)}
+                                    >
+                                      {cat.name}
+                                    </button>
+                                  </div>
+                                </div>
+                              )
+                            })}
+
+                            <div className="text-center ml-5">
+                              <h5 class="capitalise font-bold">
+                                <Link to={`/${post.node.slug}`}>
+                                  {" "}
+                                  {post.node.title}
+                                </Link>
+                              </h5>
+                              <small className="small-text">
+                                {`Writen by `}{" "}
+                              </small>
+                              {post.node.user.length === 1 ? (
+                                <Link
+                                  className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
+                                  to={`/author/${post.node.user[0].id}`}
+                                >{` ${post.node.user[0].username}`}</Link>
+                              ) : post.node.user.length > 1 ? (
+                                post.node.user.map((x, index) => (
+                                  <Link
+                                    key={index}
+                                    to={`/author/${post.node.user[index].id}`}
+                                    className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
+                                  >
+                                    {x.username}{" "}
+                                    {index < post.node.user.length - 1
+                                      ? " & "
+                                      : ""}
+                                  </Link>
+                                ))
+                              ) : null}
+                            </div>
+                          </div>
+
+                          {post.node.categories.map(cat => {
+                            return (
+                              <div
+                                key={index}
+                                className="absolute right-5 w-full bottom-5"
+                              >
+                                <div
+                                  className={`flex gap-1 items-center justify-end fill-dark-${cat.name}`}
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    viewBox="0 0 20 20"
+                                  >
+                                    <path
+                                      fillRule="evenodd"
+                                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                      clipRule="evenodd"
+                                    />
+                                  </svg>
+                                  <p
+                                    className={`text-dark-${cat.name} text-sm font-bold`}
+                                  >
+                                    {post.node.content
+                                      ? calculateTimeToRead(post.node.content)
+                                      : "0"}{" "}
+                                    min read
+                                  </p>
                                 </div>
                               </div>
                             )
                           })}
-
-                          <div className="text-center ml-5">
-                            <h5 class="capitalise font-bold">
-                              <Link to={`/${post.node.slug}`}>
-                                {" "}
-                                {post.node.title}
-                              </Link>
-                            </h5>
-                            <small className="small-text">
-                              {`Writen by `}{" "}
-                            </small>
-                            {post.node.user.length === 1 ? (
-                              <Link
-                                className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
-                                to={`/author/${post.node.user[0].id}`}
-                              >{` ${post.node.user[0].username}`}</Link>
-                            ) : post.node.user.length > 1 ? (
-                              post.node.user.map((x, index) => (
-                                <Link
-                                  key={index}
-                                  to={`/author/${post.node.user[index].id}`}
-                                  className="hover:text-black transition duration-300 ease-in-out small-text mr-1"
-                                >
-                                  {x.username}{" "}
-                                  {index < post.node.user.length - 1
-                                    ? " & "
-                                    : ""}
-                                </Link>
-                              ))
-                            ) : null}
-                          </div>
                         </div>
-
-                        {post.node.categories.map(cat => {
-                          return (
-                            <div
-                              key={index}
-                              className="absolute right-5 w-full bottom-5"
-                            >
-                              <div
-                                className={`flex gap-1 items-center justify-end fill-dark-${cat.name}`}
-                              >
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="h-5 w-5"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
-                                <p
-                                  className={`text-dark-${cat.name} text-sm font-bold text-red-orange-dark`}
-                                >
-                                  {post.node.content
-                                    ? calculateTimeToRead(post.node.content)
-                                    : "0"}{" "}
-                                  min read
-                                </p>
-                              </div>
-                            </div>
-                          )
-                        })}
                       </div>
-                    </div>
-                  )
-                }
-              })
-            : null}
+                    )
+                  }
+                })
+              : null}
+          </div>
         </div>
       </section>
 
       <PositionedSection />
-
+      {/* <section className="hidden lg:block pt-8 mt-12 md:px-0 px-5">
+        <h2 className="text-center mb-6 font-black">
+          Platformable Program Structure
+        </h2>
+        <div className="container mx-auto all-blog-content px-3 text-center pt-4">
+          <StaticImage
+            src="../images/PlatformableProgramStructure.png"
+            className="w-12/12 lg:w-11/12 "
+          />
+        </div>
+      </section> */}
       <HowWeDoItCards />
-
       <WorkWithCards />
 
-      <section className="publish_analysis">
-        <div className="container mx-auto grid md:grid-cols-2 grid-cols-1">
+      <section className="publish_analysis container my-6 py-8 sm:mx-auto md:px-0 px-5">
+        <div className=" grid md:grid-cols-2 grid-cols-1  px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="left flex items-center">
             <div>
-              <h3 className="font-black">We publish analysis and insights</h3>
+              <h3 className="font-black mt-6">
+                We publish analysis and insights
+              </h3>
               <p>
                 We share data on the growth of open ecosystems, and track how
                 value is being generated and distributed
