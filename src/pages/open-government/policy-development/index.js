@@ -46,8 +46,8 @@ const LPPolicyDevelopment = ({ data, location }) => {
     <Layout>
       <Breadcrumbs location={location} />
       <SEO title="Policy Development" />
-      <section className="hero-data-governance py-10">
-        <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 items-center px-5 ">
+      <section className="hero-data-governance py-10 sm:mx-auto md:px-0 px-5">
+        <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 items-center px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="hero-data-governance-left">
             <h3 className="font-black">
               Policy development and advocacy services
@@ -65,7 +65,7 @@ const LPPolicyDevelopment = ({ data, location }) => {
       <Potential />
 
       <Form
-        formClass="text-center mt-5 mx-auto overflow-hidden"
+        formClass="text-center mt-5 mx-auto overflow-hidden sm:mx-auto md:px-0 px-5"
         formID="lp-training-form"
         titleClass="text-base"
         title="Sign up now to learn about the upcoming global policy agenda"
@@ -91,9 +91,9 @@ const LPPolicyDevelopment = ({ data, location }) => {
       </section>
 
       <section className=" bg-lightPurple py-10">
-        <div className="blog-cards container mx-auto all-blog-content my-20 px-5">
-          <h3 className="text-center font-black my-5 text-white">{`See our recent submissions\n and contribute to our next response`}</h3>
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+        <div className="blog-cards container mx-auto all-blog-content my-20 sm:mx-auto md:px-0 px-5">
+          <h3 className="text-center font-black my-5 text-white px-0 md:px-3 lg:px-0 xl:px-3">{`See our recent submissions\n and contribute to our next response`}</h3>
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-4 px-0 md:px-3 lg:px-0 xl:px-3">
             {data
               ? noStagingPosts.map((post, index) => {
                   while (index < 3 && post.node.staging === false) {

@@ -28,7 +28,7 @@ body {
 
 /* ABOUT */
 .our-mission-bg {
-  background-color:var(--sunglow-dark);
+  background-color: var(--sunglow-dark);
 }
 
 .OurMission .container {
@@ -764,7 +764,9 @@ MEDIA QUERIES */
   text-decoration: underline;
   text-decoration-color: var(--russian-violet-dark);
 }
-.posts-content a,.footer-pp-link,.external-link {
+.posts-content a,
+.footer-pp-link,
+.external-link {
   text-decoration: underline;
   text-decoration-color: var(--russian-violet-dark);
 }
@@ -4339,7 +4341,12 @@ blockquote:after {
 
 /*SUBSCRIPTION COMPONENT*/
 .subscription-section ul {
-  text-align: left;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .subscription-section ul {
+    text-align: left;
+  }
 }
 .subscription-section li {
   font-size: 0.8rem;

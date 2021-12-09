@@ -23,9 +23,10 @@ export default function index({ data, location }) {
     <Layout>
       <Breadcrumbs location={location} />
       <SEO title="OH-Open Ecosystem Mapping" />
+
       <GridDisplay
-        gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center"
-        gridContentClass="md:w-2/5"
+        gridDisplayClass="hero-section flex flex-col sm:flex-row flex-wrap my-6 container mx-auto md:px-0 px-5 py-6 justify-between items-center"
+        gridContentClass="md:w-2/5 px-0 md:px-3 lg:px-0 xl:px-3"
         title="Open Health"
         subtitle="Open Ecosystem Mapping"
         secondParagraph=""
@@ -33,15 +34,15 @@ export default function index({ data, location }) {
         paragraphOne=""
         paragraphTwo=""
         paragraphThree=""
-        imgContentClass=""
+        imgContentClass="px-0 md:px-3 lg:px-0 xl:px-3"
         imgClass="object-cointain w-96 h-94"
         backImgSrc={OHOpenEcosystemTitle}
         alt="Hero"
       ></GridDisplay>
 
       <FourHorizontalCircles />
-      <section className="py-10 OH-anOpenEcosystemIs">
-        <div className="container mx-auto md:w-3/5 ">
+      <section className="py-10 OH-anOpenEcosystemIs mx-auto md:px-0 px-5">
+        <div className="container mx-auto md:w-3/5 px-0 md:px-3 lg:px-0 xl:px-3">
           <h3 className="font-black text-center my-5 oh-oem-anOpenEcosystemis">
             An open ecosystem is
           </h3>
@@ -160,10 +161,11 @@ export default function index({ data, location }) {
       </section>
 
       {/* <PostsCards/> */}
-      <h3 className="text-center font-black mt-5">Our Latest Work </h3>
       {/* POSTS */}
-      <section className="container mx-auto all-blog-content my-20 px-5">
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+      <section className="container mx-auto all-blog-content my-20 mx-auto md:px-0 px-5">
+        <h3 className="text-center font-black mb-5">Our Latest Work </h3>
+
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-4 px-0 md:px-3 lg:px-0 xl:px-3">
           {data
             ? data.allStrapiPost.edges.map((post, index) => {
                 while (index < 3 && post.node.staging === false) {
