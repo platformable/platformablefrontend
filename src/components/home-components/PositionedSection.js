@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const PositionedSection = () => {
   return (
     <div>
-      <section className="bg-primary relative pb-56 w-auto pt-10 lg:pt-20 text-center">
+      <section className="bg-primary relative pb-56 w-auto my-6 py-8 text-center">
         <h3 className="text-white">Platform approaches</h3>
         <h3 className="text-white font-black">have two big advantages</h3>
         <div className="md:w-3/6  text-center mx-auto  advantageImgs flex flex-wrap md:flex-nowrap justify-center flex-wrap">
@@ -41,7 +41,9 @@ const PositionedSection = () => {
           </div>
         </div>
       </section>
+      {/* <div className="md:mx-8"> */}
       <OpenEcosystemSection />
+      {/* </div> */}
     </div>
   )
 }

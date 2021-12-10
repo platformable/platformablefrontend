@@ -8,20 +8,23 @@ const ProductCards = () => {
   const images = [
     {
       src: mapConsultImg,
-      title: "Map consultation processes and current policies relevant to your industry sector",
+      title:
+        "Map consultation processes and current policies relevant to your industry sector",
     },
     {
       src: opportunitiesImg,
-      title: "Identify opportunities to contribute to, or advocate for, open ecosystem solutions",
+      title:
+        "Identify opportunities to contribute to, or advocate for, open ecosystem solutions",
     },
     {
       src: collaborateImg,
-      title: "Collaborate with us as we respond to upcoming policy opportunities",
+      title:
+        "Collaborate with us as we respond to upcoming policy opportunities",
     },
   ]
 
   return (
-    <section className="my-16 mx-auto py-8">
+    <section className="my-16 mx-auto py-8 ">
       <div className="my-12 mx-auto text-center md:w-6/12 w-9/12 px-2">
         <h3 className="">
           Strengthen your opportunity to plan and build in an open society and

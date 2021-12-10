@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex flex-col">
           <div className=" flex justify-center">
             <Link to="/">
-              <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-3 mx-auto mt-5">
+              <div className="flex flex-col md:flex-row items-center gap-5 sm:gap-3 mx-auto mt-5 px-5">
                 <StaticImage
                   src="../images/CCLogo.png"
                   alt="Workflow"
@@ -32,7 +32,7 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-          <div className="flex px-3 sm:mx-auto sm:px-0 my-5 justify-center flex-wrap">
+          <div className="flex px-5 sm:mx-auto sm:px-0 my-5 justify-center flex-wrap">
             <Link
               to="/"
               className="top-nav text-sm hover:bg-yellow-200  px-3 py-2 rounded-md text-sm font-medium"
@@ -163,7 +163,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container px-3 sm:mx-auto sm:px-0 text-center small-text mt-5">
+      <div className="container px-5 sm:mx-auto text-center small-text mt-5">
         <p>
           We are committed to minimising the amount of data we collect about our
           visitors and subscribers. See our{" "}

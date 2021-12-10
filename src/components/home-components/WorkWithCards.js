@@ -46,26 +46,28 @@ const WorkWithCards = () => {
     },
   ]
   return (
-    <section className="cards-section my-6 container mx-auto py-8">
-      <h2 className="text-center mt-5 mb-16 font-black">We Work with</h2>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 justify-center">
-        {/* <div className="my-0 md:mx-16 mx-2 md:mx-0 py-0 px-3 md:px-0 flex flex-wrap flex-col sm:flex-row justify-between items-center"> */}
-        {images.map((img, i) => (
-          <div
-            key={i}
-            className="px-3 rounded-3xl bg-card justify-center gap-4 items-center shadow transition-shadow hover:shadow-hover "
-          >
-            <div className="flex justify-center">
-              <img src={img.src} alt={img.title} className="w-28 h-28 " />
+    <section className="cards-section container sm:mx-auto md:px-0 px-5">
+      <div className="px-0 md:px-3 lg:px-0 xl:px-3">
+        <h2 className="text-center mb-6 font-black">We Work with</h2>
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 justify-center">
+          {/* <div className="my-0 md:mx-16 mx-2 md:mx-0 py-0 px-3 md:px-0 flex flex-wrap flex-col sm:flex-row justify-between items-center"> */}
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="px-3 rounded-3xl bg-card justify-center gap-4 items-center shadow transition-shadow hover:shadow-hover "
+            >
+              <div className="flex justify-center">
+                <img src={img.src} alt={img.title} className="w-28 h-28 " />
+              </div>
+              <div className="h-56">
+                <h6 className="my-5 border-t border-darkGrey pt-3 font-black text-center">
+                  {img.title}
+                </h6>
+                <p className="text-sm">{img.paragraph}</p>
+              </div>
             </div>
-            <div className="h-56">
-              <h6 className="my-5 border-t border-darkGrey pt-3 font-black text-center">
-                {img.title}
-              </h6>
-              <p className="text-sm">{img.paragraph}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

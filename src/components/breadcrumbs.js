@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import {Link } from 'gatsby';
+import { Link } from "gatsby"
 
 export default function Breadcrumbs({ location }) {
   const [urls, setUrls] = useState([])
@@ -15,21 +15,30 @@ export default function Breadcrumbs({ location }) {
     getLocations(location)
   }, [])
   return (
-    <section className="container mx-auto p-5">
-      <ul className="flex">
-        <li className="small-text">
-          <Link to={`/sectors`}>Sectors</Link>
-        </li>
-        {urls &&
-          urls.map((url, index) => {
-            return (
-              <>
-              
-                <li className={`small-text ${index===urls.length-1 ? 'font-black' : null}`}><Link to={index===urls.length-1 ? null : `/${url}` }>{`/${url}`}</Link></li>
-              </>
-            )
-          })}
-      </ul>
+    <section className="container mx-auto py-5 px-5 md:px-0 ">
+      <div className="px-0 md:px-3 lg:px-0 xl:px-3">
+        <ul className="flex">
+          <li className="small-text">
+            <Link to={`/sectors`}>Sectors</Link>
+          </li>
+          {urls &&
+            urls.map((url, index) => {
+              return (
+                <>
+                  <li
+                    className={`small-text ${
+                      index === urls.length - 1 ? "font-black" : null
+                    }`}
+                  >
+                    <Link
+                      to={index === urls.length - 1 ? null : `/${url}`}
+                    >{`/${url}`}</Link>
+                  </li>
+                </>
+              )
+            })}
+        </ul>
+      </div>
     </section>
   )
 }

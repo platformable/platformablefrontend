@@ -1,36 +1,38 @@
 import React from "react"
-import {Link} from 'gatsby'
+import { Link } from "gatsby"
 // import CallToAction from './../shared-components/CallToAction';
 
 const SectorSubCards = ({ data, className }) => {
   return (
-    <section className="cards-section my-4 container mx-auto py-8">
+    <section className="cards-section my-4 container mx-auto py-8 sm:mx-auto md:px-0 px-5">
       <div className="border-b border-primary border-opacity-25 w-2/3 mx-auto mb-8"></div>
 
       <div className={className}>
         {data.elements.map((el, i) => (
           <div
             key={i}
-            className="md:w-full max-w-xs mt-4 md:mb-2 mb-12 mx-2 p-6 rounded-3xl bg-card
-              flex flex-col justify-center items-center 
+            className="w-10/12 sm:w-5/12 lg:w-3/12 p-6 rounded-3xl bg-card
+              flex flex-col justify-center items-center min-h-full
             "
             style={{ backgroundColor: el.color }}
           >
-            <div className="text-center">
-            <Link to={el.url}>
-              <img
-                src={el.img}
-                alt={el.title}
-                className="w-24 h-24 mx-auto bg-white shadow text-center rounded-full p-3 "
-              />
+            <div className="text-center h-auto">
+              <Link to={el.url}>
+                <img
+                  src={el.img}
+                  alt={el.title}
+                  className="w-24 h-24 mx-auto bg-white shadow text-center rounded-full p-3 "
+                />
 
-              <div className="">
-                <h6 className="my-5 text-center h-18 md:h-14 px-3 text-primary font-black">{el.title}</h6>
-                <p className="hidden md:block text-grayed text-center font-normal my-1 h-24 border-t border-primary border-opacity-25 pt-3">
-                  {el.paragraph}
-                </p>
-              </div>
-            </Link>
+                <div className="">
+                  <h6 className="my-5 text-center h-16 sm:h-20 lg:h-16 md:h-14 px-3 text-primary font-black sm:mb-10">
+                    {el.title}
+                  </h6>
+                  <p className="hidden md:block text-grayed text-center font-normal my-1 h-24 border-t border-primary border-opacity-25 pt-3 lg:mb-5">
+                    {el.paragraph}
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         ))}

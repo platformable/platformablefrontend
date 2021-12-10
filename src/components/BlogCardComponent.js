@@ -41,7 +41,7 @@ const BlogCardComponent = props => {
   }
 
   return (
-    <div className="rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
+    <div className="bg-white rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
       <Link to={`/${props.slug}`}>
         <div className="px-7 text-center justify-center mb-3 h-44 overflow-hidden">
           <GatsbyImage
@@ -73,15 +73,16 @@ const BlogCardComponent = props => {
                 </div>
                 <div
                   className={
-                    cat.name === "Open Banking / Open Finance"
-                      ? `flex items-end justify-center flex-nowrap w-full sm:-ml-11 md:ml-0`
+                    cat.name === "Open Banking / Open Finance" ||
+                    cat.name === "Open Government"
+                      ? `flex items-end justify-center flex-nowrap w-full sm:-ml-11 md:ml-0 `
                       : `flex items-end justify-center flex-nowrap w-full -ml-11`
                   }
                 >
                   <button
                     key={props.id}
                     to={cat.name}
-                    className={`text-dark-${cat.name} capitalise self-end text-center`}
+                    className={`text-dark-${cat.name} capitalise self-end text-center md:text-sm lg:text-md`}
                     onClick={() => handleCategory(cat)}
                   >
                     {cat.name}
