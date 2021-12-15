@@ -57,12 +57,10 @@ export default function index({ data, location }) {
       <FourHorizontalCircles />
 
       <HowWeWork />
-
-      {/* <PostsCards/> */}
-      <h3 className="text-center font-black mt-5">Our Latest Work </h3>
-      {/* POSTS */}
+      {/* TOP LATESTS 3 POSTS */}
+      {/* <h3 className="text-center font-black mt-5">Our Latest Work </h3>
+    
       <section className="container mx-auto all-blog-content my-20 md:px-0 px-5">
-        {/* TOP LATESTS 3 POSTS */}
         <div className="container mx-auto all-blog-content px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {data
@@ -87,7 +85,7 @@ export default function index({ data, location }) {
               : null}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <HowToHire />
 

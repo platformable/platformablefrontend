@@ -35,13 +35,13 @@ const LPPolicyDevelopment = ({ data, location }) => {
       url: "/open-health-posts",
     },
   ]
-  const handleCategory = selectedCategory => {
-    const found = postsCategories.find(
-      cat => cat.name === selectedCategory.name
-    )
-    const goTo = found ? navigate(`${found.url}`) : null
-    return goTo
-  }
+  // const handleCategory = selectedCategory => {
+  //   const found = postsCategories.find(
+  //     cat => cat.name === selectedCategory.name
+  //   )
+  //   const goTo = found ? navigate(`${found.url}`) : null
+  //   return goTo
+  // }
   return (
     <Layout>
       <Breadcrumbs location={location} />
@@ -90,7 +90,7 @@ const LPPolicyDevelopment = ({ data, location }) => {
         </div>
       </section>
 
-      <section className=" bg-lightPurple py-10">
+      {/* <section className=" bg-lightPurple py-10">
         <div className="blog-cards container mx-auto all-blog-content my-20 sm:mx-auto md:px-0 px-5">
           <h3 className="text-center font-black my-5 text-white px-0 md:px-3 lg:px-0 xl:px-3">{`See our recent submissions\n and contribute to our next response`}</h3>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-4 px-0 md:px-3 lg:px-0 xl:px-3">
@@ -116,7 +116,7 @@ const LPPolicyDevelopment = ({ data, location }) => {
               : null}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Form
         formClass="text-center my-5 mx-auto overflow-hidden"

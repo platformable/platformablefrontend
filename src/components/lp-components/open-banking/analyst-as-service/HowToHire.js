@@ -2,7 +2,7 @@ import React from "react"
 
 export default function HowToHire() {
   return (
-    <section className="howToHire posts-container max-w-md container mx-auto rounded-xl py-10 px-20">
+    <section className="howToHire posts-container max-w-md container mx-auto rounded-xl py-10 my-10 px-20">
       <div>
         <div className="">
           <h3 className="font-black text-center">How to hire the service</h3>
