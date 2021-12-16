@@ -1,47 +1,41 @@
-import React from 'react'
+import React from "react"
 /*assets*/
 import understandImg from "../../../assets/lp-policy_development/understand.svg"
-import contributeImg from '../../../assets/lp-policy_development/contribute.svg'
-import advocateImg from '../../../assets/lp-policy_development/advocate.svg'
-import drawImg from '../../../assets/lp-policy_development/draw.svg'
-import identifyImg from '../../../assets/lp-policy_development/identify.svg'
+import contributeImg from "../../../assets/lp-policy_development/contribute.svg"
+import advocateImg from "../../../assets/lp-policy_development/advocate.svg"
+import drawImg from "../../../assets/lp-policy_development/draw.svg"
+import identifyImg from "../../../assets/lp-policy_development/identify.svg"
 
 const HowWeDoIt = () => {
   const images = [
     {
       src: understandImg,
-      title:
-        "Understand",
+      title: "Understand",
       paragraph: "the policy environment",
     },
     {
       src: contributeImg,
-      title:
-        "Contribute",
+      title: "Contribute",
       paragraph: "to policy consultations",
     },
     {
       src: advocateImg,
-      title:
-        "Advocate",
+      title: "Advocate",
       paragraph: "for open ecosystem approaches",
     },
     {
       src: drawImg,
-      title:
-        "Draw",
+      title: "Draw",
       paragraph: "on policy mapping to plan your strategies",
     },
     {
       src: identifyImg,
-      title:
-        "Identify",
+      title: "Identify",
       paragraph: "and prepare for new funding and investment opportunities",
     },
   ]
   return (
-    <section className="cards-section mx-auto">
-
+    <section className="container cards-section mx-auto">
       <div className="my-0 md:mx-16 mx-2 py-0 px-4 flex flex-wrap flex-col sm:flex-row justify-evenly items-center">
         {images.map((img, i) => (
           <div
@@ -59,8 +53,6 @@ const HowWeDoIt = () => {
           </div>
         ))}
       </div>
-
-      
     </section>
   )
 }

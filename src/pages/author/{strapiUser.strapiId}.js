@@ -9,7 +9,12 @@ const AuthorPage = ({ data }) => {
   const calculateTimeToRead = article => {
     return Math.ceil(article.trim().split(/\s+/).length / 225)
   }
-
+  const sortByDate = user
+    ? user.posts.sort(
+        (a, b) => new Date(b.publishing_date) - new Date(a.publishing_date)
+      )
+    : " "
+  console.log(`This is sort ${sortByDate}`)
   return (
     <Layout>
       <SEO title="Author" />
@@ -30,6 +35,7 @@ const AuthorPage = ({ data }) => {
             <div className="px-5 text-center sm:center md:right md:text-left lg:text-left">
               <h3 className="font-black">
                 {user.name} {user.lastname}
+                {console.log(user.id)}
               </h3>
               <h5 className="font-black italic">{user.position}</h5>
               <h6 className="">
@@ -45,7 +51,7 @@ const AuthorPage = ({ data }) => {
           <div className="bottom-line"></div>
           <div className="container mx-auto all-blog-content">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {user.posts.map(post => {
+              {sortByDate.map(post => {
                 if (post.authors_page === true) {
                   return (
                     <>
@@ -64,6 +70,12 @@ const AuthorPage = ({ data }) => {
                             <h5 class="capitalise font-bold">
                               <Link to={`/${post.slug}`}> {post.title}</Link>
                             </h5>
+                          </div>
+                          <div>
+                            <p className="text-center text-sm">
+                              Published on {""}
+                              {post.publishing_date}
+                            </p>
                           </div>
                         </div>
 
@@ -133,6 +145,8 @@ export const query = graphql`
         slug
         title
         content
+        publishing_date(formatString: "DD MMM YYYY")
+        staging
         featured_image {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)

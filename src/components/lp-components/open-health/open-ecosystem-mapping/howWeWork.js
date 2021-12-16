@@ -30,19 +30,21 @@ const OGOpenEcosystemMapping = () => {
 
   return (
     <section className="bg-oh-open-ecosystem-mapping-audience py-10 ">
-      <h3 className="my-10  md:mx-8 text-center font-black">Audience</h3>
-      <div classname="container mx-auto ">
-        <div className="md:w-3/5 mx-auto px-5 md:px-0">
-          {images.map((img, i) => (
-            <div key={i} className="mb-5 md:flex items-center">
-              <img src={img.src} alt={img.title} className="mr-5" />
+      <div className="container mx-auto">
+        <h3 className="my-10  md:mx-8 text-center font-black">Audience</h3>
+        <div classname="container mx-auto ">
+          <div className="md:w-3/5 mx-auto px-5 md:px-0">
+            {images.map((img, i) => (
+              <div key={i} className="mb-5 md:flex items-center">
+                <img src={img.src} alt={img.title} className="mr-5" />
 
-              <div className="">
-                <h4 className="font-black text-1xl">{img.title}</h4>
-                <p>{img.paragraph}</p>
+                <div className="">
+                  <h4 className="font-black text-1xl">{img.title}</h4>
+                  <p>{img.paragraph}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

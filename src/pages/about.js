@@ -205,20 +205,20 @@ export default function about({ data }) {
                         className="img-md-thumbnail"
                       />
                     </div>
-                    <p className="mb-1 md:text-md text-sm">
+                    <p className="mb-1 text-sm md:text-md lg:text-lg">
                       We donate/volunteer a percentage of our work projects to
                       open source projects and we select open source
                       technologies where we can.
                     </p>
-                    <p className="mb-1 md:text-md text-sm">
+                    <p className="mb-1 md:text-md text-sm lg:text-lg">
                       We allocate internal team time on building content and
                       products that can be shared in the open.
                     </p>
-                    <p className="mb-1 md:text-md text-sm">
+                    <p className="mb-1 md:text-md text-sm lg:text-lg">
                       We offer a 10% discount on our project pricing to open
                       source community organisations and non-profits.
                     </p>
-                    <p className="mb-5 md:text-md text-sm">
+                    <p className="mb-5 md:text-md text-sm lg:text-lg">
                       We are building partnerships with organisations that work
                       on reducing health inequalities and we look for
                       opportunities to extend our industry knowledge in support
@@ -244,13 +244,13 @@ export default function about({ data }) {
                         className="img-md-thumbnail"
                       />
                     </div>
-                    <p className="mb-1 md:text-md text-sm">
+                    <p className="mb-1 text-sm md:text-md lg:text-lg">
                       We are an LGBT-owned startup committed to hiring a diverse
                       workforce that represents all of us who are not
                       traditionally prioritised when building communities,
                       products or services.
                     </p>
-                    <p className="mb-1 md:text-md text-sm">
+                    <p className="mb-1text-sm md:text-md lg:text-lg">
                       We collect data on the participation and work of
                       businesses that are women-led and have diverse management
                       and we ensure that when we discuss the role of open
@@ -259,7 +259,7 @@ export default function about({ data }) {
                       whether they are supporting the needs of all market
                       segments and use case needs.
                     </p>
-                    <p className="mb-1 md:text-md text-sm">
+                    <p className="mb-1 text-sm md:text-md lg:text-lg">
                       We collect metrics that measure the capacity for open
                       ecosystems to ensure participation from under-represented
                       populations and whether the value of open ecosystem models
@@ -323,37 +323,36 @@ export default function about({ data }) {
           <div className="container mx-auto">
             <div className="pb-5 px-0 md:px-3 lg:px-0 xl:px-3">
               <h3 className="font-black md:text-2xl text-xl text-center mb-4">
-                Platformable's Team
+                Platformable Team
               </h3>
               <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-3">
                 {data.strapiAbout.Author.map((userauthor, index) => {
-                  return userauthor.user.map((x, ind) => {
-                    return (
+                  return (
+                    <>
                       <div
-                        key={ind}
+                        key={index}
                         className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow"
                       >
                         <div className="flex justify-center">
                           <GatsbyImage
-                            image={getImage(x.image)}
+                            image={getImage(userauthor.user[0].image)}
                             className="my-0 img-thumbnail"
                             alt="Platformable team"
                           />
                         </div>
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
-                            {/* <GatsbyImage image={getImage(x.position_icon)} alt="Platformable Team"/> */}
                             <div>
                               <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
-                                {`${x.name} ${x.lastname}`}
+                                {`${userauthor.user[0].name} ${userauthor.user[0].lastname}`}
                               </h3>
 
                               <p className="text-xs text-center italic font-black">
-                                {x.position}
+                                {userauthor.user[0].position}
                               </p>
-                              {x.pronoun && (
+                              {userauthor.user[0].pronoun && (
                                 <p className="text-xs text-center">
-                                  {x.pronoun}
+                                  {userauthor.user[0].pronoun}
                                 </p>
                               )}
                             </div>
@@ -361,13 +360,263 @@ export default function about({ data }) {
                           <div className="text-sm">
                             <div
                               className="leading-none text-xs"
-                              dangerouslySetInnerHTML={{ __html: x.bio }}
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[0].bio,
+                              }}
                             ></div>
                           </div>
                         </div>
                       </div>
-                    )
-                  })
+                      <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
+                        <div className="flex justify-center">
+                          <GatsbyImage
+                            image={getImage(userauthor.user[4].image)}
+                            className="my-0 img-thumbnail"
+                            alt="Platformable team"
+                          />
+                        </div>
+                        <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                          <div className="flex gap-4 items-center mb-5 justify-center ">
+                            <div>
+                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                                {`${userauthor.user[4].name} ${userauthor.user[4].lastname}`}
+                              </h3>
+
+                              <p className="text-xs text-center italic font-black">
+                                {userauthor.user[4].position}
+                              </p>
+                              {userauthor.user[4].pronoun && (
+                                <p className="text-xs text-center">
+                                  {userauthor.user[4].pronoun}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-sm">
+                            <div
+                              className="leading-none text-xs"
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[4].bio,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
+                        <div className="flex justify-center">
+                          <GatsbyImage
+                            image={getImage(userauthor.user[5].image)}
+                            className="my-0 img-thumbnail"
+                            alt="Platformable team"
+                          />
+                        </div>
+                        <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                          <div className="flex gap-4 items-center mb-5 justify-center ">
+                            <div>
+                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                                {`${userauthor.user[5].name} ${userauthor.user[5].lastname}`}
+                              </h3>
+
+                              <p className="text-xs text-center italic font-black">
+                                {userauthor.user[5].position}
+                              </p>
+                              {userauthor.user[5].pronoun && (
+                                <p className="text-xs text-center">
+                                  {userauthor.user[5].pronoun}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-sm">
+                            <div
+                              className="leading-none text-xs"
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[5].bio,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
+                        <div className="flex justify-center">
+                          <GatsbyImage
+                            image={getImage(userauthor.user[1].image)}
+                            className="my-0 img-thumbnail"
+                            alt="Platformable team"
+                          />
+                        </div>
+                        <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                          <div className="flex gap-4 items-center mb-5 justify-center ">
+                            <div>
+                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                                {`${userauthor.user[1].name} ${userauthor.user[1].lastname}`}
+                              </h3>
+
+                              <p className="text-xs text-center italic font-black">
+                                {userauthor.user[1].position}
+                              </p>
+                              {userauthor.user[1].pronoun && (
+                                <p className="text-xs text-center">
+                                  {userauthor.user[1].pronoun}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-sm">
+                            <div
+                              className="leading-none text-xs"
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[1].bio,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
+                        <div className="flex justify-center">
+                          <GatsbyImage
+                            image={getImage(userauthor.user[6].image)}
+                            className="my-0 img-thumbnail"
+                            alt="Platformable team"
+                          />
+                        </div>
+                        <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                          <div className="flex gap-4 items-center mb-5 justify-center ">
+                            <div>
+                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                                {`${userauthor.user[6].name} ${userauthor.user[6].lastname}`}
+                              </h3>
+
+                              <p className="text-xs text-center italic font-black">
+                                {userauthor.user[6].position}
+                              </p>
+                              {userauthor.user[6].pronoun && (
+                                <p className="text-xs text-center">
+                                  {userauthor.user[6].pronoun}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-sm">
+                            <div
+                              className="leading-none text-xs"
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[6].bio,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
+                        <div className="flex justify-center">
+                          <GatsbyImage
+                            image={getImage(userauthor.user[7].image)}
+                            className="my-0 img-thumbnail"
+                            alt="Platformable team"
+                          />
+                        </div>
+                        <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                          <div className="flex gap-4 items-center mb-5 justify-center ">
+                            <div>
+                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                                {`${userauthor.user[7].name} ${userauthor.user[7].lastname}`}
+                              </h3>
+
+                              <p className="text-xs text-center italic font-black">
+                                {userauthor.user[7].position}
+                              </p>
+                              {userauthor.user[7].pronoun && (
+                                <p className="text-xs text-center">
+                                  {userauthor.user[7].pronoun}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-sm">
+                            <div
+                              className="leading-none text-xs"
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[7].bio,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
+                        <div className="flex justify-center">
+                          <GatsbyImage
+                            image={getImage(userauthor.user[3].image)}
+                            className="my-0 img-thumbnail"
+                            alt="Platformable team"
+                          />
+                        </div>
+                        <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                          <div className="flex gap-4 items-center mb-5 justify-center ">
+                            <div>
+                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                                {`${userauthor.user[3].name} ${userauthor.user[3].lastname}`}
+                              </h3>
+
+                              <p className="text-xs text-center italic font-black">
+                                {userauthor.user[3].position}
+                              </p>
+                              {userauthor.user[3].pronoun && (
+                                <p className="text-xs text-center">
+                                  {userauthor.user[3].pronoun}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-sm">
+                            <div
+                              className="leading-none text-xs"
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[3].bio,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
+                        <div className="flex justify-center">
+                          <GatsbyImage
+                            image={getImage(userauthor.user[2].image)}
+                            className="my-0 img-thumbnail"
+                            alt="Platformable team"
+                          />
+                        </div>
+                        <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                          <div className="flex gap-4 items-center mb-5 justify-center ">
+                            <div>
+                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                                {`${userauthor.user[2].name} ${userauthor.user[2].lastname}`}
+                              </h3>
+
+                              <p className="text-xs text-center italic font-black">
+                                {userauthor.user[2].position}
+                              </p>
+                              {userauthor.user[2].pronoun && (
+                                <p className="text-xs text-center">
+                                  {userauthor.user[2].pronoun}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-sm">
+                            <div
+                              className="leading-none text-xs"
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[2].bio,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )
                 })}
               </div>
               <div className="container mx-auto">
@@ -430,6 +679,7 @@ export const query = graphql`
       Author {
         id
         user {
+          id
           name
           lastname
           position

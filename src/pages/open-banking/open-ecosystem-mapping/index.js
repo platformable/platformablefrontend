@@ -156,12 +156,10 @@ export default function index({ data, location }) {
           </div>
         </div>
       </section>
+      {/* TOP LATESTS 3 POSTS */}
+      {/* <h3 className="text-center font-black my-10">Our Latest Work </h3>
 
-      {/* <PostsCards/> */}
-      <h3 className="text-center font-black my-10">Our Latest Work </h3>
-      {/* POSTS */}
       <section className="container mx-auto all-blog-content mb-20 md:px-0 px-5">
-        {/* TOP LATESTS 3 POSTS */}
         <div className="container mx-auto all-blog-content px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {data
@@ -186,7 +184,7 @@ export default function index({ data, location }) {
               : null}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Form
         formClass="text-center my-5 mx-auto overflow-hidden py-6"

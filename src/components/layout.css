@@ -31,9 +31,9 @@ body {
   background-color: var(--sunglow-dark);
 }
 
-.OurMission .container {
+/* .OurMission .container {
   border-bottom: 2px solid var(--russian-violet-dark);
-}
+} */
 
 .about-clients .container {
   border-bottom: 2px solid var(--sunglow-dark);

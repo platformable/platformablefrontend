@@ -162,7 +162,7 @@ export default function index({ data, location }) {
 
       {/* <PostsCards/> */}
       {/* POSTS */}
-      <section className="container mx-auto all-blog-content my-20 mx-auto md:px-0 px-5">
+      {/* <section className="container mx-auto all-blog-content my-20 mx-auto md:px-0 px-5">
         <h3 className="text-center font-black mb-5">Our Latest Work </h3>
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4 px-0 md:px-3 lg:px-0 xl:px-3">
@@ -187,7 +187,7 @@ export default function index({ data, location }) {
               })
             : null}
         </div>
-      </section>
+      </section> */}
 
       <Form
         formClass="text-center my-5 mx-auto overflow-hidden py-6"
