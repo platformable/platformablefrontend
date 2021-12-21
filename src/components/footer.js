@@ -161,7 +161,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://tidal.com/mix/008641d9a6875e45da94e086040cda"
+            href="https://tidal.com/mix/0105d4b80651774ef38931747c080a"
             rel="noopener"
             aria-label="tidal"
             target="_blank"
