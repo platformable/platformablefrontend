@@ -327,6 +327,7 @@ export default function about({ data }) {
               </h3>
               <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-3">
                 {data.strapiAbout.Author.map((userauthor, index) => {
+                  console.log(userauthor)
                   return (
                     <>
                       <div
@@ -547,7 +548,7 @@ export default function about({ data }) {
                       <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
                         <div className="flex justify-center">
                           <GatsbyImage
-                            image={getImage(userauthor.user[3].image)}
+                            image={getImage(userauthor.user[8].image)}
                             className="my-0 img-thumbnail"
                             alt="Platformable team"
                           />
@@ -556,15 +557,15 @@ export default function about({ data }) {
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
                               <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
-                                {`${userauthor.user[3].name} ${userauthor.user[3].lastname}`}
+                                {`${userauthor.user[8].name} ${userauthor.user[8].lastname}`}
                               </h3>
 
                               <p className="text-xs text-center italic font-black">
-                                {userauthor.user[3].position}
+                                {userauthor.user[8].position}
                               </p>
-                              {userauthor.user[3].pronoun && (
+                              {userauthor.user[8].pronoun && (
                                 <p className="text-xs text-center">
-                                  {userauthor.user[3].pronoun}
+                                  {userauthor.user[8].pronoun}
                                 </p>
                               )}
                             </div>
@@ -573,7 +574,7 @@ export default function about({ data }) {
                             <div
                               className="leading-none text-xs"
                               dangerouslySetInnerHTML={{
-                                __html: userauthor.user[3].bio,
+                                __html: userauthor.user[8].bio,
                               }}
                             ></div>
                           </div>
@@ -615,6 +616,44 @@ export default function about({ data }) {
                           </div>
                         </div>
                       </div>
+
+                      <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
+                        <div className="flex justify-center">
+                          <GatsbyImage
+                            image={getImage(userauthor.user[3].image)}
+                            className="my-0 img-thumbnail"
+                            alt="Platformable team"
+                          />
+                        </div>
+                        <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                          <div className="flex gap-4 items-center mb-5 justify-center ">
+                            <div>
+                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                                {`${userauthor.user[3].name} ${userauthor.user[3].lastname}`}
+                              </h3>
+
+                              <p className="text-xs text-center italic font-black">
+                                {userauthor.user[3].position}
+                              </p>
+                              {userauthor.user[3].pronoun && (
+                                <p className="text-xs text-center">
+                                  {userauthor.user[3].pronoun}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-sm">
+                            <div
+                              className="leading-none text-xs"
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[3].bio,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      
                     </>
                   )
                 })}
