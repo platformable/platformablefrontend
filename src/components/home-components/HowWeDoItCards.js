@@ -29,8 +29,8 @@ const HowWeDoItCards = () => {
     },
   ]
   return (
-    <section className="cards-section my-6 container mx-auto py-8">
-      <h2 className="text-center mt-6 text-secondary font-black">
+    <section className="cards-section my-2 container mx-auto py-8">
+      <h2 className="text-center mt-2 text-secondary font-black">
         How we do it
       </h2>
 

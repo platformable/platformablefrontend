@@ -26,18 +26,34 @@ const data = {
         img: AnanlistAsServiceImg,
         title: "Analyst as a\n service",
         paragraph:
-          "Subscribe to a set range of hours and answer key questions to support your growth",
+          "Generate revenue and strengthen planning by using data, evidence and best practices in open banking and open finance",
         color: "#FBDACE40",
         url: "/open-banking/analyst-as-service",
       },
       {
+        img: QuarterlyImg,
+        title: "Open Banking/Open Finance\nMonthly Trends Report",
+        paragraph:
+          "Understand the open economy and see where opportunities are emerging and benchmark your activities against industry leaders",
+        color: "#FBDACE40",
+        url: "/open-banking/trends",
+      },
+      {
+        img: PlatFormImg,
+        title: "Platform Mindset Training",
+        paragraph:
+          "Understand the potential of platform-based approaches that enable banks and fintech to build an ecosystem, and how to capture opportunities as they emerge",
+        color: "#FBDACE40",
+        url: "/open-banking/training",
+      },
+      {
         img: BlogImg,
-        title: "Blogs and \nArticles",
-        paragraph: "Read our latest news and analysis",
+        title: "Open Banking/Open Finance\n Blogs and Articles",
+        paragraph: "Read our latest news and industry analysis",
         color: "#FBDACE40",
         url: "/open-banking/open-banking-posts",
       },
-      {
+    /*   {
         img: OpenEcoIMg,
         title: "Open Ecosystem\nMapping",
         paragraph:
@@ -45,22 +61,8 @@ const data = {
         color: "#FBDACE40",
         url: "/open-banking/open-ecosystem-mapping",
       },
-      {
-        img: PlatFormImg,
-        title: "Platform Mindset Training\nfor Banks",
-        paragraph:
-          "Support you business to understand the power and potential of platform business models and the open banking ecosystem",
-        color: "#FBDACE40",
-        url: "/open-banking/training",
-      },
-      {
-        img: QuarterlyImg,
-        title: "Quarterly Trends\nReport",
-        paragraph:
-          "Subscribe to the latest news analysis and updates analysing key trends on open banking and open finance",
-        color: "#FBDACE40",
-        url: "/open-banking/trends",
-      },
+      
+      
       {
         img: StateImg,
         title: "State of the Market\nReports",
@@ -68,7 +70,7 @@ const data = {
           "Our annual summary of the open banking ecosystem, sponsored by Axway",
         color: "#FBDACE40",
         url: "/open-banking-open-finance-state-of-the-market-reports",
-      },
+      }, */
     ],
   },
 }
@@ -83,8 +85,7 @@ export default function OpenBanking({ location }) {
           <div className="labs-hero-left md:w-3/5 w:1/1 md:p-0">
             <h3 className="font-black ">Open Banking / Open Finance</h3>
             <p>
-              Enabling interoperable financial services that improve financial
-              inclusion and build everyone’s wealth.
+            Identify opportunities for new products that understand market factors and foster new collaborations, enable stakeholders and users to build financial health and prepare to go to market successfully
             </p>
           </div>
           <div className="labs-hero-right w-full lg:w-2/5 flex justify-center lg:justify-end">

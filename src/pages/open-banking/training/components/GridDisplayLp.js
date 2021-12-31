@@ -25,9 +25,9 @@ const GridDisplayLp = ({
           <p>{paragraph}</p>
         </div>
 
-        <div className={doNotDisplay}>
+       {/*  <div className={doNotDisplay}>
           <ButtonLp label={label} />
-        </div>
+        </div> */}
       </div>
 
       <div className="grid justify-end">

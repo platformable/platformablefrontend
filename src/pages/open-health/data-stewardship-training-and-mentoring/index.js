@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 /*shared-components*/
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
@@ -15,7 +15,32 @@ import buildImg from "../../../assets/lp-training/build_your_knowledge.svg"
 import blackHealthImg from "../../../assets/lp-data_stewardship/black_health.svg"
 import Breadcrumbs from "../../../components/breadcrumbs"
 
-const LPDataStewardship = ({ location }) => (
+const LPDataStewardship = ({ location }) => {
+  const [form,setForm]=useState("");
+  const [formSuccess,setFormSuccess]=useState(false)
+
+  const handleSubscription = async (e) =>{
+    const email = form
+    const mailerlite = {
+      email,
+    }
+    const response = await window.fetch(`/api/ohDGSubscriptions`, {
+      method: `POST`,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(mailerlite),
+    })
+  const res = response.statusText
+
+  if(res){
+  setFormSuccess(!formSuccess)
+  }
+  
+}
+
+
+  return (
   <Layout>
     <SEO title="Home" />
     <Breadcrumbs location={location} />
@@ -72,14 +97,7 @@ const LPDataStewardship = ({ location }) => (
     <br />
 
     <ProductCards />
-    <Form
-      formClass="text-center my-5 mx-auto overflow-hidden py-6"
-      formID="lp-training-form"
-      titleClass=""
-      title="Sign up now for pricing and calendar availability"
-      iframeId="submitMailerlite"
-      iframeSrc={"https://landing.mailerlite.com/webforms/landing/b9q0r6"}
-    />
+  
 
     <CourseStructure />
 
@@ -109,20 +127,23 @@ const LPDataStewardship = ({ location }) => (
         <img src={blackHealthImg} alt="black health co" className="mx-auto text-center py-6"/>
         </div> */}
     </section>
-    <CallToAction
-      callToActionClass="text-center my-6 mx-auto py-6 px-5 flex flex-col sm:flex-row flex-wrap justify-evenly items-center"
-      contentClass=""
-      paragraph="Embrace the advantages of open health."
-      paragraphTwo="Bring your data to life with our training."
-      paragraphClass=" text-xl"
-      doNotDisplayLink="hidden"
-      to={"#lp-training-form"}
-      linkTitle="Sign up for pricing and calendar"
-      type="button"
-      label={"Sign up now"}
-      btnClass="bg-blueBtn text-white font-bold uppercase my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary hover:text-primary cursor-pointer"
-    />
+  
+<section>
+        <div className="container mx-auto mt-10">
+              <div>
+                <p className="text-center text-xl">Embrace the advantages of open health.</p>
+                <p className="text-center">Bring your data to life with our training.</p>
+              <h2 className="text-2xl font-black text-center mt-5">Sign up now for pricing and calendar availability</h2>
+          <div className="m-4 flex justify-center">
+            <input type="text" className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white" placeholder="your@mail.com" onChange={(e)=>setForm(e.target.value)}/>
+          <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
+        </div>
+      </div>
+      {formSuccess && <p className="text-center ">Thank you for your subscription</p>}
+        </div>
+      </section>
   </Layout>
 )
+}
 
 export default LPDataStewardship

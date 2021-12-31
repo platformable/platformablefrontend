@@ -120,7 +120,7 @@ const Header = ({ siteTitle }) => {
                 <div className="flex space-x-4">
                   <Link
                     to="/"
-                    className="top-nav  hover:bg-sunglow  px-3 py-2 rounded-md text-sm font-medium"
+                    className="top-nav px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName="active-top-nav"
                   >
                     Home
@@ -141,7 +141,7 @@ const Header = ({ siteTitle }) => {
                   </Link> */}
                   <Link
                     to="/sectors"
-                    className=" top-nav  hover:bg-sunglow  px-3 py-2 rounded-md text-sm font-medium"
+                    className=" top-nav  px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName="active-top-nav"
                   >
                     Sectors
@@ -196,7 +196,7 @@ const Header = ({ siteTitle }) => {
                   )}
                   <Link
                     to="/sign-up"
-                    className="top-nav text-white bg-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="top-nav bg-gray-200  px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName="active-top-nav"
                   >
                     Sign Up

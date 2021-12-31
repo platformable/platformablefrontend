@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import Layout from "../../../components/layout"
 import Form from "../../../components/shared-components/Form"
 import DataGovernanceHeroImg from "../../../assets/oh-data-governance/heroImg.png"
@@ -79,7 +79,33 @@ const tools = [
   },
 ]
 
-export default function index({ location }) {
+export default function Index({ location }) {
+
+
+  const [form,setForm]=useState("");
+  const [formSuccess,setFormSuccess]=useState(false)
+
+  const handleSubscription = async (e) =>{
+    const email = form
+    const mailerlite = {
+      email,
+    }
+    const response = await window.fetch(`/api/ohDGSubscriptions`, {
+      method: `POST`,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(mailerlite),
+    })
+  const res = response.statusText
+
+  if(res){
+  setFormSuccess(!formSuccess)
+  }
+  
+}
+
+
   return (
     <Layout>
       {/* <div className="container sm:mx-auto md:px-0 px-5">
@@ -220,15 +246,20 @@ export default function index({ location }) {
         
       
     </section> */}
+  
+    <section>
+        <div className="container mx-auto">
+              <div>
+              <h2 className="text-2xl font-black text-center">Sign up now for pricing and calendar availability</h2>
+          <div className="m-4 flex justify-center">
+            <input type="text" className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white" placeholder="your@mail.com" onChange={(e)=>setForm(e.target.value)}/>
+          <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
+        </div>
+      </div>
+      {formSuccess && <p className="text-center ">Thank you for your subscription</p>}
+        </div>
+      </section>
 
-      <Form
-        formClass="text-center my-5 mx-auto overflow-hidden py-6"
-        formID="lp-training-form"
-        titleClass=""
-        title="Sign up now for pricing and calendar availability"
-        iframeId="submitMailerlite"
-        iframeSrc={"https://landing.mailerlite.com/webforms/landing/u7n7p9"}
-      />
     </Layout>
   )
 }

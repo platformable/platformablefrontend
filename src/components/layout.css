@@ -10,7 +10,10 @@ body {
   font-size: 18px;
   font-display: swap;
 }
-
+.font-sm {
+  font-size:13px;
+  line-height: 16px;
+}
 .posts-content ul {
   list-style-type: disc !important;
   margin-left: 50px;
@@ -225,6 +228,7 @@ p {
 } */
 .top-nav:hover {
   background-color: var(--sunglow-dark);
+  color:var(--russian-violet-dark)!
 }
 i {
   margin: 5px;
@@ -275,7 +279,12 @@ svg {
 
 .active-top-nav {
   background-color: var(--russian-violet-dark);
-  color: white !important;
+color:white;
+}
+
+.active-top-nav:hover {
+  background-color: var(--sunglow-dark);
+color:var(--russian-violet-dark);
 }
 
 .topnav .icon {
@@ -463,6 +472,9 @@ a {
   padding: 10px 15px;
 }
 
+.bg-sunglow {
+background-color:var(--sunglow-dark);
+}
 /* SECTION BUSINESS MODELS */
 .business-models-advantages {
   padding: 30px 0;

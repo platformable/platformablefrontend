@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import { Link, graphql, navigate } from "gatsby"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import BlogCardComponent from "../components/BlogCardComponent"
@@ -12,10 +12,41 @@ import Form from "../components/shared-components/Form"
 import PositionedSection from "../components/home-components/PositionedSection"
 import HowWeDoItCards from "../components/home-components/HowWeDoItCards"
 import WorkWithCards from "../components/home-components/WorkWithCards"
+import SimpleSubscriptionForm from "../components/SimpleSubscriptionForm"
 
 /*assets*/
 
 const IndexPage = ({ data }) => {
+
+
+  const [form,setForm]=useState("");
+  const [formSuccess,setFormSuccess]=useState(false)
+
+  const handleSubscription = async (e) =>{
+    const email = form
+    const mailerlite = {
+      email,
+    }
+    const response = await window.fetch(`/api/platformableGroupSubscription`, {
+      method: `POST`,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(mailerlite),
+    })
+  const res = response.statusText
+
+  if(res){
+  setFormSuccess(!formSuccess)
+  }
+  
+}
+
+
+
+
+
+
   const noStagingPosts = data
     ? data.allStrapiPost.edges.filter(post => post.node.staging != true)
     : " "
@@ -59,7 +90,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <section className="container md:my-14 my-5 sm:mx-auto md:px-0 px-5">
+      <section className="container md:my-5 my-5 sm:mx-auto md:px-0 px-5">
         <br />
         <br />
         <div className="grid md:grid-cols-2 grid-cols-1 px-0 md:px-3 lg:px-0 xl:px-3">
@@ -89,7 +120,7 @@ const IndexPage = ({ data }) => {
         <br />
         <br />
       </section>
-      <section className="bg-gray-100 py-5">
+      <section className="bg-gray-100 ">
         <div className="container sm:mx-auto md:px-0 px-5">
           <br />
           <br />
@@ -123,7 +154,7 @@ const IndexPage = ({ data }) => {
       </section>
       {/* <PostsCards/> */}
       {/* POSTS */}
-      <section className="cards-section my-6 container py-8 sm:mx-auto md:px-0 px-5">
+      <section className="cards-section my-2 container py-2 sm:mx-auto md:px-0 px-5">
         <div className="px-0 md:px-3 lg:px-0 xl:px-3">
           <h2 className="text-center font-black mb-5 mt-6">Latest Posts </h2>
           <div className="grid grid-cols-1 grid-cols-1 md:grid-cols-3 text-lg md:text-sm lg:text-sm xl:text-lg gap-5">
@@ -297,6 +328,20 @@ const IndexPage = ({ data }) => {
               width={400}
             />
           </div>
+        </div>
+      </section>
+
+
+
+      <section>
+        <div className="container mx-auto">
+              <div>
+          <div className="m-4 flex justify-center">
+            <input type="text" className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white" placeholder="your@mail.com" onChange={(e)=>setForm(e.target.value)}/>
+          <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
+        </div>
+      </div>
+      {formSuccess && <p className="text-center ">Thank you for your subscription</p>}
         </div>
       </section>
       {/* 

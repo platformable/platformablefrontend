@@ -11,7 +11,7 @@ const SectorSubCards = ({ data, className }) => {
         {data.elements.map((el, i) => (
           <div
             key={i}
-            className="w-10/12 sm:w-5/12 lg:w-3/12 p-6 rounded-3xl bg-card
+            className="w-10/12 sm:w-5/12 lg:w-2/12 p-2 rounded-3xl bg-card
               flex flex-col justify-center items-center min-h-full
             "
             style={{ backgroundColor: el.color }}
@@ -25,10 +25,10 @@ const SectorSubCards = ({ data, className }) => {
                 />
 
                 <div className="">
-                  <h6 className="my-5 text-center h-16 sm:h-20 lg:h-16 md:h-14 px-3 text-primary font-black sm:mb-10">
+                  <h6 className="my-5 text-center h-8 sm:h-20 lg:h-4 md:h-8 px-3 text-primary font-black sm:mb-10">
                     {el.title}
                   </h6>
-                  <p className="hidden md:block text-grayed text-center font-normal my-1 h-24 border-t border-primary border-opacity-25 pt-3 lg:mb-5">
+                  <p className="hidden md:block text-grayed text-center font-normal font-sm h-24 border-t border-primary border-opacity-25 pt-3 lg:mb-1">
                     {el.paragraph}
                   </p>
                 </div>

@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import { Link, graphql, navigate } from "gatsby"
 import Layout from "../../../components/layout"
 import GridDisplay from "../../../components/shared-components/GridDisplay"
@@ -11,7 +11,30 @@ import Breadcrumbs from "../../../components/breadcrumbs"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import BlogCardComponent from "../../../components/BlogCardComponent"
 
-export default function index({ data, location }) {
+export default function Index({ data, location }) {
+
+  const [form,setForm]=useState("");
+  const [formSuccess,setFormSuccess]=useState(false)
+
+  const handleSubscription = async (e) =>{
+    const email = form
+    const mailerlite = {
+      email,
+    }
+    const response = await window.fetch(`/api/obAnalystSubscriptions`, {
+      method: `POST`,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(mailerlite),
+    })
+  const res = response.statusText
+
+  if(res){
+  setFormSuccess(!formSuccess)
+  }
+  
+}
   const postsCategories = [
     {
       name: "Open Banking / Open Finance",
@@ -88,6 +111,18 @@ export default function index({ data, location }) {
       </section> */}
 
       <HowToHire />
+
+      <section>
+        <div className="container mx-auto">
+              <div>
+          <div className="m-4 flex justify-center">
+            <input type="text" className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white" placeholder="your@mail.com" onChange={(e)=>setForm(e.target.value)}/>
+          <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
+        </div>
+      </div>
+      {formSuccess && <p className="text-center ">Thank you for your subscription</p>}
+        </div>
+      </section>
 
       {/*       <Form
       formClass="text-center my-5 mx-auto overflow-hidden py-6"
