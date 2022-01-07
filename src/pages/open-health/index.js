@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 // import data from "../../data/product-stream/data.json"
 import GridDisplay from "../../components/shared-components/GridDisplay"
 /*specific-components*/
-import SectorSubCards from "../../components/product-streams/sectorSubCards"
+import SectorCards from "../../components/SectorCards"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout"
 /*assets*/
@@ -93,9 +93,10 @@ export default function openHealth({ location }) {
         </div>
       </div>
       <div id="openHealth">
-        <SectorSubCards
+        <SectorCards
           data={data["OpenHealth"]}
-          className="my-0 gap-10 xl:gap-20 py-0  flex flex-wrap flex-col sm:flex-row justify-between text-sm items-center w-full px-0 md:px-3 lg:px-0 xl:px-3"
+          bgColor="#87ACFC40"
+          numberOfColumns={3}
         />
       </div>
     </Layout>

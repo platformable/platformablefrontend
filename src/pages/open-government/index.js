@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import GridDisplay from "../../components/shared-components/GridDisplay"
 /*specific-components*/
 
-import SectorSubCards from "../../components/product-streams/sectorSubCards"
+import SectorCards from "../../components/SectorCards"
 import Layout from "../../components/layout"
 /*assets*/
 import openGovImg from "../../assets/product-streams/open_government.svg"
@@ -90,22 +90,10 @@ export default function openGovernment({ location }) {
       </div>
 
       <div id="openGovernment">
-        {/*  <GridDisplay
-          gridDisplayClass="flex flex-col sm:flex-row flex-wrap my-6 container mx-auto py-6 px-5 justify-between items-center "
-          gridContentClass="md:w-2/5"
-          title="Open Government"
-          titleClass="my-5 text-purple"
-          paragraphOne="Optimising digital government, unlocking data access, and ensuring greater participation."
-          doNotDisplayLink="hidden"
-          doNotDisplayAnchor="hidden"
-          imgContentClass=""
-          imgClass="object-cointain w-96 h-94"
-          backImgSrc={openGovImg}
-          alt="Hero"
-        ></GridDisplay> */}
-        <SectorSubCards
+        <SectorCards
           data={data["OpenGovernement"]}
-          className="my-0 gap-10 xl:gap-20 py-0  flex flex-wrap flex-col sm:flex-row justify-between text-sm items-center w-full px-0 md:px-3 lg:px-0 xl:px-3"
+          bgColor="#D8C1FB40"
+          numberOfColumns={3}
         />
       </div>
     </Layout>

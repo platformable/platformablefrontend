@@ -11,6 +11,9 @@ export default function Footer() {
       localStorage.clear()
     }
   }
+
+  const date = new Date();
+const year = date.getFullYear();
   return (
     <footer className="py-5">
       <nav className="bg-white lg:block container px-3 sm:mx-auto sm:px-0">
@@ -27,7 +30,7 @@ export default function Footer() {
                 />
                 <p className="small-text text-center">
                   All free, accessible content is CC BY-SA. Logged in and paid
-                  content is © Platformable S.L. 2021{" "}
+                  content is © Platformable S.L. {year}{" "}
                 </p>
               </div>
             </Link>

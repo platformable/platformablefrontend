@@ -14,6 +14,11 @@ body {
   font-size:13px;
   line-height: 16px;
 }
+
+.font-sm-sectors {
+  font-size:18px;
+  line-height: 22px;
+}
 .posts-content ul {
   list-style-type: disc !important;
   margin-left: 50px;
@@ -226,6 +231,10 @@ p {
 .text-red-orange-dark {
   color: var(--red-orange-dark);
 } */
+
+.bg-os-light {
+  background-color: var(--os-light);
+}
 .top-nav:hover {
   background-color: var(--sunglow-dark);
   color:var(--russian-violet-dark)!
@@ -750,6 +759,16 @@ MEDIA QUERIES */
 .padding-bottom-4 {
   padding-bottom: 4px;
 }
+
+
+.sectors-cards-bg {
+  background-color:#FBDACE40;
+}
+
+.subscribe-input {
+  min-width:360px;
+  font-size:14px;
+}
 /* POST PAGE */
 
 .posts-container {
@@ -758,6 +777,15 @@ MEDIA QUERIES */
 @media screen and (max-width: 768px) {
   .posts-container {
     max-width: 640px;
+  }
+
+
+}
+
+@media screen and (max-width: 450px) {
+  .subscribe-input {
+    min-width:160px;
+    font-size:14px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -4412,6 +4440,10 @@ blockquote:after {
   background-color: #fef6f3;
 }
 
+.bg-lightGreenOS {
+  background-color:#C7F3E540;
+}
+
 .bg-blueBtn {
   background-color: #0956fc;
 }
@@ -5969,4 +6001,30 @@ section#timeline article div.inner {
 }
 .border-bottom-russian-violet-dark-thin {
   border-bottom: 2px solid var(--russian-violet-dark);
+}
+
+/* 
+.sector-cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-gap:20px;
+  justify-content:center;
+
+  
+}
+
+.sector-card {
+
+  background-color:lightpink;
+  border-radius:10px;
+  padding:20px;
+  height: 100%;
+} */
+
+@media (max-width: 600px) {
+  .sector-cards {
+ 
+    grid-template-columns:1fr;
+    grid-gap:4px;
+  }
 }

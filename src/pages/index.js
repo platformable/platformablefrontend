@@ -107,6 +107,12 @@ const IndexPage = ({ data }) => {
               >
                 Learn more about us
               </Link>
+              <a
+                href="#subscription"
+                className="bg-secondary text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
+              >
+                Subscribe
+              </a>
             </div>
           </div>
           <div className="right flex justify-end">
@@ -333,12 +339,12 @@ const IndexPage = ({ data }) => {
 
 
 
-      <section>
+      <section name="subscription" id="subscription">
         <div className="container mx-auto">
               <div>
-          <div className="m-4 flex justify-center">
-            <input type="text" className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white" placeholder="your@mail.com" onChange={(e)=>setForm(e.target.value)}/>
-          <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
+          <div className="flex justify-center">
+            <input type="text" className="rounded-l-lg  px-4 border-t mr-0 border-b border-l text-main-color border-gray-200 bg-white subscribe-input" placeholder="Your email address" onChange={(e)=>setForm(e.target.value)}/>
+          <button className="px-4 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
         </div>
       </div>
       {formSuccess && <p className="text-center ">Thank you for your subscription</p>}

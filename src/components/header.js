@@ -69,6 +69,7 @@ const Header = ({ siteTitle }) => {
           <Link to="/sectors">Sectors</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/labs">Labs</Link>
+          <Link to="/contact">Contact</Link>
           {user.isLoggedIn ? (
             ""
           ) : (
@@ -160,6 +161,13 @@ const Header = ({ siteTitle }) => {
                   >
                     Labs
                   </Link>
+                  <Link
+                    to="/contact"
+                    className="top-nav  hover:bg-sunglow  px-3 py-2 rounded-md text-sm font-medium"
+                    activeClassName="active-top-nav"
+                  >
+                    Contact
+                  </Link>
                   {user && user.isLoggedIn ? (
                     <Link
                       to="/app/dashboard"
@@ -201,6 +209,7 @@ const Header = ({ siteTitle }) => {
                   >
                     Sign Up
                   </Link>
+                  
                 </div>
               </div>
             </div>

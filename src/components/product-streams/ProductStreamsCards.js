@@ -26,7 +26,7 @@ const ProductStreamsCards = ({ data, className }) => {
                   <h5 className="my-5 text-center h-14 px-3 text-primary font-black">
                     {el.title}
                   </h5>
-                  <p className="text-grayed text-center font-normal my-5 h-24 border-t border-primary border-opacity-25 pt-3 text-sm">
+                  <p className="text-grayed text-center  my-5 h-24 border-t border-primary border-opacity-25 pt-3 font-sm-sectors">
                     {el.paragraph}
                   </p>
                 </div>
