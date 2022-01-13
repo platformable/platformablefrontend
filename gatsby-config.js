@@ -150,6 +150,13 @@ module.exports = {
         siteUrl: 'https://platformable.com'
       }
     } */
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `platformable.com`,
+      },
+    },
     
+
   ],
 }
