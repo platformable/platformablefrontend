@@ -8,12 +8,12 @@ import SectorSubCards from "../../components/product-streams/sectorSubCards"
 
 import Layout from "../../components/layout"
 /*assets*/
-import openBankImg from "../../assets/product-streams/open_banking-open_finance.svg"
-import AnanlistAsServiceImg from "../../assets/product-streams/analyst-as-a-service.svg"
-import BlogImg from "../../assets/product-streams/blogs_and_articles.svg"
-import OpenEcoIMg from "../../assets/product-streams/open_ecosystem_mapping.svg"
+import digitalToolImg from "../../assets/oe/digital-tool.png"
+import apilandscapeImg from "../../assets/oe/api-landscape-icon.png"
+import dataPrivacy from "../../assets/oe/policy-context.png"
+import dataModelsImg from "../../assets/oe/policy-context.png"
 import PlatFormImg from "../../assets/product-streams/platform_mindset_training_for_banks.svg"
-import QuarterlyImg from "../../assets/product-streams/quarterly_trends_report.svg"
+import contentStrategyImg from "../../assets/oe/Content-Strategy.png"
 import StateImg from "../../assets/product-streams/state_of_the_market_reports.svg"
 import openEcosystemImg from "../../assets/oe/open-ecosystem-sectors-icon.png"
 import Breadcrumbs from "../../components/breadcrumbs"
@@ -25,47 +25,51 @@ const data = {
   OpenEcosystem: {
     elements: [
       {
-        img: AnanlistAsServiceImg,
-        title: "API Landscape\nReports",
-        paragraph: "",
+        img: apilandscapeImg,
+        title: "API Landscape Trends\nReports",
+        paragraph:
+          "In partnership with apidays, our monthly trends reports map the latest trends in the API economy to understand investment potential, guide product and feature roadmaps, and support go to market strategies",
         color: "#FBDACE40",
-        url: "/open-banking/analyst-as-service",
+        url: null,
       },
       {
-        img: QuarterlyImg,
+        img: contentStrategyImg,
         title: "Content Strategy \nand Delivery",
-        paragraph: "",
+        paragraph:
+          "Engaging, original, developer and business-facing content for tech providers, open source technologies, standards bodies, and others working to foster open ecosystems",
         color: "#FBDACE40",
-        url: "/open-banking/trends",
+        url: null,
       },
-      {
+      /*  {
         img: PlatFormImg,
         title: "Analyst-as-a-Service",
         paragraph: "",
         color: "#FBDACE40",
         url: "/open-banking/training",
-      },
+      }, */
       {
-        img: BlogImg,
+        img: dataPrivacy,
         title: "Data Privacy and\n Tech Regulations Analysis",
-        paragraph: "Read our latest news and industry analysis",
+        paragraph:
+          "Understand and strategically plan how to respond and adapt to emerging data and technology policy regulations globally and locally",
         color: "#FBDACE40",
-        url: "/open-banking/open-banking-posts",
+        url: null,
       },
       {
-        img: OpenEcoIMg,
+        img: dataModelsImg,
         title: "Data Models and\n Dataset Building",
-        paragraph: "",
+        paragraph:
+          "Draw on world-class expertise to build taxonomies, data models and datasets for your products, services, and operations",
         color: "#FBDACE40",
-        url: "/open-banking/open-ecosystem-mapping",
+        url: null,
       },
       {
-        img: StateImg,
+        img: digitalToolImg,
         title: "Digital Tool Creation",
         paragraph:
-          "Our annual summary of the open banking ecosystem, sponsored by Axway",
+          "Create engaging digital tools to surface data insights or interact with your ecosystem stakeholders",
         color: "#FBDACE40",
-        url: "/open-banking-open-finance-state-of-the-market-reports",
+        url: null,
       },
     ],
   },
@@ -90,7 +94,7 @@ export default function OpenEcosystem({ location }) {
           <div className="labs-hero-right w-full lg:w-2/5 flex justify-center lg:justify-end">
             {/*  <img src="../../assets/product-streams/open_banking-open_finance" alt="" /> */}
             <StaticImage
-              src="../../assets/oe/open-ecosystem-sectors-icon.png"
+              src="../../assets/oe/open-ecosystem-icon.png"
               placeholder="blurred"
             />
           </div>
@@ -99,13 +103,11 @@ export default function OpenEcosystem({ location }) {
 
       <div id="openEcosystem">
         <div className="container mx-auto">
-
-        <SectorCards
-        bgColor="#FBDACE40"
-          numberOfColumns={3}
-          data={data["OpenEcosystem"]}
-        />
-          
+          <SectorCards
+            bgColor="#85e9db"
+            numberOfColumns={3}
+            data={data["OpenEcosystem"]}
+          />
         </div>
 
         {/* <div class="sector-container grid md:grid-cols-3 grid-cols-1 md:gap-10 my-5 md:mx-0 mx-5">
@@ -133,7 +135,6 @@ export default function OpenEcosystem({ location }) {
           data={data["OpenEcosystem"]}
           className="my-0 gap-10 xl:gap-20 py-0  flex flex-wrap flex-col sm:flex-row justify-between text-sm items-center w-full px-0 md:px-3 lg:px-0 xl:px-3 "
         /> */}
-        
       </div>
     </Layout>
   )

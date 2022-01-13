@@ -1,6 +1,6 @@
 import React from "react"
-import bankPlatformImg from "../assets/bank_platform.svg"
-import digitalArchitectureImg from "../assets/digital_architecture.svg"
+import createApiImg from "../../../../assets/os/OS-create-API-products.png"
+import consumeApiImg from "../../../../assets/os/OS-consume-API-products.png"
 import regulatoryFoundationsImg from "../assets/regulatory_foundations.svg"
 import apiProductImg from "../assets/api_product.svg"
 import premiumApiImg from "../assets/premium_api.svg"
@@ -11,10 +11,10 @@ const ProductOfferLp = props => {
   return (
     <section className="bg-card py-3 px-8 ">
       
-      <div className="my-0  container mx-auto">
+      <div className="my-0  container mx-auto os-course-structure">
       <h2 className="my-8 font-black">Course Structure</h2>
         <div className="mb-5 md:flex  items-center">
-          <img src={bankPlatformImg} alt="bank platform" className="mr-5" />
+          <img src={createApiImg} alt="bank platform" className="mr-5" />
           <div>
             <h3 className="font-black">Create API products</h3>
             <p className="font-black">As a bank, fintech or greentech with data and web services, we can help you identify API product opportunities</p>
@@ -23,9 +23,9 @@ const ProductOfferLp = props => {
             </p>
           </div>
         </div>
-        <div className="mb-5 md:flex  items-center">
+        <div className="mb-5 md:flex  items-center ">
           <img
-            src={digitalArchitectureImg}
+            src={consumeApiImg}
             alt="digital architecture"
             className="mr-5"
           />
