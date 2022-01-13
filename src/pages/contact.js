@@ -33,7 +33,7 @@ const Contact = () => {
 
 
                         <h5 className="font-black text-center my-5">Leave us a message</h5>
-                                <form  name="platformableWebsiteContact" method="POST" data-netlify="true" netlify>
+                                <form  name="platformableWebsiteContact" method="POST" data-netlify="true">
                                             <div className="md:flex items-center mt-12">
                                                 <div className="w-full md:w-1/2 flex flex-col">
                                                     <label className="font-semibold leading-none">Name</label>
@@ -62,7 +62,7 @@ const Contact = () => {
                                                     Send message
                                                 </button>
                                             </div>
-                                        </form>
+                                 </form>
                                 
                     </div>
                   
