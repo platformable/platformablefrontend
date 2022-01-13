@@ -101,6 +101,7 @@ const IndexPage = ({ data }) => {
                 solve complex problems, and enable everyone to participate and
                 co-create their own value
               </h3>
+               
               <Link
                 to="/about"
                 className="outlinedBtn mt-3 text-sm md:text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
@@ -109,7 +110,7 @@ const IndexPage = ({ data }) => {
               </Link>
               <a
                 href="#subscription"
-                className="bg-secondary text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
+                className="md:inline-block inline-block bg-secondary text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
               >
                 Subscribe
               </a>
