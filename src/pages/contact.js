@@ -33,7 +33,8 @@ const Contact = () => {
 
 
                         <h5 className="font-black text-center my-5">Leave us a message</h5>
-                                <form  name="platformableWebsiteContact" method="POST" data-netlify="true">
+                                <form  name="platformableWebsiteContact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                                <input type="hidden" name="bot-field" />
                                 <input type="hidden" name="platformableWebsiteContact" value="platformableWebsiteContact" />
 
                                             <div className="md:flex items-center mt-12">
