@@ -29,7 +29,7 @@ const data = {
         title: "API Landscape Trends\nReports",
         paragraph:
           "In partnership with apidays, our monthly trends reports map the latest trends in the API economy to understand investment potential, guide product and feature roadmaps, and support go to market strategies",
-        color: "#FBDACE40",
+        color: "#b6fbf1",
         url: null,
       },
       {
@@ -37,7 +37,7 @@ const data = {
         title: "Content Strategy \nand Delivery",
         paragraph:
           "Engaging, original, developer and business-facing content for tech providers, open source technologies, standards bodies, and others working to foster open ecosystems",
-        color: "#FBDACE40",
+        color: "#b6fbf1",
         url: null,
       },
       /*  {
@@ -52,7 +52,7 @@ const data = {
         title: "Data Privacy and\n Tech Regulations Analysis",
         paragraph:
           "Understand and strategically plan how to respond and adapt to emerging data and technology policy regulations globally and locally",
-        color: "#FBDACE40",
+        color: "#b6fbf1",
         url: null,
       },
       {
@@ -60,7 +60,7 @@ const data = {
         title: "Data Models and\n Dataset Building",
         paragraph:
           "Draw on world-class expertise to build taxonomies, data models and datasets for your products, services, and operations",
-        color: "#FBDACE40",
+        color: "#b6fbf1",
         url: null,
       },
       {
@@ -68,7 +68,7 @@ const data = {
         title: "Digital Tool Creation",
         paragraph:
           "Create engaging digital tools to surface data insights or interact with your ecosystem stakeholders",
-        color: "#FBDACE40",
+        color: "#b6fbf1",
         url: null,
       },
     ],
@@ -104,7 +104,7 @@ export default function OpenEcosystem({ location }) {
       <div id="openEcosystem">
         <div className="container mx-auto">
           <SectorCards
-            bgColor="#85e9db"
+            bgColor="#b6fbf1"
             numberOfColumns={3}
             data={data["OpenEcosystem"]}
           />

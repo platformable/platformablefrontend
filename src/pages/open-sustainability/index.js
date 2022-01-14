@@ -27,22 +27,22 @@ const data = {
     elements: [
       {
         img: openBankImg,
-        title: "Open Bankin/ Open\nFinance",
-        paragraph: "Understand how open economy APIs are building sustainability solutions and open sustainability APIs being used to enhance financial products",
+        title: "Open Banking/ Open\nFinance",
+        paragraph: "Understand how open economy APIs are building sustainability solutions and how open sustainability APIs are being used to enhance financial products",
         color: "#C7F3E540",
         url: "/open-sustainability/open-banking",
       },
       {
         img: AnanlistAsServiceImg,
         title: "Analyst as a service",
-        paragraph: "Generate value and strengthen planning by understanding the open sustainability market and identifying market gaps and opportunities",
+        paragraph: "Be at the forefront of creating open sustainability products using available APIs by understanding market gaps and opportunities",
         color: "#C7F3E540",
         url: "/open-sustainability/analyst-as-a-service",
       },
       {
         img: PlatFormImg,
         title: "Product Ideation Workshop",
-        paragraph: "Understand the potential of platform-based approaches for sustainability, the benefits of making APIs available and capturing existing and emerging opportunities",
+        paragraph: "Create innovative, viable new products that directly support open sustainability goals by opening APIs or by making use of available APIs",
         color: "#C7F3E540",
         url: "/open-sustainability/product-ideation-workshop",
       },

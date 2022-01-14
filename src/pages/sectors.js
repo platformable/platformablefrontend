@@ -14,7 +14,7 @@ import openBankImg from "../assets/product-streams/open_banking-open_finance.svg
 import openGovImg from "../assets/product-streams/open_government.svg"
 import openHealthImg from "../assets/product-streams/open_health.svg"
 import openSustainImg from "../assets/product-streams/open_sustainability.svg"
-import openEcosystemImg from "../assets/oe/open-ecosystem-sectors-icon.png"
+import openEcosystemImg from "../assets/oe/open-ecosystem-icon.png"
 
 const data = {
   products: {
@@ -24,7 +24,7 @@ const data = {
         img: openEcosystemImg,
         paragraph:
           "Supporting API tools providers and consultants, standards bodies, and open source technologies to document and measure their open ecosystems",
-        color: "#85e9db",
+        color: "#b6fbf1",
         anchorLink: "/open-ecosystems",
       },
       {
@@ -47,7 +47,7 @@ const data = {
         title: "Open\nSustainability",
         img: openSustainImg,
         paragraph:
-          "Coming soon: Monitoring the move to a circular economy and tracking renewable energy opportunities",
+          "Monitoring the move to a circular economy and tracking renewable energy opportunities",
         color: "#C7F3E540",
         anchorLink: "/open-sustainability",
       },

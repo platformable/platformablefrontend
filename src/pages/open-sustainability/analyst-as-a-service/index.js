@@ -160,10 +160,10 @@ export default function Index({ data, location }) {
         </div>
       </section> */}
 
-      <HowToHire />
+     {/*  <HowToHire /> */}
 
       <section name="subscription" id="subscription">
-        <div className="container mx-auto">
+        <div className="container mx-auto my-10">
               <div>
           <div className="flex justify-center">
             <input type="text" className="rounded-l-lg  px-4 border-t mr-0 border-b border-l text-main-color border-gray-200 bg-white subscribe-input" placeholder="Your email address" onChange={(e)=>setForm(e.target.value)}/>
