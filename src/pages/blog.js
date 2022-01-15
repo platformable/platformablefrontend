@@ -180,7 +180,7 @@ export default function Blogs({ data, location }) {
                               </h3>
                             </Link>
                             <p className="mb-3">
-                              {`Writen by `}{" "}
+                              {`Written by `}{" "}
                               {post.node.user.length === 1 ? (
                                 <Link
                                   className="hover:text-black transition duration-300 ease-in-out"

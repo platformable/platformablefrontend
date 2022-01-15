@@ -160,6 +160,7 @@ p {
   --os-sub3: #c7f3e5;
   --labs-dark: #a60073;
   --labs-sub3: #e6add4;
+  
 }
 
 /* MOBILE NAV */
@@ -6090,4 +6091,61 @@ section#timeline article div.inner {
 
 .os-course-structure img{
   max-width:120px;
+}
+
+/* PERSONAS CARDS */
+
+.persona-card-bg-dark-purple .personas-top {
+  background-color: var(--russian-violet-dark);
+  color:white;
+}
+
+.persona-card-bg-dark-purple .personas-bottom-text,.persona-card-bg-dark-purple .personas-top img {
+  background-color: var(--russian-violet-light);
+}
+.persona-card-bg-dark-orange .personas-top {
+  background-color: var(--red-orange-dark);
+  color:white;
+}
+
+.persona-card-bg-dark-orange .personas-bottom-text,.persona-card-bg-dark-orange .personas-top img {
+  background-color: var(--red-orange-light);
+}
+
+
+.persona-card-bg-purple .personas-top {
+  background-color: var(--og-dark);
+  color:white;
+}
+
+.persona-card-bg-purple .personas-bottom-text,.persona-card-bg-purple .personas-top img {
+  background-color: var(--og-light);
+}
+
+
+.persona-card-bg-dark-blue .personas-top {
+  background-color: var(--oh-dark);
+  color:white;
+}
+
+.persona-card-bg-dark-blue .personas-bottom-text,.persona-card-bg-dark-blue .personas-top img {
+  background-color: var(--oh-light);
+}
+
+.persona-card-bg-dark-green .personas-top {
+  background-color: var(--os-dark);
+  color:white;
+}
+
+.persona-card-bg-dark-green .personas-bottom-text,.persona-card-bg-dark-green .personas-top img {
+  background-color: var(--os-light);
+}
+
+.persona-card-bg-dark-oe .personas-top {
+  background-color: var(--oe-dark);
+  color:white;
+}
+
+.persona-card-bg-dark-oe .personas-bottom-text,.persona-card-bg-dark-oe .personas-top img {
+  background-color: var(--oe-light);
 }

@@ -27,7 +27,7 @@ export default function BlogCards({data}) {
             Published {new Date(post.node.publishing_date).toDateString()}
           </span>
               <div className="text-gray-600 text-sm font-medium flex mb-4 mt-2">
-                <small className="text-xs mr-1">{`Writen by `} </small>
+                <small className="text-xs mr-1">{`Written by `} </small>
                 {post.node.user.length === 1 ? (
                   <Link
                     className="hover:text-black transition duration-300 ease-in-out text-xs mr-1"

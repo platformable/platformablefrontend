@@ -222,7 +222,7 @@ const BlogPost = ({ data, pageContext, location }) => {
               <div className="autores flex  ">
                 <div className="autorInfo flex items-start">
                   <span>
-                    {`Writen by`}{" "}
+                    {`Written by`}{" "}
                     {data.strapiPost.user.length === 1 ? (
                       <>
                         <Link

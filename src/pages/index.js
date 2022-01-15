@@ -234,7 +234,7 @@ const IndexPage = ({ data }) => {
                                 </Link>
                               </h5>
                               <small className="small-text">
-                                {`Writen by `}{" "}
+                                {`Written by `}{" "}
                               </small>
                               {post.node.user.length === 1 ? (
                                 <Link

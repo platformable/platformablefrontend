@@ -96,7 +96,7 @@ const BlogCardComponent = props => {
             <h5 class="capitalise font-bold">
               <Link to={`/${props.slug}`}> {props.title}</Link>
             </h5>
-            <small className="small-text">{`Writen by `} </small>
+            <small className="small-text">{`Written by `} </small>
             {props.user.length === 1 ? (
               <Link
                 className="hover:text-black transition duration-300 ease-in-out small-text"
