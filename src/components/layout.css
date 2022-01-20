@@ -5946,6 +5946,10 @@ section#timeline article div.inner {
 .bg-sunglow-dark {
   background-color: var(--sunglow-dark);
 }
+
+.home-trends-bg-russian-violet-dark {
+  background-color: var(--russian-violet-dark);
+}
 .border-sunglow-dark {
   border: 4px solid var(--sunglow-dark);
 }
@@ -6148,4 +6152,24 @@ section#timeline article div.inner {
 
 .persona-card-bg-dark-oe .personas-bottom-text,.persona-card-bg-dark-oe .personas-top img {
   background-color: var(--oe-light);
+}
+
+
+
+/* BTN HOME TRENDS */
+
+.btn-trends-ob {
+  background-color:var(--red-orange-dark)
+}
+
+.btn-trends-oe {
+  background-color:var(--oe-dark)
+}
+
+.btn-trends-os {
+  background-color:var(--os-dark)
+}
+
+.btn-trends-oh {
+  background-color:var(--oh-dark)
 }

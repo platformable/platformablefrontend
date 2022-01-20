@@ -14,6 +14,10 @@ import HowWeDoItCards from "../components/home-components/HowWeDoItCards"
 import WorkWithCards from "../components/home-components/WorkWithCards"
 import SimpleSubscriptionForm from "../components/SimpleSubscriptionForm"
 
+
+/* import apilandscapeImg from "../../assets/oe/api-landscape-icon.png" */
+import apilandscapeImg from "../assets/oe/api-landscape-icon.png"
+import QuarterlyImg from "../assets/product-streams/quarterly_trends_report.svg"
 /*assets*/
 
 const IndexPage = ({ data }) => {
@@ -87,6 +91,49 @@ const IndexPage = ({ data }) => {
   const calculateTimeToRead = article => {
     return Math.ceil(article.trim().split(/\s+/).length / 225)
   }
+
+
+  /* TRENDS REPORT TILES */
+
+  const trendsData = [
+    {
+      title:"Open Banking/Open Finance Trends Report",
+      date:"January 2022",
+      btnBackground:"btn-trends-ob",
+      btnText:"Download",
+      img:QuarterlyImg,
+      download:true,
+      url:"https://drive.google.com/uc?export=download&id=1Vdl_XKh7rmoMJaIkZ5QyY5tN_e0ag9MW"
+    },
+    {
+      title:"API Landscape Tool and State of the Market",
+      date:2022,
+      btnBackground:"btn-trends-oe",
+      btnText:"Visit site",
+      img:apilandscapeImg,
+      url:"https://apilandscape.apiscene.io/",
+      download:false
+    },
+    {
+      title:`Open Sustainability Trends Report `,
+      date:2022,
+      btnBackground:"btn-trends-os",
+      btnText:"Find out more",
+      img:QuarterlyImg,
+      url:"/open-banking-apis-for-sustainability-an-open-ecosystem-approach",
+      download:false
+    },
+    {
+      title:`Open Health Trends Report`,
+      date:2022,
+      btnBackground:"btn-trends-oh",
+      btnText:"Coming soon",
+      img:QuarterlyImg,
+      url:null,
+      download:false
+    }
+
+  ]
   return (
     <Layout>
       <SEO title="Home" />
@@ -124,10 +171,79 @@ const IndexPage = ({ data }) => {
             />
           </div>
         </div>
-        <br />
-        <br />
+{/*         <br />
+        <br /> */}
       </section>
-      <section className="bg-gray-100 ">
+      
+
+    <section className="trends-homepage bg-sunglow my-5 py-10">
+      <div className="container mx-auto">
+        <div className="my-5">
+        <h3 className="text-center text-2xl font-black">Trends Reports</h3>
+        <h4 className="text-center text-sm font-black">2022</h4>
+     {/*    <a href="https://drive.google.com/uc?export=download&id=16DRInTjc0L6flFkkS1uqfXFepbeh_0xq">DDD</a>
+        <a href="https://drive.google.com/u/0/uc?id=16DRInTjc0L6flFkkS1uqfXFepbeh_0xq&export=download">aaa</a> */}
+        </div>
+      <div
+        className={`grid md:grid-cols-4 grid-cols-1 md:px-0 px-5 gap-10`}
+      >
+
+        {trendsData.map((trend,index)=>{
+          return (
+      
+             <div className="p-5 rounded-xl p-4 h-full  home-trends-bg-russian-violet-dark drop-shadow-2xl">
+            <div className="text-center">
+            <img
+              src={trend.img}
+              alt=""
+              className="w-24  bg-white shadow rounded-full p-3 my-5"
+            />
+            </div>
+            <p className="font-sm text-center text-white mb-4">{trend.date}</p>
+            <h6 className="font-black text-center  text-white  h-16 ">{trend.title}</h6>
+            <div className="text-center">
+            {trend?.download && trend?.url.includes("google") && <a
+            className={`md:inline-block inline-block 
+            ${trend.btnBackground} text-sm md:text-primary 
+            font-bold my-5 ml-2  py-2 px-10 rounded-full 
+            hover:bg-secondary cursor-pointer`}
+            href={trend.url}>
+            {trend.btnText}
+          </a>}
+          
+       {/*      {trend?.download=== false &&  <a
+            className={`md:inline-block inline-block 
+            ${trend.btnBackground} text-sm md:text-primary 
+            font-bold my-5 ml-2  py-2 px-10 rounded-full 
+            hover:bg-secondary cursor-pointer`}
+            href={trend.url}>
+            {trend.btnText}
+          </a>}  */}
+
+          {trend?.download=== false  && 
+          <a
+            className={`md:inline-block inline-block 
+            ${trend.btnBackground} text-sm md:text-primary 
+            font-bold my-5 ml-2  py-2 px-10 rounded-full 
+            hover:bg-secondary cursor-pointer`}
+            href={trend.url}
+            target={trend?.url?.includes("http")&& "_blank"}
+            >
+            {trend.btnText}
+          </a>
+        }  
+          </div>
+          </div> 
+
+          )
+        })}
+     </div>
+      </div>
+    </section>
+
+
+
+      {/* <section className="bg-gray-100 ">
         <div className="container sm:mx-auto md:px-0 px-5">
           <br />
           <br />
@@ -158,7 +274,13 @@ const IndexPage = ({ data }) => {
             <br />
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+
+
+
+
       {/* <PostsCards/> */}
       {/* POSTS */}
       <section className="cards-section my-2 container py-2 sm:mx-auto md:px-0 px-5">
