@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
+import OBTrendsFile from '../../../../static/ob/Platformable Open Banking Trends Report Q1 2022 January 2022.pdf'
+
 const ProductsCardsLp = () => {
   const data = useStaticQuery(graphql`
     query MyFileQuery {
@@ -69,7 +71,7 @@ const ProductsCardsLp = () => {
       </section>
       <section className="flex justify-center py-5 -mt-20">
         <a
-          href={data.file.publicURL}
+          href={OBTrendsFile}
           className="btn bg-russian-violet-dark text-white px-5 rounded-xl py-2"
           download
         >
