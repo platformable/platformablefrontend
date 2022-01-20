@@ -20,6 +20,8 @@ import apilandscapeImg from "../assets/oe/api-landscape-icon.png"
 import QuarterlyImg from "../assets/product-streams/quarterly_trends_report.svg"
 /*assets*/
 
+import OBTrendsFile from '../static/ob/Platformable Open Banking Trends Report Q1 2022 January 2022.pdf'
+
 const IndexPage = ({ data }) => {
 
 
@@ -107,7 +109,7 @@ const IndexPage = ({ data }) => {
     },
     {
       title:"API Landscape Tool and State of the Market",
-      date:2022,
+      date:"apidays",
       btnBackground:"btn-trends-oe",
       btnText:"Visit site",
       img:apilandscapeImg,
@@ -116,7 +118,7 @@ const IndexPage = ({ data }) => {
     },
     {
       title:`Open Sustainability Trends Report `,
-      date:2022,
+      date:"2022",
       btnBackground:"btn-trends-os",
       btnText:"Find out more",
       img:QuarterlyImg,
@@ -179,8 +181,8 @@ const IndexPage = ({ data }) => {
     <section className="trends-homepage bg-sunglow my-5 py-10">
       <div className="container mx-auto">
         <div className="my-5">
-        <h3 className="text-center text-2xl font-black">Trends Reports</h3>
-        <h4 className="text-center text-sm font-black">2022</h4>
+        <h3 className="text-center text-2xl font-black">Check out our latest releases</h3>
+        {/* <h4 className="text-center text-sm font-black">2022</h4> */}
      {/*    <a href="https://drive.google.com/uc?export=download&id=16DRInTjc0L6flFkkS1uqfXFepbeh_0xq">DDD</a>
         <a href="https://drive.google.com/u/0/uc?id=16DRInTjc0L6flFkkS1uqfXFepbeh_0xq&export=download">aaa</a> */}
         </div>
@@ -202,12 +204,13 @@ const IndexPage = ({ data }) => {
             <p className="font-sm text-center text-white mb-4">{trend.date}</p>
             <h6 className="font-black text-center  text-white  h-16 ">{trend.title}</h6>
             <div className="text-center">
-            {trend?.download && trend?.url.includes("google") && <a
+            {trend?.download && <a
             className={`md:inline-block inline-block 
             ${trend.btnBackground} text-sm md:text-primary 
             font-bold my-5 ml-2  py-2 px-10 rounded-full 
             hover:bg-secondary cursor-pointer`}
-            href={trend.url}>
+            href={OBTrendsFile}
+            download="Platformable Open Banking Trends Report Q1 2022 January 2022">
             {trend.btnText}
           </a>}
           
@@ -225,7 +228,7 @@ const IndexPage = ({ data }) => {
             className={`md:inline-block inline-block 
             ${trend.btnBackground} text-sm md:text-primary 
             font-bold my-5 ml-2  py-2 px-10 rounded-full 
-            hover:bg-secondary cursor-pointer`}
+            hover:bg-secondary ${trend.url===null ? "":"cursor-pointer"}`}
             href={trend.url}
             target={trend?.url?.includes("http")&& "_blank"}
             >
