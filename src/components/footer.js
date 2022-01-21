@@ -149,7 +149,7 @@ const year = date.getFullYear();
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/in/mark-boyd-28386936/"
+            href="https://www.linkedin.com/company/platformable/"
             rel="noopener"
             aria-label="link Linkedin"
             target="_blank"
