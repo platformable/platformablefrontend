@@ -50,11 +50,8 @@ const IndexPage = ({ data }) => {
 
 
 
-
-
-
   const noStagingPosts = data
-    ? data.allStrapiPost.edges.filter(post => post.node.staging != true)
+    ? data.allStrapiPost.edges.filter(post => post.node.staging !== true)
     : " "
 
   const postsCategories = [
@@ -214,14 +211,6 @@ const IndexPage = ({ data }) => {
             {trend.btnText}
           </a>}
           
-       {/*      {trend?.download=== false &&  <a
-            className={`md:inline-block inline-block 
-            ${trend.btnBackground} text-sm md:text-primary 
-            font-bold my-5 ml-2  py-2 px-10 rounded-full 
-            hover:bg-secondary cursor-pointer`}
-            href={trend.url}>
-            {trend.btnText}
-          </a>}  */}
 
           {trend?.download=== false  && 
           <a
@@ -290,9 +279,12 @@ const IndexPage = ({ data }) => {
         <div className="px-0 md:px-3 lg:px-0 xl:px-3">
           <h2 className="text-center font-black mb-5 mt-6">Latest Posts </h2>
           <div className="grid grid-cols-1 grid-cols-1 md:grid-cols-3 text-lg md:text-sm lg:text-sm xl:text-lg gap-5">
+           {console.log("noStagingPosts",noStagingPosts)}
+           
             {data
               ? noStagingPosts.map((post, index) => {
                   while (index < 3 && post.node.staging === false) {
+                    console.log("post",post)
                     return (
                       <div className="rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
                         <Link to={`/${post.node.slug}`}>
@@ -495,7 +487,7 @@ export default IndexPage
 
 export const blogQuery = graphql`
   query HomepagePosts {
-    allStrapiPost(sort: { fields: publishing_date, order: DESC }, limit: 3) {
+    allStrapiPost(sort: { fields: publishing_date, order: DESC }, limit: 5) {
       edges {
         node {
           categories {
