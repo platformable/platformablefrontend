@@ -29,7 +29,7 @@ const IndexPage = ({ location }) => {
       <ProductsCardsLp />
       <PositionedSection handleIsLoggedIn={handleIsLoggedIn} />
       <MeasuringBenefitsLP />
-      {/* <SubscriptionPlans /> */}
+     {/*  <SubscriptionPlans /> */}
       <TeamHours />
       {/* <TestimonialsLp /> */}
       <CallToActionLp
