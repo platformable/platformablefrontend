@@ -99,8 +99,11 @@ h5,
 h6 {
   font-weight: var(--font-weight-primary-bold);
   line-height: 1.4;
+/*   color:var(--russian-violet-dark); */
 }
-
+.posts-content h2 span,.posts-content h3 span,.posts-content h1 span{
+  color:var(--rusian-violet-dark) !important;
+  }
 h1 {
   font-size: 50px;
 }
