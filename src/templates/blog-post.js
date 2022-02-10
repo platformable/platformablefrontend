@@ -174,18 +174,6 @@ const BlogPost = ({ data, pageContext, location }) => {
                 return script
               })
             : null}
-          <meta property="og:url" content="https://www.platformable.com/blog" />
-          <meta property="og:type" content="article" />
-          <meta property="og:title" content={data.strapiPost.title} />
-          <meta property="og:description" content={data.strapiPost.title} />
-          <meta property="og:image" content={data.strapiPost.featured_image.childImageSharp
-                        .gatsbyImageData.images.fallback.src} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:creator" content={data.strapiPost.title} />
-          <meta name="twitter:title" content={data.strapiPost.title} />
-          <meta name="twitter:description" content={data.strapiPost.title} />
-          <meta name="twitter:image" content={data.strapiPost.featured_image.childImageSharp
-                        .gatsbyImageData.images.fallback.src} />
         </Helmet>
         <SEO title={data.strapiPost.title} img={data.strapiPost.featured_image} />
         <section className="posts-container mx-auto all-blog-content my-5 sm:my-20 px-5">
