@@ -53,6 +53,10 @@ function SEO({ description, lang, meta, title,img }) {
           content: `website`,
         },
         {
+        property:"og:image",
+        content:"https://paulie.dev/static/2ce7012f09fc4d59c957b09bd6dab5dd/47b7d/use-local-storage_hj0ddg.avif"
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -73,7 +77,7 @@ function SEO({ description, lang, meta, title,img }) {
 
         {
           name: "og:image",
-          content:"https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png",
+          content:"https://paulie.dev/static/2ce7012f09fc4d59c957b09bd6dab5dd/47b7d/use-local-storage_hj0ddg.avif",
         },
         {
           name: "og:image",
@@ -81,7 +85,7 @@ function SEO({ description, lang, meta, title,img }) {
         },
         {
           name:"twitter:image",
-          content:"https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png"
+          content:"https://paulie.dev/static/2ce7012f09fc4d59c957b09bd6dab5dd/47b7d/use-local-storage_hj0ddg.avif"
         }
       ].concat(meta)}
     />
