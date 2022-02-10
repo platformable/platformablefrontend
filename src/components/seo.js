@@ -73,7 +73,7 @@ function SEO({ description, lang, meta, title,img }) {
 
         {
           name: "og:image",
-          content:img,
+          content:"https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png",
         },
         {
           name: "og:image",
@@ -81,7 +81,7 @@ function SEO({ description, lang, meta, title,img }) {
         },
         {
           name:"twitter:image",
-          content:img
+          content:"https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png"
         }
       ].concat(meta)}
     />
