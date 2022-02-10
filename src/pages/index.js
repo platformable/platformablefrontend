@@ -54,6 +54,9 @@ const IndexPage = ({ data }) => {
     ? data.allStrapiPost.edges.filter(post => post.node.staging !== true)
     : " "
 
+
+    console.log("noStagingPosts",noStagingPosts)
+
   const postsCategories = [
     {
       name: "Open Banking / Open Finance",
@@ -487,7 +490,7 @@ export default IndexPage
 
 export const blogQuery = graphql`
   query HomepagePosts {
-    allStrapiPost(sort: { fields: publishing_date, order: DESC }, limit: 5) {
+    allStrapiPost(sort: { fields: publishing_date, order: DESC }, limit: 6) {
       edges {
         node {
           categories {
