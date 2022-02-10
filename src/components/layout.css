@@ -7,7 +7,7 @@
 body {
   font-family: "Roboto", sans-serif !important;
   color: var(--russian-violet-dark);
-  font-size: 18px;
+/*   font-size: 18px; */
   font-display: swap;
 }
 .font-sm {
@@ -6298,3 +6298,19 @@ section#timeline article div.inner {
 .btn-trends-oh {
   background-color:var(--oh-dark)
 }
+
+/* TRENDS REPORT POSTS */
+
+.trends-content p  {
+  font-size:15px !important;
+  line-height:1.1rem;
+  margin:15px 0;
+  }
+
+  .os-trends-light-bg {
+    background-color: var(--os-light);
+  }
+  .trends-content figcaption {
+    font-size:10px;
+    text-align:center;
+    }

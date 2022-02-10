@@ -733,15 +733,6 @@ export const query = graphql`
             }
           }
           bio
-          position_icon {
-            childImageSharp {
-              gatsbyImageData(
-                width: 32
-                blurredOptions: { width: 100 }
-                placeholder: BLURRED
-              )
-            }
-          }
         }
       }
       teamTitle
