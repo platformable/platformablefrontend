@@ -153,8 +153,8 @@ p {
   --red-orange-dark: #fb5012;
   --red-orange-light: #fed2c2;
   --fluorecent-blue-dark: #01fdf6;
-  --fluorecent-blue-light: #80fefa;
   --lavender-blue-dark: #cbbaed;
+  --fluorecent-blue-light: #80fefa;
   --lavender-blue-light: #e5ddf6;
   --light-coral-dark: #ef767a;
   --light-coral-light: #fad8d9;
@@ -6324,4 +6324,8 @@ section#timeline article div.inner {
     grid-template-columns: 1fr;
   }
   
+}
+
+.bg-btn-trends-download {
+  background-color: #0ce6a3;
 }

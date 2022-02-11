@@ -43,22 +43,22 @@ const shareUrl = location
       <div className="flex justify-end">
       <div className="flex gap-1 mr-1 items-center" key={index}>
           <TwitterShareButton url={shareUrl} title={"Impactful green fintech will require ecosystem stakeholders to collaborate, compete, and co-create"}>
-            <TwitterIcon size={28} round={true} />
+            <TwitterIcon size={28} round={true} iconFillColor={"#1b014c"} bgStyle={{fill:"#0ce6a3"}}/>
           </TwitterShareButton>
           <EmailShareButton
             url={shareUrl}
             subject={"Impactful green fintech will require ecosystem stakeholders to collaborate, compete, and co-create"}
             body={quote}
           >
-            <EmailIcon size={28} round={true} />
+            <EmailIcon size={28} round={true} iconFillColor={"#1b014c"} bgStyle={{fill:"#0ce6a3"}}/>
           </EmailShareButton>
         </div>
         <img 
-        src="https://cdn-icons.flaticon.com/png/512/2989/premium/2989976.png?token=exp=1644596402~hmac=6ab4f7e4110e92a90002b7586cf295e0" 
-        className="rounded-full bg-green-50 p-2 cursor-pointer self-start" 
+        src="https://img.icons8.com/fluency-systems-filled/48/000000/download.png" 
+        className="rounded-full bg-btn-trends-download p-2 cursor-pointer self-start" 
         onClick={() => handleDownloadImage(section)}
         alt="" 
-        width={34} />
+        width={30} />
       </div>
       <div className="grid  gap-10  md:px-0 px-5 trends-2Cols-wider">
         <div className="trends-2cols-component-left-col">
