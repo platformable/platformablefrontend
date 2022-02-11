@@ -15,7 +15,7 @@ const StagingTrendsPage = ({location,href }) => {
 
 
 const getTypeOfComponent = (section,index)=> {
-console.log("getType of component",section)
+
 
   if(section.__component==="trends-reports.2columns"){
     return <Trends2Cols section={section} index={index}/>
@@ -32,6 +32,7 @@ console.log("getType of component",section)
   
 
 }
+
 
 
   const getTrendsReport = ()=>{

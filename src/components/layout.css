@@ -797,12 +797,12 @@ MEDIA QUERIES */
 @media screen and (max-width: 768px) {
   .posts-container {
     max-width: 640px;
+    
+    
   }
-
-
+  
+  @media screen and (max-width: 450px) {
 }
-
-@media screen and (max-width: 450px) {
   .subscribe-input {
     min-width:160px;
     font-size:14px;
@@ -6314,3 +6314,14 @@ section#timeline article div.inner {
     font-size:10px;
     text-align:center;
     }
+
+.trends-2Cols-wider {
+  grid-template-columns: 1fr 2fr;
+}
+
+@media screen and (max-width: 768px) {
+  .trends-2Cols-wider {
+    grid-template-columns: 1fr;
+  }
+  
+}

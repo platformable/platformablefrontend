@@ -37,55 +37,43 @@ function SEO({ description, lang, meta, title,img }) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
-          name: `description`,
-          content: metaDescription,
+          name: `description`, content: metaDescription,
         },
         {
-          property: `og:title`,
-          content: title,
+          property: `og:title`,content: title,
         },
         {
-          property: `og:description`,
-          content: metaDescription,
+          property: `og:description`,content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: `og:type`,content: `website`,
         },
         {
-        property:"og:image",
-        content:{img}
+        property:"og:image", content:{img}
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: `twitter:card`,content: `summary`,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          name: `twitter:creator`,content: site.siteMetadata?.author || ``,
         },
         {
-          name: `twitter:title`,
-          content: title,
+          name: `twitter:title`,content: title,
         },
         {
-          name: `twitter:description`,
-          content: metaDescription,
+          name: `twitter:description`, content: metaDescription,
         },
 
         { name: "og:url", content: "https://platformable.com" },
 
         {
-          name: "og:image",
-          content:{img},
+          name: "og:image",content:{img},
         },
         {
-          name: "og:image",
-          content:img,
+          name: "og:image",content:img,
         },
         {
-          name:"twitter:image",
-          content:{img}
+          name:"twitter:image",content:{img}
         }
       ].concat(meta)}
     />
