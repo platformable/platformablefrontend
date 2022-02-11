@@ -18,15 +18,15 @@ const getTypeOfComponent = (section,index)=> {
 
 
   if(section.__component==="trends-reports.2columns"){
-    return <Trends2Cols section={section} index={index}/>
+    return <Trends2Cols section={section} index={index} location={location.href}/>
   }
 
   if(section.__component==="trends-reports.3-columns"){
-    return <Trends3ColsComponent section={section} index={index}/>
+    return <Trends3ColsComponent section={section} index={index} location={location.href}/>
   }
 
   if(section.__component==="trends-reports.2-columns-right-side-bigger"){
-    return <Trends2colsrwider section={section} index={index}/>
+    return <Trends2colsrwider section={section} index={index} location={location.href}/>
   }
 
   
