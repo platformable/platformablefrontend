@@ -73,11 +73,11 @@ function SEO({ description, lang, meta, title,img }) {
           content: metaDescription,
         },
 
-        { name: "og:url", content: "https://platformable.com/" },
+        { name: "og:url", content: "https://platformable.com" },
 
         {
           name: "og:image",
-          content:"https://paulie.dev/static/2ce7012f09fc4d59c957b09bd6dab5dd/47b7d/use-local-storage_hj0ddg.avif",
+          content:{img},
         },
         {
           name: "og:image",
@@ -85,7 +85,7 @@ function SEO({ description, lang, meta, title,img }) {
         },
         {
           name:"twitter:image",
-          content:"https://paulie.dev/static/2ce7012f09fc4d59c957b09bd6dab5dd/47b7d/use-local-storage_hj0ddg.avif"
+          content:{img}
         }
       ].concat(meta)}
     />
