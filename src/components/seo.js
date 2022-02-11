@@ -54,7 +54,7 @@ function SEO({ description, lang, meta, title,img }) {
         },
         {
         property:"og:image",
-        content:"https://paulie.dev/static/2ce7012f09fc4d59c957b09bd6dab5dd/47b7d/use-local-storage_hj0ddg.avif"
+        content:{img}
         },
         {
           name: `twitter:card`,
