@@ -10,7 +10,7 @@
  import { Helmet } from "react-helmet"
  import { useStaticQuery, graphql } from "gatsby"
  
- function SEO({ description, lang, meta, title,img,siteUrl }) {
+ function SEO({ description, lang, meta, title,img }) {
    const { site } = useStaticQuery(
      graphql`
        query {
@@ -28,7 +28,8 @@
  
    const metaDescription = description || site.siteMetadata.description
    const defaultTitle = site.siteMetadata?.title
- 
+   const siteUrl = site.siteMetadata?.siteUrl
+ console.log("siteUrl",siteUrl)
    return (
      <Helmet
        htmlAttributes={{
@@ -62,7 +63,7 @@
            name: `twitter:description`, content: metaDescription,
          },
  
-         { name: "og:url", content: siteUrl },
+         { name: "og:url", content:siteUrl },
  
          {
            name: "og:image",content:img,
