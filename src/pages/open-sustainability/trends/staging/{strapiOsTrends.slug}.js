@@ -29,8 +29,6 @@ const getTypeOfComponent = (section,index)=> {
     return <Trends2colsrwider section={section} index={index} location={location.href}/>
   }
 
-  
-
 }
 
 

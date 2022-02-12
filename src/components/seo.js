@@ -10,7 +10,7 @@
  import { Helmet } from "react-helmet"
  import { useStaticQuery, graphql } from "gatsby"
  
- function SEO({ description, lang, meta, title,img }) {
+ function SEO({ description, lang, meta, title,img,siteUrl }) {
    const { site } = useStaticQuery(
      graphql`
        query {
@@ -19,6 +19,7 @@
              title
              description
              author
+             siteUrl
            }
          }
        }
@@ -49,9 +50,6 @@
            property: `og:type`,content: `website`,
          },
          {
-         property:"og:image", content:{img}
-         },
-         {
            name: `twitter:card`,content: `summary`,
          },
          {
@@ -64,16 +62,13 @@
            name: `twitter:description`, content: metaDescription,
          },
  
-         { name: "og:url", content: "https://platformable.com" },
+         { name: "og:url", content: siteUrl },
  
-         {
-           name: "og:image",content:{img},
-         },
          {
            name: "og:image",content:img,
          },
          {
-           name:"twitter:image",content:{img}
+           name:"twitter:image",content:img
          }
        ].concat(meta)}
      />
