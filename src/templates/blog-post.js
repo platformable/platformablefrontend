@@ -30,11 +30,7 @@ const BlogPost = ({ data, pageContext, location }) => {
   )
   const activePostTitle = data.strapiPost.title
 
-  const imgAsolutePath = `https://platformable.com${data.strapiPost.featured_image.childImageSharp
-  .gatsbyImageData.images.fallback.src}`;
-
-
-  console.log("imagen",imgAsolutePath)
+ 
 
   const cleanCategoryPosts = sameCatergoryPosts.filter(
     post => post.node.title !== activePostTitle
