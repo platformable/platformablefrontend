@@ -50,7 +50,7 @@ const getTypeOfComponent = (section,index)=> {
    
   return (
     <Layout>
-      <SEO title={data.title} img={data.featured_image.url}  />
+      <SEO title={data.title} img={data?.featured_image?.url}  />
       <section
         className=" md:my-5 my-5 sm:mx-auto md:px-0 px-5 md:py-5 py-2 bg-green-50 md:h-screen" /* style={{backgroundColor:"#0099bb"}} */
       >
