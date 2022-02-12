@@ -30,6 +30,12 @@ const BlogPost = ({ data, pageContext, location }) => {
   )
   const activePostTitle = data.strapiPost.title
 
+  const imgAsolutePath = `https://platformable.com${data.strapiPost.featured_image.childImageSharp
+  .gatsbyImageData.images.fallback.src}`;
+
+
+  console.log("imagen",imgAsolutePath)
+
   const cleanCategoryPosts = sameCatergoryPosts.filter(
     post => post.node.title !== activePostTitle
   )
@@ -175,7 +181,7 @@ const BlogPost = ({ data, pageContext, location }) => {
               })
             : null}
         </Helmet>
-        <SEO title={data.strapiPost.title} img="https://platformable.com/static/5319a443d00bd1eee2efee3fa63ac32c/9a805/logo.webp" />
+        <SEO title={data.strapiPost.title} img={imgAsolutePath} />
         <section className="posts-container mx-auto all-blog-content my-5 sm:my-20 px-5">
           <h3 className="text-3xl sm:text-3xl font-black mb-3">
             {data.strapiPost.title}

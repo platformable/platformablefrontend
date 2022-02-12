@@ -37,6 +37,7 @@ const quote="test"
 const shareUrl = location
   return (
     <section
+    id="test"
       key={index}
       className="border-b-2 border-purple-50 container mx-auto py-10"
     >
@@ -61,7 +62,7 @@ const shareUrl = location
         width={30} />
       </div>
       <div className="grid  gap-10  md:px-0 px-5 trends-2Cols-wider">
-        <div className="trends-2cols-component-left-col">
+        <div className="trends-2cols-component-left-col bg-green-50 rounded-xl p-5">
           <div dangerouslySetInnerHTML={{ __html: section.column1 }}></div>
         </div>
         <div
