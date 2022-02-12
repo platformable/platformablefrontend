@@ -49,12 +49,12 @@ function SEO({ description, lang, meta, title,img }) {
           property: `og:type`,content: `website`,
         },
         {
-        property:"og:image", content:`${img}`
+        property:"og:image", content:img
         },
         { name: "og:url", content: "https://platformable.com" },
 
         {
-          name:"twitter:image",content:`${img}`
+          name:"twitter:image",content:img
         }
         , {
           name: `twitter:card`,content: `summary`,
