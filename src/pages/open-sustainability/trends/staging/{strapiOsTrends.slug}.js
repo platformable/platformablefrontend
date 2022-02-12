@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Trends2Cols from "../../../../components/Trends2Cols";
 import Trends3ColsComponent from "../../../../components/Trends3ColsComponent";
 import Trends2colsrwider from "../../../../components/Trends2ColsRwider";
+import SEO from "../../../../components/seo";
 
 const StagingTrendsPage = ({location,href }) => {
 
@@ -13,7 +14,7 @@ const StagingTrendsPage = ({location,href }) => {
 
   let result = OsTrendsReportId.replace("/open-sustainability/trends/staging/", "/");
 
-
+console.log("data",data)
 const getTypeOfComponent = (section,index)=> {
 
 
@@ -46,9 +47,10 @@ const getTypeOfComponent = (section,index)=> {
 
 
 
-    console.log("data",data)
+   
   return (
     <Layout>
+      <SEO title={data.title} img={data.featured_image.url}  />
       <section
         className=" md:my-5 my-5 sm:mx-auto md:px-0 px-5 md:py-5 py-2 bg-green-50 md:h-screen" /* style={{backgroundColor:"#0099bb"}} */
       >
