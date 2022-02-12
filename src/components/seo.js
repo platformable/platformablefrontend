@@ -49,12 +49,12 @@ function SEO({ description, lang, meta, title,img }) {
           property: `og:type`,content: `website`,
         },
         {
-        property:"og:image", content:img
+        property:"og:image", content:"https://platformable.com/static/5319a443d00bd1eee2efee3fa63ac32c/9a805/logo.webp"
         },
         { name: "og:url", content: "https://platformable.com" },
 
         {
-          name:"twitter:image",content:img
+          name:"twitter:image",content:"https://platformable.com/static/5319a443d00bd1eee2efee3fa63ac32c/9a805/logo.webp"
         }
         , {
           name: `twitter:card`,content: `summary`,
