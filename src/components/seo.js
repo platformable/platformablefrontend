@@ -39,19 +39,25 @@
        titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
        meta={[
          {
-           name: `description`, content: metaDescription,
+           name: `description`, content: `We measure the value of open ecosystems`,
          },
          {
            property: `og:title`,content: title,
          },
          {
-           property: `og:description`,content: metaDescription,
+           property: `og:description`,content: `We measure the value of open ecosystems`,
          },
          {
            property: `og:type`,content: `website`,
          },
+
+         { name: "og:url", content:siteUrl },
+ 
          {
-           name: `twitter:card`,content: `summary`,
+           property: "og:image",content:img,
+         },
+         {
+           name: `twitter:card`,content: `summary_large_image`,
          },
          {
            name: `twitter:creator`,content: site.siteMetadata?.author || ``,
@@ -60,17 +66,11 @@
            name: `twitter:title`,content: title,
          },
          {
-           name: `twitter:description`, content: metaDescription,
-         },
- 
-         { name: "og:url", content:siteUrl },
- 
-         {
-           name: "og:image",content:img,
+           name: `twitter:description`, content: `We measure the value of open ecosystems`,
          },
          {
            name:"twitter:image",content:img
-         }
+         },
        ].concat(meta)}
      />
    )
