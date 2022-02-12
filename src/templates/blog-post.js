@@ -181,7 +181,7 @@ const BlogPost = ({ data, pageContext, location }) => {
               })
             : null}
         </Helmet>
-        <SEO title={data.strapiPost.title} img={imgAsolutePath} />
+        <SEO title={data.strapiPost.title} img="https://platformable.com/static/5319a443d00bd1eee2efee3fa63ac32c/9a805/logo.webp" />
         <section className="posts-container mx-auto all-blog-content my-5 sm:my-20 px-5">
           <h3 className="text-3xl sm:text-3xl font-black mb-3">
             {data.strapiPost.title}
