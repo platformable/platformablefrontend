@@ -42,7 +42,7 @@
            name: `description`, content: `We measure the value of open ecosystems`,
          },
          {
-           property: `og:title`,content: title,
+           name:"title", property: `og:title`,content: title,
          },
          {
            property: `og:description`,content: `We measure the value of open ecosystems`,
@@ -51,10 +51,13 @@
            property: `og:type`,content: `website`,
          },
 
-         { name: "og:url", content:siteUrl },
+         { property: "og:url", content:siteUrl },
  
          {
-           property: "og:image",content:img,
+           name:"image", property: "og:image",content:img,
+         },
+         {
+           name:"author", content:"Platformable.com"
          },
          {
            name: `twitter:card`,content: `summary_large_image`,
