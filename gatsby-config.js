@@ -15,7 +15,6 @@ module.exports = {
     siteUrl:`https://www.platformable.com`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -156,6 +155,7 @@ module.exports = {
         domain: `platformable.com`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     
 
   ],
