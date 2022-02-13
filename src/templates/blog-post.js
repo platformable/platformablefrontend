@@ -34,15 +34,10 @@ const BlogPost = ({ data, pageContext, location }) => {
   .gatsbyImageData.images.fallback.src}` || `https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png`;
 
 
-
-
   const cleanCategoryPosts = sameCatergoryPosts.filter(
     post => post.node.title !== activePostTitle
   )
-  // console.log("cleanCategoryPosts", cleanCategoryPosts)
 
-  /* const cleanCategoryPosts = sameCatergoryPosts.filter(post.node.slug !==) */
-  // console.log("noStagingPosts", noStagingPosts)
 
   const postsCategories = [
     {
@@ -134,20 +129,11 @@ const BlogPost = ({ data, pageContext, location }) => {
     }
   }
 
-  function getScripts() {
-    // get all script tags from content
-    const re = /<script\b[^>]*>[\s\S]*?<\/script\b[^>]*>/g
-    const results = data.strapiPost.content
-      ? setScripts(data.strapiPost.content.match(re))
-      : " "
 
-    return results
-  }
 
   const isInitialMount = useRef(true)
   useEffect(() => {
     if (isInitialMount.current) {
-      getScripts()
       setUpdate(true)
       isInitialMount.current = false
     } else {
@@ -174,13 +160,7 @@ const BlogPost = ({ data, pageContext, location }) => {
             </ul>
           </div>
         </section>
-        <Helmet>
-          {scripts
-            ? scripts.map(script => {
-                return script
-              })
-            : null}
-        </Helmet>
+   
         <SEO title={data.strapiPost.title} img={imgAsolutePath} />
         <section className="posts-container mx-auto all-blog-content my-5 sm:my-20 px-5">
           <h3 className="text-3xl sm:text-3xl font-black mb-3">
@@ -272,9 +252,6 @@ const BlogPost = ({ data, pageContext, location }) => {
                   <div className="flex gap-1 mt-3 items-center" key={index}>
                     <p>Share this article</p>
 
-                    {/* <LinkedinShareButton url={shareUrl}>
-                      <LinkedinIcon size={28} round={true} title={quote} />
-                    </LinkedinShareButton> */}
                     <TwitterShareButton url={shareUrl} title={quote}>
                       <TwitterIcon size={28} round={true} />
                     </TwitterShareButton>

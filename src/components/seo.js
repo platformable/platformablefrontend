@@ -57,7 +57,7 @@
            name:"image", property: "og:image",content:img,
          },
          {
-           name:"author", content:"Platformable.com"
+           name:"author", content:"https://platformable.com"
          },
          {
            name: `twitter:card`,content: `summary_large_image`,
@@ -74,6 +74,9 @@
          {
            name:"twitter:image",content:img
          },
+         {
+          name:"twitter:site",content:"https://platformable.com"
+        },
        ].concat(meta)}
      />
    )
