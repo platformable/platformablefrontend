@@ -15,6 +15,8 @@ export default function TrendsMainImageOnLeftTextOnTheRight({
     row_2_image,
     row_3_image,
   } = section
+
+  console.log(section)
   return (
 <section className="">
     <div className="container mx-auto border-b-2 border-purple-50 py-10 md:px-5 px-5 ">
@@ -29,7 +31,7 @@ export default function TrendsMainImageOnLeftTextOnTheRight({
         <div class="trends-rowsWithImagesOnLeft-box">
           <div class="trends-rowsWithImagesOnLeft-box-img">
             <img
-              src={row_1_image.formats.large.url}
+              src={row_1_image?.url}
               alt={row_1_image.alternativetext}
             />
           </div>
@@ -40,7 +42,7 @@ export default function TrendsMainImageOnLeftTextOnTheRight({
         <div class="trends-rowsWithImagesOnLeft-box">
           <div class="trends-rowsWithImagesOnLeft-box-img">
             <img
-              src={row_2_image.formats.large.url}
+              src={row_2_image?.url}
               alt={row_2_image.alternativetext}
             />
           </div>
@@ -51,7 +53,7 @@ export default function TrendsMainImageOnLeftTextOnTheRight({
         <div class="trends-rowsWithImagesOnLeft-box">
           <div class="trends-rowsWithImagesOnLeft-box-img">
             <img
-              src={row_3_image.formats.large.url}
+              src={row_3_image?.url}
               alt={row_3_image.alternativetext}
             />
           </div>
