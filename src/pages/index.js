@@ -490,7 +490,7 @@ export default IndexPage
 
 export const blogQuery = graphql`
   query HomepagePosts {
-    allStrapiPost(sort: { fields: publishing_date, order: DESC }, limit: 6) {
+    allStrapiPost(sort: { fields: publishing_date, order: DESC }, limit: 100) {
       edges {
         node {
           categories {

@@ -7,6 +7,7 @@ import BlogCardComponent from "../../../components/BlogCardComponent"
 
 const OpenGovernmentPosts = ({ data, location }) => {
   // const authorsData = data.allStrapiPost.edges[0].node.user;
+  const noStagingPosts = data.allStrapiPost.edges.filter(post => post.node.staging != true) 
   return (
     <Layout>
       <SEO title="Blog" />
@@ -21,8 +22,8 @@ const OpenGovernmentPosts = ({ data, location }) => {
         <div className="container mx-auto all-blog-content my-20 md:px-0 px-5 ">
           <div className="container mx-auto all-blog-content sm:px-5 px-0 md:px-3 lg:px-0 xl:px-3">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {data
-                ? data.allStrapiPost.edges.map((post, index) => {
+              {noStagingPosts
+                ?noStagingPosts.map((post, index) => {
                     return (
                       <BlogCardComponent
                         key={index}

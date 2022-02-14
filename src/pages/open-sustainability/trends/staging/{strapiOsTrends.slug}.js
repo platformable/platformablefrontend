@@ -5,6 +5,7 @@ import Trends2Cols from "../../../../components/Trends2Cols";
 import Trends3ColsComponent from "../../../../components/Trends3ColsComponent";
 import Trends2colsrwider from "../../../../components/Trends2ColsRwider";
 import SEO from "../../../../components/seo";
+import TrendsMainImageOnLeftTextOnTheRight from "../../../../components/TrendsMainImageOnLeftTextOnTheRight";
 
 const StagingTrendsPage = ({location,href }) => {
 
@@ -29,6 +30,12 @@ const getTypeOfComponent = (section,index)=> {
   if(section.__component==="trends-reports.2-columns-right-side-bigger"){
     return <Trends2colsrwider section={section} index={index} location={location.href}/>
   }
+
+  if(section.__component==="trends-reports.main-image-on-left-text-on-the-right"){
+    return <TrendsMainImageOnLeftTextOnTheRight section={section} index={index} location={location.href}/>
+  }
+
+  
 
 }
 

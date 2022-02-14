@@ -45,6 +45,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-postcss',
+    /* {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, 
+        develop: true, // Enable while using `gatsby develop`
+        tailwind: true, // Enable tailwindcss support
+      },
+    }, */
     {
       resolve: `gatsby-source-strapi`,
       options: {

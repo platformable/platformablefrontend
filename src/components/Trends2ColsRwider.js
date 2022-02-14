@@ -42,7 +42,7 @@ const shareUrl = location
       className="border-b-2 border-purple-50 container mx-auto py-10"
     >
       <div className="flex justify-end">
-      <div className="flex gap-1 mr-1 items-center" key={index}>
+      <div className="flex gap-1 mr-1 md:mb-0 mb-5 items-center md:px-0" key={index}>
           <TwitterShareButton url={shareUrl} title={"Impactful green fintech will require ecosystem stakeholders to collaborate, compete, and co-create"}>
             <TwitterIcon size={28} round={true} iconFillColor={"#1b014c"} bgStyle={{fill:"#0ce6a3"}}/>
           </TwitterShareButton>
@@ -56,7 +56,7 @@ const shareUrl = location
         </div>
         <img 
         src="https://img.icons8.com/fluency-systems-filled/48/000000/download.png" 
-        className="rounded-full bg-btn-trends-download p-2 cursor-pointer self-start" 
+        className="rounded-full bg-btn-trends-download p-2 cursor-pointer self-start md:mr-0 mr-5 mb-5" 
         onClick={() => handleDownloadImage(section)}
         alt="" 
         width={30} />
