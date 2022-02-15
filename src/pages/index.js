@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
       body: JSON.stringify(mailerlite),
     })
   const res = response.statusText || response.statusMessage
-
+    console.log("res",res)
   if(res==='OK'){
   setFormSuccess(!formSuccess)
   }

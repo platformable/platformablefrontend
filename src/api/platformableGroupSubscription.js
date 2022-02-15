@@ -16,7 +16,8 @@ export default function formHandlerPlatformable(req, res) {
     }
   })
   .then(function (response) {
-   console.log(response)
+   console.log("response.statusText",response.statusText)
+   console.log("response.statusMessage",response.statusMessage)
    if(response.statusText==='OK' ||response.statusMessage==='OK')
     res.json('OK')
   })

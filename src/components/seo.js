@@ -29,7 +29,7 @@
    const metaDescription = description || site.siteMetadata.description
    const defaultTitle = site.siteMetadata?.title
    const siteUrl = site.siteMetadata?.siteUrl
- console.log("siteUrl",siteUrl)
+
    return (
      <Helmet
        htmlAttributes={{

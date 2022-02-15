@@ -6379,3 +6379,11 @@ padding:0 10px;
 .trends-content p span {
   color:#1b014c !important;
   }
+
+.trends-content i  {
+margin:0;
+}
+
+.trends-content a span{
+  color:var(--os-dark) !important;
+  }

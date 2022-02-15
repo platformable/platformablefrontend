@@ -66,7 +66,8 @@ const getTypeOfComponent = (section,index)=> {
             <div className="left flex items-center">
               <div>
                 <h3 className="font-black mb-5 md:text-5xl text-3xl md:text-left text-center">{data.title}</h3>
-                <p>{data.excerpt}</p>
+       
+                <div dangerouslySetInnerHTML={{ __html: data.excerpt }}></div>
               </div>
             </div>
             <div className="right flex justify-end">
