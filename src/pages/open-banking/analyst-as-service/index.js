@@ -28,9 +28,9 @@ export default function Index({ data, location }) {
       },
       body: JSON.stringify(mailerlite),
     })
-  const res = response.statusText
+  const res = response.statusText || response.statusMessage
 
-  if(res){
+  if(res==='OK'){
   setFormSuccess(!formSuccess)
   }
   

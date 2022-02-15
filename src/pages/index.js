@@ -40,9 +40,9 @@ const IndexPage = ({ data }) => {
       },
       body: JSON.stringify(mailerlite),
     })
-  const res = response.statusText
+  const res = response.statusText || response.statusMessage
 
-  if(res){
+  if(res==='OK'){
   setFormSuccess(!formSuccess)
   }
   
@@ -55,7 +55,7 @@ const IndexPage = ({ data }) => {
     : " "
 
 
-    console.log("noStagingPosts",noStagingPosts)
+
 
   const postsCategories = [
     {
@@ -282,12 +282,12 @@ const IndexPage = ({ data }) => {
         <div className="px-0 md:px-3 lg:px-0 xl:px-3">
           <h2 className="text-center font-black mb-5 mt-6">Latest Posts </h2>
           <div className="grid grid-cols-1 grid-cols-1 md:grid-cols-3 text-lg md:text-sm lg:text-sm xl:text-lg gap-5">
-           {console.log("noStagingPosts",noStagingPosts)}
+    
            
             {data
               ? noStagingPosts.map((post, index) => {
                   while (index < 3 && post.node.staging === false) {
-                    console.log("post",post)
+             
                     return (
                       <div className="rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
                         <Link to={`/${post.node.slug}`}>

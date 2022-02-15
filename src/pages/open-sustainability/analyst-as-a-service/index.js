@@ -56,9 +56,9 @@ export default function Index({ data, location }) {
       },
       body: JSON.stringify(mailerlite),
     })
-  const res = response.statusText
-
-  if(res){
+  const res = response.statusText || response.statusMessage
+console.log("res",res)
+  if(res==='OK'){
   setFormSuccess(!formSuccess)
   }
   
@@ -170,7 +170,7 @@ export default function Index({ data, location }) {
           <button className="px-4 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
         </div>
       </div>
-      {formSuccess && <p className="text-center ">Thank you for your subscription</p>}
+      {formSuccess && <p className="text-center my-5">Thank you for your subscription</p>}
         </div>
       </section>
 

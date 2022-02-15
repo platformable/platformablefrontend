@@ -20,7 +20,7 @@ export default function formHandler(req, res) {
   })
   .then(function (response) {
    console.log(response)
-   if(response.statusText==='OK')
+   if(response.statusText==='OK' ||response.statusMessage==='OK')
     res.json('OK')
   })
   .catch(error => {  
