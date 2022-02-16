@@ -16,10 +16,11 @@ export default function TrendsMainImageOnLeftTextOnTheRight({
     row_3_image,
   } = section
 
-  console.log(section)
   return (
-<section className="">
+<section className="" id={`section-${section.id}`}>
+
     <div className="container mx-auto border-b-2 border-purple-50 py-10 md:px-5 px-5 ">
+{/*     <span className="text-xs my-5 italic">Section-{section.id}</span> */}
       <div class="trends-rowsWithImagesOnLeft">
         <div class="trends-rowsWithImagesOnLeft-top-content mb-10">
           <h3 className="font-black">{heading}</h3>

@@ -141,6 +141,10 @@ p {
 .raw-html-embed .twitter-tweet {
   margin: 0 auto;
 }
+
+.text-xxs {
+  font-size:9px
+}
 /* FONT IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
@@ -251,6 +255,10 @@ p {
 .text-red-orange-dark {
   color: var(--red-orange-dark);
 } */
+
+.text-color-os-dark {
+  color:var(--os-dark);
+}
 
 .bg-os-light {
   background-color: var(--os-light);

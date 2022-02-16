@@ -122,7 +122,8 @@ const IndexPage = ({ data }) => {
       btnBackground:"btn-trends-os",
       btnText:"Find out more",
       img:QuarterlyImg,
-      url:"/open-banking-apis-for-sustainability-an-open-ecosystem-approach",
+      //url:"/open-banking-apis-for-sustainability-an-open-ecosystem-approach",
+      url:"/open-sustainability/trends/open-sustainability-trends-report-q1-2022/",
       download:false
     },
     {

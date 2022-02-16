@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Trends2Cols from "../../../../components/Trends2Cols";
 import Trends3ColsComponent from "../../../../components/Trends3ColsComponent";
 import Trends2colsrwider from "../../../../components/Trends2ColsRwider";
+import Trends1Col from "../../../../components/Trends1Col";
 import SEO from "../../../../components/seo";
 import TrendsMainImageOnLeftTextOnTheRight from "../../../../components/TrendsMainImageOnLeftTextOnTheRight";
 
@@ -34,7 +35,9 @@ const getTypeOfComponent = (section,index)=> {
   if(section.__component==="trends-reports.main-image-on-left-text-on-the-right"){
     return <TrendsMainImageOnLeftTextOnTheRight section={section} index={index} location={location.href}/>
   }
-
+  if(section.__component==="trends-reports.1-column"){
+    return <Trends1Col section={section} index={index} location={location.href}/>
+  }
   
 
 }

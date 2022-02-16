@@ -4,7 +4,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import Trends2Cols from "../../../components/Trends2Cols";
 import Trends3ColsComponent from "../../../components/Trends3ColsComponent";
 import Trends2colsrwider from "../../../components/Trends2ColsRwider";
+import TrendsMainImageOnLeftTextOnTheRight from '../../../components/TrendsMainImageOnLeftTextOnTheRight'
 import SEO from "../../../components/seo";
+import Trends1Col from "../../../components/Trends1Col";
 
 const TrendsPage = ({location,href }) => {
 
@@ -29,8 +31,17 @@ const getTypeOfComponent = (section,index)=> {
     return <Trends2colsrwider section={section} index={index}/>
   }
 
-  
+  if(section.__component==="trends-reports.main-image-on-left-text-on-the-right"){
+    return <TrendsMainImageOnLeftTextOnTheRight section={section} index={index} location={location.href}/>
+  }
 
+  if(section.__component==="trends-reports.1-column"){
+    return <Trends1Col section={section} index={index} location={location.href}/>
+  }
+
+
+
+  
 }
 
 
@@ -59,19 +70,22 @@ const getTypeOfComponent = (section,index)=> {
             <div className="left flex items-center">
               <div>
                 <h3 className="font-black mb-5 md:text-5xl text-3xl md:text-left text-center">{data.title}</h3>
-                <p>{data.excerpt}</p>
+                <p className="text-sm">{data.excerpt}</p>
               </div>
             </div>
-            <div className="right flex justify-end">
+            <div className="right flex justify-end md:block hidden">
               <StaticImage
                 src="../../../static/os/main_hero_img.png"
                 alt="platformable"
                 width={800}
+                className=""
               />
             </div>
           </div>
         </div>
       </section>
+
+      
       <section className="trends-content">
         <div className="">
             {data?.Sections?.map((section,index)=>{

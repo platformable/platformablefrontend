@@ -8,6 +8,8 @@ import {
 import { EmailIcon, LinkedinIcon, TwitterIcon } from "react-share"
 
 const Trends2colsrwider = ({ section, index, location }) => {
+
+  console.log("section",section)
   /* const downloadImg = url => {
     console.log("download")
     var el = document.createElement("a")
@@ -36,11 +38,12 @@ const Trends2colsrwider = ({ section, index, location }) => {
   const shareUrl = location
   return (
     <section
-      id="test"
+      id={`section-${section.id}`}
       key={index}
       className="border-b-2 border-purple-50 container mx-auto py-10"
     >
-      <div className="flex justify-end">
+     {/*  <span className="text-xs my-5 italic">Section - {section.id}</span> */}
+      <div className="flex justify-end mb-5">
         <div
           className="flex gap-1 mr-1 md:mb-0 mb-5 items-center md:px-0"
           key={index}
