@@ -28,7 +28,7 @@ const CallToActionLp = ({
       },
       body: JSON.stringify(mailerlite),
     })
-    const res = response.statusText || response.statusMessage
+    const res = await response.statusText || response.statusMessage
 
     if(res==='OK') {
       setFormSuccess(!formSuccess)
