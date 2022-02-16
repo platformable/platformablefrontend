@@ -17,7 +17,7 @@ export default function formHandlerOS(req, res) {
   })
   .then(function (response) {
    console.log(response)
-   if(response.statusText==='OK' ||response.statusMessage==='OK')
+   if(response.statusText==='OK' || response.statusMessage==='OK' ||  response.statusCode==='200')
    res.send('OK')
   })
   .catch(error => {  

@@ -19,7 +19,7 @@ export default function formHandlerPlatformable(req, res) {
    console.log("response.statusText",response.statusText)
    console.log(response)
    console.log("response.statusMessage",response.statusMessage)
-   if(response.statusText==='OK' || response.statusMessage==='OK')
+   if(response.statusText==='OK' || response.statusMessage==='OK' ||  response.statusCode==='200')
     res.send('OK')
   })
   .catch(error => {  
