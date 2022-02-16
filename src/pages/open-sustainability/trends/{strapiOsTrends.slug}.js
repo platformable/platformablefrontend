@@ -7,6 +7,7 @@ import Trends2colsrwider from "../../../components/Trends2ColsRwider";
 import TrendsMainImageOnLeftTextOnTheRight from '../../../components/TrendsMainImageOnLeftTextOnTheRight'
 import SEO from "../../../components/seo";
 import Trends1Col from "../../../components/Trends1Col";
+import TrendsExecutiveSummaryComponent from "../../../components/TrendsExecutiveSummaryComponent";
 
 const TrendsPage = ({location,href }) => {
 
@@ -38,7 +39,9 @@ const getTypeOfComponent = (section,index)=> {
   if(section.__component==="trends-reports.1-column"){
     return <Trends1Col section={section} index={index} location={location.href}/>
   }
-
+  if(section.__component==="trends-reports.executive-summary"){
+    return <TrendsExecutiveSummaryComponent section={section} index={index} location={location.href}/>
+  }
 
 
   

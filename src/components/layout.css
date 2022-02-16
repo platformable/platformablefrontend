@@ -6395,3 +6395,20 @@ margin:0;
 .trends-content a span{
   color:var(--os-dark) !important;
   }
+  .trends-reports-executive-summary-box {
+    display:grid;
+    grid-template-columns:50px 2fr
+  
+  }
+  
+  .executive-summary-box-left {
+  
+    display:grid;
+    justify-content:end;
+    padding-right:15px;
+    border-right:1px solid var(--oe-dark);
+  }
+  
+  .executive-summary-box-right {
+  padding:0 10px;
+  }

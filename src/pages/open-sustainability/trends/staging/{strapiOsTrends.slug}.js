@@ -7,16 +7,17 @@ import Trends2colsrwider from "../../../../components/Trends2ColsRwider";
 import Trends1Col from "../../../../components/Trends1Col";
 import SEO from "../../../../components/seo";
 import TrendsMainImageOnLeftTextOnTheRight from "../../../../components/TrendsMainImageOnLeftTextOnTheRight";
+import TrendsExecutiveSummaryComponent from "../../../../components/TrendsExecutiveSummaryComponent";
 
 const StagingTrendsPage = ({location,href }) => {
 
   const [data,setData]=useState([])
 
+  console.log("data",data)
   const OsTrendsReportId=location.pathname
 
   let result = OsTrendsReportId.replace("/open-sustainability/trends/staging/", "/");
 
-console.log("data",data)
 const getTypeOfComponent = (section,index)=> {
 
 
@@ -38,8 +39,12 @@ const getTypeOfComponent = (section,index)=> {
   if(section.__component==="trends-reports.1-column"){
     return <Trends1Col section={section} index={index} location={location.href}/>
   }
-  
 
+  if(section.__component==="trends-reports.executive-summary"){
+    return <TrendsExecutiveSummaryComponent section={section} index={index} location={location.href}/>
+  }
+  
+  
 }
 
 
