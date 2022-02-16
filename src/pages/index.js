@@ -21,6 +21,7 @@ import QuarterlyImg from "../assets/product-streams/quarterly_trends_report.svg"
 /*assets*/
 
 import OBTrendsFile from '../static/ob/Platformable Open Banking Trends Report Q1 2022 January 2022.pdf'
+import OSTrendsFile from '../static/os/Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022.pdf'
 
 const IndexPage = ({ data }) => {
 
@@ -105,7 +106,9 @@ const IndexPage = ({ data }) => {
       btnText:"Download",
       img:QuarterlyImg,
       download:true,
-      url:"https://drive.google.com/uc?export=download&id=1Vdl_XKh7rmoMJaIkZ5QyY5tN_e0ag9MW"
+      downloadText:"Platformable Open Banking Trends Report Q1 2022 January 2022",
+      /* url:"https://drive.google.com/uc?export=download&id=1Vdl_XKh7rmoMJaIkZ5QyY5tN_e0ag9MW" */
+      url:OBTrendsFile
     },
     {
       title:"API Landscape Tool and State of the Market",
@@ -120,11 +123,13 @@ const IndexPage = ({ data }) => {
       title:`Open Sustainability Trends Report `,
       date:"2022",
       btnBackground:"btn-trends-os",
-      btnText:"Find out more",
+      btnText:"Download",
       img:QuarterlyImg,
       //url:"/open-banking-apis-for-sustainability-an-open-ecosystem-approach",
-      url:"/open-sustainability/trends/open-sustainability-trends-report-q1-2022/",
-      download:false
+      //url:"/open-sustainability/trends/open-sustainability-trends-report-q1-2022/",
+      url:OSTrendsFile,
+      downloadText:"Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022",
+      download:true
     },
     {
       title:`Open Health Trends Report`,
@@ -210,8 +215,8 @@ const IndexPage = ({ data }) => {
             ${trend.btnBackground} text-sm md:text-primary 
             font-bold my-5 ml-2  py-2 px-10 rounded-full 
             hover:bg-secondary cursor-pointer`}
-            href={OBTrendsFile}
-            download="Platformable Open Banking Trends Report Q1 2022 January 2022">
+            href={trend.url}
+            download={trend.downloadText}>
             {trend.btnText}
           </a>}
           

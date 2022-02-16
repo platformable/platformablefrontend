@@ -13,7 +13,7 @@ const StagingTrendsPage = ({location,href }) => {
 
   const [data,setData]=useState([])
 
-  console.log("data",data)
+
   const OsTrendsReportId=location.pathname
 
   let result = OsTrendsReportId.replace("/open-sustainability/trends/staging/", "/");
@@ -76,6 +76,15 @@ const getTypeOfComponent = (section,index)=> {
                 <h3 className="font-black mb-5 md:text-5xl text-3xl md:text-left text-center">{data.title}</h3>
        
                 <div dangerouslySetInnerHTML={{ __html: data.excerpt }}></div>
+            {/*     <a
+            className={`md:inline-block inline-block 
+            text-sm md:text-primary 
+            font-bold my-5 ml-2 bg-russian-violet-dark text-white py-2 px-10 rounded-full 
+            hover:bg-secondary cursor-pointer`}
+            href="#"
+            download="Platformable Open Banking Trends Report Q1 2022 January 2022">
+            Download Report
+          </a> */}
               </div>
             </div>
             <div className="right flex justify-end">
@@ -93,6 +102,21 @@ const getTypeOfComponent = (section,index)=> {
             {data?.Sections?.map((section,index)=>{
               return getTypeOfComponent(section,index)
             })}
+        </div>
+      </section>
+
+
+      <section className="trends-content">
+        <div className="text-center">
+       {/*  <a
+            className={`md:inline-block inline-block 
+            text-sm md:text-primary 
+            font-bold my-5 ml-2 bg-russian-violet-dark text-white py-2 px-10 rounded-full 
+            hover:bg-secondary cursor-pointer`}
+            href="#"
+            download="Platformable Open Banking Trends Report Q1 2022 January 2022">
+            Download
+          </a> */}
         </div>
       </section>
     </Layout>
