@@ -17,9 +17,10 @@ export default function formHandlerPlatformable(req, res) {
   })
   .then(function (response) {
    console.log("response.statusText",response.statusText)
+   console.log(response)
    console.log("response.statusMessage",response.statusMessage)
-   if(response.statusText==='OK' ||response.statusMessage==='OK')
-    res.json('OK')
+   if(response.statusText==='OK' || response.statusMessage==='OK')
+    res.send('OK')
   })
   .catch(error => {  
     // Handle error.

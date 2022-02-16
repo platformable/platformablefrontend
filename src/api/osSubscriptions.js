@@ -18,7 +18,7 @@ export default function formHandlerOS(req, res) {
   .then(function (response) {
    console.log(response)
    if(response.statusText==='OK' ||response.statusMessage==='OK')
-    res.json('OK')
+   res.send('OK')
   })
   .catch(error => {  
     // Handle error.
