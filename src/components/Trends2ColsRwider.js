@@ -38,7 +38,7 @@ const Trends2colsrwider = ({ section, index, location }) => {
   const shareUrl = location
   return (
     <section
-      id={`section-${section.id}`}
+      id={`section-${section.id}-2colsrwider`}
       key={index}
       className="border-b-2 border-purple-50 container mx-auto py-10"
     >

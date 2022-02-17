@@ -9,7 +9,32 @@ import SEO from "../../../components/seo";
 import Trends1Col from "../../../components/Trends1Col";
 import TrendsExecutiveSummaryComponent from "../../../components/TrendsExecutiveSummaryComponent";
 
+import OSTrendsFile from '../../../static/os/Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022.pdf'
+
 const TrendsPage = ({location,href }) => {
+
+  const [form,setForm]=useState("");
+  const [formSuccess,setFormSuccess]=useState(false)
+
+  const handleSubscription = async (e) =>{
+    const email = form
+    const mailerlite = {
+      email,
+    }
+    const response = await window.fetch(`/api/osSubscriptions`, {
+      method: `POST`,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(mailerlite),
+    })
+  const res = await response.statusText || response.statusMessage
+
+  if(res==='OK' || res===undefined){
+  setFormSuccess(!formSuccess)
+  }
+  
+}
 
   const [data,setData]=useState([])
 
@@ -71,9 +96,28 @@ const getTypeOfComponent = (section,index)=> {
           <div className="grid md:grid-cols-2 grid-cols-1 px-0 md:px-3 lg:px-0 xl:px-3 items-center  h-100">
             <div className="left flex items-center">
               <div>
-                <h3 className="font-black mb-5 md:text-5xl text-3xl md:text-left text-center">{data.title}</h3>
+                <h3 className="font-black mb-5 md:text-5xl text-1xl md:text-left text-center">{data.title}</h3>
                 {/* <p className="text-sm">{data.excerpt}</p> */}
-                <div dangerouslySetInnerHTML={{ __html: data?.hero_content }}></div>
+                <div dangerouslySetInnerHTML={{ __html: data?.hero_content }} className="hero-content"></div>
+                       <a
+                    className={`md:inline-block inline-block 
+                    text-sm md:text-primary 
+                    font-bold my-5  bg-russian-violet-dark text-white py-2 px-10 rounded-full 
+                    hover:bg-secondary cursor-pointer`}
+                    href={OSTrendsFile}
+                    download="Platformable Open Banking Trends Report Q1 2022 January 2022">
+                    Download Report
+                  </a>
+
+                  <a
+                    className={`md:inline-block inline-block 
+                    text-sm md:text-primary 
+                    font-bold my-5  ml-2 bg-russian-violet-dark text-white py-2 px-10 rounded-full 
+                    hover:bg-secondary cursor-pointer`}
+                    href="#os-form"
+                  >
+                    Subscribe
+                  </a>
               </div>
             </div>
             <div className="right flex justify-end md:block hidden">
@@ -94,6 +138,22 @@ const getTypeOfComponent = (section,index)=> {
             {data?.Sections?.map((section,index)=>{
               return getTypeOfComponent(section,index)
             })}
+        </div>
+      </section>
+
+
+      <section id="os-form">
+        <div className="container mx-auto mt-10">
+              <div>
+{/*                 <p className="text-center text-xl">Our workshops cover architecture decisions, performance and technical metrics and how to comply with policy and regulatory requirements when building new product opportunities</p>
+ */}                {/* <p className="text-center">Bring your data to life with our training.</p> */}
+              <h2 className="text-2xl font-black text-center mt-5">Sign up now to our trends reports</h2>
+          <div className="m-4 flex justify-center">
+          <input type="text" className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-main-color border-gray-200 bg-white subscribe-input" placeholder="Your email address" onChange={(e)=>setForm(e.target.value)}/>
+          <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
+        </div>
+      </div>
+      {formSuccess && <p className="text-center ">Thank you for your subscription</p>}
         </div>
       </section>
     </Layout>

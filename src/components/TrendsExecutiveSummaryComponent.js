@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function TrendsExecutiveSummaryComponent({section,index}) {
   return (
+    <section id={`section-${section.id}-summary`}>
       <div className="container mx-auto md:px-20 px-10">
           <h3 className="font-black text-center my-10">Executive Summary</h3>
     <div class="treds-reports-executive-summary-container">
@@ -31,5 +32,6 @@ export default function TrendsExecutiveSummaryComponent({section,index}) {
     </div>
   </div>
   </div>
+  </section>
   )
 }
