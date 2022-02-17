@@ -89,7 +89,7 @@ const Trends2colsrwider = ({ section, index, location }) => {
           <div dangerouslySetInnerHTML={{ __html: section.column1 }}></div>
         </div>
         <div
-          className="trends-2cols-component-right-col grid items-center "
+          className="trends-2cols-component-right-col grid  "
           id={section.id}
         >
           <div dangerouslySetInnerHTML={{ __html: section.column2 }}></div>

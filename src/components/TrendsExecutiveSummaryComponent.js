@@ -10,7 +10,7 @@ export default function TrendsExecutiveSummaryComponent({section,index}) {
         <h3>{section.heading_1}</h3>
       </div>
       <div class="executive-summary-box-right">
-      <div dangerouslySetInnerHTML={{ __html: section.content_1 }}></div>
+      <div dangerouslySetInnerHTML={{ __html: section.content_1 }} className="text-xl"></div>
       </div>
     </div>
     <div class="trends-reports-executive-summary-box my-5">

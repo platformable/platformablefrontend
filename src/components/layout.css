@@ -6412,3 +6412,14 @@ margin:0;
   .executive-summary-box-right {
   padding:0 10px;
   }
+
+.executive-summary-box-right p span{
+font-size:26px;
+line-height:1.5rem
+}
+
+@media screen and (max-width: 768px) {
+.executive-summary-box-right p span{
+font-size:14px;
+}
+}

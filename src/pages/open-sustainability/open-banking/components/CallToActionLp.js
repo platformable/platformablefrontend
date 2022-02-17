@@ -30,7 +30,7 @@ const CallToActionLp = ({
     })
     const res = await response.statusText || response.statusMessage
 
-    if(res==='OK') {
+    if(res==='OK' || res===undefined){
       setFormSuccess(!formSuccess)
     }
   }

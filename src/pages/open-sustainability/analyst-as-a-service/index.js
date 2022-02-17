@@ -58,7 +58,7 @@ export default function Index({ data, location }) {
     })
   const res = await response.statusText || response.statusMessage
 console.log("res",res)
-  if(res==='OK'){
+if(res==='OK' || res===undefined){
   setFormSuccess(!formSuccess)
   }
   
