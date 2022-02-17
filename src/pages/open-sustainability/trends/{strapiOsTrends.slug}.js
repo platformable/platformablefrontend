@@ -61,7 +61,6 @@ const getTypeOfComponent = (section,index)=> {
 
 
 
-    console.log("data",data)
   return (
     <Layout>
       <SEO title={data.title} img={data?.feature_image?.url}/>
@@ -73,8 +72,8 @@ const getTypeOfComponent = (section,index)=> {
             <div className="left flex items-center">
               <div>
                 <h3 className="font-black mb-5 md:text-5xl text-3xl md:text-left text-center">{data.title}</h3>
-                <p className="text-sm">{data.excerpt}</p>
-                {/* <div dangerouslySetInnerHTML={{ __html: data?.hero_content }}></div> */}
+                {/* <p className="text-sm">{data.excerpt}</p> */}
+                <div dangerouslySetInnerHTML={{ __html: data?.hero_content }}></div>
               </div>
             </div>
             <div className="right flex justify-end md:block hidden">
