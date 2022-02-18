@@ -404,7 +404,7 @@ const Labs = () => {
               <div className="form-message-container flex justify-center my-5">
                 <div className="form-messages   md:rounded-full py-3 px-3 bg-green-300 md:w-1/3 w-1/1">
                   <p className="text-center text-white text-sm px-5">
-                    Thank you for your subscription
+                    Thanks for your subscription, please check your email for a confirmation
                   </p>
                 </div>
               </div>

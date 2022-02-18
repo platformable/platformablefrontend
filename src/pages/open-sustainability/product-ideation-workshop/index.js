@@ -75,7 +75,7 @@ const IndexPage = ({location}) => {
           <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
         </div>
       </div>
-      {formSuccess && <p className="text-center ">Thank you for your subscription</p>}
+      {formSuccess && <p className="text-center ">Thanks for your subscription, please check your email for a confirmation</p>}
         </div>
       </section>
   </Layout>

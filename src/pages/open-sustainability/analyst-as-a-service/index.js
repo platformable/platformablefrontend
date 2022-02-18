@@ -170,7 +170,7 @@ if(res==='OK' || res===undefined){
           <button className="px-4 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
         </div>
       </div>
-      {formSuccess && <p className="text-center my-5">Thank you for your subscription</p>}
+      {formSuccess && <p className="text-center my-5">Thanks for your subscription, please check your email for a confirmation</p>}
         </div>
       </section>
 

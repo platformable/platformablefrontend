@@ -18,7 +18,7 @@ const PaymentSuccess = () => {
         <div className="grid md:grid-cols-6 md:gap-4 grid-cols-1 md:gap-2 px-5 justify-center items-center h-screen  ">
           <div className="col-start-3 col-span-2  rounded-xl  px-10 py-10">
             <h3 className="text-3xl text-center font-black">
-              Thank you for your subscription
+              Thanks for your subscription, please check your email for a confirmation
             </h3>
             <h4 className="text-xl text-center font-black my-5">
               We are confirming your order

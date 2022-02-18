@@ -65,7 +65,7 @@ const CallToActionLp = ({
             </div>
             {formSuccess && (
               <p className="text-center text-yellow-300 pb-5">
-                Thank you for your subscription
+                Thanks for your subscription, please check your email for a confirmation
               </p>
             )}
           </div>

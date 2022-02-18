@@ -123,13 +123,13 @@ const IndexPage = ({ data }) => {
       title:`Open Sustainability Trends Report `,
       date:"2022",
       btnBackground:"btn-trends-os",
-      btnText:"Download",
+      btnText:"Read it here",
       img:QuarterlyImg,
       //url:"/open-banking-apis-for-sustainability-an-open-ecosystem-approach",
-      //url:"/open-sustainability/trends/open-sustainability-trends-report-q1-2022/",
-      url:OSTrendsFile,
-      downloadText:"Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022",
-      download:true
+      url:"/open-sustainability/trends/open-sustainability-trends-report-q1-2022/",
+      //url:OSTrendsFile,
+      //downloadText:"Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022",
+      download:false
     },
     {
       title:`Open Health Trends Report`,
@@ -474,7 +474,7 @@ const IndexPage = ({ data }) => {
           <button className="px-4 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
         </div>
       </div>
-      {formSuccess && <p className="text-center my-5">Thank you for your subscription</p>}
+      {formSuccess && <p className="text-center my-5">Thanks for your subscription, please check your email for a confirmation</p>}
         </div>
       </section>
       {/* 
