@@ -32,7 +32,8 @@ const BlogPost = ({ data, pageContext, location }) => {
   )
   const activePostTitle = data.strapiPost.title
 
-  const imgAsolutePath =  data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src || `https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png`;
+  // you should probably query the site.sitemetadata here to get the siteUrl 
+  const imgAsolutePath =  `https://www.platformable.com/${data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}` || `https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png`;
 
 
   const cleanCategoryPosts = sameCatergoryPosts.filter(
