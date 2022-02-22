@@ -21,6 +21,8 @@ import { EmailIcon, LinkedinIcon, TwitterIcon } from "react-share"
 const isBrowser = typeof window !== "undefined"
 
 const BlogPost = ({ data, pageContext, location }) => {
+
+
   const actualPostCategory = data.strapiPost.categories[0].name
   const noStagingPosts = data
     ? data.allStrapiPost.edges.filter(post => post.node.staging != true)
@@ -30,8 +32,7 @@ const BlogPost = ({ data, pageContext, location }) => {
   )
   const activePostTitle = data.strapiPost.title
 
-  const imgAsolutePath = `https://platformable.com${data.strapiPost.featured_image.childImageSharp
-  .gatsbyImageData.images.fallback.src}` || `https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png`;
+  const imgAsolutePath =  data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src || `https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png`;
 
 
   const cleanCategoryPosts = sameCatergoryPosts.filter(
@@ -139,6 +140,9 @@ const BlogPost = ({ data, pageContext, location }) => {
     } else {
     }
   }, [data])
+
+  console.log('image: ',imgAsolutePath)
+
 
   return (
     <>
@@ -274,13 +278,10 @@ const BlogPost = ({ data, pageContext, location }) => {
               <div className="post-featured-img shadow-md mb-8 rounded-lg flex justify-center w-full">
                 {data.strapiPost.featured_image &&
                 data.strapiPost.featured_image ? (
-                  <img
-                    src={
-                      data.strapiPost.featured_image.childImageSharp
-                        .gatsbyImageData.images.fallback.src
-                    }
-                    className="text-center mb-5  top-featured-post-image w-full"
-                    alt={data.strapiPost.title}
+                  <GatsbyImage 
+                  image={getImage(data.strapiPost.featured_image)} 
+                  className="text-center mb-5 top-featured-post-image w-full"
+                  alt={data.strapiPost.title}
                   />
                 ) : null}
               </div>
