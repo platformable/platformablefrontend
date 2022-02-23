@@ -142,7 +142,7 @@ const BlogPost = ({ data, pageContext, location }) => {
     }
   }, [data])
 
-  console.log('image: ',imgAsolutePath)
+/*   console.log('image: ',imgAsolutePath) */
 
 
   return (

@@ -146,7 +146,7 @@ module.exports = {
       options: {
         host: 'https://www.platformable.com',
         sitemap: 'https://www.platformable.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/',disallow: ['/app','/app/*'] }]
+       // policy: [{ userAgent: '*', allow: '/',disallow: ['/app','/app/*'] }]
       }
     },
 /*     {
