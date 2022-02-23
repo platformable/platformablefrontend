@@ -85,12 +85,12 @@ const getTypeOfComponent = (section,index)=> {
     },[])
 
 
-
+/* 
 const socialImg = data?.featured_image?.formats?.medium?.url;
-
+console.log("data.featured_image: ",data?.featured_image.formats.medium.url) */
   return (
     <Layout>
-      <SEO title={data.title} img={socialImg}/>
+      <SEO title={data.title} img="https://res.cloudinary.com/platform1/image/upload/v1645454942/Os_trends_report_cover_7dda1373ad.png"/>
       <section
         className=" md:my-5 my-5 sm:mx-auto md:px-0 px-5 md:py-5 py-2 bg-green-50 " /* style={{backgroundColor:"#0099bb"}} */
       >

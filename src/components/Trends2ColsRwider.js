@@ -9,7 +9,7 @@ import { EmailIcon, LinkedinIcon, TwitterIcon } from "react-share"
 
 const Trends2colsrwider = ({ section, index, location }) => {
 
-  console.log("section",section)
+  
   /* const downloadImg = url => {
     console.log("download")
     var el = document.createElement("a")

@@ -12,7 +12,7 @@
  
  function SEO({ description, lang, meta, title,img }) {
 
-
+console.log("social img:", img)
    const { site } = useStaticQuery(
      graphql`
        query {
