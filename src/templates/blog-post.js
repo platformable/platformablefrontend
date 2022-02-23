@@ -33,7 +33,7 @@ const BlogPost = ({ data, pageContext, location }) => {
   const activePostTitle = data.strapiPost.title
 
   // you should probably query the site.sitemetadata here to get the siteUrl 
-  const imgAsolutePath =  `https://www.platformable.com/${data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}` || `https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png`;
+  const imgAsolutePath =  `https://www.platformable.com${data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}` || `https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png`;
 
 
   const cleanCategoryPosts = sameCatergoryPosts.filter(
@@ -449,7 +449,7 @@ export const query = graphql`
           featured_image {
             childImageSharp {
               gatsbyImageData(
-                width: 300
+                width: 800
                 blurredOptions: { width: 100 }
                 placeholder: BLURRED
                 formats: PNG
