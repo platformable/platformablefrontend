@@ -6432,3 +6432,23 @@ font-size:20px;
   font-size:25px !important;
   font-weight:bold;
   }
+
+ #os-product-idea-workshop {
+   background-color:#C7F3E5;
+ }
+
+.os-heading-highlight {
+  background-color:#31F3B6;
+}
+
+.os-product-idea-workshop-hero {
+  display:grid;
+  grid-template-columns:2fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  .os-product-idea-workshop-hero {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  }

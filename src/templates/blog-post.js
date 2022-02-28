@@ -34,7 +34,7 @@ const BlogPost = ({ data, pageContext, location }) => {
 
   // you should probably query the site.sitemetadata here to get the siteUrl 
   const imgAsolutePath =  `https://www.platformable.com${data.strapiPost.featured_image.childImageSharp.gatsbyImageData.images.fallback.src}` || `https://res.cloudinary.com/platform1/image/upload/v1644508012/platformable_Featuredimg_e85aa2f51a.png`;
-
+console.log("img:", imgAsolutePath)
 
   const cleanCategoryPosts = sameCatergoryPosts.filter(
     post => post.node.title !== activePostTitle
@@ -489,7 +489,12 @@ export const query = graphql`
       updated_at
       featured_image {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(
+            width: 1200
+            blurredOptions: { width: 100 }
+            placeholder: BLURRED
+            formats: PNG
+          )
         }
       }
       calendly

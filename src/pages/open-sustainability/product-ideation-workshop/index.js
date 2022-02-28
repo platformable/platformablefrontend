@@ -12,6 +12,8 @@ import CallToActionLp from "./components/CallToActionLp"
 import FormLp from './components/FormLp';
 import Breadcrumbs from '../../../components/breadcrumbs'
 
+import heroImg from '../../../static/os/os-product-ideation-icon-hero.png'
+
 const IndexPage = ({location}) => {
   const [form,setForm]=useState("");
   const [formSuccess,setFormSuccess]=useState(false)
@@ -40,6 +42,28 @@ const IndexPage = ({location}) => {
   <Layout>
     <Breadcrumbs location={location}/>
     <SEOLp title="Product Ideation Workshop" />
+
+  {/*   <section id="os-product-idea-workshop" className="py-0">
+      <div className="os-product-idea-workshop-hero container mx-auto place-items-center ">
+      <div className="os-product-idea-workshop-hero-left align-middle">
+        <h3 className="font-black text-4xl mb-2">Building green fintech:</h3>
+        <h3 className="font-black text-4xl mb-2"> <span className="os-heading-highlight px-3 ">impactful design</span></h3>
+        <h3 className="font-black text-4xl"><span className="os-heading-highlight px-3">and product ideation</span></h3>
+        <p className="my-5 font-black">Using open banking and open finance APIs <br />
+        to build sustainability products and features
+        </p>
+        <p>
+        The move to digital infrastructures and addressing environmental challenges like climate change requires greater collaboration. Learn how APIs enable this and can play a key part in an impactful and revenue-generating business strategy
+        </p>
+      </div>
+
+      <div className="os-product-idea-workshop-hero-right bg-green-400">
+      <img src={heroImg} alt="" />
+      </div>
+      </div>
+    </section> */}
+
+
     <HeroLp />
 
     <section>
