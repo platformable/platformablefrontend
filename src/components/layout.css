@@ -185,6 +185,10 @@ p {
   --labs-sub3: #e6add4;
 }
 
+.main-text-color {
+  color:var(--russian-violet-dark);
+}
+
 /* MOBILE NAV */
 .sidenav {
   height: 100%;
@@ -231,7 +235,9 @@ p {
     font-size: 18px;
   }
 }
-
+.bg-main-color {
+  background-color: #1a014c;
+}
 .bg-russian-violet-dark {
   background-color: var(--russian-violet-dark);
 }
@@ -6432,9 +6438,36 @@ font-size:20px;
   font-size:25px !important;
   font-weight:bold;
   }
+.os-pwi-hero {
+  background-image: url('../static/os/os-pwi-bg-hero-small.png');
+  background-position: 950px 0;
+  background-repeat: no-repeat;
+}
 
+@media screen and (max-width: 768px) {
+  .os-pwi-hero {
+    background-image: none;
+  }
+  }
+
+@media screen and (max-width: 2399px) {
+  .os-pwi-hero {
+    background-image: url('../static/os/os-pwi-bg-hero-small.png');
+    background-position: 850px 0;
+    background-repeat: no-repeat;
+  }
+  }
+
+
+  @media screen and (min-width: 2400px) {
+    .os-pwi-hero {
+      background-image: url('../static/os/os-pwi-bg-hero-small.png');
+      background-position: 1100px 0;
+      background-repeat: no-repeat;
+    }
+    }
  #os-product-idea-workshop {
-   background-color:#C7F3E5;
+   background-color:#E3F9F2;
  }
 
 .os-heading-highlight {
@@ -6443,7 +6476,7 @@ font-size:20px;
 
 .os-product-idea-workshop-hero {
   display:grid;
-  grid-template-columns:2fr 1fr;
+  grid-template-columns:1fr 1fr;
 }
 
 @media screen and (max-width: 768px) {
@@ -6452,3 +6485,103 @@ font-size:20px;
     grid-template-columns:1fr;
   }
   }
+.os-product-idea-workshop-our-workshop {
+  background-color:#C7F3E5;
+}
+.os-product-idea-workshop-4-square-container {
+  display:grid;
+  grid-template-columns:2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+  gap: 10px;
+  place-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .os-product-idea-workshop-4-square-container {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  }
+
+
+.os-product-idea-workshop-green-span {
+  background-color:#31F3B6;
+}
+.bg-os-piw-btn {
+  background-color: #31F3B6;
+}
+.os-product-idea-workshop-green-span-text-color {
+  color:#31F3B6;
+}
+
+.os-product-ideation-workshop-green-fintech-challenge-container {
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .os-product-ideation-workshop-green-fintech-challenge-container {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  }
+.os-product-ideation-workshop-green-fintech-challenge-box img {
+max-width: 120px;
+text-align: center;
+}
+
+.os-product-idea-workshop-4-square-container-box,.os-product-ideation-workshop-green-fintech-challenge-box {
+  border:2px solid #31F3B6;
+}
+
+.os-product-ideation-workshop-green-fintech-challenge-green {
+  background-color: #31F3B6;
+}
+
+.os-product-ideation-workshop-section5-container {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  gap:20px;
+  place-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .os-product-ideation-workshop-section5-container {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  }
+
+.os-product-ideation-workshop-section5-right-color-green {
+  color:#31F3B6;
+}
+
+.os-product-ideation-workshop-section6 {
+background-color: #31F3B6;
+}
+.os-product-ideation-workshop-section6-container {
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .os-product-ideation-workshop-section6-container {
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  }
+
+  .os-product-ideation-workshop-section7-container {
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+
+  }
+  @media screen and (max-width: 768px) {
+    .os-product-ideation-workshop-section7-container  {
+      display:grid;
+      grid-template-columns:1fr;
+    }
+    }
