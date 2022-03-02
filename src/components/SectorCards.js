@@ -25,7 +25,7 @@ const Sectorcards = ({ data, numberOfColumns, bgColor }) => {
                   className="w-24  bg-white shadow rounded-full p-3 my-5"
                 />
                 </div>
-                <h6 className="font-black text-center my-3"> {el.title}</h6>
+                <h6 className="font-bold text-center my-3"> {el.title}</h6>
                 <p className="hidden md:block mb-5 text-center text-primary">{el.paragraph}</p>
               </div>
               </Link>

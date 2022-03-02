@@ -46,7 +46,7 @@ if(data) {
       <div className="container mx-auto ">
         <div className="grid md:grid-cols-6 md:gap-4 grid-cols-1 md:gap-2 px-5 justify-center items-center h-screen  ">
           <div className="col-start-3 col-span-2 bg-gray-100 rounded-xl  px-10 py-10">
-            <h3 className="font-black text-lg">Edit Profile</h3>
+            <h3 className="font-bold text-lg">Edit Profile</h3>
 
             <div className="mb-4">
               <label

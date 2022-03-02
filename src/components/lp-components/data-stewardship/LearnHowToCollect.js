@@ -30,7 +30,7 @@ const LearnHowToCollect = () => {
   ]
   return (
     <section className="px-8 py-6 container mx-auto mx-4">
-      <h3 className="my-4 mx-auto text-center font-black">
+      <h3 className="my-4 mx-auto text-center font-bold">
         Learn how to collect, manage, analyse and reuse data in ways that are
         ethical, responsible and participatory.
       </h3>
@@ -45,8 +45,8 @@ const LearnHowToCollect = () => {
             />
 
             <div className="mx-auto">
-              <h4 className="text-center font-black">{img.title}</h4>
-              <p className="text-xs text-center font-black">{img.paragraph}</p>
+              <h4 className="text-center font-bold">{img.title}</h4>
+              <p className="text-xs text-center font-bold">{img.paragraph}</p>
             </div>
           </div>
         ))}

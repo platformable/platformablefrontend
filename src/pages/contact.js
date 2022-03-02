@@ -10,7 +10,7 @@ const Contact = () => {
             <div className="container mx-auto">
                 <div className="contact-hero grid md:grid-cols-2 grid-cols-1">
                     <div className="hero-contact-text my-5 py-10 px-3">
-                        <h3 className="font-black">Contact Us</h3>
+                        <h3 className="font-bold">Contact Us</h3>
                         <p>Please write to mark@platformable.com, complete the form below or schedule an appointment</p>
                     </div>
                     <div className="hero-contact-image flex justify-end">
@@ -32,7 +32,7 @@ const Contact = () => {
                     <div className="contact-form px-3">
 
 
-                        <h5 className="font-black text-center my-5">Leave us a message</h5>
+                        <h5 className="font-bold text-center my-5">Leave us a message</h5>
                                 <form  name="platformableWebsiteContact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                                 <input type="hidden" name="bot-field" />
                                 <input type="hidden" name="form-name" value="platformableWebsiteContact" />
@@ -70,7 +70,7 @@ const Contact = () => {
                     </div>
                   
                     <section className="calendly">
-                        <h5 className="font-black text-center my-5">Schedule an appointment</h5>
+                        <h5 className="font-bold text-center my-5">Schedule an appointment</h5>
                         <InlineWidget url="https://calendly.com/platformable" />
                     </section>
                 </div>

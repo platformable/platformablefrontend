@@ -6488,6 +6488,10 @@ font-size:20px;
 .os-product-idea-workshop-our-workshop {
   background-color:#C7F3E5;
 }
+
+.os-product-idea-workshop-our-workshop-subscribe-form {
+  background-color:#E6FFF5;
+}
 .os-product-idea-workshop-4-square-container {
   display:grid;
   grid-template-columns:2fr 1fr 2fr 1fr 2fr 1fr 2fr;
@@ -6509,6 +6513,12 @@ font-size:20px;
 }
 .bg-os-piw-btn {
   background-color: #31F3B6;
+  transition: 0.5s ease-in-out;
+}
+
+.bg-os-piw-btn:hover {
+  background-color: #00b57d;
+  color:white;
 }
 .os-product-idea-workshop-green-span-text-color {
   color:#31F3B6;
@@ -6585,3 +6595,20 @@ background-color: #31F3B6;
       grid-template-columns:1fr;
     }
     }
+
+.os-btn-text-green {
+  color:#31F3B6;
+}
+/* 
+HOMEPAGE */
+.homepage-hero-bg {
+  background-color:#E4E0F8;
+}
+
+.bg-homepage-trends-releases {
+
+  background-color:#F3F2F6;
+}
+.bg-homepage-latest-releases {
+  background-color:#F3F2F6;
+}

@@ -74,7 +74,7 @@ const Labs = () => {
       <div className="container mx-auto sm:mx-auto md:px-0 px-5">
         <div className="labs-hero-container flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center md:px-3 lg:px-0 xl:px-3">
           <div className="labs-hero-left md:w-3/5 w:1/1">
-            <h3 className="font-black labs-main-color-dark">Labs</h3>
+            <h3 className="font-bold labs-main-color-dark">Labs</h3>
             <p>
               Learn about our experimental and developmental work to build tools
               that support open ecosystems.
@@ -91,7 +91,7 @@ const Labs = () => {
 
       <section className="bg-pink-50 py-10 mx-auto md:px-0 px-5">
         <div className="container mx-auto md:px-3 lg:px-0 xl:px-3">
-          <h3 className="font-black mb-5 labs-main-color-dark">
+          <h3 className="font-bold mb-5 labs-main-color-dark">
             Current Lab Projects
           </h3>
           <div className="current-labs-container grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1">
@@ -170,7 +170,7 @@ const Labs = () => {
         <div className="container mx-auto md:px-3 lg:px-0 xl:px-3">
           <div className="lab-component-container flex items-center">
             <div className="lab-component-left md:w-3/5 w-1/1 ">
-              <h3 className="font-black mb-5">
+              <h3 className="font-bold mb-5">
                 Blog component code generator for headless CMS
               </h3>
               <p className="text-sm mb-5">
@@ -197,7 +197,7 @@ const Labs = () => {
         <div className="container mx-auto md:px-3 lg:px-0 xl:px-3">
           <div className="lab-component-container flex items-center">
             <div className="lab-component-left md:w-3/5 w-1/1 ">
-              <h3 className="font-black mb-5">
+              <h3 className="font-bold mb-5">
                 Open banking / open finance ecosystem data model
               </h3>
               <p className="text-sm mb-5">
@@ -227,7 +227,7 @@ const Labs = () => {
         <div className="container mx-auto md:px-3 lg:px-0 xl:px-3">
           <div className="lab-component-container flex items-center">
             <div className="lab-component-left md:w-3/5 w-1/1 ">
-              <h3 className="font-black mb-5">Open health ecosystem model</h3>
+              <h3 className="font-bold mb-5">Open health ecosystem model</h3>
               <p className="text-sm mb-5">
                 Drawing on ecosystem{" "}
                 <Link
@@ -258,7 +258,7 @@ const Labs = () => {
         <div className="container mx-auto md:px-3 lg:px-0 xl:px-3">
           <div className="lab-component-container flex items-center">
             <div className="lab-component-left md:w-3/5 w-1/1 ">
-              <h3 className="font-black mb-5">
+              <h3 className="font-bold mb-5">
                 Open sustainability data model
               </h3>
               <p className="text-sm mb-5">
@@ -285,7 +285,7 @@ const Labs = () => {
         <div className="container mx-auto md:px-3 lg:px-0 xl:px-3">
           <div className="lab-component-container flex items-center">
             <div className="lab-component-left md:w-3/5 w-1/1 ">
-              <h3 className="font-black mb-5">
+              <h3 className="font-bold mb-5">
                 Equity tool to measure participation in open ecosystem
               </h3>
               <p className="text-sm mb-5">
@@ -316,7 +316,7 @@ const Labs = () => {
         <div className="container mx-auto md:px-3 lg:px-0 xl:px-3">
           <div className="lab-component-container flex items-center">
             <div className="lab-component-left md:w-3/5 w-1/1 ">
-              <h3 className="font-black mb-5">Equity tech financing</h3>
+              <h3 className="font-bold mb-5">Equity tech financing</h3>
               <p className="text-sm mb-5">
                 We are excited by some of the new approaches that industry and
                 non-profits are taking to invest in new social impact and
@@ -345,7 +345,7 @@ const Labs = () => {
             <div className="labs-form-container">
               <div className="lab-form-top-container flex items-center">
                 <div className="lab-form-top-left-container">
-                  <h3 className="text-3xl font-black">
+                  <h3 className="text-3xl font-bold">
                     Support our labs initiatives
                   </h3>
                   <p>

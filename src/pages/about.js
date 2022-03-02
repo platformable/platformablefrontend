@@ -19,8 +19,8 @@ export default function about({ data }) {
         <div className="container mx-auto">
           <div className="flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center px-0 md:px-3 lg:px-0 xl:px-3">
             <div className="labs-hero-left md:w-3/5 w:1/1 ">
-              {/* <h3 className="font-black md:text-2xl text-xl">{data.strapiAbout.heroText}</h3> */}
-              <h3 className="font-black md:text-2xl text-xl">
+              {/* <h3 className="font-bold md:text-2xl text-xl">{data.strapiAbout.heroText}</h3> */}
+              <h3 className="font-bold md:text-2xl text-xl">
                 We are a Barcelona based startup building data products and
                 digital tools for a global audience of non-profits, businesses,
                 startups, and multilateral organisations
@@ -42,7 +42,7 @@ export default function about({ data }) {
         <div className="OurMission container sm:mx-auto md:px-0 px-5">
           <div className="container mx-auto">
             <div className=" pb-5 px-0 md:px-3 lg:px-0 xl:px-3">
-              <h3 className="font-black text-center md:text-2xl text-xl">
+              <h3 className="font-bold text-center md:text-2xl text-xl">
                 Our Mission
               </h3>
               <h4 className="text-center md:text-2xl text-xl">
@@ -91,7 +91,7 @@ export default function about({ data }) {
 
       <section className="container about-clients mt-10 mb-5 sm:mx-auto md:px-0 px-5 ">
         <div className=" pb-12 px-0 md:px-3 lg:px-0 xl:px-3">
-          <h3 className="text-center font-black my-5 md:text-2xl text-xl">
+          <h3 className="text-center font-bold my-5 md:text-2xl text-xl">
             Current and previous clients
           </h3>
 
@@ -183,7 +183,7 @@ export default function about({ data }) {
         <div className="container sm:mx-auto md:px-0 px-5">
           <div className="container mx-auto">
             <div className="px-0 md:px-3 lg:px-0 xl:px-3">
-              <h3 className="text-center font-black my-5 md:text-2xl text-xl">
+              <h3 className="text-center font-bold my-5 md:text-2xl text-xl">
                 Our commitment...
               </h3>
 
@@ -196,7 +196,7 @@ export default function about({ data }) {
                         alt="platformable"
                         className="img-md-thumbnail"
                       />
-                      <h4 className="font-black text-center md:text-lg text-sm">
+                      <h4 className="font-bold text-center md:text-lg text-sm">
                         ...To open source <br /> and open ecosystems
                       </h4>
                       <StaticImage
@@ -234,7 +234,7 @@ export default function about({ data }) {
                         alt="platformable"
                         className="img-md-thumbnail"
                       />
-                      <h4 className="font-black text-center md:text-lg text-sm">
+                      <h4 className="font-bold text-center md:text-lg text-sm">
                         ...To diversisty <br /> and equity
                       </h4>
 
@@ -322,7 +322,7 @@ export default function about({ data }) {
         <div className="container sm:mx-auto md:px-0 px-5">
           <div className="container mx-auto">
             <div className="pb-5 px-0 md:px-3 lg:px-0 xl:px-3">
-              <h3 className="font-black md:text-2xl text-xl text-center mb-4">
+              <h3 className="font-bold md:text-2xl text-xl text-center mb-4">
                 Platformable Team
               </h3>
               <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-3">
@@ -344,11 +344,11 @@ export default function about({ data }) {
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
-                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
                                 {`${userauthor.user[0].name} ${userauthor.user[0].lastname}`}
                               </h3>
 
-                              <p className="text-xs text-center italic font-black">
+                              <p className="text-xs text-center italic font-bold">
                                 {userauthor.user[0].position}
                               </p>
                               {userauthor.user[0].pronoun && (
@@ -379,11 +379,11 @@ export default function about({ data }) {
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
-                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
                                 {`${userauthor.user[4].name} ${userauthor.user[4].lastname}`}
                               </h3>
 
-                              <p className="text-xs text-center italic font-black">
+                              <p className="text-xs text-center italic font-bold">
                                 {userauthor.user[4].position}
                               </p>
                               {userauthor.user[4].pronoun && (
@@ -414,11 +414,11 @@ export default function about({ data }) {
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
-                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
                                 {`${userauthor.user[5].name} ${userauthor.user[5].lastname}`}
                               </h3>
 
-                              <p className="text-xs text-center italic font-black">
+                              <p className="text-xs text-center italic font-bold">
                                 {userauthor.user[5].position}
                               </p>
                               {userauthor.user[5].pronoun && (
@@ -449,11 +449,11 @@ export default function about({ data }) {
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
-                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
                                 {`${userauthor.user[1].name} ${userauthor.user[1].lastname}`}
                               </h3>
 
-                              <p className="text-xs text-center italic font-black">
+                              <p className="text-xs text-center italic font-bold">
                                 {userauthor.user[1].position}
                               </p>
                               {userauthor.user[1].pronoun && (
@@ -484,11 +484,11 @@ export default function about({ data }) {
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
-                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
                                 {`${userauthor.user[6].name} ${userauthor.user[6].lastname}`}
                               </h3>
 
-                              <p className="text-xs text-center italic font-black">
+                              <p className="text-xs text-center italic font-bold">
                                 {userauthor.user[6].position}
                               </p>
                               {userauthor.user[6].pronoun && (
@@ -520,11 +520,11 @@ export default function about({ data }) {
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
-                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
                                 {`${userauthor.user[7].name} ${userauthor.user[7].lastname}`}
                               </h3>
 
-                              <p className="text-xs text-center italic font-black">
+                              <p className="text-xs text-center italic font-bold">
                                 {userauthor.user[7].position}
                               </p>
                               {userauthor.user[7].pronoun && (
@@ -556,11 +556,11 @@ export default function about({ data }) {
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
-                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
                                 {`${userauthor.user[8].name} ${userauthor.user[8].lastname}`}
                               </h3>
 
-                              <p className="text-xs text-center italic font-black">
+                              <p className="text-xs text-center italic font-bold">
                                 {userauthor.user[8].position}
                               </p>
                               {userauthor.user[8].pronoun && (
@@ -592,11 +592,11 @@ export default function about({ data }) {
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
-                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
                                 {`${userauthor.user[2].name} ${userauthor.user[2].lastname}`}
                               </h3>
 
-                              <p className="text-xs text-center italic font-black">
+                              <p className="text-xs text-center italic font-bold">
                                 {userauthor.user[2].position}
                               </p>
                               {userauthor.user[2].pronoun && (
@@ -628,11 +628,11 @@ export default function about({ data }) {
                         <div className="p-4 md:p-6 md:block md:px-5 px-5">
                           <div className="flex gap-4 items-center mb-5 justify-center ">
                             <div>
-                              <h3 className="font-black text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
                                 {`${userauthor.user[3].name} ${userauthor.user[3].lastname}`}
                               </h3>
 
-                              <p className="text-xs text-center italic font-black">
+                              <p className="text-xs text-center italic font-bold">
                                 {userauthor.user[3].position}
                               </p>
                               {userauthor.user[3].pronoun && (

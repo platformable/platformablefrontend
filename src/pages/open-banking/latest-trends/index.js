@@ -40,7 +40,7 @@ const LPLatestTrend = ({location}) => (
     ></GridDisplay>
 
     <section className="mt-6 mx-auto py-8 bg-lightPink">
-      <h1 className="text-center my-5 font-black">2021</h1>
+      <h1 className="text-center my-5 font-bold">2021</h1>
       <div className="my-0 md:mx-16 mx-2 py-0 px-3 md:flex justify-evenly items-center">
         <div className="text-center">
           {/* <Link to="/trends-reports/2021/q1"> */}
@@ -71,7 +71,7 @@ const LPLatestTrend = ({location}) => (
     </section>
 
     <section className="mx-auto py-8 bg-blueish">
-      <h1 className="text-center my-5 font-black">2020</h1>
+      <h1 className="text-center my-5 font-bold">2020</h1>
       <div className="my-0 md:mx-16 mx-2 py-0 px-3 md:flex justify-evenly items-center">
         <div className="text-center">         
           <Link to={'/q1-2020-open-banking-quarterly-trends-report'}>

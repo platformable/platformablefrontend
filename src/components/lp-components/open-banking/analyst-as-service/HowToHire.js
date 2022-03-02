@@ -5,7 +5,7 @@ export default function HowToHire() {
     <section className="howToHire posts-container max-w-md container mx-auto rounded-xl py-10 my-10 px-20">
       <div>
         <div className="">
-          <h3 className="font-black text-center">How to hire the service</h3>
+          <h3 className="font-bold text-center">How to hire the service</h3>
           <p className="text-center">
             Our analyst service is available to subscribers of our Direction and
             Leadership Trends Report Packs.

@@ -12,10 +12,10 @@ const OpenHealthPostx = ({ data }) => {
     <Layout>
       <SEO title="Blog" />
       <section className="container mx-auto all-blog-content my-20 ">
-        <h3 className="text-3xl font-black text-center md:px-0 px-5 ">
+        <h3 className="text-3xl font-bold text-center md:px-0 px-5 ">
           Open Health
         </h3>
-        <h3 className="text-1xl font-black text-center mb-5 md:px-0 px-5">
+        <h3 className="text-1xl font-bold text-center mb-5 md:px-0 px-5">
           Posts and Articles
         </h3>
         <div className="container mx-auto all-blog-content my-20 md:px-0 px-5">

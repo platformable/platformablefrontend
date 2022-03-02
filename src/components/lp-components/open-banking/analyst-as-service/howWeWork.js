@@ -49,7 +49,7 @@ const OBAnalystAsService = () => {
 
   return (
     <section className="bg-lightPink py-3 px-8">
-      <h2 className="my-10 md:mx-16 text-center font-black">How we work</h2>
+      <h2 className="my-10 md:mx-16 text-center font-bold">How we work</h2>
 
       <div className="my-0  md:w-3/5 mx-auto">
         {images.map((img, i) => (
@@ -57,7 +57,7 @@ const OBAnalystAsService = () => {
             <img src={img.src} alt={img.title} className="mr-5" />
 
             <div className="">
-              <h4 className="font-black text-1xl">{img.title}</h4>
+              <h4 className="font-bold text-1xl">{img.title}</h4>
               <p>{img.paragraph}</p>
             </div>
           </div>

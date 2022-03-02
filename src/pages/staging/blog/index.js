@@ -10,7 +10,7 @@ export default function StagingBlogs({ data, location }) {
     <Layout>
       <SEO title="Blog" />
       <section className="container mx-auto ">
-        <div className="my-10 px-5"><h3 className="font-black text-center">Staging Blog Posts</h3></div>
+        <div className="my-10 px-5"><h3 className="font-bold text-center">Staging Blog Posts</h3></div>
       </section>
       <div className="container mx-auto all-blog-content my-20 px-5">
         {/* TOP LATESTS 3 POSTS */}

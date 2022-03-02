@@ -23,7 +23,7 @@ export default function TrendsMainImageOnLeftTextOnTheRight({
 {/*     <span className="text-xs my-5 italic">Section-{section.id}</span> */}
       <div class="trends-rowsWithImagesOnLeft">
         <div class="trends-rowsWithImagesOnLeft-top-content mb-10">
-          <h3 className="font-black">{heading}</h3>
+          <h3 className="font-bold">{heading}</h3>
           <p>
             <div dangerouslySetInnerHTML={{ __html: content }}></div>
           </p>

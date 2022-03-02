@@ -52,7 +52,7 @@ const IndexPage = ({location}) => {
               <div>
                 <p className="text-center text-xl">Embrace the advantages of open banking.</p>
                 <p className="text-center">Bring your data to life with our training.</p>
-              <h2 className="text-2xl font-black text-center mt-5">Sign up now for pricing and calendar availability</h2>
+              <h2 className="text-2xl font-bold text-center mt-5">Sign up now for pricing and calendar availability</h2>
           <div className="m-4 flex justify-center">
           <input type="text" className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-main-color border-gray-200 bg-white subscribe-input" placeholder="Your email address" onChange={(e)=>setForm(e.target.value)}/>
           <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>

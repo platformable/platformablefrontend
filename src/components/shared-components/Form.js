@@ -12,7 +12,7 @@ const Form = ({
 }) => {
   return (
     <section className={formClass} id={formID}>
-      <h2 className="text-2xl font-black">{title}</h2>
+      <h2 className="text-2xl font-bold">{title}</h2>
 
       <iframe 
         id={iframeId}

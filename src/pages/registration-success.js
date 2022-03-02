@@ -19,7 +19,7 @@ export const RegistrationSuccess = () => {
             src={Logo}
             className="my-5"
           /></Link>
-            <h3 className="text-3xl text-center font-black my-5">Registration Completed</h3>
+            <h3 className="text-3xl text-center font-bold my-5">Registration Completed</h3>
           {/* <img
             src={successImg}
             className="my-10"

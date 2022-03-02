@@ -30,7 +30,7 @@ const HowWeDoItCards = () => {
   ]
   return (
     <section className="cards-section my-2 container mx-auto py-8">
-      <h2 className="text-center mt-2 text-secondary font-black">
+      <h2 className="text-center mt-2 text-secondary font-bold">
         How we do it
       </h2>
 
@@ -44,7 +44,7 @@ const HowWeDoItCards = () => {
           >
             <img src={img.src} alt={img.title} className="mr-8 w-20 h-20" />
             <div className="w-8/12">
-              <h6 className="my-1 text-secondary font-black">{img.title}</h6>
+              <h6 className="my-1 text-secondary font-bold">{img.title}</h6>
               <p className="text-darkGrey">{img.paragraph}</p>
             </div>
           </div>

@@ -47,7 +47,7 @@ const HowWeDoIt = () => {
             <img src={img.src} alt={img.title} className="mr-8 w-20 h-20" />
 
             <div className="w-8/12">
-              <h4 className="my-1 text-purple font-black">{img.title}</h4>
+              <h4 className="my-1 text-purple font-bold">{img.title}</h4>
               <p className="text-grayed">{img.paragraph}</p>
             </div>
           </div>

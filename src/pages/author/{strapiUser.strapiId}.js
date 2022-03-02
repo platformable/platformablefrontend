@@ -33,11 +33,11 @@ const AuthorPage = ({ data }) => {
               )}
             </div>
             <div className="px-5 text-center sm:center md:right md:text-left lg:text-left">
-              <h3 className="font-black">
+              <h3 className="font-bold">
                 {user.name} {user.lastname}
                 {console.log(user.id)}
               </h3>
-              <h5 className="font-black italic">{user.position}</h5>
+              <h5 className="font-bold italic">{user.position}</h5>
               <h6 className="">
                 <strong>Email: </strong> {` ${user.email}`}
               </h6>
@@ -47,7 +47,7 @@ const AuthorPage = ({ data }) => {
         </div>
 
         <section className="blog-cards sm:mx-auto px-5 md:px-3 lg:px-0 xl:px-3">
-          <h3 className="text-center font-black mt-14">Posts</h3>
+          <h3 className="text-center font-bold mt-14">Posts</h3>
           <div className="bottom-line"></div>
           <div className="container mx-auto all-blog-content">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

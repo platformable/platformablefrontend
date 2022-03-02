@@ -93,8 +93,8 @@ if(res==='OK' || res===undefined){
       <div className="container mx-auto">
           <div className="hero-container grid md:grid-cols-2 grid-cols-1 gap-4 items-center">
               <div className="hero-text px-3">
-                  <h3 className="font-black">Open Banking / Open Finance</h3>
-                  <h4 className="font-black">Analyst as a service</h4> 
+                  <h3 className="font-bold">Open Banking / Open Finance</h3>
+                  <h4 className="font-bold">Analyst as a service</h4> 
                   <p>Subscribe to a set range of hours and answer key questions to support your growth and create environmental value</p> 
               </div>
               <div className="hero-img flex justify-end md:px-0 px-5">
@@ -118,7 +118,7 @@ if(res==='OK' || res===undefined){
             />
 
             <div className="mx-auto">
-              <h4 className="text-center font-black">{img.title}</h4>
+              <h4 className="text-center font-bold">{img.title}</h4>
               <p className="text-center">{img.paragraph}</p>
             </div>
           </div>
@@ -131,7 +131,7 @@ if(res==='OK' || res===undefined){
 
       <HowWeWork />
       {/* TOP LATESTS 3 POSTS */}
-      {/* <h3 className="text-center font-black mt-5">Our Latest Work </h3>
+      {/* <h3 className="text-center font-bold mt-5">Our Latest Work </h3>
     
       <section className="container mx-auto all-blog-content my-20 md:px-0 px-5">
         <div className="container mx-auto all-blog-content px-0 md:px-3 lg:px-0 xl:px-3">

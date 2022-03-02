@@ -8,7 +8,7 @@ const PositionedSection = () => {
     <div>
       <section className="bg-primary relative pb-40 w-auto my-6 py-8 text-center">
         <h3 className="text-white">Platform approaches</h3>
-        <h3 className="text-white font-black">have two big advantages</h3>
+        <h3 className="text-white font-bold">have two big advantages</h3>
         <div className="md:w-3/6  text-center mx-auto  advantageImgs flex flex-wrap md:flex-nowrap justify-center flex-wrap">
           <div className="flex justify-center text-center">
             <div className="flex flex-col items-center text-center">

@@ -7,7 +7,7 @@ import globalMoveImg from "../../../../assets/os/OS-Product-icon.png"
 const ActionableInfoLp = () => {
   return (
     <section className="bg-card py-3  container mx-auto rounded-3xl mx-4 relative inset-x-0 -mt-40">
-      <h2 className="my-8 mx-auto text-center font-black">
+      <h2 className="my-8 mx-auto text-center font-bold">
         Actionable information on:
       </h2>
 

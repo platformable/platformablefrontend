@@ -158,7 +158,7 @@ console.log("img:", imgAsolutePath)
                 urls.map((url, index) => {
                   return (
                     <>
-                      <li className="small-text font-black">{`/${url}`}</li>
+                      <li className="small-text font-bold">{`/${url}`}</li>
                     </>
                   )
                 })}
@@ -168,7 +168,7 @@ console.log("img:", imgAsolutePath)
    
         <SEO title={data.strapiPost.title} img={imgAsolutePath} />
         <section className="posts-container mx-auto all-blog-content my-5 sm:my-20 px-5">
-          <h3 className="text-3xl sm:text-3xl font-black mb-3">
+          <h3 className="text-3xl sm:text-3xl font-bold mb-3">
             {data.strapiPost.title}
           </h3>
           {/* <div className="block container mx-auto px-3"> */}
@@ -384,7 +384,7 @@ console.log("img:", imgAsolutePath)
           {data.strapiPost.categories.map(cat => {
             return (
               <h3
-                className={`font-black my-5 text-center text-dark-${cat.name} pt-5 w-3/5 mx-auto`}
+                className={`font-bold my-5 text-center text-dark-${cat.name} pt-5 w-3/5 mx-auto`}
               >
                 Related Articles
               </h3>

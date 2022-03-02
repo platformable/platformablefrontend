@@ -81,7 +81,7 @@ export default function Index({ data, location }) {
 
       <HowWeWork />
       {/* TOP LATESTS 3 POSTS */}
-      {/* <h3 className="text-center font-black mt-5">Our Latest Work </h3>
+      {/* <h3 className="text-center font-bold mt-5">Our Latest Work </h3>
     
       <section className="container mx-auto all-blog-content my-20 md:px-0 px-5">
         <div className="container mx-auto all-blog-content px-0 md:px-3 lg:px-0 xl:px-3">

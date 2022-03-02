@@ -146,7 +146,7 @@ const data = useStaticQuery(graphql`
             <div className="dashboard-profile-card bg-gray-50 rounded-lg flex flex-wrap shadow-xl">
               <div className="dashboard-profile-card-img py-10"></div>
               <div className="dashboard-profile-card-text p-5">
-                <h5 className="font-black text-primary">Hi {user.name}</h5>
+                <h5 className="font-bold text-primary">Hi {user.name}</h5>
                 <h6 className="text-xs text-primary">
                   {user.isStripeActive
                     ? "Your Plan is Active"
@@ -159,7 +159,7 @@ const data = useStaticQuery(graphql`
                   <div className="dashboard-profile-card bg-gray-50 rounded-lg flex flex-wrap shadow-xl">
                   <div className="dashboard-profile-card-img py-10"></div>
                   <div className="dashboard-profile-card-text p-5">
-                    <h5 className="font-black text-primary">Codegenerator</h5>
+                    <h5 className="font-bold text-primary">Codegenerator</h5>
                     <a href="https://platformablecodegen.netlify.app" target="_blank">Go to Codegenerator</a>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ const data = useStaticQuery(graphql`
             {/* <div className="dashboard-profile-card bg-gray-50 rounded-lg shadow-sm flex flex-wrap">
               <div className="dashboard-profile-card-img pl-10 py-10 pr-5"></div>
               <div className="dashboard-profile-card-text p-10">
-                <h5 className="font-black text-primary">
+                <h5 className="font-bold text-primary">
                   {user.isStripeActive
                     ? "Your Plan is Active"
                     : "No Active Plan yet!"}
@@ -196,10 +196,10 @@ const data = useStaticQuery(graphql`
             {/* <div className="dashboard-profile-card bg-gray-50 rounded-lg shadow-sm flex flex-wrap">
               <div className="dashboard-profile-card-img  "></div>
               <div className="dashboard-profile-card-text">
-                <h5 className="font-black text-primary">
+                <h5 className="font-bold text-primary">
                   Current period Start: {new Date(user.stripeStartDay).toDateString()}
                 </h5>
-                <h5 className="font-black text-primary">
+                <h5 className="font-bold text-primary">
                   Current period End: {new Date(user.stripeEndDay ).toDateString()}
                 </h5>
               </div>
@@ -229,14 +229,14 @@ const data = useStaticQuery(graphql`
                       className="w-14 self-center mx-auto absolute -top-7 inset-x-0"
                     /> */}
                     <div className="h-14 border-bottom px-1">
-                      <h5 className="text-primary my-8 font-black">
+                      <h5 className="text-primary my-8 font-bold">
                         
                         {plan.node.product.name}
                       </h5>
                     </div>
                     <div className="plans-price ">
                       <div className="font-bold">
-                        <h2 className="text-primary font-black text-3xl leading-tight">
+                        <h2 className="text-primary font-bold text-3xl leading-tight">
                         €{(plan.node.unit_amount / 100).toFixed(2)}
                         </h2>
                         <span className="text-black">

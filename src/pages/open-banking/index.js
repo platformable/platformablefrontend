@@ -84,7 +84,7 @@ export default function OpenBanking({ location }) {
       <div className="container sm:mx-auto md:px-0 px-5">
         <div className="flex md:flex-nowrap flex-wrap mt-10 mb-5 items-center px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="labs-hero-left md:w-3/5 w:1/1 md:p-0">
-            <h3 className="font-black ">Open Banking / Open Finance</h3>
+            <h3 className="font-bold ">Open Banking / Open Finance</h3>
             <p>
             Identify opportunities for new products that understand market factors and foster new collaborations, enable stakeholders and users to build financial health and prepare to go to market successfully
             </p>

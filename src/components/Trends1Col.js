@@ -8,7 +8,7 @@ export default function Trends1Col({section,index}) {
     <div className="grid md:grid-cols-1 grid-cols-1 gap-8  md:px-0 px-5 mt-5">
       
       <div className="trends-1cols-component--col">
-          <h3 className="text-center font-black">{section.heading}</h3>
+          <h3 className="text-center font-bold">{section.heading}</h3>
         <div dangerouslySetInnerHTML={{ __html: section.content }}></div>
       </div>
       

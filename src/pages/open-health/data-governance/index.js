@@ -116,7 +116,7 @@ export default function Index({ location }) {
         <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 items-center sm:mx-auto md:px-0 px-5">
           <div className="px-0 md:px-3 lg:px-0 xl:px-3">
             <div className="text-center lg:text-left hero-data-governance-left">
-              <h3 className="font-black ">Data Governance</h3>
+              <h3 className="font-bold ">Data Governance</h3>
               Create a data governance and data stewardship system for your
               agency
             </div>
@@ -145,7 +145,7 @@ export default function Index({ location }) {
           <div className="px-0 md:px-3 lg:px-0 xl:px-3">
             <div className="type-of-data-container-left">
               <div className="h-24">
-                <h3 className="font-black text-2xl text-center">
+                <h3 className="font-bold text-2xl text-center">
                   Data Governance
                 </h3>
                 <p className="text-center">
@@ -172,7 +172,7 @@ export default function Index({ location }) {
           <div className="px-0 md:px-3 lg:px-0 xl:px-3">
             <div className="type-of-data-container-right">
               <div className="h-24">
-                <h3 className="font-black text-2xl text-center">
+                <h3 className="font-bold text-2xl text-center">
                   Data stewardship
                 </h3>
                 <p className="text-center">
@@ -199,7 +199,7 @@ export default function Index({ location }) {
       <section className="our-toolkit my-10">
         <div className="container mx-auto sm:mx-auto md:px-0 px-5">
           <div className="px-0 md:px-3 lg:px-0 xl:px-3">
-            <h3 className="font-black text-center my-5">Our toolkit</h3>
+            <h3 className="font-bold text-center my-5">Our toolkit</h3>
             <div className="our-toolkit-container grid grid-cols-1 md:grid-cols-3 gap-4">
               {tools.map((tool, index) => {
                 return (
@@ -207,7 +207,7 @@ export default function Index({ location }) {
                     <div className="flex justify-center">
                       <img src={tool.img} className="img-thumbnail" />
                     </div>
-                    <h4 className="font-black text-center">{tool.title}</h4>
+                    <h4 className="font-bold text-center">{tool.title}</h4>
                   </div>
                 )
               })}
@@ -218,7 +218,7 @@ export default function Index({ location }) {
 
       {/* <section className="blueBkgTest bg-testimBkgBlue my-0 mx-auto py-6">
       <div className="text-center p-8">
-        <h4 className="text-white font-black">
+        <h4 className="text-white font-bold">
           What our clients say about the program:
         </h4>
         <blockquote className="italic p-2 w-3/5 mx-auto">
@@ -250,7 +250,7 @@ export default function Index({ location }) {
     <section>
         <div className="container mx-auto">
               <div>
-              <h2 className="text-2xl font-black text-center">Sign up now for pricing and calendar availability</h2>
+              <h2 className="text-2xl font-bold text-center">Sign up now for pricing and calendar availability</h2>
           <div className="m-4 flex justify-center">
           <input type="text" className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-main-color border-gray-200 bg-white subscribe-input" placeholder="Your email address" onChange={(e)=>setForm(e.target.value)}/>
           <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>

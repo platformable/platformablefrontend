@@ -15,7 +15,7 @@ const SubscriptionPlans = props => {
   }
   return (
     <section className="subscription-section text-grayed my-8 container mx-auto px-2">
-      <h2 className="text-primary text-center py-5 font-black">
+      <h2 className="text-primary text-center py-5 font-bold">
         Subscription Plans
       </h2>
       <div className="plans-group flex flex-wrap flex-col md:flex-row justify-evenly text-center text-sm my-5 gap-5">
@@ -26,7 +26,7 @@ const SubscriptionPlans = props => {
             className="w-14 self-center mx-auto absolute -top-7 inset-x-0"
           />
           <div className="border-bottom h-32 lg:h-48 xl:h-40">
-            <h3 className="text-primary mt-8 font-black">Knowledge Pack</h3>
+            <h3 className="text-primary mt-8 font-bold">Knowledge Pack</h3>
             <p className="mt-2 text-xs mx-7">
               Understand key trends in open banking and open finance
             </p>
@@ -68,7 +68,7 @@ const SubscriptionPlans = props => {
             className="w-14 self-center mx-auto absolute -top-7 inset-x-0"
           />
           <div className="border-bottom h-32 lg:h-48 xl:h-40">
-            <h3 className="text-primary mt-8 font-black">Strategy Pack</h3>
+            <h3 className="text-primary mt-8 font-bold">Strategy Pack</h3>
             <p className="mt-2 text-xs mx-7">
               Work with your team to share insights and plan ecosystem strategy
             </p>
@@ -116,7 +116,7 @@ const SubscriptionPlans = props => {
             className="w-14 self-center mx-auto absolute -top-7 inset-x-0"
           />
           <div className="border-bottom h-32 lg:h-48 xl:h-40">
-            <h3 className="text-primary mt-8 font-black">Direction Pack</h3>
+            <h3 className="text-primary mt-8 font-bold">Direction Pack</h3>
             <p className="mt-2 text-xs mx-7">
               Steer your business towards embracing a platform mindset with data
               and evidence
@@ -179,7 +179,7 @@ const SubscriptionPlans = props => {
             className="w-14 self-center mx-auto absolute -top-7 inset-x-0"
           />
           <div className="border-bottom h-32 lg:h-48 xl:h-40">
-            <h3 className="text-primary mt-8 font-black">Leadership Pack</h3>
+            <h3 className="text-primary mt-8 font-bold">Leadership Pack</h3>
             <p className="mt-2 text-xs mx-7 ">
               Become an ecosystem leader by leveraging data and insights to
               drive business strategy and action

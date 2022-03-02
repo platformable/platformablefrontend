@@ -12,7 +12,7 @@ const NotFoundPage = () => (
             <div className="container mx-auto ">
       <div className="grid md:grid-cols-6 md:gap-4 grid-cols-1 md:gap-2 px-5 justify-center items-center h-screen  ">
         <div className="col-start-3 col-span-2  rounded-xl  px-10 py-10">
-            <h3 className="text-3xl text-center font-black">Wrong url!</h3>
+            <h3 className="text-3xl text-center font-bold">Wrong url!</h3>
           <img
             src={NotFoundImg}
             className="my-10"

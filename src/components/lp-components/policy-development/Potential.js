@@ -30,7 +30,7 @@ const Potential = () => {
   ]
   return (
     <section className="container py-6 mx-auto sm:mx-auto md:px-0 px-5">
-      <h3 className="md:w-1/3 w-full my-4 mx-auto text-center font-black">
+      <h3 className="md:w-1/3 w-full my-4 mx-auto text-center font-bold">
         Help us describe the potential of open ecosystems using:
       </h3>
       <div className="my-0  py-0 px-0 md:px-3 lg:px-0 xl:px-3 flex flex-wrap flex-col sm:flex-row justify-center">

@@ -27,7 +27,7 @@ export default function Breadcrumbs({ location }) {
                 <>
                   <li
                     className={`small-text ${
-                      index === urls.length - 1 ? "font-black" : null
+                      index === urls.length - 1 ? "font-bold" : null
                     }`}
                   >
                     <Link

@@ -71,7 +71,7 @@ const ProductsCardsLp = () => {
         </div>
 
         {/* <div className="mt-20 mx-auto text-center md:w-6/12 w-9/12 px-2">
-          <p className="leading-6 text-2xl font-black">
+          <p className="leading-6 text-2xl font-bold">
             Let us help you and your team evolve towards a platform mindset.
           </p>
         </div> */}

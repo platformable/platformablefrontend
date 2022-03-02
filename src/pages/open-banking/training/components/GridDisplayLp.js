@@ -18,7 +18,7 @@ const GridDisplayLp = ({
     >
       <div className=" mx-auto px-0 md:px-3 lg:px-0 xl:px-3 ">
         <div>
-          <h3 className="font-black">
+          <h3 className="font-bold">
             {title}&nbsp;
             <span className="bg-secondary p-1">{span}</span>
           </h3>

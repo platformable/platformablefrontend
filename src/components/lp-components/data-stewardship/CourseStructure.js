@@ -47,14 +47,14 @@ const CourseStructure = () => {
       
       
       <div className="my-0  container mx-auto w-3/5">
-      <h3 className="my-8 font-black">Course Structure</h3>
+      <h3 className="my-8 font-bold">Course Structure</h3>
         {images.map((img, i) =>(
           <div key={i} className="mb-5 md:flex items-center"
             >
             <img src={img.src} alt={img.title} className="mr-5 img-thumbnail" />
             
             <div className="">
-              <h3 className="font-black">{img.title}</h3>
+              <h3 className="font-bold">{img.title}</h3>
               <p>{img.paragraph}</p>
             </div>
           </div>

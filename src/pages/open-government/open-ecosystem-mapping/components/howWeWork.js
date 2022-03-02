@@ -31,7 +31,7 @@ const OGOpenEcosystemMapping = () => {
   return (
     <section className="bg-lavender-blue-dark py-10 md:px-0 px-5">
       <div className="container mx-auto">
-        <h2 className="my-10  md:mx-16 text-center font-black">Audience</h2>
+        <h2 className="my-10  md:mx-16 text-center font-bold">Audience</h2>
         <div classname="container mx-auto md:px-0 px-5">
           <div className="md:w-4/5 mx-auto px-0 md:px-3 lg:px-0 xl:px-3">
             {images.map((img, i) => (
@@ -39,7 +39,7 @@ const OGOpenEcosystemMapping = () => {
                 <img src={img.src} alt={img.title} className="mr-5" />
 
                 <div className="">
-                  <h4 className="font-black text-1xl">{img.title}</h4>
+                  <h4 className="font-bold text-1xl">{img.title}</h4>
                   <p>{img.paragraph}</p>
                 </div>
               </div>

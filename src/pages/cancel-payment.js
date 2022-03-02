@@ -17,10 +17,10 @@ const CancelPayment = () => {
       <div className="container mx-auto ">
         <div className="grid md:grid-cols-6 md:gap-4 grid-cols-1 md:gap-2 px-5 justify-center items-center h-screen  ">
           <div className="col-start-3 col-span-2  rounded-xl  px-10 py-10">
-            <h3 className="text-2xl text-center font-black">
+            <h3 className="text-2xl text-center font-bold">
             The order has been cancelled
             </h3>
-            <h4 className="text-xl text-center font-black my-5">
+            <h4 className="text-xl text-center font-bold my-5">
             You have not been charged.
             </h4>
             <h5 className="text-xl text-center">

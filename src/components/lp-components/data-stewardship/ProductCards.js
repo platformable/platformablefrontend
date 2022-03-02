@@ -46,7 +46,7 @@ const ProductCards = () => {
             <img src={img.src} alt={img.title} className="w-40 h-40" />
 
             <div className=" md:h-44 lg:h-60">
-              <h5 className="m-5 text-center font-black">{img.title}</h5>
+              <h5 className="m-5 text-center font-bold">{img.title}</h5>
               <p className="text-sm">{img.paragraph}</p>
             </div>
           </div>

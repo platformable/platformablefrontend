@@ -12,7 +12,7 @@ const ProductOfferLp = props => {
     <section className="bg-card py-3 px-8 ">
       
       <div className="my-0  container mx-auto">
-      <h2 className="my-8 font-black">Course Structure</h2>
+      <h2 className="my-8 font-bold">Course Structure</h2>
         <div className="mb-5 md:flex  items-center">
           <img src={bankPlatformImg} alt="bank platform" className="mr-5" />
           <div>

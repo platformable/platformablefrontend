@@ -52,8 +52,8 @@ const FourHorizontalCircles = () => {
             />
 
             <div className="mx-auto">
-              <h4 className="text-center font-black">{img.title}</h4>
-              <p className="text-xs text-center font-black">{img.paragraph}</p>
+              <h4 className="text-center font-bold">{img.title}</h4>
+              <p className="text-xs text-center font-bold">{img.paragraph}</p>
             </div>
           </div>
         ))}

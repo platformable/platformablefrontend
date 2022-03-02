@@ -52,7 +52,7 @@ export default function Q4TrendsReport2020() {
 
 <section>
         {/* <div className="container mx-auto">
-            <h3 className="text-3xl font-black text-center mb-5 mt-20">2020</h3>
+            <h3 className="text-3xl font-bold text-center mb-5 mt-20">2020</h3>
         </div> */}
 
         <div className="all-posts">
@@ -63,7 +63,7 @@ export default function Q4TrendsReport2020() {
           <section id="q4TrendsCards">
     <div className="">
       <div className="center-title">
-      <h3 className="font-black mb-5">Key takeaways from Q1 2021</h3>
+      <h3 className="font-bold mb-5">Key takeaways from Q1 2021</h3>
       </div>
       <div className="bottom-line"></div>
     <div className="card__wrap--outer">
@@ -73,7 +73,7 @@ export default function Q4TrendsReport2020() {
             <img src="https://platformable.com/content/images/size/w1000/2021/01/banks-icon-1.png"/>
           </div>
           <div className="card__item">
-            <h2 className="font-black mb-5">If you work for Banks</h2>
+            <h2 className="font-bold mb-5">If you work for Banks</h2>
           </div>
 
           <div className="card__item flexible">
@@ -95,7 +95,7 @@ export default function Q4TrendsReport2020() {
             <img src="https://platformable.com/content/images/size/w1600/2021/01/2-FINTECH-1.png"/>
           </div>
           <div className="card__item">
-            <h2 className="font-black mb-5">If you work for Fintechs</h2>
+            <h2 className="font-bold mb-5">If you work for Fintechs</h2>
           </div>
 
           <div className="card__item flexible">
@@ -118,7 +118,7 @@ export default function Q4TrendsReport2020() {
             <img src="https://platformable.com/content/images/size/w1600/2021/01/3-CONSUMERS.png"/>
           </div>
           <div className="card__item">
-            <h2 className="font-black mb-5">If you work for Consumers</h2>
+            <h2 className="font-bold mb-5">If you work for Consumers</h2>
           </div>
 
           <div className="card__item flexible">
@@ -149,7 +149,7 @@ export default function Q4TrendsReport2020() {
             <img src="https://platformable.com/content/images/size/w1600/2021/01/4-UNDER-SERVED.png"/>
           </div>
           <div className="card__item">
-            <h2 className="font-black mb-5">If you work for Underserved</h2>
+            <h2 className="font-bold mb-5">If you work for Underserved</h2>
           </div>
 
           <div className="card__item flexible">
@@ -171,7 +171,7 @@ export default function Q4TrendsReport2020() {
             <img src="https://platformable.com/content/images/size/w1600/2021/01/5-API-INDUSTRY.png"/>
           </div>
           <div className="card__item">
-            <h2 className="font-black mb-5">If you work for API Industry</h2>
+            <h2 className="font-bold mb-5">If you work for API Industry</h2>
           </div>
 
           <div className="card__item flexible">
@@ -194,7 +194,7 @@ export default function Q4TrendsReport2020() {
             <img src="https://platformable.com/content/images/size/w1600/2021/01/OpenBanking-Book.png"/>
           </div>
           <div className="card__item">
-            <h2 className="font-black mb-5">If you work for Enablers</h2>
+            <h2 className="font-bold mb-5">If you work for Enablers</h2>
           </div>
 
           <div className="card__item flexible">

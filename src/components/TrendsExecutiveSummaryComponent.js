@@ -4,7 +4,7 @@ export default function TrendsExecutiveSummaryComponent({section,index}) {
   return (
     <section id={`section-${section.id}-summary`}>
       <div className="container mx-auto md:px-20 px-10">
-          <h3 className="font-black text-center my-10">Executive Summary</h3>
+          <h3 className="font-bold text-center my-10">Executive Summary</h3>
     <div class="treds-reports-executive-summary-container">
     <div class="trends-reports-executive-summary-box my-5">
       <div class="executive-summary-box-left">

@@ -98,7 +98,7 @@ console.log("data.featured_image: ",data?.featured_image.formats.medium.url) */
           <div className="grid md:grid-cols-2 grid-cols-1 px-0 md:px-3 lg:px-0 xl:px-3 items-center  h-100">
             <div className="left flex items-center">
               <div>
-                <h3 className="font-black mb-5 md:text-5xl text-1xl md:text-left text-center">{data.title}</h3>
+                <h3 className="font-bold mb-5 md:text-5xl text-1xl md:text-left text-center">{data.title}</h3>
                 {/* <p className="text-sm">{data.excerpt}</p> */}
                 <div dangerouslySetInnerHTML={{ __html: data?.hero_content }} className="hero-content"></div>
                        <a
@@ -149,7 +149,7 @@ console.log("data.featured_image: ",data?.featured_image.formats.medium.url) */
               <div>
 {/*                 <p className="text-center text-xl">Our workshops cover architecture decisions, performance and technical metrics and how to comply with policy and regulatory requirements when building new product opportunities</p>
  */}                {/* <p className="text-center">Bring your data to life with our training.</p> */}
-              <h2 className="text-2xl font-black text-center mt-5">Sign up now to our trends reports</h2>
+              <h2 className="text-2xl font-bold text-center mt-5">Sign up now to our trends reports</h2>
           <div className="m-4 flex justify-center">
           <input type="text" className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-main-color border-gray-200 bg-white subscribe-input" placeholder="Your email address" onChange={(e)=>setForm(e.target.value)}/>
           <button className="px-8 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>

@@ -38,8 +38,8 @@ const CallToActionLp = ({
 }
   return (<>
     <section id="cta" className={sectionClassName}>
-      <h3 className="my-3 font-black">{title}</h3>
-      <h3 className="my-3 font-black">{secondTitle}</h3>
+      <h3 className="my-3 font-bold">{title}</h3>
+      <h3 className="my-3 font-bold">{secondTitle}</h3>
       <p className={paragraphClassName}>{paragraphOne}<br/>{paragraphTwo}</p>
      {/*  <button onClick={handleIsLoggedIn} label={label} doNotDisplay={doNotDisplay} className={btnClassName}>{label}</button> */}
      <section>

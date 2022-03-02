@@ -45,7 +45,7 @@ const OpenEcosystemSection = () => {
               // layout="fixed"
             />
           </div>
-          <h3 className="my-4 mx-auto text-center font-black text-3xl">
+          <h3 className="my-4 mx-auto text-center font-bold text-3xl">
             We measure the growth of digital open ecosystems
           </h3>
           <p className="text-center">Across 4 sectors</p>
@@ -63,7 +63,7 @@ const OpenEcosystemSection = () => {
                   />
 
                   <div>
-                    <h6 className="my-5 text-center mx-auto font-black">
+                    <h6 className="my-5 text-center mx-auto font-bold">
                       {img.title}
                     </h6>
                   </div>

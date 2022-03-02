@@ -73,7 +73,7 @@ const getTypeOfComponent = (section,index)=> {
           <div className="grid md:grid-cols-2 grid-cols-1 px-0 md:px-3 lg:px-0 xl:px-3 items-center  h-100">
             <div className="left flex items-center">
               <div>
-                <h3 className="font-black mb-5 md:text-5xl text-3xl md:text-left text-center">{data.title}</h3>
+                <h3 className="font-bold mb-5 md:text-5xl text-3xl md:text-left text-center">{data.title}</h3>
        
                 <div dangerouslySetInnerHTML={{ __html: data.excerpt }}></div>
             {/*     <a
