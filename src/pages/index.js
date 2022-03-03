@@ -183,7 +183,7 @@ const IndexPage = ({ data }) => {
               </Link>
               <a
                 href="#subscription"
-                className="md:inline-block inline-block bg-red-orange-dark text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full  cursor-pointer"
+                className="md:inline-block inline-block bg-sunglow text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full  cursor-pointer"
               >
                 Subscribe
               </a>
