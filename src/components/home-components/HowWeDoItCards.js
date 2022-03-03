@@ -31,8 +31,8 @@ export const howWeDoitData = [
 const HowWeDoItCards = () => {
 
   return (
-    <section className="cards-section  mb-10 container mx-auto py-8 border rounded-xl md:px-0 px-5">
-      <h2 className="text-center mt-2  mb-10 font-bold">
+    <section className="cards-section  mb-10 container mx-auto  border rounded-xl md:px-0 px-5">
+      <h2 className="text-center mt-2  mb-1 font-bold">
         How we do it
       </h2>
 

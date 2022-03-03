@@ -48,18 +48,18 @@ const WorkWithCards = () => {
   return (
     <section className="cards-section  we-work-with py-10">
       <div className="px-0 md:px-3 lg:px-0 xl:px-3 container sm:mx-auto md:px-0 px-5 ">
-        <h2 className="text-center mb-6 font-bold">We Work with</h2>
+        <h2 className="text-center mb-6 font-bold">We work with</h2>
         <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 justify-center">
           {/* <div className="my-0 md:mx-16 mx-2 md:mx-0 py-0 px-3 md:px-0 flex flex-wrap flex-col sm:flex-row justify-between items-center"> */}
           {images.map((img, i) => (
             <div
               key={i}
-              className="px-3 py-5 rounded-3xl bg-card justify-center gap-4 items-center card-border transition-shadow hover:shadow-hover "
+              className="px-3 py-5 rounded-3xl bg-card justify-center gap-4 items-center card-border transition-shadow hover:shadow-hover h-full"
             >
               <div className="flex justify-center">
                 <img src={img.src} alt={img.title} className="w-28 h-28 " />
               </div>
-              <div className="h-40">
+              <div className="">
                 <h6 className="my-5 pt-3 font-bold text-center">
                   {img.title}
                 </h6>

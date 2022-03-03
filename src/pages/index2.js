@@ -183,7 +183,7 @@ const IndexPages = ({ data }) => {
               </Link>
               <a
                 href="#subscription"
-                className="md:inline-block inline-block bg-purple-100 text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full  cursor-pointer"
+                className="md:inline-block inline-block bg-red-orange-dark text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full  cursor-pointer"
               >
                 Subscribe
               </a>
@@ -203,7 +203,7 @@ const IndexPages = ({ data }) => {
       </div>
 
 
-      <section className="trends-homepage bg-homepage-trends-releases  py-10">
+      <section className="trends-homepage bg-homepage-trends-releases  pt-2 pb-10">
       <div className="container mx-auto">
         <div className="my-5">
         <h3 className="text-2xl font-bold">Check out our latest releases</h3>
@@ -317,7 +317,7 @@ const IndexPages = ({ data }) => {
       <section className="cards-section my-2 container py-2 sm:mx-auto md:px-0 px-5">
         <div className="px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="flex justify-between items-end  my-5">
-          <h3 className="font-bold">Latest Posts from our blog</h3>
+          <h3 className="font-bold">Latest posts from our blog</h3>
           <Link to="/blog/">See all posts</Link>
           </div>
           <div className="grid grid-cols-1 grid-cols-1 md:grid-cols-3 text-lg md:text-sm lg:text-sm xl:text-lg gap-5">
@@ -463,7 +463,7 @@ const IndexPages = ({ data }) => {
 <section className="bg-primary relative  py-14 homepage-dark-purple-section ">
     <div className="container mx-auto md:px-0 px-5">
 
-    <h3 className="text-white mb-10">Platformable approaches <span className="text-white font-bold">have two big advantages</span></h3>
+    <h3 className="text-white mb-10">Platform approaches <span className="text-white font-bold">have two big advantages</span></h3>
         
 
     <div className="grid md:grid-cols-3 grid-cols-1">
@@ -497,11 +497,11 @@ const IndexPages = ({ data }) => {
 
 <section className="homepage-we-measure-section">
     <div className="container mx-auto">
-        <div className="homepage-sectors py-10">
+        <div className="homepage-sectors pt-2 pb-2">
             
-            <h3 className="pt-5 text-center">We measure the <span className="font-bold "> growth of digital open ecosytems</span></h3>
-                <p className="text-center">key sectors</p>
-        <section className="cards-section container mb-4 py-8 sm:mx-auto md:px-0 px-5">
+            <h3 className="pt-2 text-center">We measure the <span className="font-bold "> growth of digital open ecosytems</span></h3>
+              
+        <section className="cards-section container mb-4 py-2 sm:mx-auto md:px-0 px-5">
       <div className=" mb-8 mx-0 md:px-3 lg:px-0 xl:px-3"></div>
       <div className="grid md:grid-cols-5 grid-cols-1 gap-5">
         {sectorsData.products.elements.map((el, i) => (
@@ -520,7 +520,7 @@ const IndexPages = ({ data }) => {
                   
                 />
 
-                <div className="rounded-b-lg py-5" style={{backgroundColor:el.color}}>
+                <div className="py-5 rounded-b-3xl" style={{backgroundColor:el.color}}>
                   
              <button className="bg-white px-3 py-1 rounded-xl">Know more</button>
                 </div>

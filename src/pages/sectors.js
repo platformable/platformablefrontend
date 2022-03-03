@@ -20,7 +20,7 @@ export const sectorsData = {
   products: {
     elements: [
       {
-        title: "Open\nEcosystem",
+        title: "Open\nEcosystems",
         img: openEcosystemImg,
         paragraph:
           "Supporting API tools providers and consultants, standards bodies, and open source technologies to document and measure their open ecosystems",

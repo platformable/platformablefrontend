@@ -23,6 +23,14 @@ import QuarterlyImg from "../assets/product-streams/quarterly_trends_report.svg"
 import OBTrendsFile from '../static/ob/Platformable Open Banking Trends Report Q1 2022 January 2022.pdf'
 import OSTrendsFile from '../static/os/Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022.pdf'
 
+import {sectorsData} from './sectors'
+
+
+import release1Img from '../static/homepage/last_release_01_workshop.png'
+import release2Img from '../static/homepage/last_release_02_Open_Banking.png'
+import release3Img from '../static/homepage/last_release_03_apilandscape.png'
+import release4Img from '../static/homepage/last_release_04_OS_trends_report.png'
+
 const IndexPage = ({ data }) => {
 
 
@@ -100,58 +108,68 @@ const IndexPage = ({ data }) => {
 
   const trendsData = [
     {
-      title:"Open Banking/Open Finance Trends Report",
-      date:"January 2022",
-      btnBackground:"btn-trends-ob",
-      btnText:"Download",
-      img:QuarterlyImg,
-      download:true,
-      downloadText:"Platformable Open Banking Trends Report Q1 2022 January 2022",
-      /* url:"https://drive.google.com/uc?export=download&id=1Vdl_XKh7rmoMJaIkZ5QyY5tN_e0ag9MW" */
-      url:OBTrendsFile
+      title:"Building green fintech: impactful design and product ideation",
+      date:"Workshop - February 2022",
+      //btnBackground:"btn-trends-ob",
+      btnBackground:"bg-white",
+      btnText:"Register now",
+      //img:QuarterlyImg,
+      img:release1Img,
+      download:false,
+      downloadText:"",
+      url:"https://www.the-ntwk.com/event-details/thentwkacademy-green-fintech-designing-for-impact",
+      /* url:OBTrendsFile */
     },
+    {
+        title:`Open Banking/Open Finance Trends Report`,
+        date:2022,
+        //btnBackground:"btn-trends-oh",
+        btnBackground:"bg-white",
+        btnText:"Download",
+        //img:QuarterlyImg,
+        img:release2Img,
+        url:OBTrendsFile,
+        download:true,
+        downloadText:"Open-Banking-PlatFormable-Trends-Report"
+      },
     {
       title:"API Landscape Tool and State of the Market",
       date:"apidays",
-      btnBackground:"btn-trends-oe",
+      //btnBackground:"btn-trends-oe",
+      btnBackground:"bg-white",
       btnText:"Visit site",
-      img:apilandscapeImg,
+      //img:apilandscapeImg,
+      img:release3Img,
       url:"https://apilandscape.apiscene.io/",
       download:false
     },
     {
       title:`Open Sustainability Trends Report `,
       date:"2022",
-      btnBackground:"btn-trends-os",
+      //btnBackground:"btn-trends-os",
+      btnBackground:"bg-white",
       btnText:"Read it here",
-      img:QuarterlyImg,
+      //img:QuarterlyImg,
+      img:release4Img,
       //url:"/open-banking-apis-for-sustainability-an-open-ecosystem-approach",
       url:"/open-sustainability/trends/open-sustainability-trends-report-q1-2022/",
       //url:OSTrendsFile,
       //downloadText:"Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022",
       download:false
     },
-    {
-      title:`Open Health Trends Report`,
-      date:2022,
-      btnBackground:"btn-trends-oh",
-      btnText:"Coming soon",
-      img:QuarterlyImg,
-      url:null,
-      download:false
-    }
+  
 
   ]
   return (
     <Layout>
       <SEO title="Home" />
-      <section className="container md:my-5 my-5 sm:mx-auto md:px-0 px-5">
-        <br />
-        <br />
+      <div className="homepage-hero-bg">
+      <section className="container sm:mx-auto md:px-0 px-5  py-24">
+
         <div className="grid md:grid-cols-2 grid-cols-1 px-0 md:px-3 lg:px-0 xl:px-3">
           <div className="left flex items-center">
             <div>
-              <h3 className="font-black mb-5 text-base md:text-2xl">
+              <h3 className="font-bold mb-5 text-base md:text-2xl">
                 We support open ecosystems that build economic opportunities,
                 solve complex problems, and enable everyone to participate and
                 co-create their own value
@@ -159,13 +177,13 @@ const IndexPage = ({ data }) => {
                
               <Link
                 to="/about"
-                className="outlinedBtn mt-3 text-sm md:text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
+                className="md:inline-block inline-block bg-white text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full  cursor-pointer"
               >
                 Learn more about us
               </Link>
               <a
                 href="#subscription"
-                className="md:inline-block inline-block bg-secondary text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
+                className="md:inline-block inline-block bg-red-orange-dark text-sm md:text-primary font-bold my-5 ml-2  py-2 px-10 rounded-full  cursor-pointer"
               >
                 Subscribe
               </a>
@@ -182,39 +200,43 @@ const IndexPage = ({ data }) => {
 {/*         <br />
         <br /> */}
       </section>
-      
+      </div>
 
-    <section className="trends-homepage bg-sunglow my-5 py-10">
+
+      <section className="trends-homepage bg-homepage-trends-releases  pt-2 pb-10">
       <div className="container mx-auto">
         <div className="my-5">
-        <h3 className="text-center text-2xl font-black">Check out our latest releases</h3>
-        {/* <h4 className="text-center text-sm font-black">2022</h4> */}
-     {/*    <a href="https://drive.google.com/uc?export=download&id=16DRInTjc0L6flFkkS1uqfXFepbeh_0xq">DDD</a>
-        <a href="https://drive.google.com/u/0/uc?id=16DRInTjc0L6flFkkS1uqfXFepbeh_0xq&export=download">aaa</a> */}
+        <h3 className="text-2xl font-bold">Check out our latest releases</h3>
         </div>
       <div
-        className={`grid md:grid-cols-4 grid-cols-1 md:px-0 px-5 gap-10`}
+        className={`grid md:grid-cols-4 grid-cols-1 md:px-0 px-5 gap-4`}
       >
 
         {trendsData.map((trend,index)=>{
           return (
       
-             <div className="p-5 rounded-xl p-4 h-full  home-trends-bg-russian-violet-dark drop-shadow-2xl">
-            <div className="text-center">
+             <div className="rounded-xl  h-full bg-homepage-latest-releases card-border shadow-xl ">
+            <div className="text-center px-5">
+            <p className="font-sm text-center py-3 trends-card-date">{trend.date}</p>
+            <h5 className="text-center h-24 ">{trend.title}</h5>
+            </div>
+
+            <div className="mb-5">
+
             <img
               src={trend.img}
               alt=""
-              className="w-24  bg-white shadow rounded-full p-3 my-5"
+              className="h-50"
             />
             </div>
-            <p className="font-sm text-center text-white mb-4">{trend.date}</p>
-            <h6 className="font-black text-center  text-white  h-16 ">{trend.title}</h6>
+            
+            
             <div className="text-center">
             {trend?.download && <a
             className={`md:inline-block inline-block 
             ${trend.btnBackground} text-sm md:text-primary 
             font-bold my-5 ml-2  py-2 px-10 rounded-full 
-            hover:bg-secondary cursor-pointer`}
+             cursor-pointer`}
             href={trend.url}
             download={trend.downloadText}>
             {trend.btnText}
@@ -226,7 +248,7 @@ const IndexPage = ({ data }) => {
             className={`md:inline-block inline-block 
             ${trend.btnBackground} text-sm md:text-primary 
             font-bold my-5 ml-2  py-2 px-10 rounded-full 
-            hover:bg-secondary ${trend.url===null ? "":"cursor-pointer"}`}
+             ${trend.url===null ? "":"cursor-pointer"}`}
             href={trend.url}
             target={trend?.url?.includes("http")&& "_blank"}
             >
@@ -244,49 +266,60 @@ const IndexPage = ({ data }) => {
 
 
 
-      {/* <section className="bg-gray-100 ">
-        <div className="container sm:mx-auto md:px-0 px-5">
-          <br />
-          <br />
-          <div className=" grid md:grid-cols-2 grid-cols-1 px-0 md:px-3 lg:px-0 xl:px-3">
-            <div className="left flex items-center">
-              <div>
-                <p>Download our latest release</p>
-                <h3 className="font-black mb-5">
-                  Open Banking/Open Finance Quarterly Trend Reports Q2 2021
-                </h3>
-                <Link
-                  to="/open-banking/trends"
-                  className="bg-secondary text-sm md:text-primary font-bold my-5 mx-0 py-2 px-10 rounded-full hover:bg-secondary cursor-pointer"
-                >
-                  More info on our reports
-                </Link>
-              </div>
+      <section >
+        <div className="os-product-idea-workshop-our-workshop-subscribe-form py-10">
+          <div className="container mx-auto os-product-ideation-workshop-section5-container md:px-0 px-5">
+            <div className="os-product-ideation-workshop-section5-left">
+            <StaticImage
+              src="../assets/home/we_publish_analysis.png"
+              alt="platformable"
+              width={400}
+            />
             </div>
-            <div className="right flex justify-end">
-              <StaticImage
-                src="../assets/home/quarterly_trends1.png"
-                alt="platformable"
-                width={400}
+            <div className="os-product-ideation-workshop-section5-right">
+            
+              <h3 className="font-bold mb-5 text-3xl">We publish analysis and insights</h3>
+
+              <p className=" mb-3">
+              We share data on the growth of open ecosystems, and track how<br />
+              value is being generated and distributed
+              </p>
+              <div className="flex">
+              <input
+                type="text"
+                className="rounded-l-lg p-4 border-t mr-0 border-b border-l text-main-color border-gray-200 bg-white subscribe-input"
+                placeholder="Your email address"
+                onChange={e => setForm(e.target.value)}
               />
+              <button
+                className="px-8 rounded-r-lg bg-sunglow  font-bold p-4  border-yellow-500 border-t border-b border-r"
+                onClick={handleSubscription}
+              >
+                Subscribe to stay updated
+              </button>
             </div>
 
-            <br />
-            <br />
+            {formSuccess && (
+            <p className="text-center my-5 ">
+              Thanks for your subscription, please check your email for a
+              confirmation
+            </p>
+          )}
+              
+            </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
 
-
-
-
-
-      {/* <PostsCards/> */}
+    
       {/* POSTS */}
       <section className="cards-section my-2 container py-2 sm:mx-auto md:px-0 px-5">
         <div className="px-0 md:px-3 lg:px-0 xl:px-3">
-          <h2 className="text-center font-black mb-5 mt-6">Latest Posts </h2>
+          <div className="flex justify-between items-end  my-5">
+          <h3 className="font-bold">Latest posts from our blog</h3>
+          <Link to="/blog/">See all posts</Link>
+          </div>
           <div className="grid grid-cols-1 grid-cols-1 md:grid-cols-3 text-lg md:text-sm lg:text-sm xl:text-lg gap-5">
     
            
@@ -295,7 +328,7 @@ const IndexPage = ({ data }) => {
                   while (index < 3 && post.node.staging === false) {
              
                     return (
-                      <div className="rounded-xl pt-5 pb-10 top-blog-cards flex flex-col shadow relative">
+                      <div className="rounded-xl pt-5 pb-10 top-blog-cards flex flex-col card-border relative">
                         <Link to={`/${post.node.slug}`}>
                           <div className="px-7 text-center justify-center mb-3 h-44 overflow-hidden">
                             <GatsbyImage
@@ -426,68 +459,94 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      <PositionedSection />
-      {/* <section className="hidden lg:block pt-8 mt-12 md:px-0 px-5">
-        <h2 className="text-center mb-6 font-black">
-          Platformable Program Structure
-        </h2>
-        <div className="container mx-auto all-blog-content px-3 text-center pt-4">
-          <StaticImage
-            src="../images/PlatformableProgramStructure.png"
-            className="w-12/12 lg:w-11/12 "
-          />
-        </div>
-      </section> */}
-      <HowWeDoItCards />
-      <WorkWithCards />
 
-      <section className="publish_analysis container my-6 py-8 sm:mx-auto md:px-0 px-5">
-        <div className=" grid md:grid-cols-2 grid-cols-1  px-0 md:px-3 lg:px-0 xl:px-3">
-          <div className="left flex items-center">
-            <div>
-              <h3 className="font-black mt-6">
-                We publish analysis and insights
-              </h3>
-              <p>
-                We share data on the growth of open ecosystems, and track how
-                value is being generated and distributed
+<section className="bg-primary relative  py-14 homepage-dark-purple-section ">
+    <div className="container mx-auto md:px-0 px-5">
+
+    <h3 className="text-white mb-10">Platform approaches <span className="text-white font-bold">have two big advantages</span></h3>
+        
+
+    <div className="grid md:grid-cols-3 grid-cols-1">
+        <div className="homepage-dark-purple-section-left flex ">
+        <StaticImage
+                src="../assets/home/home-apiproviders.png"
+             
+              />
+              <p className="p-5 text-left text-white">
+                They open up the value previously locked in data and capabilties
               </p>
+        </div>
+        <div className="homepage-dark-purple-section-right flex">
+        <StaticImage
+                src="../assets/home/home-theyopenvalues.png"
+        
+           
+              />
+              <p className="p-5 text-center text-white">
+                They enable digital ecosystems where everyone can participate
+                and co-create
+              </p>
+        </div>
+
+        <div></div>
+    </div>
+
+    </div>
+</section>
+
+
+<section className="homepage-we-measure-section">
+    <div className="container mx-auto">
+        <div className="homepage-sectors pt-2 pb-2">
+            
+            <h3 className="pt-2 text-center">We measure the <span className="font-bold "> growth of digital open ecosytems</span></h3>
+              
+        <section className="cards-section container mb-4 py-2 sm:mx-auto md:px-0 px-5">
+      <div className=" mb-8 mx-0 md:px-3 lg:px-0 xl:px-3"></div>
+      <div className="grid md:grid-cols-5 grid-cols-1 gap-5">
+        {sectorsData.products.elements.map((el, i) => (
+          <div
+            key={i}
+            className="rounded-3xl flex flex-col bg-white card-border items-center h-full">
+            <div className="text-center self-start">
+              <Link to={el.anchorLink}>
+              <h5 className="my-5 text-center h-14 px-3 text-primary font-bold">
+                    {el.title}
+                  </h5>
+                <img
+                  src={el.img}
+                  alt={el.title}
+                  className="mx-auto text-center px-3 rounded-3xl self-start "
+                  
+                />
+
+            <div className="py-5 rounded-b-3xl" style={{backgroundColor:el.color}}>
+                  
+             <button className="bg-white px-3 py-1 rounded-xl">Know more</button>
+                </div>
+              </Link>
             </div>
           </div>
-          <div className="right flex justify-end">
-            <StaticImage
-              src="../assets/home/we_publish_analysis.png"
-              alt="platformable"
-              width={400}
-            />
-          </div>
-        </div>
-      </section>
-
-
-
-      <section name="subscription" id="subscription">
-        <div className="container mx-auto">
-              <div>
-          <div className="flex justify-center">
-            <input type="text" className="rounded-l-lg  px-4 border-t mr-0 border-b border-l text-main-color border-gray-200 bg-white subscribe-input" placeholder="Your email address" onChange={(e)=>setForm(e.target.value)}/>
-          <button className="px-4 rounded-r-lg bg-sunglow  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r" onClick={handleSubscription}>Subscribe</button>
-        </div>
+        ))}
       </div>
-      {formSuccess && <p className="text-center my-5">Thanks for your subscription, please check your email for a confirmation</p>}
+    </section>
         </div>
-      </section>
-      {/* 
-    <Form
-      id="submitMailerlite"
-      formClass="text-center my-6 mx-auto"
-      titleClass="text-sm"
-      title="The future is open"
-      iframeId=""
-      iframeSrc={"https://landing.mailerlite.com/webforms/landing/b9q0r6"}
-      paragraph="We share monthly updates on the growth of open ecosystems"
-      paragraphClass="mb-12"
-    /> */}
+    </div>
+
+    <HowWeDoItCards />
+</section>
+
+
+     
+
+  
+      <WorkWithCards />
+
+
+
+
+
+  
     </Layout>
   )
 }
