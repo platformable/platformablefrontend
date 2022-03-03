@@ -10,13 +10,13 @@ import { StaticImage } from "gatsby-plugin-image"
 
 /*assets*/
 import sectionHeroImg from "../assets/product-streams/home_hero.svg"
-import openBankImg from "../assets/product-streams/open_banking-open_finance.svg"
-import openGovImg from "../assets/product-streams/open_government.svg"
-import openHealthImg from "../assets/product-streams/open_health.svg"
-import openSustainImg from "../assets/product-streams/open_sustainability.svg"
+import openBankImg from "../assets/product-streams/open_banking-open_finance.png"
+import openGovImg from "../assets/product-streams/open_government.png"
+import openHealthImg from "../assets/product-streams/open_health.png"
+import openSustainImg from "../assets/product-streams/open_sustainability.png"
 import openEcosystemImg from "../assets/oe/open-ecosystem-icon.png"
 
-const data = {
+export const sectorsData = {
   products: {
     elements: [
       {
@@ -277,7 +277,7 @@ const ProductStreams = ({ location }) => {
       </div>
 
       <ProductStreamsCards
-        data={data["products"]}
+        data={sectorsData["products"]}
         className="my-0 py-0 flex flex-wrap flex-col sm:flex-row justify-between gap-y-8 sm:gap-y-16 items-center mx-0 md:mx-3 lg:mx-0 xl:mx-3"
       />
     </Layout>

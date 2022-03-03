@@ -35,18 +35,6 @@ const ProductStreamsCards = ({ data, className }) => {
           </div>
         ))}
       </div>
-
-      {/* <CallToAction
-        callToActionClass="text-center my-8 mx-auto py-0 px-4 "
-        contentClass="md:w-3/5 w-full text-center mx-auto"
-        paragraph=""
-        doNotDisplayAnchor="hidden"
-        url={"/about"}
-        linkTitle=""
-        type="button"
-        label={"Contact us"}
-        btnClass="outlinedBtn text-primary font-bold border-2 my-5 mx-0 py-2 px-10 rounded-full "
-      /> */}
     </section>
   )
 }

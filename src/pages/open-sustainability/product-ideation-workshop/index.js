@@ -63,7 +63,7 @@ const IndexPage = ({ location }) => {
             <h3 className="font-bold text-4xl pt-5">
               Building green fintech:
             </h3>
-            <h3 className="font-bold text-4xl mb-3">
+            <h3 className="font-bold text-4xl my-2">
               {" "}
               <span className="os-heading-highlight px-3 ">
                 impactful design
@@ -113,7 +113,7 @@ const IndexPage = ({ location }) => {
           </div>
           <div className="os-product-idea-workshop-4-square-container container mx-auto  py-10 md:px-0 px-5">
             <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl  h-full">
-              <p>
+              <p className="text-center">
                 Identifying <span className="font-bold">target market segments</span> and
                 understanding their needs
               </p>
@@ -124,14 +124,14 @@ const IndexPage = ({ location }) => {
             </div>
 
             <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl  h-full">
-              <p>Aligning product ideas with their <span className="font-bold">potential impact</span></p>
+              <p className="text-center">Aligning product ideas with their <span className="font-bold">potential impact</span></p>
             </div>
             <div className="os-product-idea-workshop-4-square-container-arrow md:block hidden">
               <img src={ArrowImg} alt="" />
             </div>
 
             <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl  h-full">
-              <p>
+              <p className="text-center">
                 in the areas causing the greatest <span className="font-bold">sustainability</span> risk threats
               </p>
             </div>
@@ -140,7 +140,7 @@ const IndexPage = ({ location }) => {
             </div>
 
             <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl  h-full">
-              <p>
+              <p className="text-center">
                 Creating products and features that enable <span className="font-bold">action to improve
                 sustainability</span>
               </p>
@@ -365,7 +365,7 @@ const IndexPage = ({ location }) => {
 
               <p className=" mb-3">
               Hear more about our Open Sustainability work <br />
-Create positive impact and generate revenue
+              Create positive impact and generate revenue
               </p>
               <div className="flex">
               <input

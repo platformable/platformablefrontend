@@ -188,7 +188,13 @@ p {
 .main-text-color {
   color:var(--russian-violet-dark);
 }
+.bg-company-color {
+  background-color:var(--russian-violet-dark);
+}
 
+.bg-ob-light {
+  background-color:var(--ob-light);
+}
 /* MOBILE NAV */
 .sidenav {
   height: 100%;
@@ -6490,7 +6496,10 @@ font-size:20px;
 }
 
 .os-product-idea-workshop-our-workshop-subscribe-form {
-  background-color:#E6FFF5;
+  background-color:#D3CBFC;
+}
+.we-work-with {
+  background-color:#D3CBFC;
 }
 .os-product-idea-workshop-4-square-container {
   display:grid;
@@ -6602,13 +6611,44 @@ background-color: #31F3B6;
 /* 
 HOMEPAGE */
 .homepage-hero-bg {
-  background-color:#E4E0F8;
+  background-color:#E6E2F9;
 }
 
 .bg-homepage-trends-releases {
 
-  background-color:#F3F2F6;
+  background: rgb(255,255,255);
+background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,238,253,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,238,253,1) 100%);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,238,253,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f0eefd",GradientType=1);
 }
 .bg-homepage-latest-releases {
-  background-color:#F3F2F6;
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,238,253,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,238,253,1) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,238,253,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f0eefd",GradientType=1);
+}
+.card-border {
+  -webkit-box-shadow: 0px 4px 15px 3px rgba(0,0,0,0.1); 
+box-shadow: 0px 4px 15px 3px rgba(0,0,0,0.1);
+}
+
+.homepage-dark-purple-section {
+  background-image: url('../static/homepage/dark_purple_section_bg_img.png');
+  background-repeat: no-repeat;
+  background-position: right 35%;
+  background-size: contain;
+}
+
+.homepage-we-measure-section {
+  background: rgb(211,203,252);
+  background: -moz-linear-gradient(180deg, rgba(211,203,252,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(211,203,252,1) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(180deg, rgba(211,203,252,1) 0%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d3cbfc",endColorstr="#ffffff",GradientType=1);
+}
+
+.trends-card-date {
+  color:#D3CBFC;
 }
