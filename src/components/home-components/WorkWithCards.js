@@ -63,7 +63,7 @@ const WorkWithCards = () => {
                 <h6 className="my-5 pt-3 font-bold text-center">
                   {img.title}
                 </h6>
-                <p className="text-sm">{img.paragraph}</p>
+                <p className="text-sm text-center">{img.paragraph}</p>
               </div>
             </div>
           ))}

@@ -12,7 +12,7 @@ import CallToActionLp from "./components/CallToActionLp"
 import FormLp from "./components/FormLp"
 import Breadcrumbs from "../../../components/breadcrumbs"
 
-import heroImg from "../../../static/os/os-product-ideation-icon-hero2.png"
+import heroImg from "../../../static/os/os-product-ideation-icon-hero3.png"
 import ArrowImg from "../../../static/os/os-product-ideation-workshop-arrow green.png"
 import animation from "../../../static/os/os-product-ideation-animation.gif"
 import greenFintechImg1 from "../../../static/os/greenfintech-challenges-img-01.png"
@@ -106,16 +106,16 @@ const IndexPage = ({ location }) => {
           <div className="container mx-auto md:px-0 px-5">
             <h3 className="font-bold">
               <span className="os-product-idea-workshop-green-span px-2 py-2">
-                Our workshop
+                Our workshop will
               </span>{" "}
-              help guide you through a process from:
+              help you:
             </h3>
           </div>
           <div className="os-product-idea-workshop-4-square-container container mx-auto  py-10 md:px-0 px-5">
-            <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl  h-full">
+            <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 flex items-center rounded-xl  h-full">
               <p className="text-center">
-                Identifying <span className="font-bold">target market segments</span> and
-                understanding their needs
+                Identify <span className="font-bold">target market segments</span> and
+                understanding their needs 
               </p>
             </div>
 
@@ -123,26 +123,26 @@ const IndexPage = ({ location }) => {
               <img src={ArrowImg} alt="" />
             </div>
 
-            <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl  h-full">
-              <p className="text-center">Aligning product ideas with their <span className="font-bold">potential impact</span></p>
+            <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl flex items-center  h-full">
+              <p className="text-center">Focus on <span className="font-bold">high-impact sectors</span> and use cases</p>
             </div>
             <div className="os-product-idea-workshop-4-square-container-arrow md:block hidden">
               <img src={ArrowImg} alt="" />
             </div>
 
-            <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl  h-full">
+            <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl flex items-center h-full">
               <p className="text-center">
-                in the areas causing the greatest <span className="font-bold">sustainability</span> risk threats
+              Align product ideas with widest <span className="font-bold">potential sustainability impact</span>
+              
               </p>
             </div>
             <div className="os-product-idea-workshop-4-square-container-arrow md:block hidden">
               <img src={ArrowImg} alt="" />
             </div>
 
-            <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl  h-full">
+            <div className="os-product-idea-workshop-4-square-container-box my-5 p-5 rounded-xl flex items-center  h-full">
               <p className="text-center">
-                Creating products and features that enable <span className="font-bold">action to improve
-                sustainability</span>
+              Create products and features that <span className="font-bold">enable action</span>
               </p>
             </div>
           </div>
