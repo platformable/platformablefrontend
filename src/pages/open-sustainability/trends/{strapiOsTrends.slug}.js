@@ -9,7 +9,7 @@ import SEO from "../../../components/seo";
 import Trends1Col from "../../../components/Trends1Col";
 import TrendsExecutiveSummaryComponent from "../../../components/TrendsExecutiveSummaryComponent";
 
-import OSTrendsFile from '../../../static/os/Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022.pdf'
+import OSTrendsFile from '../../../static/os/Using_Open_Banking_APIs_to_Build_Green_Fintech Q1_2022.pdf'
 
 const TrendsPage = ({location,href }) => {
 
@@ -107,7 +107,7 @@ console.log("data.featured_image: ",data?.featured_image.formats.medium.url) */
                     font-bold my-5  bg-russian-violet-dark text-white py-2 px-10 rounded-full 
                     hover:bg-secondary cursor-pointer`}
                     href={OSTrendsFile}
-                    download="Platformable Open Banking Trends Report Q1 2022 January 2022">
+                    download="Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022">
                     Download Report
                   </a>
 

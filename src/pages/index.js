@@ -21,7 +21,7 @@ import QuarterlyImg from "../assets/product-streams/quarterly_trends_report.svg"
 /*assets*/
 
 import OBTrendsFile from '../static/ob/Platformable Open Banking Trends Report Q1 2022 January 2022.pdf'
-import OSTrendsFile from '../static/os/Using_Open_Banking_APIs_to_Build_Green_Fintech_Q1_2022.pdf'
+import OSTrendsFile from '../static/os/Using_Open_Banking_APIs_to_Build_Green_Fintech Q1_2022.pdf'
 
 import {sectorsData} from './sectors'
 
