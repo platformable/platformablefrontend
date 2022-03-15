@@ -266,7 +266,7 @@ const IndexPage = ({ data }) => {
 
 
 
-      <section >
+      <section id="subscription">
         <div className="os-product-idea-workshop-our-workshop-subscribe-form py-10">
           <div className="container mx-auto os-product-ideation-workshop-section5-container md:px-0 px-5">
             <div className="os-product-ideation-workshop-section5-left">
