@@ -4188,7 +4188,7 @@ small {
 }
 
 .card {
-  background-color: white;
+/*   background-color: white; */
   border-radius: 10px;
 }
 
@@ -6652,3 +6652,134 @@ box-shadow: 0px 4px 15px 3px rgba(0,0,0,0.1);
 .trends-card-date {
   color:#D3CBFC;
 }
+
+.bg-ob-hero {
+  background-color: #8987CA;
+}
+
+.seeourlatest-container {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+
+
+.seeourlatest-container a{
+  cursor: pointer;
+}
+
+
+
+.seeourlatest-container img{
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .seeourlatest-container {
+      display:grid;
+      grid-template-columns: 1fr ;
+    }
+    }
+
+
+.ob-trends-page-middle-section {
+  background:#F6F5FF;
+}
+
+.ob-trendspage-actionable {
+  background: #F6F5FF;
+}
+
+.ob-price-section {
+  background: #F6F5FF;
+}
+
+.border-ob-trendspage-actionable {
+  border:2px solid #c6a4f7;
+}
+
+.pricing-plans-first-top {
+  display:grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.price-card1 {
+  background-color: #8987ca;
+}
+
+.price-card2 {
+  background-color: #6764BC;
+}
+
+.price-card3 {
+  background-color:#1a014c;
+}
+
+.os-btn-price-right {
+  background-color:#f9c61a;
+}
+
+.os-btn-price-left {
+  background-color:#6764BC;
+}
+
+.os-price-section-stars {
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  place-items: center;
+}
+
+.stars-line {
+  height:2px;
+  background-color:white;
+  padding:0px 5px;
+    font-size:30px !important;
+  }
+.star-orange {
+  color:var(--red-orange-dark);
+  font-size:30px !important;
+}
+  .star-light {
+    color:#EBE0FD;
+    font-size:30px !important;
+  }
+
+  .ob-invest-monthly-section {
+   /*  background-image: url("../static/ob/trends-page/img_banner_02.png");
+    background-repeat: no-repeat;
+    min-height:300px;
+    background-size: cover; */
+  }
+
+  .ob-invest-monthly-section-container {
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    background-image: url("../static/ob/trends-page/img_banner_02.png");
+    background-repeat: no-repeat;
+    min-height:300px;
+    background-size:contain; 
+  }
+
+  .invest-italic-text {
+    opacity: 50%;
+  }
+
+  .red-orange-text-color {
+color: var(--red-orange-dark);
+  }
+
+  @media screen and (max-width: 768px) {
+    .ob-invest-monthly-section-container {
+      background-image: none;
+      /* background-color: var(--red-orange-dark); */
+      grid-template-columns: 1fr;
+      min-height: 800px;
+    }
+    .ob-invest-monthly-section-left {
+      background-color:var(--red-orange-dark);
+      padding:20px;
+      border-radius: 30px;
+      margin-top:20px;
+    }
+    }
