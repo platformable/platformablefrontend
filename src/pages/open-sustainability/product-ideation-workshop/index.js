@@ -269,7 +269,7 @@ const IndexPage = ({ location }) => {
       </section>
 
 
-      <section className="bg-main-color py-10" id="os-pwi-form">
+     {/*  <section className="bg-main-color py-10" id="os-pwi-form">
 
 
         <div className="os-product-ideation-workshop-section7 ">
@@ -350,7 +350,7 @@ const IndexPage = ({ location }) => {
 
         </div>
 
-      </section>
+      </section> */}
 
 
       <section >

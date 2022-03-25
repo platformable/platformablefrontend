@@ -27,7 +27,7 @@ const data = {
     elements: [
       {
         img: openBankImg,
-        title: "Open Banking/ Open\nFinance",
+        title: "Open Sustainability",
         paragraph: "Understand how open economy APIs are building sustainability solutions and how open sustainability APIs are being used to enhance financial products",
         color: "#C7F3E540",
         url: "/open-sustainability/open-banking",
