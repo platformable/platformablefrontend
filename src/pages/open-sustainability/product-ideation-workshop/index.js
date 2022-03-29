@@ -12,6 +12,7 @@ import CallToActionLp from "./components/CallToActionLp"
 import FormLp from "./components/FormLp"
 import Breadcrumbs from "../../../components/breadcrumbs"
 
+
 import heroImg from "../../../static/os/os-product-ideation-icon-hero3.png"
 import ArrowImg from "../../../static/os/os-product-ideation-workshop-arrow green.png"
 import animation from "../../../static/os/os-product-ideation-animation.gif"
