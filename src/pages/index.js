@@ -107,19 +107,7 @@ const IndexPage = ({ data }) => {
   /* TRENDS REPORT TILES */
 
   const trendsData = [
-    {
-      title:"Building green fintech: impactful design and product ideation",
-      date:"Workshop - February 2022",
-      //btnBackground:"btn-trends-ob",
-      btnBackground:"bg-white",
-      btnText:"Register now",
-      //img:QuarterlyImg,
-      img:release1Img,
-      download:false,
-      downloadText:"",
-      url:"https://www.the-ntwk.com/event-details/thentwkacademy-green-fintech-designing-for-impact",
-      /* url:OBTrendsFile */
-    },
+
     {
         title:`Open Banking/Open Finance Trends Report`,
         date:2022,
@@ -209,7 +197,7 @@ const IndexPage = ({ data }) => {
         <h3 className="text-2xl font-bold">Check out our latest releases</h3>
         </div>
       <div
-        className={`grid md:grid-cols-4 grid-cols-1 md:px-0 px-5 gap-4`}
+        className={`grid md:grid-cols-3 grid-cols-1 md:px-0 px-5 gap-4`}
       >
 
         {trendsData.map((trend,index)=>{
