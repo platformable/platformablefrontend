@@ -227,12 +227,12 @@ const IndexPage = ({ location }) => {
                 <div className="ob-price-card-bottom-left">
                   <h2 className="font-bold red-orange-text-color">€19</h2>
                   <p className="italic text-xs my-1 invest-italic-text">per month</p>
-                  <a href="https://checkout.stripe.com/pay/cs_live_a1vIvU4bprkrM2u4HJrQ8WJnrfxprVwp09V482Br2cz1DQ59nU8maNbpYo#fidkdWxOYHwnPyd1blppbHNgWjA0QmRLdWFCUW1LT1JmSGN2PDFLb2BAN3duSnFgUE5OQ01jZlNqSTc8bEs9XTNoTW9PM2Z8TE9EUkZobEFmZ0trUWo3SEk2TnVfPTx1RlBcNEhUTzVMbjI8NTVfa0RvRm5qMycpJ3VpbGtuQH11anZgYUxhJz8nYVczNmNdYmJ8YUtpYGpqY181J3gl" target="_blank" className="px-5 py-2 os-btn-price-left cursor-pointer text-white rounded-xl inline-block">Buy Now</a>
+                  <a href="https://buy.stripe.com/dR63fXggydNleoofZ0" target="_blank" className="px-5 py-2 os-btn-price-left cursor-pointer text-white rounded-xl inline-block">Buy Now</a>
                 </div>
                 <div className="ob-price-card-bottom-right">
                 <h2 className="font-bold red-orange-text-color">€182</h2>
                   <p className="italic text-xs my-1 invest-italic-text">per year</p>
-                  <a target= "_blank" href="https://checkout.stripe.com/pay/cs_live_a1CyHahXN6AN9QnPy4oRV3XuPPs0w1ORFgjf473dOnhxAp4ORtwh4zHW0Y#fidkdWxOYHwnPyd1blppbHNgWjA0QmRLdWFCUW1LT1JmSGN2PDFLb2BAN3duSnFgUE5OQ01jZlNqSTc8bEs9XTNoTW9PM2Z8TE9EUkZobEFmZ0trUWo3SEk2TnVfPTx1RlBcNEhUTzVMbjI8NTVfa0RvRm5qMycpJ3VpbGtuQH11anZgYUxhJz8nM2pANTZJZFJgZk9tNX18NmZjJ3gl" className="px-5 py-2 os-btn-price-right   cursor-pointer rounded-xl inline-block">Buy Now</a>
+                  <a target= "_blank" href="https://buy.stripe.com/6oE03LaWecJh0xy3cf" className="px-5 py-2 os-btn-price-right   cursor-pointer rounded-xl inline-block">Buy Now</a>
                   <p className=" text-xs my-1 i red-orange-text-color">Save €46</p>
                 </div>
               </div>
@@ -274,12 +274,12 @@ const IndexPage = ({ location }) => {
                 <div className="ob-price-card-bottom-left">
                   <h2 className="font-bold red-orange-text-color">€50</h2>
                   <p className="italic text-xs my-1 invest-italic-text">per month</p>
-                  <a href="https://checkout.stripe.com/pay/cs_live_a12udxwZnQsGm1E4OIqEohdANZwb6lWIrRxG6ds1OLgBnDnIXj7rs1P4bC#fidkdWxOYHwnPyd1blppbHNgWjA0QmRLdWFCUW1LT1JmSGN2PDFLb2BAN3duSnFgUE5OQ01jZlNqSTc8bEs9XTNoTW9PM2Z8TE9EUkZobEFmZ0trUWo3SEk2TnVfPTx1RlBcNEhUTzVMbjI8NTVfa0RvRm5qMycpJ3VpbGtuQH11anZgYUxhJz8nPXJIMGowYmJ8PXE0PTU1PXJ9J3gl" target="_blank" className="px-5 py-2 os-btn-price-left cursor-pointer rounded-xl inline-block text-white">Buy Now</a>
+                  <a href="https://buy.stripe.com/8wM5o5ggy8t18008wx" target="_blank" className="px-5 py-2 os-btn-price-left cursor-pointer rounded-xl inline-block text-white">Buy Now</a>
                 </div>
                 <div className="ob-price-card-bottom-right">
                 <h2 className="font-bold red-orange-text-color">€480</h2>
                   <p className="italic text-xs my-1 invest-italic-text">per year</p>
-                 <a href="https://checkout.stripe.com/pay/cs_live_a1Cv231qRagEUljBfx0ZSUS7MLwckwLJr38B57fTqUpFFdPflvG1f8Fn34#fidkdWxOYHwnPyd1blppbHNgWjA0QmRLdWFCUW1LT1JmSGN2PDFLb2BAN3duSnFgUE5OQ01jZlNqSTc8bEs9XTNoTW9PM2Z8TE9EUkZobEFmZ0trUWo3SEk2TnVfPTx1RlBcNEhUTzVMbjI8NTVfa0RvRm5qMycpJ3VpbGtuQH11anZgYUxhJz8nYFNkYFxDZFJgMWZJZ2ZmNmZmJ3gl" target="_blank" className="px-5 py-2 os-btn-price-right cursor-pointer rounded-xl inline-block">Buy Now</a>
+                 <a href="https://buy.stripe.com/eVaeYFaWe4cLbcc3cc" target="_blank" className="px-5 py-2 os-btn-price-right cursor-pointer rounded-xl inline-block">Buy Now</a>
                  <p className="text-xs my-1  red-orange-text-color">Save €120</p>
                 </div>
               </div>
@@ -351,7 +351,7 @@ const IndexPage = ({ location }) => {
                 <div className="ob-price-card-bottom-left">
                   <h2 className="font-bold red-orange-text-color">€1550</h2>
                   <p className="italic text-xs my-1">per month</p>
-                <a targe="_blank" href="https://checkout.stripe.com/pay/cs_live_a1w9WVsj3K9TZ5Y3fJgec1F0XyWADXtgWL0L5aEJmcHaWG2cwYvc4w1aQx#fidkdWxOYHwnPyd1blppbHNgWjA0QmRLdWFCUW1LT1JmSGN2PDFLb2BAN3duSnFgUE5OQ01jZlNqSTc8bEs9XTNoTW9PM2Z8TE9EUkZobEFmZ0trUWo3SEk2TnVfPTx1RlBcNEhUTzVMbjI8NTVfa0RvRm5qMycpJ3VpbGtuQH11anZgYUxhJz8nZks3NTZJMX1UZ0NhPDExNmZiJ3gl" className="px-5 py-2 price-card3 text-white rounded-xl inline-block cursor-pointer">Buy Now</a>
+                <a targe="_blank" href="https://buy.stripe.com/cN203L4xQbFd9443cg" className="px-5 py-2 price-card3 text-white rounded-xl inline-block cursor-pointer">Buy Now</a>
                 <p className="italic text-xs my-1 text-white">0</p>
                 </div>
                 
