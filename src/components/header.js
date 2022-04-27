@@ -179,7 +179,7 @@ const Header = ({ siteTitle }) => {
                   ) : (
                     ""
                   )}
-                  {user.isLoggedIn ? (
+                 {/*  {user.isLoggedIn ? (
                     ""
                   ) : (
                     <Link
@@ -201,14 +201,14 @@ const Header = ({ siteTitle }) => {
                     </span>
                   ) : (
                     ""
-                  )}
-                  <Link
+                  )} */}
+                {/*   <Link
                     to="/sign-up"
                     className="top-nav bg-gray-200  px-3 py-2 rounded-md text-sm font-medium"
                     activeClassName="active-top-nav"
                   >
                     Sign Up
-                  </Link>
+                  </Link> */}
                   
                 </div>
               </div>

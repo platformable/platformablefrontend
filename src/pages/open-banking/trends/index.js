@@ -17,6 +17,7 @@ import "./styles/index.css"
 import Breadcrumbs from "../../../components/breadcrumbs"
 
 import seeOurLatestImg from "../../../static/ob/last_release_02_Open_Banking.png"
+
 import icon1 from '../../../static/ob/trends-page/icon_01.png'
 import icon2 from '../../../static/ob/trends-page/icon_02.png'
 import icon3 from '../../../static/ob/trends-page/icon_03.png'

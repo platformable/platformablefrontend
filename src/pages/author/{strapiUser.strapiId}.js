@@ -123,40 +123,37 @@ const AuthorPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query strapiAuthorPage($strapiId: Int) {
-    strapiUser(strapiId: { eq: $strapiId }) {
-      bio
-      id
-      image {
-        childImageSharp {
-          gatsbyImageData(
-            width: 320
-            blurredOptions: { width: 100 }
-            placeholder: BLURRED
-          )
-        }
-      }
-      name
-      email
-      lastname
-      position
-      strapiId
-      posts {
-        slug
-        title
-        content
-        publishing_date(formatString: "DD MMM YYYY")
-        staging
-        featured_image {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
-          }
-        }
-        excerpt
-        authors_page
+query strapiAuthorPage($strapiId: Int) {
+  strapiUser(strapiId: {eq: $strapiId}, affiliation: {eq: "Team"}) {
+    bio
+    id
+    image {
+      childImageSharp {
+        gatsbyImageData(width: 320, blurredOptions: {width: 100}, placeholder: BLURRED)
       }
     }
+    name
+    email
+    lastname
+    position
+    strapiId
+    posts {
+      slug
+      title
+      content
+      publishing_date(formatString: "DD MMM YYYY")
+      staging
+      featured_image {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
+      excerpt
+      authors_page
+    }
   }
+}
+
 `
 
 export default AuthorPage
