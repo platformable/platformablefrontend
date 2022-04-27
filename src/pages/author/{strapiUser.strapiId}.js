@@ -14,7 +14,7 @@ const AuthorPage = ({ data }) => {
         (a, b) => new Date(b.publishing_date) - new Date(a.publishing_date)
       )
     : " "
-  console.log(`This is sort ${sortByDate}`)
+
   return (
     <Layout>
       <SEO title="Author" />
@@ -22,9 +22,9 @@ const AuthorPage = ({ data }) => {
         <div className="sm:mx-auto px-5 md:px-3 lg:px-0 xl:px-3">
           <section className="grid md:grid-cols-2  grid-cols-1 py-10 justify-center  items-center bg-gray-50 my-5 rounded-xl px-0 md:px-3 lg:px-0 xl:px-3">
             <div className="authors-page-left grid justify-center">
-              {user.image && user.image ? (
+              {user?.image && user?.image ? (
                 <GatsbyImage
-                  image={getImage(user.image)}
+                  image={getImage(user?.image)}
                   className="mb-2"
                   alt={"Platformable"}
                 />
@@ -34,14 +34,13 @@ const AuthorPage = ({ data }) => {
             </div>
             <div className="px-5 text-center sm:center md:right md:text-left lg:text-left">
               <h3 className="font-bold">
-                {user.name} {user.lastname}
-                {console.log(user.id)}
+                {user?.name} {user?.lastname}
               </h3>
-              <h5 className="font-bold italic">{user.position}</h5>
+              <h5 className="font-bold italic">{user?.position}</h5>
               <h6 className="">
-                <strong>Email: </strong> {` ${user.email}`}
+                <strong>Email: </strong> {` ${user?.email}`}
               </h6>
-              <div dangerouslySetInnerHTML={{ __html: user.bio }} />
+              <div dangerouslySetInnerHTML={{ __html: user?.bio }} />
             </div>
           </section>
         </div>
@@ -124,7 +123,7 @@ const AuthorPage = ({ data }) => {
 
 export const query = graphql`
 query strapiAuthorPage($strapiId: Int) {
-  strapiUser(strapiId: {eq: $strapiId}, affiliation: {eq: "Team"}) {
+  strapiUser(strapiId: {eq: $strapiId}) {
     bio
     id
     image {
