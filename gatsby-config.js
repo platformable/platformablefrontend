@@ -112,7 +112,7 @@ module.exports = {
         // Exclude specific pages or groups of pages using glob parameters
         // See: https://github.com/isaacs/minimatch
         // The example below will exclude the single `path/to/page` and all routes beginning with `category`
-        exclude: [`/app/*`],
+        exclude: [`/app/*`,`/author/*`],
         query: `
           {
             site {
@@ -146,17 +146,10 @@ module.exports = {
       options: {
         host: 'https://www.platformable.com',
         sitemap: 'https://www.platformable.com/sitemap.xml',
-       // policy: [{ userAgent: '*', allow: '/',disallow: ['/app','/app/*'] }]
+        policy: [{ userAgent: '*', allow: '/',disallow: ['/app','/app/*','/author','/author/*'] }]
       }
     },
-/*     {
-      resolve: 'gatsby-plugin-matomo',
-      options: {
-        siteId: '1',
-        matomoUrl: 'https://platformable.matomo.cloud',
-        siteUrl: 'https://platformable.com'
-      }
-    } */
+
     {
       resolve: `gatsby-plugin-plausible`,
       options: {
