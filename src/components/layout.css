@@ -853,7 +853,7 @@ MEDIA QUERIES */
 .posts-content p {
   font-size: 19px;
   margin-bottom: 20px;
-  color: #333 !important;
+  color:var(--russian-violet-dark) !important;
 }
 
 .image-style-align-center {
