@@ -5141,7 +5141,7 @@ blockquote:after {
 .dynamicTable table td {
   border: 2px solid var(--russian-violet-dark);
   padding: 20px;
-  color: black;
+  color: var(--rusian-violet-dark);
 }
 
 /* dynamicTable-OB */
@@ -5178,7 +5178,7 @@ blockquote:after {
 .dynamicTable-ob table td {
   border: 2px solid var(--ob-dark);
   padding: 20px;
-  color: black;
+  color: var(--russian-violet-dark);
 }
 
 /* dynamicTable-OB */
@@ -5218,7 +5218,7 @@ blockquote:after {
 .dynamicTable-og table td {
   border: 2px solid var(--og-dark);
   padding: 20px;
-  color: black;
+  color: var(--rusian-violet-dark);
 }
 
 /* dynamicTable-Og */
@@ -5257,7 +5257,7 @@ blockquote:after {
 .dynamicTable-oh table td {
   border: 2px solid var(--oh-dark);
   padding: 20px;
-  color: black;
+  color: var(--rusian-violet-dark);
 }
 
 /* dynamicTable-OH */
@@ -5296,7 +5296,7 @@ blockquote:after {
 .dynamicTable-os table td {
   border: 2px solid var(--os-dark);
   padding: 20px;
-  color: black;
+  color: var(--rusian-violet-dark);
 }
 
 /* dynamicTable-OS */
@@ -5332,7 +5332,7 @@ blockquote:after {
 .dynamicTable-oe table td {
   border: 2px solid var(--oe-dark);
   padding: 20px;
-  color: black;
+  color: var(--rusian-violet-dark);
 }
 
 /* dynamicTable-OE */
