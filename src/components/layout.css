@@ -1259,6 +1259,7 @@ hr.blue {
   /* border-right: 1px solid #09b; */
   border-bottom: 1px solid #ccc;
   padding: 20px;
+  font-family: Roboto !important;
 }
 .posts-content figure.table tr th:first-child,
 .posts-content figure.table tr td:first-child {
@@ -3959,6 +3960,7 @@ hr.blue {
   border-right: 2px dotted #dddddd;
   text-align: left;
   padding: 8px;
+  font-family: Roboto !important;
 }
 
 .horizontal-table td:last-child {
@@ -3978,6 +3980,7 @@ hr.blue {
 .horizontal-table td {
   padding: 1em;
   border-bottom: 0px solid white;
+  font-family: Roboto !important;
 }
 
 .horizontal-table-head--red-orange {
@@ -5142,6 +5145,7 @@ blockquote:after {
   border: 2px solid var(--russian-violet-dark);
   padding: 20px;
   color: var(--rusian-violet-dark);
+  font-family: Roboto !important;
 }
 
 /* dynamicTable-OB */
@@ -5154,6 +5158,7 @@ blockquote:after {
 }
 .dynamicTable-ob p {
   font-size: 12px;
+  font-family: Roboto !important;
 }
 
 .dynamicTable-ob table {
@@ -5179,6 +5184,7 @@ blockquote:after {
   border: 2px solid var(--ob-dark);
   padding: 20px;
   color: var(--russian-violet-dark);
+  font-family: Roboto !important;
 }
 
 /* dynamicTable-OB */
@@ -5219,6 +5225,7 @@ blockquote:after {
   border: 2px solid var(--og-dark);
   padding: 20px;
   color: var(--rusian-violet-dark);
+  font-family: Roboto !important;
 }
 
 /* dynamicTable-Og */
@@ -5258,6 +5265,7 @@ blockquote:after {
   border: 2px solid var(--oh-dark);
   padding: 20px;
   color: var(--rusian-violet-dark);
+  font-family: Roboto !important;
 }
 
 /* dynamicTable-OH */
@@ -5297,6 +5305,7 @@ blockquote:after {
   border: 2px solid var(--os-dark);
   padding: 20px;
   color: var(--rusian-violet-dark);
+  font-family: Roboto !important;
 }
 
 /* dynamicTable-OS */
@@ -5333,6 +5342,7 @@ blockquote:after {
   border: 2px solid var(--oe-dark);
   padding: 20px;
   color: var(--rusian-violet-dark);
+  font-family: Roboto !important;
 }
 
 /* dynamicTable-OE */
