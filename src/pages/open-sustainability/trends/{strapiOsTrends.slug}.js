@@ -11,6 +11,8 @@ import TrendsExecutiveSummaryComponent from "../../../components/TrendsExecutive
 
 import OSTrendsFile from '../../../static/os/Using_Open_Banking_APIs_to_Build_Green_Fintech Q1_2022.pdf'
 
+import OBOFTrendsImg from "../../../static/ob/trends-page/obftrendslinkimage.png"
+
 const TrendsPage = ({location,href }) => {
 
   const [form,setForm]=useState("");
@@ -142,7 +144,26 @@ console.log("data.featured_image: ",data?.featured_image.formats.medium.url) */
             })}
         </div>
       </section>
-
+      <section className="ob-trends-seeourlatest md:my-10">
+        <div className="container mx-auto">
+          <div className="seeourlatest-container items-center shadow rounded-xl md:px-0 px-5 bg-white">
+            <div className="ronded-tl-xl ronded-bl-xl">
+              <img src={OBOFTrendsImg} alt="openBanking openFinance Trends" />
+            </div>
+            <div className="px-5">
+              <h3 className="font-bold mb-5 md:pt-0 pt-5">
+                Let us help you and your team evolve towards a platform mindset.
+              </h3>
+              <a
+                className="btn bg-red-orange-dark text-white px-5 rounded-xl py-1 mb-5 cursor"
+                href="/open-banking/trends"
+              >
+                See our latest Trends Reports
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="os-form">
         <div className="container mx-auto mt-10">
