@@ -1253,7 +1253,13 @@ hr.blue {
   border-top-right-radius: 6px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
+
+/* .posts-content table p {
+margin:0 !important;
+} */
+
 .posts-content figure.table tr th,
 .posts-content figure.table tr td {
   /* border-right: 1px solid #09b; */

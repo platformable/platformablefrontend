@@ -26,7 +26,7 @@ import actionableImg2 from '../../../static/ob/trends-page/Actionable_section_ic
 import actionableImg3 from '../../../static/ob/trends-page/Actionable_section_icon_03.png'
 import actionableImg4 from '../../../static/ob/trends-page/Actionable_section_icon_04.png'
 
-import OBTrendsFile from '../../../static/ob/Platformable Open Banking Trends Report Q1 2022 January 2022.pdf'
+import OBTrendsFile from '../../../static/ob/Platformable-Q2-2022-Open-Banking-Trends-Report.pdf'
 
 
 const IndexPage = ({ location }) => {
@@ -116,9 +116,20 @@ const IndexPage = ({ location }) => {
                     text-sm md:text-primary 
                     font-bold my-5  ml-2 bg-red-orange-dark text-white py-2 px-10 rounded-full 
                     hover:bg-secondary cursor-pointer`}
-                  href="#os-form"
+                  href="#ob-price-section"
                 >
                   Subscribe
+                </a>
+
+                <a
+                  className={`md:inline-block inline-block 
+                    text-sm md:text-primary 
+                    font-bold my-5  ml-2 bg-sunglow  py-2 px-10 rounded-full 
+                    hover:bg-secondary cursor-pointer`}
+                  href={OBTrendsFile}
+                  download={'Platformable-Q2-2022-Open-Banking-Trends-Report'}
+                >
+                  Download Q2 2022 Report
                 </a>
               </div>
             </div>

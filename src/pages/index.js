@@ -30,7 +30,7 @@ import release1Img from '../static/homepage/last_release_01_workshop.png'
 import release2Img from '../static/homepage/last_release_02_Open_Banking.png'
 import release3Img from '../static/homepage/last_release_03_apilandscape.png'
 import release4Img from '../static/homepage/last_release_04_OS_trends_report.png'
-import graviteeAdImg from '../static/homepage/graviteeAd.png'
+import ObTrendsImg from '../static/homepage/Platformable-Q2-2022-Open-Banking-Trends-Report-Cover-Page.png'
 const IndexPage = ({ data }) => {
 
 
@@ -109,14 +109,14 @@ const IndexPage = ({ data }) => {
   const trendsData = [
 
     {
-        title:`Gravitee API Complexity Survey: Now open`,
+        title:`Q2 2022 Trends Report`,
         date:2022,
         //btnBackground:"btn-trends-oh",
         btnBackground:"bg-white",
-        btnText:"Share your feedback",
+        btnText:"Read it here",
         //img:QuarterlyImg,
-        img:graviteeAdImg,
-        url:'https://platformable.typeform.com/APIcomplexity',
+        img:ObTrendsImg,
+        url:'open-banking/trends',
         download:false,
         downloadText:""
       },
