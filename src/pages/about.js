@@ -508,6 +508,41 @@ export default function about({ data }) {
                           </div>
                         </div>
                       </div>
+                      <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
+                        <div className="flex justify-center">
+                          <GatsbyImage
+                            image={getImage(userauthor.user[8].image)}
+                            className="my-0 img-thumbnail"
+                            alt="Platformable team"
+                          />
+                        </div>
+                        <div className="p-4 md:p-6 md:block md:px-5 px-5">
+                          <div className="flex gap-4 items-center mb-5 justify-center ">
+                            <div>
+                              <h3 className="font-bold text-lg text-center leading-tight sm:leading-normal md:text-sm">
+                                {`${userauthor.user[8].name} ${userauthor.user[8].lastname}`}
+                              </h3>
+
+                              <p className="text-xs text-center italic font-bold">
+                                {userauthor.user[8].position}
+                              </p>
+                              {userauthor.user[8].pronoun && (
+                                <p className="text-xs text-center">
+                                  {userauthor.user[8].pronoun}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="text-sm">
+                            <div
+                              className="leading-none text-xs"
+                              dangerouslySetInnerHTML={{
+                                __html: userauthor.user[8].bio,
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
 
                      {/*  <div className=" pt-5 rounded overflow-hidden   bg-gray-50 w-1/1 shadow">
                         <div className="flex justify-center">
