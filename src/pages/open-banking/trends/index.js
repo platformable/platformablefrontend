@@ -237,15 +237,15 @@ const IndexPage = ({ location }) => {
               </div>
               <div className="ob-price-card-bottom grid md:grid-cols-2 grid-cols-1 bg-white py-5 rounded-b-lg">
                 <div className="ob-price-card-bottom-left">
-                  <h2 className="font-bold red-orange-text-color">€19</h2>
+                  <h2 className="font-bold red-orange-text-color">€49</h2>
                   <p className="italic text-xs my-1 invest-italic-text">per month</p>
-                  <a href="https://buy.stripe.com/dR63fXggydNleoofZ0" target="_blank" className="px-5 py-2 os-btn-price-left cursor-pointer text-white rounded-xl inline-block">Buy Now</a>
+                  <a href="https://buy.stripe.com/aEUdUB7K2gZx9448wB" target="_blank" className="px-5 py-2 os-btn-price-left cursor-pointer text-white rounded-xl inline-block">Buy Now</a>
                 </div>
                 <div className="ob-price-card-bottom-right">
-                <h2 className="font-bold red-orange-text-color">€182</h2>
+                <h2 className="font-bold red-orange-text-color">€470</h2>
                   <p className="italic text-xs my-1 invest-italic-text">per year</p>
-                  <a target= "_blank" href="https://buy.stripe.com/6oE03LaWecJh0xy3cf" className="px-5 py-2 os-btn-price-right   cursor-pointer rounded-xl inline-block">Buy Now</a>
-                  <p className=" text-xs my-1 i red-orange-text-color">Save €46</p>
+                  <a target= "_blank" href="https://buy.stripe.com/bIYdUB9SaeRp4NOfZ4" className="px-5 py-2 os-btn-price-right   cursor-pointer rounded-xl inline-block">Buy Now</a>
+                  <p className="text-xs my-1 i red-orange-text-color">Save €118 (20% discount)</p>
                 </div>
               </div>
             </div>
@@ -284,15 +284,15 @@ const IndexPage = ({ location }) => {
               </div>
               <div className="ob-price-card-bottom grid md:grid-cols-2 grid-cols-1 bg-white py-5 rounded-b-lg">
                 <div className="ob-price-card-bottom-left">
-                  <h2 className="font-bold red-orange-text-color">€50</h2>
+                  <h2 className="font-bold red-orange-text-color">€199</h2>
                   <p className="italic text-xs my-1 invest-italic-text">per month</p>
-                  <a href="https://buy.stripe.com/8wM5o5ggy8t18008wx" target="_blank" className="px-5 py-2 os-btn-price-left cursor-pointer rounded-xl inline-block text-white">Buy Now</a>
+                  <a href="https://buy.stripe.com/8wM6s98O6gZxeoo5kr" target="_blank" className="px-5 py-2 os-btn-price-left cursor-pointer rounded-xl inline-block text-white">Buy Now</a>
                 </div>
                 <div className="ob-price-card-bottom-right">
-                <h2 className="font-bold red-orange-text-color">€480</h2>
+                <h2 className="font-bold red-orange-text-color">€1910</h2>
                   <p className="italic text-xs my-1 invest-italic-text">per year</p>
-                 <a href="https://buy.stripe.com/eVaeYFaWe4cLbcc3cc" target="_blank" className="px-5 py-2 os-btn-price-right cursor-pointer rounded-xl inline-block">Buy Now</a>
-                 <p className="text-xs my-1  red-orange-text-color">Save €120</p>
+                 <a href="https://buy.stripe.com/9AQ9Eld4m7oX3JK6ow" target="_blank" className="px-5 py-2 os-btn-price-right cursor-pointer rounded-xl inline-block">Buy Now</a>
+                 <p className="text-xs my-1  red-orange-text-color">Save €478 (20% discount)</p>
                 </div>
               </div>
             </div>
@@ -361,9 +361,9 @@ const IndexPage = ({ location }) => {
               </div>
               <div className="ob-price-card-bottom grid grid-cols-1 bg-white text-main-color py-5 rounded-b-lg">
                 <div className="ob-price-card-bottom-left">
-                  <h2 className="font-bold red-orange-text-color">€1550</h2>
+                  <h2 className="font-bold red-orange-text-color">€3000</h2>
                   <p className="italic text-xs my-1">per month</p>
-                <a targe="_blank" href="https://buy.stripe.com/cN203L4xQbFd9443cg" className="px-5 py-2 price-card3 text-white rounded-xl inline-block cursor-pointer">Buy Now</a>
+                <a targe="_blank" href="https://buy.stripe.com/fZe7wde8qdNl3JK4gp" className="px-5 py-2 price-card3 text-white rounded-xl inline-block cursor-pointer">Buy Now</a>
                 <p className="italic text-xs my-1 text-white">0</p>
                 </div>
                 
