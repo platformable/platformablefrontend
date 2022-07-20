@@ -127,7 +127,7 @@ const IndexPage = ({ location }) => {
                     font-bold my-5  ml-2 bg-sunglow  py-2 px-10 rounded-full 
                     hover:bg-secondary cursor-pointer`}
                   href={OBTrendsFile}
-                  download={'Platformable-Q2-2022-Open-Banking-Trends-Report'}
+                  download={'Platformable-Q3-2022-Open-Banking-Trends-Report'}
                 >
                   Download Q3 2022 Report
                 </a>
