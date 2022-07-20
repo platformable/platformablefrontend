@@ -30,7 +30,7 @@ import release1Img from '../static/homepage/last_release_01_workshop.png'
 import release2Img from '../static/homepage/last_release_02_Open_Banking.png'
 import release3Img from '../static/homepage/last_release_03_apilandscape.png'
 import release4Img from '../static/homepage/last_release_04_OS_trends_report.png'
-import ObTrendsImg from '../static/homepage/Platformable-Q2-2022-Open-Banking-Trends-Report-Cover-Page.png'
+import ObTrendsImg from '../static/homepage/Platformable-Q3-2022-Quarterly-Trends-OBOF.png'
 const IndexPage = ({ data }) => {
 
 
@@ -109,7 +109,7 @@ const IndexPage = ({ data }) => {
   const trendsData = [
 
     {
-        title:`Q2 2022 Trends Report`,
+        title:`Q3 2022 Trends Report`,
         date:2022,
         //btnBackground:"btn-trends-oh",
         btnBackground:"bg-white",

@@ -16,7 +16,7 @@ import SubscriptionPlans from "./components/SubscriptionPlans"
 import "./styles/index.css"
 import Breadcrumbs from "../../../components/breadcrumbs"
 
-import seeOurLatestImg from "../../../static/ob/last_release_02_Open_Banking.png"
+import seeOurLatestImg from "../../../static/ob/Platformable-Q3-2022-Quarterly-Trends-OBOF.png"
 
 import icon1 from '../../../static/ob/trends-page/icon_01.png'
 import icon2 from '../../../static/ob/trends-page/icon_02.png'
@@ -26,7 +26,7 @@ import actionableImg2 from '../../../static/ob/trends-page/Actionable_section_ic
 import actionableImg3 from '../../../static/ob/trends-page/Actionable_section_icon_03.png'
 import actionableImg4 from '../../../static/ob/trends-page/Actionable_section_icon_04.png'
 
-import OBTrendsFile from '../../../static/ob/Platformable-Q2-2022-Open-Banking-Trends-Report.pdf'
+import OBTrendsFile from '../../../static/ob/Platformable-Q3-2022-Quarterly-Trends-OBOF.pdf'
 
 
 const IndexPage = ({ location }) => {
@@ -129,7 +129,7 @@ const IndexPage = ({ location }) => {
                   href={OBTrendsFile}
                   download={'Platformable-Q2-2022-Open-Banking-Trends-Report'}
                 >
-                  Download Q2 2022 Report
+                  Download Q3 2022 Report
                 </a>
               </div>
             </div>
