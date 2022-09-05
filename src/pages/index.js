@@ -21,6 +21,7 @@ import QuarterlyImg from "../assets/product-streams/quarterly_trends_report.svg"
 /*assets*/
 
 import OBTrendsFile from '../static/ob/Platformable Open Banking Trends Report Q1 2022 January 2022.pdf'
+import OBUseCasesAugust2022TrendsFile from '../static/ob/Q3 2022 Trends Report Use Cases.pdf'
 import OSTrendsFile from '../static/os/Using_Open_Banking_APIs_to_Build_Green_Fintech Q1_2022.pdf'
 
 import {sectorsData} from './sectors'
@@ -31,6 +32,7 @@ import release2Img from '../static/homepage/last_release_02_Open_Banking.png'
 import release3Img from '../static/homepage/last_release_03_apilandscape.png'
 import release4Img from '../static/homepage/last_release_04_OS_trends_report.png'
 import ObTrendsImg from '../static/homepage/Platformable-Q3-2022-Quarterly-Trends-OBOF.png'
+import UseCasesTrendsImg from '../static/homepage/Q3 2022 Business models and Use cases OBOF.png'
 const IndexPage = ({ data }) => {
 
 
@@ -107,7 +109,18 @@ const IndexPage = ({ data }) => {
   /* TRENDS REPORT TILES */
 
   const trendsData = [
-
+    {
+      title:`Q3 2022 Trends Report Use Cases`,
+      date:2022,
+      //btnBackground:"btn-trends-oh",
+      btnBackground:"bg-white",
+      btnText:"Download",
+      //img:QuarterlyImg,
+      img:UseCasesTrendsImg,
+      url:OBUseCasesAugust2022TrendsFile,
+      download:true,
+      downloadText:"Q3 2022 Trends Report Business models use cases"
+    },
     {
         title:`Q3 2022 Trends Report`,
         date:2022,
@@ -197,7 +210,7 @@ const IndexPage = ({ data }) => {
         <h3 className="text-2xl font-bold">Check out our latest releases</h3>
         </div>
       <div
-        className={`grid md:grid-cols-3 grid-cols-1 md:px-0 px-5 gap-4`}
+        className={`grid md:grid-cols-4 grid-cols-1 md:px-0 px-5 gap-4`}
       >
 
         {trendsData.map((trend,index)=>{
