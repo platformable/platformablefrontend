@@ -110,7 +110,7 @@ const IndexPage = ({ data }) => {
 
   const trendsData = [
     {
-      title:`Q3 2022 Trends Report Use Cases`,
+      title:`Q3 2022 Trends Report Business Models & Use Cases`,
       date:2022,
       //btnBackground:"btn-trends-oh",
       btnBackground:"bg-white",
@@ -119,7 +119,7 @@ const IndexPage = ({ data }) => {
       img:UseCasesTrendsImg,
       url:OBUseCasesAugust2022TrendsFile,
       download:true,
-      downloadText:"Q3 2022 Trends Report Business models use cases"
+      downloadText:"Q3 2022 Trends Report Business Models & Use Cases"
     },
     {
         title:`Q3 2022 Trends Report`,
